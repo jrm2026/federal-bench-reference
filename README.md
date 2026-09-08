@@ -72,9 +72,12 @@ patch scripts, so a rebuild cannot erase a curator's sign-off:
     python3 scripts/patch-verified.py    # source-checked content, 2026-09-03
     python3 scripts/patch-batch1.py      # roster and biography verification
     python3 scripts/patch-batch2.py      # appellate postures
+    python3 scripts/patch-batch3.py      # biographies, in progress: Kiel
     node scripts/validate-content.mjs
 
 Run in that order on an empty `data/judges/` and the tree reproduces exactly.
+Add each new patch script to that list as it is written; a rebuild that omits
+one produces a tree that looks right and is not.
 `build-roster.py --check` writes nothing and reports drift: records on the
 roster source missing from the tree, records in the tree no longer on the roster
 source, and divergence in name, office or vicinage. CI runs it on every push.
