@@ -1,11 +1,19 @@
-# Cloudflare Pages redirects. 301 unless noted.
+# Redirect rules for Workers static assets. 301 unless noted.
 #
-# The secondary domain is a memorable entry point that must not become a second
-# indexable copy of the site. Everything lands on the primary host.
-
-https://njfederalbench.com/*        https://REPLACE-WITH-DOMAIN/:splat        301
-https://www.njfederalbench.com/*    https://REPLACE-WITH-DOMAIN/:splat        301
-https://www.REPLACE-WITH-DOMAIN/*   https://REPLACE-WITH-DOMAIN/:splat        301
+# Only relative URLs are allowed here. Workers rejects a rule whose source or
+# destination names a host, and rejects the whole file rather than the offending
+# line: an absolute URL fails the deploy at version creation with
+# "Invalid _redirects configuration ... [code: 100324]".
+#
+# This is the one place Pages and Workers diverge on this file. Pages accepted
+# cross-host rules, which is how the apex-to-primary and secondary-domain
+# redirects were written here originally. Those belong in Cloudflare Redirect
+# Rules or Bulk Redirects at the zone level instead, configured once a domain
+# exists. See docs/LAUNCH-CHECKLIST.md.
+#
+# Note that wrangler's dry run does not catch a bad rule. The file is validated
+# server-side when the version is created, so the first sign of a mistake here
+# is a failed deploy.
 
 # Judge URLs are slugs, and slugs change when a name is corrected. Add a line
 # here rather than breaking an inbound link from a mail piece already sent.
