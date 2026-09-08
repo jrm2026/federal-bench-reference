@@ -38,8 +38,13 @@ None of these is Claude's to make.
 - [ ] Ownership acknowledgment executed. The clean moment to paper that this is
       Jay's personal business-development asset, sponsored by the firm during
       employment, is before the firm's name appears on a public URL.
-- [ ] `REPLACE-WITH-DOMAIN` replaced in `public/_redirects` and
-      `public/robots.launch.txt`.
+- [ ] `REPLACE-WITH-DOMAIN` replaced in `public/robots.launch.txt`.
+- [ ] Secondary domain pointed at the primary in Cloudflare Redirect Rules, so
+      `njfederalbench.com` and the `www` forms land on the primary host rather
+      than becoming a second indexable copy of the site. This lived in
+      `public/_redirects` while the target was Pages. Workers allows only
+      relative URLs there and rejects the entire file over a single absolute
+      rule, so the cross-host redirects belong in the zone now.
 
 ## Content
 
