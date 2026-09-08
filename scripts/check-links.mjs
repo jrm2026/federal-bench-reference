@@ -16,7 +16,21 @@
  * link on a judge page is the most visible possible failure and the easiest to
  * prevent.
  *
- * Writes data/link-report.json. Exits 1 if anything is dead.
+ * A failed request is not automatically a dead document, and the difference
+ * decides whether there is any work to do:
+ *
+ *   dead         the origin answered and the document is gone (404, 410)
+ *   blocked      something refused the request (401, 403, 407, 429). Court and
+ *                agency hosts throttle robots, and an egress proxy answers 403
+ *                to the CONNECT itself, which looks identical from here
+ *   unreachable  no answer at all: DNS, TLS, reset, timeout
+ *
+ * Only dead links block publication. Blocked and unreachable mean the run was
+ * inconclusive and has to be repeated with open network access, which is what
+ * docs/HANDOFF.md section 5 asks for.
+ *
+ * Writes data/link-report.json. Exits 1 if anything is dead, 2 if the run was
+ * inconclusive, 0 if every URL resolved.
  */
 
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -86,6 +100,14 @@ async function check(item) {
     out.error = e.name === "AbortError" ? "timeout" : String(e.message || e);
   }
 
+  // A 403 survives the ranged-GET fallback above when the refusal is a robot
+  // policy or an egress proxy rather than the document being gone. Say so
+  // rather than reporting a live opinion as dead.
+  out.result = out.ok ? "ok"
+    : out.status == null ? "unreachable"
+    : [401, 403, 407, 429].includes(out.status) ? "blocked"
+    : "dead";
+
   if (ARCHIVE && out.ok) {
     try {
       const res = await fetchWithTimeout(`https://web.archive.org/save/${item.url}`, { method: "GET" });
@@ -112,7 +134,7 @@ async function run() {
       const item = items[i++];
       const r = await check(item);
       results.push(r);
-      const mark = r.ok ? (r.redirected ? "»" : "✓") : "✗";
+      const mark = r.ok ? (r.redirected ? "»" : "✓") : r.result === "dead" ? "✗" : "?";
       console.log(`  ${mark} ${r.status ?? r.error}  ${r.url}`);
       if (!r.ok) for (const ref of r.refs) console.log(`        ${ref.jurist_id} — ${ref.where}`);
       if (ARCHIVE) await new Promise((s) => setTimeout(s, 1500)); // be polite to the archive
@@ -120,7 +142,10 @@ async function run() {
   });
   await Promise.all(workers);
 
-  const dead = results.filter((r) => !r.ok);
+  const dead = results.filter((r) => r.result === "dead");
+  const blocked = results.filter((r) => r.result === "blocked");
+  const unreachable = results.filter((r) => r.result === "unreachable");
+  const inconclusive = blocked.length + unreachable.length;
   const redirected = results.filter((r) => r.ok && r.redirected);
 
   writeFileSync(REPORT, JSON.stringify({
@@ -128,11 +153,13 @@ async function run() {
     archived: ARCHIVE,
     total: results.length,
     dead: dead.length,
+    blocked: blocked.length,
+    unreachable: unreachable.length,
     redirected: redirected.length,
     results: results.sort((a, b) => a.url.localeCompare(b.url)),
   }, null, 2) + "\n");
 
-  console.log(`\n${results.length} checked, ${dead.length} dead, ${redirected.length} redirected`);
+  console.log(`\n${results.length} checked, ${dead.length} dead, ${inconclusive} inconclusive, ${redirected.length} redirected`);
   console.log(`report: data/link-report.json`);
   if (redirected.length) {
     console.log("\nRedirects are not failures, but a redirected opinion URL should be");
@@ -143,7 +170,17 @@ async function run() {
     console.log("is a renumbered document within the case; find the current sequence number");
     console.log("on the case's GovInfo package page rather than guessing.");
   }
-  return dead.length ? 1 : 0;
+  if (inconclusive && !results.some((r) => r.ok)) {
+    console.log("\nNothing resolved, on any host. That is the network, not the content: an");
+    console.log("egress proxy answering 403 to CONNECT produces exactly this result. Run the");
+    console.log("check from a machine with open access to the courts, GovInfo and the FJC.");
+    console.log("docs/HANDOFF.md section 5 covers it. This run proves nothing either way.");
+  } else if (inconclusive) {
+    console.log(`\n${inconclusive} URL(s) neither resolved nor answered as gone. Government hosts`);
+    console.log("throttle automated requests, so retry these by hand or at lower concurrency");
+    console.log("before treating any of them as a broken link.");
+  }
+  return dead.length ? 1 : inconclusive ? 2 : 0;
 }
 
 process.exit(await run());
