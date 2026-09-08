@@ -1,0 +1,105 @@
+{
+  "jurist_id": "michael-e-farbiarz",
+  "canonical_name": "Michael E. Farbiarz",
+  "office": "U.S. District Judge",
+  "vicinage": "Newark",
+  "article_iii": true,
+  "status": {
+    "label": "Active",
+    "senior_status_date": null,
+    "commission_or_appointment_date": "2023-05-05",
+    "roster_basis": "Listed on the court's Our Judges directory",
+    "roster_source": "https://www.njd.uscourts.gov/our-judges",
+    "roster_checked": "2026-09-03",
+    "notes": null
+  },
+  "official_profile_url": "https://www.njd.uscourts.gov/content/michael-e-farbiarz",
+  "biography": {
+    "text": null,
+    "education": [],
+    "prior_service": [],
+    "facts": [],
+    "source_url": null,
+    "verification_status": "unverified",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [
+    {
+      "caption": "Khalil v. President of the United States",
+      "citation": null,
+      "docket": "2:25-cv-01963 (D.N.J.) (district caption Khalil v. Joyce)",
+      "court": "D.N.J.",
+      "decided": "2025-06-11",
+      "public_url": null,
+      "repository": null,
+      "authored_as": "district judge",
+      "selection_basis": "Institutional consequence; appellate treatment on jurisdiction",
+      "headnote": null,
+      "appellate_history": [
+        {
+          "court": "3d Cir., Nos. 25-2162 & 25-2357",
+          "date": "2026-01-15",
+          "disposition": "Per curiam, 2-1 (Hardiman and Bibas, JJ.; Freeman, J., dissenting). The district court had habeas jurisdiction as the district of confinement, but 8 U.S.C. § 1252(b)(9) stripped subject-matter jurisdiction over claims arising from removal, channeling them into a petition for review. Vacated the orders of 29 April, 28 May, 11 June, 20 June and 17 July 2025 and remanded with instructions to dismiss the petition.",
+          "url": "https://www2.ca3.uscourts.gov/opinarch/252162p.pdf",
+          "effect_on_lower_ruling": "Vacated; remanded with instructions to dismiss",
+          "status_checked": "2026-09-03"
+        },
+        {
+          "court": "3d Cir.",
+          "date": "2026-05-22",
+          "disposition": "Rehearing en banc denied, 6-5, over a dissent by Krause, Restrepo and Freeman, JJ.",
+          "url": null,
+          "effect_on_lower_ruling": "No change",
+          "status_checked": "2026-09-03"
+        },
+        {
+          "court": "3d Cir.",
+          "date": "2026-05-26",
+          "disposition": "Motion to stay the mandate under Fed. R. App. P. 41(d) granted, pending the filing and disposition of a petition for certiorari. Absent the stay the mandate would have issued 29 May 2026 and the district court's orders would have dissolved.",
+          "url": null,
+          "effect_on_lower_ruling": "Mandate stayed; the vacatur has not taken effect below",
+          "status_checked": "2026-09-03"
+        }
+      ],
+      "verification_status": "source-checked",
+      "reviewer": null,
+      "review_date": null,
+      "notes": "The prior report omitted the denial of rehearing and the stay. Two distinctions must survive into any published summary: the Third Circuit did not reach the constitutional merits, and its vacatur is not yet in effect. Do not describe the district court's analysis as good law and do not describe it as undone.",
+      "current_posture": {
+        "as_of": "2026-09-03",
+        "statement": "No certiorari petition confirmed filed. The mandate remains stayed, so the district court's orders have not been dissolved. The Board of Immigration Appeals has separately entered a final order of removal, and review of that order runs through a petition for review in a different circuit, not through this case.",
+        "next_check_trigger": "Supreme Court docket for a petition; Third Circuit docket for issuance of the mandate."
+      }
+    }
+  ],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": "ChatGPT research report, 2026-09-03 (unverified)",
+    "note": "Carried for triage only. Never publish from this field."
+  },
+  "publish": false,
+  "last_verified": null
+}

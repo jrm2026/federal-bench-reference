@@ -1,0 +1,14 @@
+# Cloudflare Pages edge headers.
+#
+# The noindex rule is the launch switch. Removing it is a deliberate, separate
+# act, listed last in docs/LAUNCH-CHECKLIST.md. Forty-three pages reading
+# "Biography in preparation," crawled and cached, is worse than no site at all,
+# and Google is slow to forget.
+
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

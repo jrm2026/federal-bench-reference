@@ -1,0 +1,58 @@
+{
+  "jurist_id": "michael-a-hammer",
+  "canonical_name": "Michael A. Hammer",
+  "office": "U.S. Magistrate Judge",
+  "vicinage": "Newark",
+  "article_iii": false,
+  "status": {
+    "label": "Former",
+    "senior_status_date": null,
+    "commission_or_appointment_date": "2011-07-25",
+    "roster_basis": "Retired. Still listed on the Our Judges directory as of the roster read; the directory is stale.",
+    "roster_source": "https://www.njd.uscourts.gov/sites/njd/files/NoticetotheBarADS.pdf",
+    "roster_checked": "2026-09-03",
+    "notes": "RETIRED 2026. Appointed 25 July 2011; reappointed 2019 to a term that would have run to 24 July 2027. Served as chief magistrate judge. Do not publish a profile page. Retain the record so that opinions authored by him carry a correct author attribution and a former-judge label.",
+    "term_end": "2026"
+  },
+  "official_profile_url": "https://www.njd.uscourts.gov/content/michael-hammer",
+  "biography": {
+    "text": null,
+    "education": [],
+    "prior_service": [],
+    "facts": [],
+    "source_url": null,
+    "verification_status": "unverified",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": null,
+    "note": "Former judge. No profile page."
+  },
+  "publish": false,
+  "last_verified": null
+}

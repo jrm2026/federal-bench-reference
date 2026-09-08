@@ -1,0 +1,97 @@
+{
+  "jurist_id": "peter-g-sheridan",
+  "canonical_name": "Peter G. Sheridan",
+  "office": "Senior U.S. District Judge",
+  "vicinage": "Not stated on the court's chambers directory",
+  "article_iii": true,
+  "status": {
+    "label": "Senior",
+    "senior_status_date": "2018-06-14",
+    "commission_or_appointment_date": "2006-06-12",
+    "roster_basis": "FJC records an un-terminated Article III commission; not listed on the court's chambers/e-filing directory",
+    "roster_source": "https://www.fjc.gov/sites/default/files/history/judges.csv",
+    "roster_checked": "2026-09-03",
+    "notes": "CORRECTED FRAMING. The Our Judges page is a chambers and e-filing contact directory, not a roster of commissions, and it does not separate district from magistrate judges. Absence from it is not evidence of inactive service. Do not label this judge inactive. Establish current service by docket activity within the last 12 months before publishing any status language. Sheridan issued the consolidated summary judgment opinion in Association of New Jersey Rifle & Pistol Clubs v. Platkin on 2024-07-30. He is in ordinary senior service."
+  },
+  "official_profile_url": "https://www.fjc.gov/node/1392436",
+  "biography": {
+    "text": null,
+    "education": [],
+    "prior_service": [],
+    "facts": [],
+    "source_url": null,
+    "verification_status": "unverified",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [
+    {
+      "caption": "Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin",
+      "citation": "742 F. Supp. 3d 421 (D.N.J. 2024)",
+      "docket": "Consolidated, 1:18-cv-10507 et al.",
+      "court": "D.N.J.",
+      "decided": "2024-07-30",
+      "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_22-cv-04397/pdf/USCOURTS-njd-3_22-cv-04397-1.pdf",
+      "repository": "GovInfo",
+      "authored_as": "senior district judge",
+      "selection_basis": "Institutional consequence; en banc appellate treatment",
+      "headnote": null,
+      "appellate_history": [
+        {
+          "court": "3d Cir. (en banc), No. 24-2415",
+          "date": "2026-07-17",
+          "disposition": "10-5. Freeman, J. Semi-automatic rifles and magazines holding more than ten rounds are arms in common use for lawful purposes; New Jersey's restrictions violate the Second Amendment. Broadened the district relief, which had reached only Colt-manufactured AR-15s, and reversed as to the magazine restriction. The first federal court of appeals decision invalidating a state assault-weapons ban on Second Amendment grounds.",
+          "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/24-2415/24-2415-2026-07-17.html",
+          "effect_on_lower_ruling": "Modified and expanded in part; reversed in part",
+          "status_checked": "2026-09-03"
+        },
+        {
+          "court": "3d Cir. (en banc)",
+          "date": "2026-08-04",
+          "disposition": "Freeman, J. Issuance of the mandate stayed pending the Supreme Court's disposition of the anticipated petition for a writ of certiorari, or until the time to file has expired. If certiorari is granted, the stay continues through final disposition on the merits. New Jersey moved on July 31, which itself suspended issuance while the motion was pending.",
+          "url": null,
+          "effect_on_lower_ruling": "Mandate stayed. The challenged provisions remain enforceable notwithstanding the holding.",
+          "status_checked": "2026-09-03"
+        }
+      ],
+      "verification_status": "source-checked",
+      "reviewer": null,
+      "review_date": null,
+      "notes": "The prior report presented the en banc holding as operative law and omitted the stay. The stay runs against the mandate, not the opinion: the holding stands as circuit precedent while the relief is suspended. State that distinction precisely or not at all.",
+      "current_posture": {
+        "as_of": "2026-09-03",
+        "statement": "No certiorari petition has been filed. New Jersey's deadline is 15 October 2026, extendable by application to the Circuit Justice for the Third Circuit. The en banc holding is not operative; the statutes remain enforceable.",
+        "next_check_trigger": "2026-10-15 filing deadline, and any extension application."
+      }
+    }
+  ],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": "ChatGPT research report, 2026-09-03 (unverified)",
+    "note": "Carried for triage only. Never publish from this field."
+  },
+  "publish": false,
+  "last_verified": null
+}

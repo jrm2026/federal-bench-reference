@@ -1,0 +1,163 @@
+{
+  "audience": {
+    "description": "An out-of-state commercial defendant, recently served, not yet appeared through counsel, three to six weeks into a case in the District of New Jersey.",
+    "horizon": "The next ninety days: whether to move to dismiss, why the case is in New Jersey, any pending order to show cause, and the initial conference before the magistrate judge.",
+    "implication": "Select for the rulings this reader is about to live through, not for the rulings that would headline a profile."
+  },
+  "categories": [
+    {
+      "key": "trade-secrets",
+      "label": "Trade Secrets"
+    },
+    {
+      "key": "restrictive-covenants",
+      "label": "Restrictive Covenants"
+    },
+    {
+      "key": "trademark-copyright",
+      "label": "Trademark & Copyright"
+    },
+    {
+      "key": "commercial-contract",
+      "label": "Commercial & Contract"
+    },
+    {
+      "key": "securities",
+      "label": "Securities"
+    },
+    {
+      "key": "employment",
+      "label": "Employment"
+    }
+  ],
+  "postures": [
+    {
+      "key": "personal-jurisdiction",
+      "label": "Personal jurisdiction (Rule 12(b)(2))",
+      "priority": 1,
+      "note": "Highest value. Every out-of-state defendant's first question is why New Jersey. Fact-specific, neutral to summarize, aggregated nowhere."
+    },
+    {
+      "key": "venue-transfer",
+      "label": "Venue, transfer under 28 U.S.C. 1404(a), first-filed",
+      "priority": 1
+    },
+    {
+      "key": "injunction",
+      "label": "TRO and preliminary injunction",
+      "priority": 1,
+      "note": "Concentrated in trade secrets and restrictive covenants, which is where this reader is most often a defendant."
+    },
+    {
+      "key": "arbitration-forum",
+      "label": "Motions to compel arbitration; forum selection clauses",
+      "priority": 2
+    },
+    {
+      "key": "remand",
+      "label": "Remand after removal; subject-matter jurisdiction",
+      "priority": 2
+    },
+    {
+      "key": "dismissal",
+      "label": "Rule 12(b)(6) on the substantive claims",
+      "priority": 3
+    },
+    {
+      "key": "case-management",
+      "label": "Scheduling, discovery disputes, settlement practice",
+      "priority": 2,
+      "note": "Magistrate output. Low prestige, high relevance: this reader will see the magistrate more than the district judge in year one."
+    },
+    {
+      "key": "summary-judgment",
+      "label": "Summary judgment",
+      "priority": 4
+    },
+    {
+      "key": "institutional",
+      "label": "Institutional significance",
+      "priority": 0,
+      "tier": "significant",
+      "note": "Credibility tier only. Not selected for business relevance."
+    }
+  ],
+  "exclusions": [
+    "Criminal sentencing, prisoner civil rights, habeas. Irrelevant to a commercial defendant, and a page dominated by it reads as a criminal defense site.",
+    "Mass tort and MDL rulings. Impressive and irrelevant; those defendants already have counsel.",
+    "Specialized statutory work outside the six categories (ERISA benefits, IDEA, False Claims Act, Hatch-Waxman, social security).",
+    "Anything selected because of how it came out."
+  ],
+  "tiers": {
+    "significant": {
+      "field": "significant_opinions",
+      "purpose": "Credibility. A judge page with no Koons on it tells any lawyer the site is marketing in a reference costume.",
+      "max_per_judge": 3,
+      "headnote_max_words": 60,
+      "rule": "Identify the matter in two sentences, state the current posture, link. Never a long headnote: these are the volatile entries and a 400-word treatment has to be rewritten every time the court of appeals moves."
+    },
+    "matter": {
+      "field": "matter_relevant_opinions",
+      "purpose": "The business content.",
+      "headnote_min_words": 250,
+      "headnote_max_words": 500,
+      "rule": "Two display modes. At launch, citation-only: a complete unsummarized list per category, which is neutral by construction because it is exhaustive. Headnotes are added per entry behind the gate. The 250-500 word length fits a jurisdiction or injunction opinion and does not fit a 230-page constitutional decision, which is why the tiers are separate.",
+      "weighting": "Favor posture priority 1 and 2. A judge page carrying four early-procedure rulings serves this reader better than one carrying four merits opinions.",
+      "default_display": "citation-only"
+    }
+  },
+  "maintenance_bias": {
+    "rule": "Prefer settled opinions: decided, affirmed or unappealed, and more than two years old.",
+    "reason": "Every disturbed-posture entry costs a recurring status check under gate 6a, forever. A 2022 personal jurisdiction ruling costs nothing to maintain. A case on a stayed mandate costs a check every month.",
+    "soft_cap_disturbed_entries": 12
+  },
+  "neutrality": {
+    "select_by": [
+      "posture",
+      "subject matter",
+      "recency",
+      "accessibility of a free public copy"
+    ],
+    "never_select_by": [
+      "outcome",
+      "who won",
+      "whether the motion was granted"
+    ],
+    "forbidden_output": [
+      "Tallies or grant rates of any kind. A tally is a prediction wearing the costume of a fact, and it is the direct target of RPC 8.4(e) and 8.2.",
+      "Any statement of what a judge is likely to do.",
+      "A selection consisting only of cases that came out one way. Even with no numbers on the page, that implies a pattern."
+    ],
+    "publication_requirement": "The selection criteria are published on the methodology page so a reader can verify the neutrality rather than take it on faith. Written criteria are also what lets the site be defended if anyone asks."
+  },
+  "thin_bench_rule": {
+    "problem": "Kiel and Semper have short benches; Fais and Silagi have none. Mail will go to defendants in front of all of them, and a defendant assigned to a new judge would land on an empty page.",
+    "fix": "The practice information block and the appearing-from-out-of-state material are the spine of every judge page, above the case list, not an addendum below it. They are complete for every judge on day one, they come from the court, and for this reader they may be the more useful content anyway.",
+    "never": "Do not pad a thin bench with off-taxonomy filler. An honest empty state beats a sentence that says nothing."
+  },
+  "display_modes": {
+    "citation-only": {
+      "purpose": "Launch mode. A complete, machine-generated, unsummarized list of the judge's opinions in a category. Neutral by construction: it states what exists and characterizes nothing.",
+      "requires": [
+        "verified citation",
+        "resolving public_url",
+        "posture tag"
+      ],
+      "forbids": [
+        "a headnote of any length",
+        "any selection that is not exhaustive for the category"
+      ],
+      "note": "Exhaustiveness is what makes this mode safe. A partial list without summaries still implies a choice; a complete list does not. If the category cannot be listed exhaustively, hold it as an empty state instead."
+    },
+    "headnote": {
+      "purpose": "The full treatment, added behind the gate as records clear review.",
+      "requires": [
+        "250-500 word headnote",
+        "facts, issues, holding"
+      ],
+      "forbids": [
+        "characterization of the judge"
+      ]
+    }
+  }
+}

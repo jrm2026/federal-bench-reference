@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--
+  Federal Bench Reference — judge page template.
+
+  CONTAINS NO FACTS BY DESIGN. An earlier revision carried a worked example
+  built on a sitting judge, and the biography in it was wrong: it showed
+  Ursinus College and Penn Law for Chief Judge Bumb, where the Federal Judicial
+  Center records Ohio State, Chicago and Rutgers-Newark. A template with
+  specimen facts is a template that eventually publishes them.
+
+  Every value binds to a record in data/judges/ that has cleared
+  scripts/validate-content.mjs. Placeholders are Handlebars-style; convert to
+  Astro expressions on drop-in. Markup and CSS are unchanged from the approved
+  design except for two added sections.
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ judge.canonical_name }} — Federal Bench Reference</title>
+<style>
+  :root{
+    --page:#f4f5f7;
+    --card:#ffffff;
+    --ink:#1c2530;
+    --muted:#5c6672;
+    --faint:#8a929c;
+    --line:#dce0e6;
+    --accent:#1f3a5f;
+    --advert:#7a5a12;
+    --advert-bg:#fbf4e2;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+  /* attorney advertising banner — above the fold */
+  .advert-banner{background:var(--advert-bg);border-bottom:1px solid #ecdcae;color:var(--advert);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 16px;font-weight:600}
+
+  /* site header */
+  .siteheader{background:var(--accent);color:#fff}
+  .siteheader .inner{max-width:900px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .sitemark{font-family:var(--serif);font-size:19px;letter-spacing:.02em;color:#fff;text-decoration:none}
+  .sitenav{display:flex;gap:22px}
+  .sitenav a{color:#c8d3e2;text-decoration:none;font-size:13px;letter-spacing:.03em}
+  .sitenav a:hover{color:#fff}
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px}
+  .breadcrumb{font-size:12.5px;color:var(--muted);padding:18px 0 0}
+  .breadcrumb a{color:var(--accent);text-decoration:none}
+
+  /* judge header */
+  .judgehead{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px 30px;margin:16px 0 22px}
+  .judgehead h1{font-family:var(--serif);font-size:29px;margin:0 0 6px;letter-spacing:-.01em}
+  .judgehead .role{font-size:14.5px;color:var(--muted)}
+  .judgehead .vic{display:inline-block;margin-top:12px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:4px 10px}
+
+  /* sections */
+  section.block{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px 30px;margin-bottom:20px}
+  section.block h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .bio p{margin:0 0 12px;font-size:15.5px}
+  .bio p:last-child{margin-bottom:0}
+  dl.facts{margin:0;display:grid;grid-template-columns:150px 1fr;gap:8px 18px;font-size:14.5px}
+  dl.facts dt{color:var(--faint);text-transform:uppercase;font-size:11px;letter-spacing:.08em;padding-top:3px}
+  dl.facts dd{margin:0}
+
+  /* opinion entries */
+  .opinion{padding:16px 0;border-bottom:1px solid var(--line)}
+  .opinion:first-of-type{padding-top:0}
+  .opinion:last-child{border-bottom:none;padding-bottom:0}
+  .opinion .cite{font-family:var(--serif);font-size:16px;margin:0 0 4px}
+  .opinion .cite a{color:var(--accent);text-decoration:none}
+  .opinion .cite a:hover{text-decoration:underline}
+  .opinion .src{font-size:11.5px;color:var(--faint);letter-spacing:.03em;margin-bottom:8px}
+  .opinion .summary{font-size:14.5px;color:#2b333d;margin:0}
+
+  /* empty states */
+  .empty{border:1px dashed var(--line);border-radius:6px;padding:22px;text-align:center;color:var(--faint);font-size:13.5px;background:#fafbfc}
+  .empty strong{display:block;color:var(--muted);font-size:14px;margin-bottom:4px;font-weight:600}
+
+  .matter-group{margin-bottom:6px}
+  .matter-group h3{font-size:13px;color:var(--ink);margin:0 0 6px;font-weight:600}
+
+  /* footer / attribution */
+  footer{background:#eceef1;border-top:1px solid var(--line);margin-top:14px}
+  footer .inner{max-width:900px;margin:0 auto;padding:26px 28px 34px}
+  .advert-block{font-size:12.5px;color:var(--muted);line-height:1.65;max-width:680px}
+  .advert-block .label{color:var(--advert);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px}
+  .advert-block b{color:var(--ink)}
+  .footlinks{margin-top:16px;display:flex;gap:20px;flex-wrap:wrap}
+  .footlinks a{font-size:12.5px;color:var(--accent);text-decoration:none}
+
+  @media(max-width:640px){
+    .sitenav{display:none}
+    dl.facts{grid-template-columns:1fr;gap:2px}
+    dl.facts dt{padding-top:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="advert-banner">Attorney Advertising · An independent reference — not affiliated with or endorsed by any court or judge</div>
+
+<header class="siteheader">
+  <div class="inner">
+    <a href="/" class="sitemark">{{ site.name }}</a>
+    <nav class="sitenav">
+      <a href="/judges/">Judges</a>
+      <a href="/topics/">Topics</a>
+      <a href="/about/">About</a>
+      <a href="/attorney-advertising/">Attorney Advertising</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="/judges/">Judges</a> &nbsp;›&nbsp; {{ judge.vicinage }} Vicinage &nbsp;›&nbsp; {{ judge.canonical_name }}</div>
+
+  <div class="judgehead">
+    <h1>{{ judge.canonical_name }}</h1>
+    <div class="role">{{ judge.office }} · United States District Court for the District of New Jersey</div>
+    <div class="vic">{{ judge.vicinage }} Vicinage</div>
+  </div>
+
+  <!-- BIOGRAPHY -->
+  <section class="block bio">
+    <h2>Biography</h2>
+    {{#if judge.biography.text}}
+    <p>{{ judge.biography.text }}</p>
+    <dl class="facts">
+      {{#each judge.biography.facts}}
+      <dt>{{ this.label }}</dt><dd>{{ this.value }}</dd>
+      {{/each}}
+    </dl>
+    <p style="font-size:12px;color:var(--faint);margin-top:16px;margin-bottom:0">Source: {{ judge.biography.source_label }}. Checked {{ judge.biography.review_date }} by {{ judge.biography.reviewer }}.</p>
+    {{else}}
+    <div class="empty"><strong>Biography in preparation</strong>This entry has not cleared editorial review. Nothing is published about a sitting judge until it has been checked against the primary source.</div>
+    {{/if}}
+  </section>
+
+  <!-- PRACTICE INFORMATION — official, neutral, and the most useful block on the page -->
+  <section class="block">
+    <h2>Practice Information</h2>
+    <dl class="facts">
+      <dt>Judicial preferences</dt><dd><a href="{{ judge.practice_information.judicial_preferences_url }}" rel="noopener">Published preferences</a></dd>
+      <dt>Standing orders</dt><dd><a href="{{ judge.practice_information.standing_orders_url }}" rel="noopener">Standing orders</a></dd>
+      <dt>Motion days</dt><dd><a href="{{ judge.practice_information.motion_days_url }}" rel="noopener">Motion day calendar</a></dd>
+      <dt>Local rules</dt><dd><a href="https://www.njd.uscourts.gov/court-info/local-rules-and-orders" rel="noopener">L. Civ. R. and orders</a></dd>
+    </dl>
+    <p style="font-size:12px;color:var(--faint);margin-top:16px;margin-bottom:0">These links resolve to the court's own pages. Procedures change; confirm against the docket in your case.</p>
+  </section>
+
+  <!-- OUT-OF-STATE NOTE — states a rule, argues nothing -->
+  <section class="block">
+    <h2>Appearing From Outside New Jersey</h2>
+    <p class="summary">Counsel admitted elsewhere may appear in this district pro hac vice under L. Civ. R. 101.1(c), which requires association with a member of the bar of this court who signs the pleadings and remains responsible in the matter. Case assignment among the Camden, Newark and Trenton vicinages follows the court's published vicinage lines.</p>
+    <div class="footlinks" style="margin-top:12px">
+      <a href="/appearing-in-dnj/">How cases are assigned and how to appear</a>
+      <a href="https://www.njd.uscourts.gov/vicinage-lines-case-assignment" rel="noopener">Vicinage lines (court)</a>
+    </div>
+  </section>
+
+  <!-- SIGNIFICANT OPINIONS -->
+  <section class="block">
+    <h2>Significant Opinions</h2>
+    {{#each judge.significant_opinions}}
+    <div class="opinion">
+      <p class="cite"><a href="{{ this.public_url }}" rel="noopener">{{ this.caption }}</a>{{#if this.citation}}, {{ this.citation }}{{/if}}</p>
+      <div class="src">{{ this.court }} · {{ this.docket }} · {{ this.decided }} · full opinion: {{ this.repository }}</div>
+      <p class="summary">{{ this.headnote }}</p>
+      {{#each this.appellate_history}}
+      <p class="summary" style="margin-top:8px"><b>Later history.</b> {{ this.court }}, {{ this.date }}: {{ this.disposition }} Status checked {{ this.status_checked }}.</p>
+      {{/each}}
+    </div>
+    {{else}}
+    <div class="empty"><strong>No verified entries yet</strong>Opinions appear here once the citation, the link and the summary have each been checked against the public opinion.</div>
+    {{/each}}
+  </section>
+
+  <!-- MATTER-RELEVANT OPINIONS — driven by taxonomy.json -->
+  <section class="block">
+    <h2>Opinions by Matter Type</h2>
+    {{#each taxonomy.categories}}
+    <div class="matter-group" style="margin-top:14px">
+      <h3>{{ this.label }}</h3>
+      {{#if (lookup ../judge.matter_listing_note this.key)}}
+      <p style="font-size:12px;color:var(--faint);margin:0 0 8px">{{ lookup ../judge.matter_listing_note this.key }}</p>
+      {{/if}}
+      {{#each (lookup ../judge.matter_relevant_opinions this.key)}}
+      <div class="opinion">
+        <p class="cite"><a href="{{ this.public_url }}" rel="noopener">{{ this.caption }}</a>{{#if this.citation}}, {{ this.citation }}{{/if}}</p>
+        <div class="src">{{ this.court }} · {{ this.docket }} · {{ this.decided }}</div>
+        {{#if this.headnote}}<p class="summary">{{ this.headnote }}</p>{{/if}}
+      </div>
+      {{else}}
+      <div class="empty"><strong>No verified entries yet</strong>Verified opinions in this category will appear here as they are curated and reviewed.</div>
+      {{/each}}
+    </div>
+    {{/each}}
+  </section>
+
+  <!-- NEWS (Phase 3 empty state) -->
+  <section class="block">
+    <h2>In the News</h2>
+    <div class="empty"><strong>No items yet</strong>Links to outside press coverage that mentions this judge will appear here. The reader decides whether to read further.</div>
+  </section>
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="advert-block">
+      <span class="label">Attorney Advertising.</span> This independent reference is maintained by <b>{{ curator.name }}</b> and sponsored by <b>{{ firm.name }}</b>, {{ firm.address }}, {{ firm.phone }}. It is not affiliated with, endorsed by, or authorized by the United States courts or any judge. Content is compiled from public sources; opinion summaries are written from the public opinions and are provided for general information, not as legal advice. Prior results do not guarantee a similar outcome. © {{ site.copyright_year }}.
+    </div>
+    <div class="footlinks">
+      <a href="/about/">About &amp; Methodology</a>
+      <a href="/attorney-advertising/">Attorney Advertising Notice</a>
+      <a href="/about/#sources">Sources</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

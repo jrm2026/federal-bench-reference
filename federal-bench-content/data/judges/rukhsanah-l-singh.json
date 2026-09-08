@@ -1,0 +1,57 @@
+{
+  "jurist_id": "rukhsanah-l-singh",
+  "canonical_name": "Rukhsanah L. Singh",
+  "office": "U.S. Magistrate Judge",
+  "vicinage": "Trenton",
+  "article_iii": false,
+  "status": {
+    "label": "Active",
+    "senior_status_date": null,
+    "commission_or_appointment_date": "2022-03-16",
+    "roster_basis": "Listed on the court's Our Judges directory",
+    "roster_source": "https://www.njd.uscourts.gov/our-judges",
+    "roster_checked": "2026-09-03",
+    "notes": null
+  },
+  "official_profile_url": "https://www.njd.uscourts.gov/content/rukhsanah-l-singh",
+  "biography": {
+    "text": null,
+    "education": [],
+    "prior_service": [],
+    "facts": [],
+    "source_url": null,
+    "verification_status": "unverified",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": "ChatGPT research report, 2026-09-03 (unverified)",
+    "note": "Carried for triage only. Never publish from this field."
+  },
+  "publish": false,
+  "last_verified": null
+}

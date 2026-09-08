@@ -1,0 +1,58 @@
+{
+  "jurist_id": "james-b-clark-iii",
+  "canonical_name": "James B. Clark III",
+  "office": "U.S. Magistrate Judge",
+  "vicinage": "Newark",
+  "article_iii": false,
+  "status": {
+    "label": "Active",
+    "senior_status_date": null,
+    "commission_or_appointment_date": "2013-07-15",
+    "roster_basis": "Listed on the court's Our Judges directory",
+    "roster_source": "https://www.njd.uscourts.gov/our-judges",
+    "roster_checked": "2026-09-03",
+    "notes": "Reappointment Notice to the Bar records his term expiring 14 July 2021 and a merit selection panel convened for a new eight-year term, so the current term runs to 14 July 2029. LAW SCHOOL UNRESOLVED. The St. John's attribution traces to the prior report's narrative and to a blocked commercial-AI source. Ballotpedia and a New Jersey Law Journal biographical entry both give Seton Hall (J.D. 1986), with Notre Dame, B.B.A. 1983. The NJLJ-derived page also states that a President nominated him, which is wrong for a magistrate judge, so it is not reliable enough to close the question. Omit the law school from the published page until the court or chambers confirms it.",
+    "term_end": "2029-07-14"
+  },
+  "official_profile_url": "https://www.njd.uscourts.gov/content/james-b-clark-iii",
+  "biography": {
+    "text": null,
+    "education": [],
+    "prior_service": [],
+    "facts": [],
+    "source_url": null,
+    "verification_status": "unverified",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": "ChatGPT research report, 2026-09-03 (unverified)",
+    "note": "Carried for triage only. Never publish from this field."
+  },
+  "publish": false,
+  "last_verified": null
+}

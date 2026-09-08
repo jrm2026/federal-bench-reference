@@ -1,0 +1,21 @@
+{
+  "district": "District of New Jersey",
+  "roster_source": "https://www.njd.uscourts.gov/our-judges",
+  "roster_read": "2026-09-03",
+  "counts": {
+    "article_iii_on_directory": 20,
+    "magistrate_active": 17,
+    "sworn_not_yet_listed": 1,
+    "former_still_listed_on_directory": 1,
+    "senior_off_directory": 4,
+    "recalled_by_designation": 1,
+    "records_total": 43
+  },
+  "roster_source_note": "No single source is current. The Our Judges directory lags and does not distinguish district from magistrate judges; the Notices to the Bar lead. Reconcile both on every check.",
+  "known_divergence_from_prior_report": [
+    "Michael A. Hammer retired in 2026 and Silagi fills his seat. The prior report was right to carry Silagi and not Hammer; the court's directory is stale in both directions.",
+    "The 20/17 district-magistrate split is an inference from a page that does not draw it.",
+    "Cooper, Thompson, Sheridan and McNulty were labelled inactive senior. Withdrawn pending docket evidence.",
+    "Koons: the September 2025 panel opinion was vacated in December 2025; the en banc appeal is pending."
+  ]
+}

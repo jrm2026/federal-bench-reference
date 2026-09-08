@@ -1,0 +1,159 @@
+{
+  "jurist_id": "renee-marie-bumb",
+  "canonical_name": "Renée Marie Bumb",
+  "office": "Chief U.S. District Judge",
+  "vicinage": "Camden",
+  "article_iii": true,
+  "status": {
+    "label": "Chief",
+    "senior_status_date": null,
+    "commission_or_appointment_date": "2006-06-12",
+    "roster_basis": "Listed on the court's Our Judges directory",
+    "roster_source": "https://www.njd.uscourts.gov/our-judges",
+    "roster_checked": "2026-09-03",
+    "notes": "CORRECTION: the Appendix A reference template carried a biography for this judge showing Ursinus College and the University of Pennsylvania Law School. Both are wrong. The FJC directory records Ohio State, Chicago and Rutgers–Newark. The template biography must not be used as scaffold content."
+  },
+  "official_profile_url": "https://www.njd.uscourts.gov/content/ren%C3%A9e-marie-bumb",
+  "biography": {
+    "text": null,
+    "education": [
+      {
+        "institution": "Ohio State University",
+        "degree": "B.A.",
+        "year": 1981
+      },
+      {
+        "institution": "University of Chicago",
+        "degree": "M.A.",
+        "year": 1983
+      },
+      {
+        "institution": "Rutgers School of Law–Newark",
+        "degree": "J.D.",
+        "year": 1987
+      }
+    ],
+    "prior_service": [
+      {
+        "role": "Law clerk to Hon. Garrett E. Brown, Jr., U.S. District Court, D.N.J.",
+        "years": "1987–1988"
+      },
+      {
+        "role": "Private practice, New Jersey",
+        "years": "1988–1991"
+      },
+      {
+        "role": "Assistant U.S. Attorney, District of New Jersey",
+        "years": "1991–2006"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Born",
+        "value": "1960, Bellevue, Ohio"
+      },
+      {
+        "label": "Nominated",
+        "value": "George W. Bush, January 25, 2006, to the seat vacated by William H. Walls"
+      },
+      {
+        "label": "Confirmed",
+        "value": "June 6, 2006"
+      },
+      {
+        "label": "Commission",
+        "value": "June 12, 2006"
+      },
+      {
+        "label": "Chief Judge",
+        "value": "2023–present"
+      },
+      {
+        "label": "Judicial Conference of the United States",
+        "value": "Member, 2023"
+      }
+    ],
+    "source_url": "https://www.fjc.gov/history/judges/bumb-ren-e-marie",
+    "verification_status": "source-checked",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [
+    {
+      "caption": "Koons v. Platkin",
+      "citation": "673 F. Supp. 3d 515 (D.N.J. 2023)",
+      "docket": "1:22-cv-07464",
+      "court": "D.N.J.",
+      "decided": "2023-05-16",
+      "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_22-cv-07464/pdf/USCOURTS-njd-1_22-cv-07464-3.pdf",
+      "repository": "GovInfo",
+      "authored_as": "district judge",
+      "selection_basis": "Institutional consequence; consolidated constitutional challenge; extensive appellate treatment",
+      "headnote": null,
+      "appellate_history": [
+        {
+          "court": "3d Cir., Nos. 23-1900 & 23-2043 (panel)",
+          "date": "2025-09-10",
+          "disposition": "Panel opinion, amended 17 September 2025, affirming in part and reversing in part. VACATED. Do not cite as law and do not link as the current appellate disposition.",
+          "url": null,
+          "effect_on_lower_ruling": "Vacated by the court's own order of 11 December 2025",
+          "status_checked": "2026-09-03"
+        },
+        {
+          "court": "3d Cir. (en banc)",
+          "date": "2025-12-11",
+          "disposition": "Rehearing en banc granted. The panel opinion of 10 September 2025, as amended 17 September 2025, and the judgment entered 10 September 2025 were vacated.",
+          "url": "https://www.courtlistener.com/docket/67401781/ronald-koons-v-attorney-general-new-jersey/",
+          "effect_on_lower_ruling": "Panel disposition vacated; appeal pending",
+          "status_checked": "2026-09-03"
+        },
+        {
+          "court": "3d Cir. (en banc)",
+          "date": "2026-02-11",
+          "disposition": "Argued en banc. Supplemental briefing followed a Supreme Court decision in July 2026. No en banc decision had issued as of this check.",
+          "url": null,
+          "effect_on_lower_ruling": "Pending",
+          "status_checked": "2026-09-03"
+        }
+      ],
+      "verification_status": "source-checked",
+      "reviewer": null,
+      "review_date": null,
+      "notes": "MATERIAL CORRECTION. The prior report states that in September 2025 the Third Circuit upheld most sensitive-place restrictions, links that opinion, and repeats it in the watchlist as current law. That opinion was vacated on 11 December 2025 when rehearing en banc was granted. The appeal is pending. The district court's preliminary injunction posture, as modified by the partial stay of 20 June 2023, governs. Recheck before every publish.",
+      "current_posture": {
+        "as_of": "2026-09-03",
+        "statement": "The 10 September 2025 panel opinion was vacated on 11 December 2025 when rehearing en banc was granted, so there is no operative appellate disposition. The consolidated appeal was argued en banc on 11 February 2026, with supplemental briefing after a Supreme Court decision in July 2026, and remains undecided. What governs is the district court's preliminary injunction as modified by the Third Circuit's partial stay of 20 June 2023, which stayed the injunction as to the enumerated sensitive places and left it in place as to private property open to the public and carry in vehicles.",
+        "next_check_trigger": "Third Circuit docket Nos. 23-1900 and 23-2043 for the en banc decision."
+      }
+    }
+  ],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": "ChatGPT research report, 2026-09-03 (unverified)",
+    "note": "Carried for triage only. Never publish from this field."
+  },
+  "publish": false,
+  "last_verified": null
+}

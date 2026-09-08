@@ -1,0 +1,97 @@
+{
+  "jurist_id": "jamel-k-semper",
+  "canonical_name": "Jamel K. Semper",
+  "office": "U.S. District Judge",
+  "vicinage": "Newark",
+  "article_iii": true,
+  "status": {
+    "label": "Active",
+    "senior_status_date": null,
+    "commission_or_appointment_date": "2023-12-01",
+    "roster_basis": "Listed on the court's Our Judges directory",
+    "roster_source": "https://www.njd.uscourts.gov/our-judges",
+    "roster_checked": "2026-09-03",
+    "notes": null
+  },
+  "official_profile_url": "https://www.njd.uscourts.gov/content/jamel-k-semper",
+  "biography": {
+    "text": null,
+    "education": [],
+    "prior_service": [],
+    "facts": [],
+    "source_url": null,
+    "verification_status": "unverified",
+    "reviewer": null,
+    "review_date": null
+  },
+  "significant_opinions": [
+    {
+      "caption": "United States v. McIver",
+      "citation": null,
+      "docket": "Crim. No. 25-388 (D.N.J.)",
+      "court": "D.N.J.",
+      "decided": "2025-11-13",
+      "public_url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.575005/gov.uscourts.njd.575005.44.0.pdf",
+      "repository": "CourtListener / RECAP",
+      "authored_as": "district judge",
+      "selection_basis": "Institutional consequence; Speech or Debate Clause; interlocutory appeal",
+      "headnote": null,
+      "appellate_history": [
+        {
+          "court": "D.N.J. (subsequent district ruling)",
+          "date": "2026-01",
+          "disposition": "Semper, J., declined to dismiss the count on which he had reserved judgment in November. McIver noticed an appeal from that ruling as well.",
+          "url": null,
+          "effect_on_lower_ruling": "Not applicable",
+          "status_checked": "2026-09-03"
+        },
+        {
+          "court": "3d Cir., No. 25-3573",
+          "date": "2026-08-26",
+          "disposition": "2-1 (Chung, J., joined by Bibas, J.; Ambro, J., dissenting in part). Affirmed as to Counts One and Two: prosecution would not require the Congresswoman to answer for legislative acts under the two-step test of United States v. Menendez. Vacated and remanded Count Three, which asserts no specific actus reus and reaches a broader range of conduct that the district court had analyzed together with Count One on the narrower timeframe outside the security gate. Dismissed the balance of the appeal, including the selective and vindictive prosecution claims, for lack of jurisdiction. Ambro, J., would have vacated as to Count Two and allowed discovery on the retaliation claim.",
+          "url": "https://www2.ca3.uscourts.gov/opinarch/253573p.pdf",
+          "effect_on_lower_ruling": "Affirmed in part; vacated and remanded in part",
+          "status_checked": "2026-09-03"
+        }
+      ],
+      "verification_status": "source-checked",
+      "reviewer": null,
+      "review_date": null,
+      "notes": "Two open items. First, the docket is Crim. No. 25-388, not 2:25-cr-00373 as the prior report states. Second, the count numbering does not reconcile across sources: one repository copy of the 13 November 2025 order reads as a denial on Counts One and Three with judgment reserved on Count Two, while the Third Circuit opinion and contemporaneous reporting treat Count Three as the reserved and now remanded count. Read the signed order before writing the headnote, and do not paraphrase count numbers from press coverage.",
+      "current_posture": {
+        "as_of": "2026-09-03",
+        "statement": "On remand Judge Semper must decide whether the conduct charged at Count Three includes legislative acts and, if so, whether the count can stand once protected conduct is removed. Counts One and Two may proceed. No trial date is set; trial was adjourned indefinitely in November 2025 pending the immunity rulings.",
+        "next_check_trigger": "District docket for the remand ruling and any trial date."
+      }
+    }
+  ],
+  "matter_relevant_opinions": {
+    "trade-secrets": [],
+    "restrictive-covenants": [],
+    "trademark-copyright": [],
+    "commercial-contract": [],
+    "securities": [],
+    "employment": []
+  },
+  "practice_information": {
+    "judicial_preferences_url": "https://www.njd.uscourts.gov/judicial-preferences",
+    "standing_orders_url": "https://www.njd.uscourts.gov/standing-orders",
+    "motion_days_url": "https://www.njd.uscourts.gov/motion-days-0",
+    "verification_status": "unverified"
+  },
+  "matter_listing_note": {
+    "trade-secrets": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "restrictive-covenants": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "trademark-copyright": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "commercial-contract": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "securities": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review.",
+    "employment": "Every opinion located in this category is listed, without summary. Entries are added as they are identified and are not selected by outcome. Summaries are published as they clear editorial review."
+  },
+  "news": [],
+  "research_lead": {
+    "source": "ChatGPT research report, 2026-09-03 (unverified)",
+    "note": "Carried for triage only. Never publish from this field."
+  },
+  "publish": false,
+  "last_verified": null
+}

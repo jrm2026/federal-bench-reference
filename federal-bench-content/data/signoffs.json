@@ -1,0 +1,18 @@
+{
+  "_purpose": "Curator sign-off ledger. The gate will not publish a record unless this file carries a matching entry, and the entry is bound to a hash of the record's publishable content. Edit a signed record and the hash stops matching, the sign-off lapses, and the build blocks until a human signs again.",
+
+  "_why_it_is_separate": "The reviewer and review_date fields inside a judge record are self-reported. Nothing stops an automated process from typing the curator's name into them. This file is protected by CODEOWNERS and requires the curator's review to change, so authority lives somewhere an agent with write access to data/judges cannot reach.",
+
+  "_how_to_sign": [
+    "1. Read the rendered page, not the JSON. Ask the question the gate cannot: would a reader infer a tendency from this selection?",
+    "2. Run: node scripts/sign-record.mjs <jurist_id> --reviewer \"Jay R. McDaniel\"",
+    "3. Review the diff. Commit it yourself, separately from any content commit.",
+    "4. Never sign in the same commit that changes the content being signed."
+  ],
+
+  "curators": [
+    "Jay R. McDaniel"
+  ],
+
+  "signoffs": {}
+}

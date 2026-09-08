@@ -1,0 +1,47 @@
+{
+  "purpose": "Facts affirmatively established to be false. The review gate blocks any build in which one reappears. Add an entry every time a correction is made, so the same error cannot be reintroduced by a later ingest or by a regenerated draft.",
+  "entries": [
+    {
+      "jurist_id": "renee-marie-bumb",
+      "pattern": "Ursinus",
+      "reason": "The Appendix A reference template attributed a B.A. from Ursinus College to Chief Judge Bumb. The FJC directory records Ohio State University, B.A. 1981.",
+      "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": "renee-marie-bumb",
+      "pattern": "University of Pennsylvania Law School",
+      "reason": "The Appendix A reference template attributed a J.D. from Penn to Chief Judge Bumb. The FJC directory records Rutgers School of Law–Newark, J.D. 1987.",
+      "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": null,
+      "pattern": "ezel\\.ai",
+      "reason": "A commercial AI aggregator was cited as a public rulings index for five judges in the prior research report. Not an acceptable source on a site whose premise is official and free repositories.",
+      "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": "jamel-k-semper",
+      "pattern": "25-cr-00373",
+      "reason": "The prior research report gave the McIver docket as 2:25-cr-00373. The district court opinion and order carry Crim. No. 25-388.",
+      "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": null,
+      "pattern": "inactive senior",
+      "reason": "Applied to Cooper, Thompson, Sheridan and McNulty on the basis of absence from the court's chambers and e-filing directory. That page is not a roster of commissions. Sheridan issued a merits opinion in July 2024. The label is withdrawn and may not be reused without docket evidence.",
+      "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": null,
+      "pattern": "Hammer[^.]{0,60}(current|sitting|active) magistrate",
+      "reason": "Michael A. Hammer retired in 2026. The court's Our Judges directory still listed him at the roster read of 2026-09-03; the Notice to the Bar of 2026-09-01 controls. He may not be presented as a sitting judge.",
+      "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": "renee-marie-bumb",
+      "pattern": "Third Circuit upheld most sensitive-place",
+      "reason": "The 10 September 2025 Koons panel opinion was vacated on 11 December 2025 when rehearing en banc was granted. It may not be described as the appellate disposition.",
+      "corrected_on": "2026-09-03"
+    }
+  ]
+}
