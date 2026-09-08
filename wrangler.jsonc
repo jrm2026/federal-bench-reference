@@ -1,0 +1,25 @@
+{
+  // Cloudflare Workers static assets.
+  //
+  // The Workers Builds project runs `npx wrangler deploy` with no build step.
+  // Without this file wrangler has nothing to read, so it tries to infer the
+  // project shape, looks for a directory containing html, css or js, finds none
+  // and fails. That is the whole of the first failure.
+  //
+  // ./public is the assets root because Workers reads _headers and _redirects
+  // from the root of the assets directory, and that is where they live. It also
+  // decides what is published: data/ sits outside the assets root, so the
+  // forty-three judge records are uploaded to GitHub but never served.
+  //
+  // When the Astro scaffold lands, Astro copies public/ into its own output.
+  // Point "directory" at ./dist then, set the project's build command to the
+  // Astro build, and delete public/index.html — that file exists only so there
+  // is a page to verify the edge headers against before there is a site.
+
+  "name": "federal-bench-reference",
+  "compatibility_date": "2026-09-08",
+
+  "assets": {
+    "directory": "./public"
+  }
+}

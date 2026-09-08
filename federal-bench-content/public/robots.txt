@@ -1,3 +1,0 @@
-# Preview posture. Replace this file at launch; see docs/LAUNCH-CHECKLIST.md.
-User-agent: *
-Disallow: /

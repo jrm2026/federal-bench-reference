@@ -94,9 +94,28 @@ const TONE = [
 
 const DISTURBED = /(vacat|revers|remand|stay|withdraw|supersed|abrogat|cert(iorari)? granted)/i;
 
-const poison = existsSync(POISON) ? JSON.parse(readFileSync(POISON, "utf8")) : { entries: [] };
-const tax = existsSync(TAXONOMY) ? JSON.parse(readFileSync(TAXONOMY, "utf8")) : null;
-const ledger = existsSync(LEDGER) ? JSON.parse(readFileSync(LEDGER, "utf8")) : { curators: [], signoffs: {} };
+// Fail closed. A missing gate file stops the run rather than quietly switching
+// a gate off. The tree was once uploaded twice, and the copy that arrived
+// without taxonomy.json, poison-list.json and signoffs.json printed
+// "review gate: passed" while Gate 9 was skipped outright, Gate 7 ran against an
+// empty poison list and the ledger was empty. A green light from a gate with its
+// checks removed is worse than a red one.
+const REQUIRED = [
+  [POISON, "data/poison-list.json", "Gate 7 has nothing to check against"],
+  [TAXONOMY, "data/taxonomy.json", "Gate 9 cannot check tier discipline"],
+  [LEDGER, "data/signoffs.json", "sign-off authority cannot be checked"],
+];
+const absent = REQUIRED.filter(([path]) => !existsSync(path));
+if (absent.length) {
+  console.error("review gate: cannot run.\n");
+  for (const [, name, why] of absent) console.error(`  x ${name} is missing — ${why}`);
+  console.error("\nBUILD BLOCKED.");
+  process.exit(1);
+}
+
+const poison = JSON.parse(readFileSync(POISON, "utf8"));
+const tax = JSON.parse(readFileSync(TAXONOMY, "utf8"));
+const ledger = JSON.parse(readFileSync(LEDGER, "utf8"));
 const CATEGORY_KEYS = new Set((tax?.categories || []).map((c) => c.key));
 const POSTURE_KEYS = new Set((tax?.postures || []).map((p) => p.key));
 
