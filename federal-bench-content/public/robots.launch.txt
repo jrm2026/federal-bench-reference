@@ -1,8 +1,0 @@
-# The launch replacement for robots.txt. Do not move this into place until the
-# curator has signed off on the records that will be live and the noindex
-# header has been removed from public/_headers.
-User-agent: *
-Allow: /
-Disallow: /drafts/
-
-Sitemap: https://REPLACE-WITH-DOMAIN/sitemap-index.xml
