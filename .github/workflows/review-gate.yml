@@ -1,0 +1,61 @@
+# The review gate, on push, on pull request, and weekly.
+#
+# The workflow name and the job id together produce the status check named
+# "Review gate / gate". docs/HANDOFF.md section 2 requires that exact name in
+# the branch protection rule for main, so renaming either one silently detaches
+# the protection. Change them together or not at all.
+#
+# The weekly run is not redundant. Appellate staleness accrues while the
+# repository sits still: a vacated or stayed posture goes stale forty-five days
+# after its last status check whether or not anyone pushes. That is the failure
+# a push-triggered gate cannot see.
+
+name: Review gate
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 11 * * 1"   # Mondays, 11:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: review-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Drift is a signal, not an error: the court's directory changed, or a
+      # patch script deliberately changed something. A human decides which.
+      # --check writes nothing and exits 1 only on divergence.
+      - name: Roster drift
+        run: python3 scripts/build-roster.py --check
+
+      - name: Review gate
+        run: node scripts/validate-content.mjs
+
+      # A sign-off is bound to a hash of the record's publishable content, so an
+      # edit to a signed record lapses it. Catch that here rather than at the
+      # moment someone tries to publish.
+      - name: Sign-off ledger
+        run: node scripts/sign-record.mjs --verify-all
+
+      # scripts/check-links.mjs is deliberately absent. It needs open network
+      # access to the courts, GovInfo and the FJC, and docs/HANDOFF.md puts it on
+      # the desktop. Whether a scheduled job should poll those hosts weekly is a
+      # decision, not a task.

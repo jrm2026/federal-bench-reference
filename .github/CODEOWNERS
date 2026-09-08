@@ -1,0 +1,22 @@
+# Curator ownership.
+#
+# data/signoffs.json is the authority behind the review gate. The `reviewer`
+# field inside a judge record is self-reported and an automated process can type
+# any name into it, so the gate checks this ledger instead. That indirection is
+# worth nothing unless the ledger sits somewhere a writer with access to
+# data/judges cannot reach, which is what this file and the "Require review from
+# Code Owners" branch rule accomplish together.
+#
+# The same reasoning covers the gate script, the signing script, the CI
+# definition that runs them, and the noindex header that keeps forty-three
+# unfinished pages out of Google. Each is a control that an ordinary content
+# change has no business editing.
+#
+# To require curator review on every change rather than only on the control
+# surfaces, add a line reading:  *  @jrm2026
+
+/data/signoffs.json          @jrm2026
+/scripts/validate-content.mjs @jrm2026
+/scripts/sign-record.mjs     @jrm2026
+/.github/                    @jrm2026
+/public/_headers             @jrm2026
