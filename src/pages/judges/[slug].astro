@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+import JudgeBody from "../../components/JudgeBody.astro";
+import { publishedJudges, taxonomy } from "../../lib/content.js";
+
+export function getStaticPaths() {
+  return publishedJudges.map((judge) => ({
+    params: { slug: judge.jurist_id },
+    props: { judge },
+  }));
+}
+
+const { judge } = Astro.props;
+---
+
+<Base title={judge.canonical_name}>
+  <div class="breadcrumb" slot="breadcrumb">
+    <a href="/judges/">Judges</a> &nbsp;›&nbsp; {judge.vicinage} Vicinage &nbsp;›&nbsp; {judge.canonical_name}
+  </div>
+  <JudgeBody judge={judge} taxonomy={taxonomy} />
+</Base>

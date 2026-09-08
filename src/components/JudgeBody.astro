@@ -1,0 +1,248 @@
+---
+/**
+ * The judge page body, converted from templates/judge-page.html.
+ *
+ * Section order, markup and class names are the template's. Three things
+ * differ, each deliberate:
+ *
+ *  1. Every value that can be null is guarded. The template assumes a record
+ *     that has cleared review; most records have not, and rendering the string
+ *     "null" onto a page about a sitting judge is not an acceptable failure.
+ *  2. `current_posture` is rendered after the appellate history. The template
+ *     predates gate 6a, which exists because a correct history is not enough —
+ *     a reader has to be told whether the holding is in effect today.
+ *  3. Draft pages show the collected biographical facts under an explicit
+ *     "not yet reviewed" heading. Published pages follow the template exactly
+ *     and show the empty state until `biography.text` exists. Drafts exist to
+ *     be reviewed, and there is nothing to review if the working material is
+ *     hidden.
+ */
+import { sourceLabel } from "../lib/content.js";
+
+const { judge, taxonomy, draft = false } = Astro.props;
+
+const bio = judge.biography || {};
+const significant = judge.significant_opinions || [];
+const matter = judge.matter_relevant_opinions || {};
+const notes = judge.matter_listing_note || {};
+const practice = judge.practice_information || {};
+const news = judge.news || [];
+
+// Education and prior service are biographical facts, so they join the same
+// definition list the template already uses rather than opening a new section.
+const collectedFacts = [
+  ...(bio.facts || []),
+  ...(bio.education || []).map((e) => ({
+    label: "Education",
+    value: [e.institution, e.degree, e.year].filter(Boolean).join(", "),
+  })),
+  ...(bio.prior_service || []).map((p) => ({
+    label: "Prior service",
+    value: [p.role, p.years].filter(Boolean).join(", "),
+  })),
+];
+---
+
+<div class="judgehead">
+  <h1>{judge.canonical_name}</h1>
+  <div class="role">{judge.office} · United States District Court for the District of New Jersey</div>
+  {judge.vicinage && <div class="vic">{judge.vicinage} Vicinage</div>}
+</div>
+
+{draft && (
+  <div class="draftnote">
+    <b>This page is not published.</b>
+    The record is marked <code>publish: false</code>. Its biography is{" "}
+    {bio.verification_status || "unverified"} and it carries no entry in the sign-off ledger.
+    It is rendered here so it can be read whole before anyone signs it, which is what
+    <code>data/signoffs.json</code> asks for. Nothing on it has cleared editorial review.
+  </div>
+)}
+
+<!-- BIOGRAPHY -->
+<section class="block bio">
+  <h2>Biography</h2>
+  {bio.text ? (
+    <>
+      <p>{bio.text}</p>
+      {collectedFacts.length > 0 && (
+        <dl class="facts">
+          {collectedFacts.map((f) => (
+            <>
+              <dt>{f.label}</dt>
+              <dd>{f.value}</dd>
+            </>
+          ))}
+        </dl>
+      )}
+      {bio.source_url && (
+        <p style="font-size:12px;color:var(--faint);margin-top:16px;margin-bottom:0">
+          Source: <a href={bio.source_url} rel="noopener">{sourceLabel(bio.source_url)}</a>.
+          {bio.review_date && bio.reviewer && ` Checked ${bio.review_date} by ${bio.reviewer}.`}
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <div class="empty">
+        <strong>Biography in preparation</strong>
+        This entry has not cleared editorial review. Nothing is published about a sitting judge
+        until it has been checked against the primary source.
+      </div>
+      {draft && collectedFacts.length > 0 && (
+        <>
+          <h3 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:20px 0 10px;font-weight:600">
+            Collected, not yet reviewed
+          </h3>
+          <dl class="facts">
+            {collectedFacts.map((f) => (
+              <>
+                <dt>{f.label}</dt>
+                <dd>{f.value}</dd>
+              </>
+            ))}
+          </dl>
+          {bio.source_url && (
+            <p style="font-size:12px;color:var(--faint);margin-top:16px;margin-bottom:0">
+              Drawn from <a href={bio.source_url} rel="noopener">{sourceLabel(bio.source_url)}</a>.
+              Status: {bio.verification_status || "unverified"}.
+            </p>
+          )}
+        </>
+      )}
+    </>
+  )}
+</section>
+
+<!-- PRACTICE INFORMATION — official, neutral, and the most useful block on the page -->
+<section class="block">
+  <h2>Practice Information</h2>
+  <dl class="facts">
+    <dt>Judicial preferences</dt>
+    <dd><a href={practice.judicial_preferences_url} rel="noopener">Published preferences</a></dd>
+    <dt>Standing orders</dt>
+    <dd><a href={practice.standing_orders_url} rel="noopener">Standing orders</a></dd>
+    <dt>Motion days</dt>
+    <dd><a href={practice.motion_days_url} rel="noopener">Motion day calendar</a></dd>
+    <dt>Local rules</dt>
+    <dd><a href="https://www.njd.uscourts.gov/court-info/local-rules-and-orders" rel="noopener">L. Civ. R. and orders</a></dd>
+    {judge.official_profile_url && (
+      <>
+        <dt>Court profile</dt>
+        <dd><a href={judge.official_profile_url} rel="noopener">Profile on the court's site</a></dd>
+      </>
+    )}
+  </dl>
+  <p style="font-size:12px;color:var(--faint);margin-top:16px;margin-bottom:0">
+    These links resolve to the court's own pages. Procedures change; confirm against the docket in
+    your case.
+  </p>
+</section>
+
+<!-- OUT-OF-STATE NOTE — states a rule, argues nothing -->
+<section class="block">
+  <h2>Appearing From Outside New Jersey</h2>
+  <p class="summary">
+    Counsel admitted elsewhere may appear in this district pro hac vice under L. Civ. R. 101.1(c),
+    which requires association with a member of the bar of this court who signs the pleadings and
+    remains responsible in the matter. Case assignment among the Camden, Newark and Trenton
+    vicinages follows the court's published vicinage lines.
+  </p>
+  <div class="footlinks" style="margin-top:12px">
+    <a href="/appearing-in-dnj/">How cases are assigned and how to appear</a>
+    <a href="https://www.njd.uscourts.gov/vicinage-lines-case-assignment" rel="noopener">Vicinage lines (court)</a>
+  </div>
+</section>
+
+<!-- SIGNIFICANT OPINIONS -->
+<section class="block">
+  <h2>Significant Opinions</h2>
+  {significant.length > 0 ? (
+    significant.map((o) => (
+      <div class="opinion">
+        <p class="cite">
+          {o.public_url ? <a href={o.public_url} rel="noopener">{o.caption}</a> : o.caption}
+          {o.citation && `, ${o.citation}`}
+        </p>
+        <div class="src">
+          {[o.court, o.docket, o.decided].filter(Boolean).join(" · ")}
+          {o.repository && ` · full opinion: ${o.repository}`}
+        </div>
+        {o.headnote && <p class="summary">{o.headnote}</p>}
+        {(o.appellate_history || []).map((ah) => (
+          <p class="summary" style="margin-top:8px">
+            <b>Later history.</b> {[ah.court, ah.date].filter(Boolean).join(", ")}:{" "}
+            {ah.disposition}
+            {ah.status_checked && ` Status checked ${ah.status_checked}.`}
+          </p>
+        ))}
+        {o.current_posture?.statement && (
+          <p class="summary" style="margin-top:8px">
+            <b>What is operative now.</b> {o.current_posture.statement}
+            {o.current_posture.as_of && ` Stated as of ${o.current_posture.as_of}.`}
+          </p>
+        )}
+      </div>
+    ))
+  ) : (
+    <div class="empty">
+      <strong>No verified entries yet</strong>
+      Opinions appear here once the citation, the link and the summary have each been checked
+      against the public opinion.
+    </div>
+  )}
+</section>
+
+<!-- MATTER-RELEVANT OPINIONS — driven by taxonomy.json -->
+<section class="block">
+  <h2>Opinions by Matter Type</h2>
+  {taxonomy.categories.map((cat) => {
+    const entries = matter[cat.key] || [];
+    return (
+      <div class="matter-group" style="margin-top:14px">
+        <h3>{cat.label}</h3>
+        {notes[cat.key] && (
+          <p style="font-size:12px;color:var(--faint);margin:0 0 8px">{notes[cat.key]}</p>
+        )}
+        {entries.length > 0 ? (
+          entries.map((o) => (
+            <div class="opinion">
+              <p class="cite">
+                {o.public_url ? <a href={o.public_url} rel="noopener">{o.caption}</a> : o.caption}
+                {o.citation && `, ${o.citation}`}
+              </p>
+              <div class="src">{[o.court, o.docket, o.decided].filter(Boolean).join(" · ")}</div>
+              {o.headnote && <p class="summary">{o.headnote}</p>}
+            </div>
+          ))
+        ) : (
+          <div class="empty">
+            <strong>No verified entries yet</strong>
+            Verified opinions in this category will appear here as they are curated and reviewed.
+          </div>
+        )}
+      </div>
+    );
+  })}
+</section>
+
+<!-- NEWS -->
+<section class="block">
+  <h2>In the News</h2>
+  {news.length > 0 ? (
+    news.map((n) => (
+      <div class="opinion">
+        <p class="cite">
+          {n.url ? <a href={n.url} rel="noopener">{n.title}</a> : n.title}
+        </p>
+        <div class="src">{[n.outlet, n.date].filter(Boolean).join(" · ")}</div>
+      </div>
+    ))
+  ) : (
+    <div class="empty">
+      <strong>No items yet</strong>
+      Links to outside press coverage that mentions this judge will appear here. The reader decides
+      whether to read further.
+    </div>
+  )}
+</section>

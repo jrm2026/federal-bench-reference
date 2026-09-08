@@ -35,6 +35,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: "22"
+          cache: "npm"
 
       - uses: actions/setup-python@v7
         with:
@@ -54,6 +55,16 @@ jobs:
       # moment someone tries to publish.
       - name: Sign-off ledger
         run: node scripts/sign-record.mjs --verify-all
+
+      - name: Install
+        run: npm ci
+
+      # The gate above decides whether the content may publish. This decides
+      # whether it can be rendered at all. A scaffold that throws is as
+      # effective at stopping a launch as a record that fails review, and it is
+      # cheaper to find here than in a deploy.
+      - name: Build site
+        run: npx astro build
 
       # scripts/check-links.mjs is deliberately absent. It needs open network
       # access to the courts, GovInfo and the FJC, and docs/HANDOFF.md puts it on

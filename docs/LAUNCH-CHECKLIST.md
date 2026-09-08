@@ -16,11 +16,19 @@ That is the point: the site is technically ready long before it is ready.
 
 ## Cloudflare
 
-- [ ] Pages project connected to the repository, building from `main`.
-- [ ] Build command and output directory match the Astro config.
-- [ ] Deploy to the `pages.dev` subdomain only. No custom domain yet.
+This is a Workers project, not Pages. Pages was the original target and the
+difference is not cosmetic: `_headers` and `_redirects` are supported on both,
+but Workers allows only relative URLs in `_redirects` and rejects the entire
+file over one absolute rule.
+
+- [ ] Workers Builds connected to the repository, production branch `main`.
+- [ ] Build command `npm run build`. Deploy command `npx wrangler deploy`.
+      The build command runs the review gate first and exit 1 blocks it; with
+      the field empty there is no `dist/` and the deploy fails outright.
+- [ ] Deploy to the `workers.dev` subdomain only. No custom domain yet.
 - [ ] Cloudflare Access in front of the preview, limited to Jay and anyone
-      reviewing. A preview URL is not a secret.
+      reviewing. A preview URL is not a secret, and non-production branch builds
+      mint one per branch.
 - [ ] Confirm `public/_headers` is being served: a request to any page returns
       `X-Robots-Tag: noindex`. Verify this before anything else.
 
@@ -71,7 +79,16 @@ None of these is Claude's to make.
 
 - [ ] Custom domain attached in Cloudflare, DNS cut over.
 - [ ] `public/robots.launch.txt` moved into place as `robots.txt`.
+- [ ] `site` set in `astro.config.mjs` and `@astrojs/sitemap` added. It is unset
+      on purpose until a domain exists; a canonical URL pointing at a host
+      nobody owns is worse than no sitemap.
 - [ ] Sitemap generating and referenced.
+- [ ] Build with `INCLUDE_DRAFTS=0`. Drafts are rendered by default because the
+      sign-off procedure requires reading the page rather than the JSON, and
+      today every record is a draft. They carry their own noindex tag and
+      `robots.launch.txt` disallows `/drafts/`, but robots is a request, not a
+      lock: once the site is reachable without Access, an unreviewed page about a
+      sitting judge should not be on it at all.
 - [ ] **Remove the `X-Robots-Tag` line from `public/_headers`.**
 
 That last line is the whole gate. Until it is deleted the site is private no

@@ -1,0 +1,193 @@
+---
+/**
+ * The approved design, carried over from templates/judge-page.html.
+ *
+ * The CSS below is that file's stylesheet unchanged. Additions for the roster,
+ * the prose pages and the draft banner are grouped at the end under their own
+ * comment so the approved rules stay legible as a block. Do not reorder them
+ * into the original.
+ */
+import { site, firm, curator, advertisingBlockSettled } from "../config/site.js";
+
+const { title, draft = false, noindex = false } = Astro.props;
+
+const fullTitle = title ? `${title} — ${site.name}` : site.name;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{fullTitle}</title>
+{/* Drafts carry their own directive rather than trusting the edge header. The
+    launch switch lives in public/_headers and removing it is a deliberate act;
+    an unreviewed page should stay out of an index even if someone removes it. */}
+{(draft || noindex) && <meta name="robots" content="noindex, nofollow, noarchive" />}
+<style is:global>
+  :root{
+    --page:#f4f5f7;
+    --card:#ffffff;
+    --ink:#1c2530;
+    --muted:#5c6672;
+    --faint:#8a929c;
+    --line:#dce0e6;
+    --accent:#1f3a5f;
+    --advert:#7a5a12;
+    --advert-bg:#fbf4e2;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+  /* attorney advertising banner — above the fold */
+  .advert-banner{background:var(--advert-bg);border-bottom:1px solid #ecdcae;color:var(--advert);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 16px;font-weight:600}
+
+  /* site header */
+  .siteheader{background:var(--accent);color:#fff}
+  .siteheader .inner{max-width:900px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .sitemark{font-family:var(--serif);font-size:19px;letter-spacing:.02em;color:#fff;text-decoration:none}
+  .sitenav{display:flex;gap:22px}
+  .sitenav a{color:#c8d3e2;text-decoration:none;font-size:13px;letter-spacing:.03em}
+  .sitenav a:hover{color:#fff}
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px}
+  .breadcrumb{font-size:12.5px;color:var(--muted);padding:18px 0 0}
+  .breadcrumb a{color:var(--accent);text-decoration:none}
+
+  /* judge header */
+  .judgehead{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px 30px;margin:16px 0 22px}
+  .judgehead h1{font-family:var(--serif);font-size:29px;margin:0 0 6px;letter-spacing:-.01em}
+  .judgehead .role{font-size:14.5px;color:var(--muted)}
+  .judgehead .vic{display:inline-block;margin-top:12px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:4px 10px}
+
+  /* sections */
+  section.block{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px 30px;margin-bottom:20px}
+  section.block h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .bio p{margin:0 0 12px;font-size:15.5px}
+  .bio p:last-child{margin-bottom:0}
+  dl.facts{margin:0;display:grid;grid-template-columns:150px 1fr;gap:8px 18px;font-size:14.5px}
+  dl.facts dt{color:var(--faint);text-transform:uppercase;font-size:11px;letter-spacing:.08em;padding-top:3px}
+  dl.facts dd{margin:0}
+
+  /* opinion entries */
+  .opinion{padding:16px 0;border-bottom:1px solid var(--line)}
+  .opinion:first-of-type{padding-top:0}
+  .opinion:last-child{border-bottom:none;padding-bottom:0}
+  .opinion .cite{font-family:var(--serif);font-size:16px;margin:0 0 4px}
+  .opinion .cite a{color:var(--accent);text-decoration:none}
+  .opinion .cite a:hover{text-decoration:underline}
+  .opinion .src{font-size:11.5px;color:var(--faint);letter-spacing:.03em;margin-bottom:8px}
+  .opinion .summary{font-size:14.5px;color:#2b333d;margin:0}
+
+  /* empty states */
+  .empty{border:1px dashed var(--line);border-radius:6px;padding:22px;text-align:center;color:var(--faint);font-size:13.5px;background:#fafbfc}
+  .empty strong{display:block;color:var(--muted);font-size:14px;margin-bottom:4px;font-weight:600}
+
+  .matter-group{margin-bottom:6px}
+  .matter-group h3{font-size:13px;color:var(--ink);margin:0 0 6px;font-weight:600}
+
+  /* footer / attribution */
+  footer{background:#eceef1;border-top:1px solid var(--line);margin-top:14px}
+  footer .inner{max-width:900px;margin:0 auto;padding:26px 28px 34px}
+  .advert-block{font-size:12.5px;color:var(--muted);line-height:1.65;max-width:680px}
+  .advert-block .label{color:var(--advert);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px}
+  .advert-block b{color:var(--ink)}
+  .footlinks{margin-top:16px;display:flex;gap:20px;flex-wrap:wrap}
+  .footlinks a{font-size:12.5px;color:var(--accent);text-decoration:none}
+
+  @media(max-width:640px){
+    .sitenav{display:none}
+    dl.facts{grid-template-columns:1fr;gap:2px}
+    dl.facts dt{padding-top:10px}
+  }
+
+  /* ---- additions: roster, prose pages, draft marking ------------------- */
+
+  .draftbar{background:#5b1f1f;color:#ffd9d9;font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:8px 16px;font-weight:600}
+  .draftnote{border:1px solid #e5c2c2;background:#fdf4f4;border-radius:6px;padding:14px 18px;margin:16px 0 0;font-size:13px;color:#7a2b2b}
+  .draftnote b{display:block;margin-bottom:3px}
+
+  .pagehead{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px 30px;margin:16px 0 22px}
+  .pagehead h1{font-family:var(--serif);font-size:29px;margin:0 0 6px;letter-spacing:-.01em}
+  .pagehead .role{font-size:14.5px;color:var(--muted)}
+
+  .prose p{font-size:15.5px;margin:0 0 12px;max-width:680px}
+  .prose p:last-child{margin-bottom:0}
+  .prose ul{font-size:15px;margin:0 0 12px;padding-left:20px;max-width:680px}
+  .prose li{margin-bottom:6px}
+  .prose h3{font-size:13px;color:var(--ink);margin:20px 0 8px;font-weight:600}
+
+  .roster{list-style:none;margin:0;padding:0}
+  .roster li{padding:11px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .roster li:last-child{border-bottom:none}
+  .roster .name{font-family:var(--serif);font-size:16px}
+  .roster .name a{color:var(--accent);text-decoration:none}
+  .roster .name a:hover{text-decoration:underline}
+  .roster .office{font-size:12.5px;color:var(--muted);text-align:right}
+
+  .unset{color:#a33;font-style:italic}
+</style>
+</head>
+<body>
+
+{draft && (
+  <div class="draftbar">Draft — not reviewed, not published</div>
+)}
+<div class="advert-banner">Attorney Advertising · An independent reference — not affiliated with or endorsed by any court or judge</div>
+
+<header class="siteheader">
+  <div class="inner">
+    <a href="/" class="sitemark">{site.name}</a>
+    <nav class="sitenav">
+      <a href="/judges/">Judges</a>
+      <a href="/topics/">Topics</a>
+      <a href="/about/">About</a>
+      <a href="/attorney-advertising/">Attorney Advertising</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <slot name="breadcrumb" />
+  <slot />
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="advert-block">
+      <span class="label">Attorney Advertising.</span>{" "}
+      {advertisingBlockSettled ? (
+        <>
+          This independent reference is maintained by <b>{curator.name}</b> and sponsored by{" "}
+          <b>{firm.name}</b>, {firm.address}, {firm.phone}. It is not affiliated with, endorsed by,
+          or authorized by the United States courts or any judge. Content is compiled from public
+          sources; opinion summaries are written from the public opinions and are provided for
+          general information, not as legal advice. Prior results do not guarantee a similar
+          outcome. © {site.copyright_year}.
+        </>
+      ) : (
+        <>
+          This independent reference is not affiliated with, endorsed by, or authorized by the
+          United States courts or any judge. Content is compiled from public sources; opinion
+          summaries are written from the public opinions and are provided for general information,
+          not as legal advice. Prior results do not guarantee a similar outcome. ©{" "}
+          {site.copyright_year}.{" "}
+          <span class="unset">
+            Sponsor and curator identification is not yet settled; no page is published until it is.
+          </span>
+        </>
+      )}
+    </div>
+    <div class="footlinks">
+      <a href="/about/">About &amp; Methodology</a>
+      <a href="/attorney-advertising/">Attorney Advertising Notice</a>
+      <a href="/about/#sources">Sources</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

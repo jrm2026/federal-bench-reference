@@ -1,0 +1,51 @@
+---
+import Base from "../../layouts/Base.astro";
+import { publishedJudges, byVicinage, includeDrafts, draftJudges } from "../../lib/content.js";
+import { assertAdvertisingBlockSettled } from "../../config/site.js";
+
+// Publishing a judge page without a settled attorney advertising block is a
+// compliance failure. Stop the build rather than ship it.
+assertAdvertisingBlockSettled(publishedJudges.length);
+
+const groups = byVicinage(publishedJudges);
+---
+
+<Base title="Judges">
+  <div class="breadcrumb" slot="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Judges</div>
+
+  <div class="pagehead">
+    <h1>Judges</h1>
+    <div class="role">United States District Court for the District of New Jersey</div>
+  </div>
+
+  {publishedJudges.length === 0 ? (
+    <section class="block">
+      <div class="empty">
+        <strong>No judge pages are published yet</strong>
+        A page appears here when its record clears the review gate: a biography checked against the
+        primary source, a named reviewer, and a curator sign-off bound to a hash of the content.
+        Until then there is nothing here to read, which is the correct state rather than a fault.
+      </div>
+      {includeDrafts && draftJudges.length > 0 && (
+        <p style="font-size:12.5px;color:var(--faint);margin:16px 0 0;text-align:center">
+          {draftJudges.length} record{draftJudges.length === 1 ? "" : "s"} exist in draft for
+          review. <a href="/drafts/">See the draft index</a>.
+        </p>
+      )}
+    </section>
+  ) : (
+    groups.map(([vicinage, list]) => (
+      <section class="block">
+        <h2>{vicinage} Vicinage</h2>
+        <ul class="roster">
+          {list.map((j) => (
+            <li>
+              <span class="name"><a href={`/judges/${j.jurist_id}/`}>{j.canonical_name}</a></span>
+              <span class="office">{j.office}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  )}
+</Base>

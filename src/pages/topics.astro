@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import { taxonomy, publishedJudges } from "../lib/content.js";
+
+// Counts come from published records only. A topic page that counted drafts
+// would advertise entries a reader cannot reach.
+const counts = Object.fromEntries(
+  taxonomy.categories.map((c) => [
+    c.key,
+    publishedJudges.reduce((n, j) => n + ((j.matter_relevant_opinions || {})[c.key] || []).length, 0),
+  ]),
+);
+const total = Object.values(counts).reduce((a, b) => a + b, 0);
+---
+
+<Base title="Topics">
+  <div class="breadcrumb" slot="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Topics</div>
+
+  <div class="pagehead">
+    <h1>Matter Types</h1>
+    <div class="role">The six categories this reference covers</div>
+  </div>
+
+  <section class="block">
+    <div class="prose">
+      <p>
+        Opinions are grouped by the kind of matter a commercial defendant is likely to be living
+        through. Within a category, entries are selected by procedural posture and subject, and a
+        category published without summaries is listed exhaustively — a partial unsummarized list
+        still implies a choice, and a complete one does not.
+      </p>
+    </div>
+    <ul class="roster" style="margin-top:18px">
+      {taxonomy.categories.map((c) => (
+        <li>
+          <span class="name">{c.label}</span>
+          <span class="office">{counts[c.key] > 0 ? `${counts[c.key]} published` : "none published yet"}</span>
+        </li>
+      ))}
+    </ul>
+    {total === 0 && (
+      <div class="empty" style="margin-top:18px">
+        <strong>No entries are published yet</strong>
+        Categories appear on a judge's page as records clear review.
+      </div>
+    )}
+  </section>
+
+  <section class="block">
+    <h2>Procedural postures</h2>
+    <div class="prose">
+      <p>Within those categories, selection favours the postures this reader meets first.</p>
+      <ul>
+        {taxonomy.postures
+          .filter((p) => p.key !== "institutional")
+          .sort((a, b) => a.priority - b.priority)
+          .map((p) => (
+            <li>{p.label}{p.note ? ` — ${p.note}` : ""}</li>
+          ))}
+      </ul>
+    </div>
+  </section>
+</Base>
