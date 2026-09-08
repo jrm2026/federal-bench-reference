@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import { taxonomy } from "../lib/content.js";
+
+// This page is generated from data/taxonomy.json rather than written beside it.
+// taxonomy.neutrality.publication_requirement asks for the selection criteria to
+// be published so a reader can verify the neutrality; generating the page from
+// the same file the gate enforces is the only way the published criteria and the
+// enforced criteria cannot drift apart.
+const { audience, neutrality, exclusions, tiers, display_modes } = taxonomy;
+---
+
+<Base title="About & Methodology">
+  <div class="breadcrumb" slot="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; About</div>
+
+  <div class="pagehead">
+    <h1>About &amp; Methodology</h1>
+    <div class="role">How entries are selected, and what is refused</div>
+  </div>
+
+  <section class="block">
+    <h2>Who this is for</h2>
+    <div class="prose">
+      <p>{audience.description}</p>
+      <p><b>Horizon.</b> {audience.horizon}</p>
+      <p>{audience.implication}</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>How opinions are selected</h2>
+    <div class="prose">
+      <p>Entries are selected by:</p>
+      <ul>{neutrality.select_by.map((s) => <li>{s}</li>)}</ul>
+      <p>They are never selected by:</p>
+      <ul>{neutrality.never_select_by.map((s) => <li>{s}</li>)}</ul>
+      <h3>What this reference will not publish</h3>
+      <ul>{neutrality.forbidden_output.map((s) => <li>{s}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>What is out of scope</h2>
+    <div class="prose">
+      <ul>{exclusions.map((s) => <li>{s}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Two tiers of entry</h2>
+    <div class="prose">
+      <h3>Significant opinions</h3>
+      <p>{tiers.significant.purpose} {tiers.significant.rule}</p>
+      <h3>Opinions by matter type</h3>
+      <p>{tiers.matter.purpose} {tiers.matter.rule}</p>
+      <h3>Display modes</h3>
+      <p><b>Citation only.</b> {display_modes["citation-only"].purpose} {display_modes["citation-only"].note}</p>
+      <p><b>Headnote.</b> {display_modes.headnote.purpose}</p>
+    </div>
+  </section>
+
+  <section class="block" id="sources">
+    <h2>Sources</h2>
+    <div class="prose">
+      <p>
+        Biographies come from the Federal Judicial Center's Biographical Directory of Article III
+        Judges and from the court's own profiles and Notices to the Bar. Opinions link to GovInfo,
+        CourtListener and RECAP, Justia, uscourts.gov, the Third Circuit, the District of New
+        Jersey, or the Federal Judicial Center. Links to advocacy, party, commercial-AI and press
+        hosts are refused by the build.
+      </p>
+      <p>
+        No content is drawn from a subscription research service. Nothing publishes without a named
+        reviewer, a review date, and a curator sign-off bound to a hash of the content reviewed;
+        editing a signed record lapses the sign-off and blocks the build until a human signs again.
+      </p>
+    </div>
+  </section>
+</Base>

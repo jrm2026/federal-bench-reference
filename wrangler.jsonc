@@ -1,25 +1,26 @@
 {
   // Cloudflare Workers static assets.
   //
-  // The Workers Builds project runs `npx wrangler deploy` with no build step.
-  // Without this file wrangler has nothing to read, so it tries to infer the
-  // project shape, looks for a directory containing html, css or js, finds none
-  // and fails. That is the whole of the first failure.
+  // The assets root is ./dist, the Astro build output. public/ is Astro's
+  // static passthrough directory, so _headers, _redirects and both robots files
+  // are copied into dist/ during the build and are read from there — Workers
+  // reads them from the root of the assets directory, which is why the site
+  // will not serve its noindex header if this points anywhere else.
   //
-  // ./public is the assets root because Workers reads _headers and _redirects
-  // from the root of the assets directory, and that is where they live. It also
-  // decides what is published: data/ sits outside the assets root, so the
-  // forty-three judge records are uploaded to GitHub but never served.
+  // The build must run before this deploys. Set the Workers Builds project's
+  // build command to `npm run build`, which runs the review gate first and
+  // blocks on exit 1, then builds. A deploy with no build step will fail with
+  // "Could not detect a directory containing static files" because dist/ is
+  // gitignored and will not exist.
   //
-  // When the Astro scaffold lands, Astro copies public/ into its own output.
-  // Point "directory" at ./dist then, set the project's build command to the
-  // Astro build, and delete public/index.html — that file exists only so there
-  // is a page to verify the edge headers against before there is a site.
+  // data/ sits outside the assets root, so the forty-three judge records are
+  // versioned on GitHub and never served from the edge. Only what Astro renders
+  // into dist/ is published.
 
   "name": "federal-bench-reference",
   "compatibility_date": "2026-09-08",
 
   "assets": {
-    "directory": "./public"
+    "directory": "./dist"
   }
 }

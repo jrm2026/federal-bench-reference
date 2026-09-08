@@ -1,7 +1,17 @@
-# Federal Bench Reference — corrected content layer (D.N.J.)
+# Federal Bench Reference — District of New Jersey
 
-Drop-in replacement for the content layer. Nothing here is a design change.
+A static site generated from a content layer that no page escapes without
+clearing review. `data/` holds the facts, `scripts/validate-content.mjs` decides
+whether they are fit to publish, and `src/` renders only what has cleared.
 
+    src/pages/                the routes; judge pages under /judges/ and
+                              unreviewed records under /drafts/judges/
+    src/components/JudgeBody.astro  the judge page, from templates/judge-page.html
+    src/layouts/Base.astro    the approved design's shell and stylesheet
+    src/lib/content.js        loads data/ and splits published from draft
+    src/config/site.js        firm and curator blocks; unset, and guarded
+    astro.config.mjs          static output to dist/
+    wrangler.jsonc            Workers static assets, serving dist/
     data/judges/*.json        43 jurist records, structural facts populated,
                               narrative facts null and unverified
     data/roster-manifest.json counts and the divergences from the prior report
@@ -22,12 +32,33 @@ Drop-in replacement for the content layer. Nothing here is a design change.
     public/_redirects         secondary domain to primary
     templates/judge-page.html the approved design, stripped of all specimen facts
 
+## Build the site
+
+    npm install
+    npm run build          # runs the gate, then astro build; exit 1 blocks
+    npm run dev            # local preview on :4321
+
+`npm run build` is the Workers Builds build command. It writes `dist/`, which is
+what `wrangler.jsonc` serves. `public/` is Astro's static passthrough directory,
+so `_headers`, `_redirects` and both robots files are copied into `dist/` and
+read from its root, which is where Workers looks for them.
+
+A record renders under `/judges/` when `publish` is true and under
+`/drafts/judges/` otherwise — the same flag the gate keys on, so the gate and
+the site cannot disagree about what is published. Drafts exist because
+`data/signoffs.json` asks the curator to read the rendered page rather than the
+JSON before signing. They carry their own `noindex` tag, `robots.launch.txt`
+disallows `/drafts/`, and `INCLUDE_DRAFTS=0` drops them from the build.
+
+`data/` sits outside the assets root. The judge records are versioned here and
+never served; only what Astro renders reaches the edge.
+
 ## Run the gate
 
     node scripts/validate-content.mjs
     node scripts/validate-content.mjs --stale-days 30
 
-Wire it into the build and into CI. Exit 1 blocks.
+Wire it into the build and into CI. Exit 1 blocks. `npm run build` already does.
 
 ## Sign-off
 

@@ -1,0 +1,20 @@
+{
+  "name": "federal-bench-reference",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Federal Bench Reference — District of New Jersey. Static site generated from the content layer in data/.",
+  "scripts": {
+    "gate": "node scripts/validate-content.mjs",
+    "drift": "python3 scripts/build-roster.py --check",
+    "signoffs": "node scripts/sign-record.mjs --verify-all",
+    "build": "npm run gate && astro build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "check-links": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "astro": "^7.3.2",
+    "wrangler": "^4.130.0"
+  }
+}

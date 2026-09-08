@@ -1,0 +1,45 @@
+---
+import Base from "../layouts/Base.astro";
+import { firm, curator, advertisingBlockSettled } from "../config/site.js";
+---
+
+<Base title="Attorney Advertising Notice">
+  <div class="breadcrumb" slot="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Attorney Advertising</div>
+
+  <div class="pagehead">
+    <h1>Attorney Advertising Notice</h1>
+    <div class="role">Who maintains this reference, and what it is not</div>
+  </div>
+
+  <section class="block">
+    <div class="prose">
+      {advertisingBlockSettled ? (
+        <p>
+          This independent reference is maintained by <b>{curator.name}</b> and sponsored by{" "}
+          <b>{firm.name}</b>, {firm.address}, {firm.phone}.
+        </p>
+      ) : (
+        <div class="empty">
+          <strong>Sponsor and curator identification is not yet settled</strong>
+          The firm and curator blocks are open decisions. No judge page is published until they are
+          settled; the build refuses to publish one otherwise.
+        </div>
+      )}
+      <p>
+        This reference is not affiliated with, endorsed by, or authorized by the United States
+        courts or any judge. Nothing here is legal advice, and reading it creates no
+        attorney-client relationship.
+      </p>
+      <p>
+        Content is compiled from public sources. Opinion summaries are written from the public
+        opinions themselves and are provided for general information. Prior results do not
+        guarantee a similar outcome.
+      </p>
+      <p>
+        This reference publishes no prediction of how any judge will rule, and no tally, grant rate
+        or comparable statistic. Those are refused by the build, not merely avoided in practice.
+        The <a href="/about/">methodology</a> sets out the selection criteria in full.
+      </p>
+    </div>
+  </section>
+</Base>

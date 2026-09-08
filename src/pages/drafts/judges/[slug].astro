@@ -1,0 +1,22 @@
+---
+import Base from "../../../layouts/Base.astro";
+import JudgeBody from "../../../components/JudgeBody.astro";
+import { draftJudges, taxonomy, includeDrafts } from "../../../lib/content.js";
+
+export function getStaticPaths() {
+  if (!includeDrafts) return [];
+  return draftJudges.map((judge) => ({
+    params: { slug: judge.jurist_id },
+    props: { judge },
+  }));
+}
+
+const { judge } = Astro.props;
+---
+
+<Base title={`${judge.canonical_name} (draft)`} draft={true}>
+  <div class="breadcrumb" slot="breadcrumb">
+    <a href="/drafts/">Drafts</a> &nbsp;›&nbsp; {judge.vicinage} Vicinage &nbsp;›&nbsp; {judge.canonical_name}
+  </div>
+  <JudgeBody judge={judge} taxonomy={taxonomy} draft={true} />
+</Base>

@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+import { publishedJudges, draftJudges, includeDrafts, rosterManifest, taxonomy } from "../lib/content.js";
+---
+
+<Base title={null}>
+  <div class="pagehead">
+    <h1>Federal Bench Reference</h1>
+    <div class="role">United States District Court for the District of New Jersey</div>
+  </div>
+
+  <section class="block">
+    <h2>What this is</h2>
+    <div class="prose">
+      <p>
+        A reference to the judges of the District of New Jersey, assembled for a particular reader:
+        an out-of-state commercial defendant, recently served, not yet appeared through counsel, and
+        three to six weeks into a case.
+      </p>
+      <p>
+        Every page carries the court's own practice information — judicial preferences, standing
+        orders, motion days, local rules — because that material is complete for every judge on day
+        one and is often the more useful content. Opinions are selected by posture and subject
+        matter, never by outcome. The <a href="/about/">methodology</a> is published so a reader can
+        check the neutrality rather than take it on faith.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Status</h2>
+    {publishedJudges.length === 0 ? (
+      <div class="empty">
+        <strong>Nothing is published yet</strong>
+        {rosterManifest.counts?.records_total} records exist. None has cleared the review gate, so
+        no judge page is live. That is the correct state at this stage, not a fault.
+      </div>
+    ) : (
+      <div class="prose">
+        <p>
+          {publishedJudges.length} of {rosterManifest.counts?.records_total} records have cleared
+          review and are published. <a href="/judges/">See the judges</a>.
+        </p>
+      </div>
+    )}
+    {includeDrafts && draftJudges.length > 0 && (
+      <p style="font-size:12.5px;color:var(--faint);margin:16px 0 0">
+        {draftJudges.length} record{draftJudges.length === 1 ? "" : "s"} are rendered as{" "}
+        <a href="/drafts/">drafts</a> for curator review. Drafts are not published and are excluded
+        from search indexing.
+      </p>
+    )}
+  </section>
+
+  <section class="block">
+    <h2>Matter types</h2>
+    <ul class="roster">
+      {taxonomy.categories.map((c) => (
+        <li>
+          <span class="name"><a href="/topics/">{c.label}</a></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

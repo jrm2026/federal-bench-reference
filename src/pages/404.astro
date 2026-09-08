@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page not found" noindex={true}>
+  <div class="pagehead">
+    <h1>Page not found</h1>
+    <div class="role">404</div>
+  </div>
+
+  <section class="block">
+    <div class="prose">
+      <p>
+        Judge pages are addressed by slug, and a slug changes when a name is corrected. If you
+        followed a link from something printed or mailed, the entry may have moved.
+      </p>
+      <div class="footlinks">
+        <a href="/judges/">Judges</a>
+        <a href="/topics/">Topics</a>
+        <a href="/about/">About &amp; Methodology</a>
+      </div>
+    </div>
+  </section>
+</Base>
