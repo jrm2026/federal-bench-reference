@@ -62,8 +62,8 @@
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
   "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
+  "authorship_source": "appellate_cover_page",
+  "authored_by": "Susan D. Wigenton",
   "decision_ecf_number": null,
   "decision_date": null
 }

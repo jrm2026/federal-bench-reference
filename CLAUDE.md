@@ -77,6 +77,14 @@ alone collides on this corpus — *United States v. Jackson* appears on two judg
 pages, *Veterans Guardian v. Platkin* on two more. A matcher keyed on caption
 will silently consume the wrong record. This has already happened once.
 
+Both collisions turn out to be one case before two judges, which is why the
+district docket is part of identity but does not by itself distinguish the
+entries. *Jackson* was tried and sentenced before Hayden, then reassigned to
+Wigenton for resentencing after three sentencing appeals: one criminal docket,
+two decisions, two pages, both correct. *Veterans Guardian* is 3:23-cv-20660 with
+Shipp presiding and Day referred. Resolving the docket for one entry resolves it
+for its twin; deduplicating on the docket would delete a real page.
+
 **A district docket and an appellate docket are different numbers for the same
 litigation, and only one of them identifies a district decision.** They lived in
 a single `docket` field until 14 September 2026, and a Third Circuit number

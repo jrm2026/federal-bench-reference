@@ -164,7 +164,8 @@
     "case_name_below": null,
     "judge_confirmed": null,
     "judge_conflict": "The appeal is United States v. Carolyn Jackson, 3d Cir. Nos. 16-1200 and 16-1201, decided 6 July 2017, panel McKee, Cowen and Fuentes. The district criminal docket is not in RECAP under that caption \u2014 criminal dockets are thinly covered. Take the docket and the district judge from the cover page of 161200p.pdf, which the record already links.",
-    "source": "CourtListener opinions search, cite 862 F.3d 365"
+    "source": "CourtListener opinions search, cite 862 F.3d 365",
+    "related_entry": "Same prosecution as the other United States v. Jackson entry. Carolyn and John Jackson were tried and sentenced before Judge Hayden (3d Cir. Nos. 16-1200, 16-1201), and the case was reassigned to Judge Wigenton for resentencing after three sentencing appeals (3d Cir. No. 23-2492 et al.). One district criminal docket, two judges, two decisions, both entries legitimate. Resolving the docket for either resolves it for both. This is the caption collision CLAUDE.md warns about, and the mechanism is reassignment."
   },
   "susan-d-wigenton--united-states-v-baroni-and-kelly-supreme-court-r": {
     "district_docket": null,
@@ -182,5 +183,9 @@
     "judge_confirmed": null,
     "judge_conflict": "The appeal is United States v. Angelica Gwinnett, 3d Cir. No. 06-1766, decided 26 April 2007, panel Sloviter, Ambro and Brody. The district criminal docket predates RECAP coverage. Take it from the cover page of 061766p.pdf.",
     "source": "CourtListener opinions search, cite 483 F.3d 200"
+  },
+  "susan-d-wigenton--united-states-v-jackson": {
+    "district_docket": null,
+    "related_entry": "Same prosecution as the other United States v. Jackson entry. Carolyn and John Jackson were tried and sentenced before Judge Hayden (3d Cir. Nos. 16-1200, 16-1201), and the case was reassigned to Judge Wigenton for resentencing after three sentencing appeals (3d Cir. No. 23-2492 et al.). One district criminal docket, two judges, two decisions, both entries legitimate. Resolving the docket for either resolves it for both. This is the caption collision CLAUDE.md warns about, and the mechanism is reassignment."
   }
 }
