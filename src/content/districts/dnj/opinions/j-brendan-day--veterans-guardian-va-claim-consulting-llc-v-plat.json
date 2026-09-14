@@ -1,0 +1,63 @@
+{
+  "id": "j-brendan-day--veterans-guardian-va-claim-consulting-llc-v-plat",
+  "district": "dnj",
+  "judge_slug": "j-brendan-day",
+  "judge_name": "J. Brendan Day",
+  "judge_office": "magistrate",
+  "caption": "Veterans Guardian VA Claim Consulting, LLC v. Platkin",
+  "citation_line": "Veterans Guardian VA Claim Consulting, LLC v. Platkin, No. 3:23-cv-20660, ECF No. 87 (D.N.J. Aug. 18, 2026)",
+  "docket": "3:23-cv-20660",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Held that First Amendment associational privilege can protect internal legislative analysis and advocacy strategy in discovery, but ordered production after an in camera review because conclusory assertions did not show an objectively reasonable probability of chill.",
+  "qualification_rationale": "A current and doctrinally substantial application of associational privilege outside the familiar membership-list setting, with direct guidance on the evidentiary burden.",
+  "appellate_posture_note": "Non-dispositive discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://docs.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2023cv20660/533378/87",
+  "links": [
+    {
+      "anchor": "Justia filing",
+      "url": "https://docs.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2023cv20660/533378/87"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 52,
+  "components": {
+    "app": 0,
+    "doc": 19,
+    "prac": 18,
+    "end": 7,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "privilege-work-product"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "First Amendment Associational Privilege",
+  "screen_score": 66,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 19,
+    "disposition": 8,
+    "doctrine": 12,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

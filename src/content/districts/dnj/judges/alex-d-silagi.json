@@ -1,0 +1,47 @@
+{
+  "slug": "alex-d-silagi",
+  "name": "Alex D. Silagi",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Newark",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Sworn September 1, 2026 through September 13, 2026. Selected decisions: 0.",
+  "record_status": "developing",
+  "record_status_note": "No qualifying decision identified. The judge was sworn twelve days before the cutoff.",
+  "declared_selected_count": 0,
+  "actual_selected_count": 0,
+  "link_from_mail": false,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Silagi earned a B.A. from Rutgers University (2010) and a J.D. from Seton Hall University School of Law (2014). He practiced at Carter Ledyard and Proskauer Rose, clerked for District Judge Madeline Cox Arleo and Third Circuit Judge Morton I. Greenberg, and served as an Assistant U.S. Attorney in New Jersey from 2020 to 2026, including as deputy chief of the Civil Division.",
+    "education_sentences": [
+      "Silagi earned a B.A. from Rutgers University (2010) and a J.D. from Seton Hall University School of Law (2014)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.njd.uscourts.gov/content/alex-d-silagi",
+      "https://www.njd.uscourts.gov/sites/njd/files/NoticetotheBarADS.pdf"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "Official appointment notice"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [
+    {
+      "text": "“Selective Minimalism: The Judicial Philosophy of Chief Justice John Roberts,” Seton Hall Law student scholarship (2014). Open publication",
+      "url": "https://scholarship.shu.edu/student_scholarship/572/"
+    }
+  ],
+  "role_line": "U.S. Magistrate Judge | Sworn September 1, 2026 | Newark"
+}

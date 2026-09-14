@@ -1,0 +1,61 @@
+{
+  "id": "brian-r-martinotti--brian-trematore-plumbing-heating-inc-v-sheet-met",
+  "district": "dnj",
+  "judge_slug": "brian-r-martinotti",
+  "judge_name": "Brian R. Martinotti",
+  "judge_office": "district",
+  "caption": "Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25",
+  "citation_line": "Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25, No. 24-1298 (3d Cir. Aug. 1, 2025)",
+  "docket": "24-1298",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Martinotti held that the contractor had not effectively repudiated its collective-bargaining agreement and compelled arbitration of the disputed grievances.",
+  "qualification_rationale": "The case addresses the intersection of § 9(a) collective-bargaining relationships, construction-industry labor agreements and the NLRB’s one-employee-unit doctrine—an issue on which the appellate panel divided in part.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the attempted repudiation was ineffective and that the CBA remained in effect.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241298p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/241298p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 61,
+  "components": {
+    "app": 22,
+    "doc": 15,
+    "prac": 12,
+    "end": 4,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "labor-cba",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Labor Law and Collective Bargaining",
+  "screen_score": 77,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 17,
+    "disposition": 16,
+    "doctrine": 8,
+    "treatment": 9,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

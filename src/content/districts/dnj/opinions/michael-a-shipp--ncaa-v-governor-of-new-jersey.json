@@ -1,0 +1,61 @@
+{
+  "id": "michael-a-shipp--ncaa-v-governor-of-new-jersey",
+  "district": "dnj",
+  "judge_slug": "michael-a-shipp",
+  "judge_name": "Michael A. Shipp",
+  "judge_office": "district",
+  "caption": "NCAA v. Governor of New Jersey",
+  "citation_line": "NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), and 61 F. Supp. 3d 488 (D.N.J. 2014); reversed in Murphy v. NCAA, 584 U.S. 453 (2018)",
+  "docket": null,
+  "reporter_cite": "926 F. Supp. 2d 551",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Shipp enjoined New Jersey’s efforts to authorize sports wagering under the federal Professional and Amateur Sports Protection Act (PASPA), rejecting the State’s anti-commandeering challenge.",
+  "qualification_rationale": "The litigation was nationally consequential: it determined whether states could legalize sports betting and produced a major Supreme Court federalism decision.",
+  "appellate_posture_note": "The Third Circuit affirmed, including en banc review of the 2014-law dispute. The Supreme Court reversed in Murphy, holding that PASPA’s prohibition on state authorization of sports gambling violated the anti-commandeering rule and that the offending provisions were not severable.",
+  "headnote_status": "published",
+  "public_url": "https://www.supremecourt.gov/opinions/17pdf/16-476_dbfi.pdf",
+  "links": [
+    {
+      "anchor": "Supreme Court opinion",
+      "url": "https://www.supremecourt.gov/opinions/17pdf/16-476_dbfi.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 100,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 15,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "gaming-wagering",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federalism and Sports Wagering",
+  "screen_score": 94,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

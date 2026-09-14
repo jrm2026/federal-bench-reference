@@ -13,9 +13,9 @@
   // "Could not detect a directory containing static files" because dist/ is
   // gitignored and will not exist.
   //
-  // data/ sits outside the assets root, so the forty-three judge records are
-  // versioned on GitHub and never served from the edge. Only what Astro renders
-  // into dist/ is published.
+  // src/content/ sits outside the assets root, so the judge and opinion records
+  // are versioned on GitHub and never served from the edge. Only what Astro
+  // renders into dist/ is published.
 
   "name": "federal-bench-reference",
   "compatibility_date": "2026-09-08",

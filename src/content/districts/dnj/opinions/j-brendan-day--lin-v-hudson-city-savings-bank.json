@@ -1,0 +1,63 @@
+{
+  "id": "j-brendan-day--lin-v-hudson-city-savings-bank",
+  "district": "dnj",
+  "judge_slug": "j-brendan-day",
+  "judge_name": "J. Brendan Day",
+  "judge_office": "magistrate",
+  "caption": "Lin v. Hudson City Savings Bank",
+  "citation_line": "Lin v. Hudson City Savings Bank, No. 3:18-cv-15387, ECF No. 92 (D.N.J. Apr. 19, 2024)",
+  "docket": "3:18-cv-15387",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "order",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Granted a renewed Rule 11 fee petition and ordered two previously declared vexatious litigants to pay $110,643.86 jointly and severally. The court used the lodestar as a guide and declined mitigation given repetitive bad-faith filings and deterrence needs.",
+  "qualification_rationale": "A detailed sanctions-fee methodology with a substantial award, integrating authority, lodestar reasonableness, mitigation, and deterrence.",
+  "appellate_posture_note": "Fee order followed dismissal of an earlier appeal in the underlying litigation; no substantive review of this order identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_18-cv-15387/pdf/USCOURTS-njd-3_18-cv-15387-6.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_18-cv-15387/pdf/USCOURTS-njd-3_18-cv-15387-6.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 45,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 18,
+    "end": 5,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "fees-and-costs"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Rule 11 Sanctions and Attorney Fees",
+  "screen_score": 64,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 22,
+    "analysis": 15,
+    "disposition": 15,
+    "doctrine": 8,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

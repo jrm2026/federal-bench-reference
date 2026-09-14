@@ -1,0 +1,28 @@
+name: ingest-daily
+on:
+  schedule: [{ cron: '0 9 * * *' }]
+  workflow_dispatch:
+permissions: { contents: write, pull-requests: write }
+jobs:
+  ingest:
+    strategy:
+      fail-fast: false
+      matrix: { district: [dnj] }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      # Proposes entries into review/pending only. Nothing about a sitting judge
+      # reaches src/content without a human merging the pull request.
+      - run: node scripts/ingest-courtlistener.mjs --district=${{ matrix.district }}
+        env:
+          COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: ingest/${{ matrix.district }}-${{ github.run_number }}
+          title: 'Ingest: ${{ matrix.district }} proposed entries'
+          body: 'Automated proposal. Reviewer checks: link resolves to the correct case; citation, docket and date match; no characterization of the judge; appellate history current.'
+          add-paths: review/pending

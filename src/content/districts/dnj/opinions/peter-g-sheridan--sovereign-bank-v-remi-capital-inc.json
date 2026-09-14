@@ -1,0 +1,61 @@
+{
+  "id": "peter-g-sheridan--sovereign-bank-v-remi-capital-inc",
+  "district": "dnj",
+  "judge_slug": "peter-g-sheridan",
+  "judge_name": "Peter G. Sheridan",
+  "judge_office": "district",
+  "caption": "Sovereign Bank v. REMI Capital, Inc.",
+  "citation_line": "Sovereign Bank v. REMI Capital, Inc., No. 21-2289 (3d Cir. Sept. 15, 2022)",
+  "docket": "21-2289",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Sheridan discharged a consent judgment after concluding that the obligor had satisfied the judgment as written and that the court could not add a contractual post-judgment interest term omitted from the judgment.",
+  "qualification_rationale": "The precedential decision gives practical guidance on drafting settlements and consent judgments and on the limits of a district court’s authority to enforce obligations that the parties did not clearly incorporate into the judgment.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, emphasizing that parties must state their bargain with precision and that a court may not divine and enforce an otherwise silent term.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/212289p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/212289p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 68,
+  "components": {
+    "app": 25,
+    "doc": 16,
+    "prac": 12,
+    "end": 8,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "commercial-contract",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Consent Judgments and Contract Enforcement",
+  "screen_score": 83,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 18,
+    "disposition": 20,
+    "doctrine": 9,
+    "treatment": 10,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

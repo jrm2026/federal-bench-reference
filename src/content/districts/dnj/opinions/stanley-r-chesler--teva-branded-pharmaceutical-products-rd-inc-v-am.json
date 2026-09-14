@@ -1,0 +1,61 @@
+{
+  "id": "stanley-r-chesler--teva-branded-pharmaceutical-products-rd-inc-v-am",
+  "district": "dnj",
+  "judge_slug": "stanley-r-chesler",
+  "judge_name": "Stanley R. Chesler",
+  "judge_office": "district",
+  "caption": "Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC",
+  "citation_line": "Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC, No. 2:23-cv-20964; aff’d, No. 2024-1936 (Fed. Cir. Dec. 20, 2024)",
+  "docket": "2:23-cv-20964",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "order",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Chesler ordered Teva to delist inhaler-device patents from the FDA’s Orange Book because the patents did not claim the active ingredient at issue, albuterol sulfate.",
+  "qualification_rationale": "The decision addressed the boundary between drug and device patents in the Hatch-Waxman system, with direct consequences for the timing of generic competition and the availability of the statutory counterclaim remedy.",
+  "appellate_posture_note": "The Federal Circuit lifted its stay and affirmed the delisting order in a precedential opinion.",
+  "headnote_status": "published",
+  "public_url": "https://www.cafc.uscourts.gov/opinions-orders/24-1936.OPINION.12-20-2024_2439730.pdf",
+  "links": [
+    {
+      "anchor": "Federal Circuit precedential opinion",
+      "url": "https://www.cafc.uscourts.gov/opinions-orders/24-1936.OPINION.12-20-2024_2439730.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 93,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 12,
+    "press": 7,
+    "career": 9
+  },
+  "subject_primary": "patent",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Patent Law and Hatch Waxman",
+  "screen_score": 94,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "unlabeled"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "peter-g-sheridan--oakwood-laboratories-llc-v-thanoo",
+  "district": "dnj",
+  "judge_slug": "peter-g-sheridan",
+  "judge_name": "Peter G. Sheridan",
+  "judge_office": "district",
+  "caption": "Oakwood Laboratories LLC v. Thanoo",
+  "citation_line": "Oakwood Laboratories LLC v. Thanoo, 999 F.3d 892 (3d Cir. 2021)",
+  "docket": null,
+  "reporter_cite": "999 F.3d 892",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Sheridan dismissed four successive complaints alleging theft of pharmaceutical-development trade secrets, breach of contract and tortious interference.",
+  "qualification_rationale": "The precedential appeal became a leading Third Circuit authority on pleading claims under the Defend Trade Secrets Act, including identification of trade secrets and plausible allegations of acquisition, disclosure or use.",
+  "appellate_posture_note": "The Third Circuit vacated and remanded, concluding that the detailed third amended complaint readily satisfied federal pleading requirements and clarifying DTSA pleading standards.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/193707p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/193707p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 85,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 15,
+    "end": 15,
+    "press": 2,
+    "career": 8
+  },
+  "subject_primary": "trade-secrets",
+  "subject_secondary": [
+    "commercial-contract",
+    "business-torts"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Trade Secrets",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

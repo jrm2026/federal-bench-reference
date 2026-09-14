@@ -1,0 +1,61 @@
+{
+  "id": "katharine-s-hayden--united-states-v-jackson",
+  "district": "dnj",
+  "judge_slug": "katharine-s-hayden",
+  "judge_name": "Katharine S. Hayden",
+  "judge_office": "district",
+  "caption": "United States v. Jackson",
+  "citation_line": "United States v. Jackson, 862 F.3d 365 (3d Cir. 2017), with later sentencing appeals",
+  "docket": null,
+  "reporter_cite": "862 F.3d 365",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Hayden presided over the 2015 trial of John and Carolyn Jackson on federal and assimilated New Jersey child-endangerment charges arising from abuse of adopted children at Picatinny Arsenal, and imposed three successive sentencing judgments after appellate remands.",
+  "qualification_rationale": "The prosecution attracted sustained press attention and produced repeated precedential guidance concerning the Assimilative Crimes Act, jury findings, causation and federal sentencing. It is career-significant despite—and partly because of—the unusual sequence of appellate reversals.",
+  "appellate_posture_note": "The Third Circuit affirmed the convictions but vacated Judge Hayden’s sentences three times. After the third remand it reassigned sentencing to Judge Wigenton, who imposed longer terms later affirmed in a precedential opinion.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/161200p.pdf",
+  "links": [
+    {
+      "anchor": "First precedential appeal",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/161200p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 88,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 15,
+    "end": 10,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "federal-criminal",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Criminal Sentencing",
+  "screen_score": 86,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 21,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "unlabeled"
+}

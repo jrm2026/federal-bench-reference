@@ -1,0 +1,46 @@
+{
+  "slug": "zahid-n-quraishi",
+  "name": "Zahid N. Quraishi",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2021–13 September 2026. Selected decisions: 2.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1975 in New York City. Quraishi earned a B.A. from John Jay College of Criminal Justice (1997) and a J.D. from Rutgers Law School–Newark (2000). He clerked for New Jersey Appellate Division Judge Edwin H. Stern, practiced privately, served as an Army JAG officer, worked for the Department of Homeland Security, served as an Assistant U.S. Attorney, and was a District of New Jersey magistrate judge from 2019 to 2021. President Biden appointed him; he is the first Muslim Article III federal judge.",
+    "education_sentences": [
+      "Quraishi earned a B.A. from John Jay College of Criminal Justice (1997) and a J.D. from Rutgers Law School–Newark (2000)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/10236621",
+      "https://www.njd.uscourts.gov/content/zahid-n-quraishi",
+      "https://www2.ca3.uscourts.gov/opinarch/241594p.pdf",
+      "https://apnews.com/article/4a2563fd56ee513f7ade9d6e2ff25edf"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile",
+      "Third Circuit Kim opinion",
+      "AP report on county-line appeal"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned June 22, 2021 | Trenton"
+}

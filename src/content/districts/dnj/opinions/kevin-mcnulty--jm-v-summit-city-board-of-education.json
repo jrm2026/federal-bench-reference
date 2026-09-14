@@ -1,0 +1,61 @@
+{
+  "id": "kevin-mcnulty--jm-v-summit-city-board-of-education",
+  "district": "dnj",
+  "judge_slug": "kevin-mcnulty",
+  "judge_name": "Kevin McNulty",
+  "judge_office": "district",
+  "caption": "J.M. v. Summit City Board of Education",
+  "citation_line": "J.M. v. Summit City Board of Education, No. 20-3391 (3d Cir. July 1, 2022)",
+  "docket": "20-3391",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge McNulty upheld an administrative determination that a school district had not violated its child-find obligations or denied a free appropriate public education before a first-grade student was diagnosed with autism.",
+  "qualification_rationale": "The precedential appeal gives detailed guidance on when observable behavioral and academic difficulties trigger a school district’s duty to evaluate a child under the IDEA and Section 504, a recurring issue in special-education litigation.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, sustaining the district court’s legal and factual conclusions and its treatment of the administrative record.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/203391p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/203391p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 76,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 14,
+    "end": 10,
+    "press": 1,
+    "career": 8
+  },
+  "subject_primary": "education-idea",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Special Education",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "renee-marie-bumb--bryman-v-murphy",
+  "district": "dnj",
+  "judge_slug": "renee-marie-bumb",
+  "judge_name": "Renée Marie Bumb",
+  "judge_office": "district",
+  "caption": "Bryman v. Murphy",
+  "citation_line": "Bryman v. Murphy, No. 1:23-cv-12601; aff’d, No. 24-2947 (3d Cir. Dec. 5, 2025)",
+  "docket": "1:23-cv-12601",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Chief Judge Bumb dismissed constitutional challenges to New Jersey’s requirement that a patient be a state resident to obtain medication under the Medical Aid in Dying for the Terminally Ill Act.",
+  "qualification_rationale": "The case addressed a consequential and unusually sensitive constitutional boundary involving interstate travel, medical services, assisted suicide, equal protection, privileges and immunities, and the dormant Commerce Clause.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion. It held that New Jersey could reserve physician-assisted suicide to residents and that the residency rule survived each asserted constitutional challenge.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/242947p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/242947p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 77,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 17,
+    "end": 5,
+    "press": 2,
+    "career": 8
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Constitutional Law and Medical Aid in Dying",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

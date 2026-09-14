@@ -1,0 +1,61 @@
+{
+  "id": "william-j-martini--united-states-v-soto",
+  "district": "dnj",
+  "judge_slug": "william-j-martini",
+  "judge_name": "William J. Martini",
+  "judge_office": "district",
+  "caption": "United States v. Soto",
+  "citation_line": "United States v. Soto, No. 2:20-cr-00903; sentence vacated, No. 23-1827 (3d Cir. Nov. 20, 2024)",
+  "docket": "2:20-cr-00903",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Martini applied the obstruction-of-justice enhancement at sentencing based on the defendant's interactions with jurors, victims, and a testifying co-defendant's relative during an armed-bank-robbery trial.",
+  "qualification_rationale": "The appeal supplies precedential guidance on the factual findings and intent necessary before ordinary or ambiguous courthouse encounters can support a substantial obstruction enhancement.",
+  "appellate_posture_note": "The Third Circuit vacated the sentence and remanded because the record did not adequately support the enhancement.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/231827p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/231827p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 70,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 12,
+    "end": 5,
+    "press": 0,
+    "career": 10
+  },
+  "subject_primary": "federal-criminal",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federal Sentencing and Obstruction",
+  "screen_score": 88,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

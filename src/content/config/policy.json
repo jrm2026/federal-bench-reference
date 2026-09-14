@@ -1,0 +1,12 @@
+{
+  "lookback": {
+    "significant": null,
+    "subject_district_years": 5,
+    "procedural_district_years": 3,
+    "magistrate_entries_per_tag": 5,
+    "daubert_floor": "2023-12-01",
+    "discovery_scope_flag_before": "2015-12-01",
+    "mail_link_preferred_years": 3
+  },
+  "caps": { "significant_per_judge": 5, "recent_per_tag": 5, "subject_secondary_max": 2 }
+}

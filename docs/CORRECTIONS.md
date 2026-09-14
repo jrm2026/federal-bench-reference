@@ -2,7 +2,7 @@
 
 Checked 3 September 2026 against the court's own directory, the Federal Judicial
 Center, and the appellate dockets. Each correction is enforced in code: the
-poison list in `data/poison-list.json` blocks any build in which a corrected
+poison list in `src/content/config/poison-list.json` blocks any build in which a corrected
 error reappears.
 
 ## Roster
@@ -238,3 +238,62 @@ different direction.
 Remaining before launch: the thirty-seven biographies, the taxonomy-aligned case
 selection, and the link check. None needs this session. The first two are bulk
 work best batched by source; the third needs open network access.
+
+---
+
+# Corrections applied on the merge, 14 September 2026
+
+The content build and the review scaffold were developed separately and merged
+here. The scaffold's gates ran against the content build's records for the first
+time. Two of the corrections above had reappeared, which is the case for keeping
+the poison list.
+
+## Poison list hits
+
+**`ezel.ai` was cited as a biography source for six judges.** McNulty, Sheridan,
+Bongiovanni, Cooper, Clark and Thompson each carried it under the label "Public
+rulings index." A commercial AI aggregator is not an acceptable source on a site
+whose premise is official and free repositories. The URL and its label were
+removed from all six records. Each retains at least one primary source.
+
+**The "Inactive senior" label was back on Cooper and Thompson.** It appeared in
+`role_line`, which renders on the page. The label was withdrawn in September for
+want of docket evidence and may not be reused without it. Struck from both. The
+two remaining clauses — that the commission is not shown as terminated in FJC
+data, and that the judge is not listed in the current directory — are
+observations with sources and stay. McNulty and Sheridan already carried the
+corrected form, which states the senior-status date instead.
+
+## Sources
+
+Five opinion entries linked to hosts the sources gate refuses. Four were
+re-sourced to CourtListener, each verified against the docket, the court and the
+assigned judge:
+
+- *FTC v. Wyndham Worldwide Corp.* — was the FTC's own copy, a party host. Now
+  the CourtListener opinion; D.N.J., Salas, 7 April 2014, 10 F. Supp. 3d 602.
+- *United States v. Auernheimer* — was hosted by the EFF, an advocacy host. Now
+  the CourtListener opinion; 3d Cir., 11 April 2014, No. 13-1816, 748 F.3d 525.
+- *United States v. City of Newark* — was the Department of Justice's copy of the
+  consent decree, a party host. Now the CourtListener docket; 2:16-cv-01731,
+  assigned to Arleo, filed 30 March 2016.
+- *Ireland v. Hegseth* — was FindLaw. Now the CourtListener docket;
+  1:25-cv-01918, assigned to O'Hearn, filed 17 March 2025. The record gave the
+  docket as 25-cv-01918, without the vicinage prefix; corrected. Whether FindLaw
+  is an acceptable host at all is open and is item 2 on the worklist.
+- *Antar v. Borgata Hotel Casino & Spa* — the only copy of the 1 February 2024
+  letter order was on a gambling-trade press site. Removed, with no substitute:
+  the record carries no docket to resolve one by. The entry now rests on its
+  Third Circuit link, is marked `appellate_only`, and renders the strip saying
+  no free public copy of the district order was located.
+
+## Gate change
+
+The page check read only the top level of `src/pages`, so a page under
+`src/pages/districts/` could render without the advertising banner and the gate
+would not see it. It now walks the tree.
+
+The tone gate refused the bare word "predict," which fired on *KalshiEX LLC v.
+Flaherty* — a case about prediction markets. The pattern now requires the word
+to sit near a judge, a court, a ruling or an outcome, and may not straddle two
+fields.

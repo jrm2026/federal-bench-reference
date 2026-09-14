@@ -1,0 +1,61 @@
+{
+  "id": "edward-s-kiel--kalshiex-llc-v-flaherty",
+  "district": "dnj",
+  "judge_slug": "edward-s-kiel",
+  "judge_name": "Edward S. Kiel",
+  "judge_office": "district",
+  "caption": "KalshiEX LLC v. Flaherty",
+  "citation_line": "KalshiEX LLC v. Flaherty, No. 1:25-cv-02152; aff’d, No. 25-1922 (3d Cir. Apr. 6, 2026)",
+  "docket": "1:25-cv-02152",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Kiel preliminarily barred New Jersey gaming regulators from enforcing state gambling laws against sports-related event contracts offered on Kalshi’s CFTC-licensed designated contract market.",
+  "qualification_rationale": "The case sits at the new boundary between federally regulated prediction markets and state sports-wagering regimes, with direct consequences for federalism, derivatives regulation and online betting.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that Kalshi showed a reasonable likelihood that the Commodity Exchange Act’s exclusive-jurisdiction structure preempts otherwise applicable New Jersey gambling law.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/251922p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/251922p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 90,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 5,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "gaming-wagering",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federal Preemption and Prediction Markets",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 15,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

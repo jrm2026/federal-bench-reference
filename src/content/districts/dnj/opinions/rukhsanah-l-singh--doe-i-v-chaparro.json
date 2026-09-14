@@ -1,0 +1,55 @@
+{
+  "id": "rukhsanah-l-singh--doe-i-v-chaparro",
+  "district": "dnj",
+  "judge_slug": "rukhsanah-l-singh",
+  "judge_name": "Rukhsanah L. Singh",
+  "judge_office": "magistrate",
+  "caption": "Doe I v. Chaparro",
+  "citation_line": "Doe I v. Chaparro, No. 3:25-cv-13961, ECF No. 16 (D.N.J. Dec. 22, 2025)",
+  "docket": "3:25-cv-13961",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Allowed two adults alleging childhood sexual assault to proceed under pseudonyms. Applying Megless, the court credited sworn evidence of PTSD-related harm and found that the public interest in open proceedings did not require disclosure of nonpublic victims' identities.",
+  "qualification_rationale": "A careful, accessible application of Third Circuit pseudonymity doctrine to highly sensitive allegations and the public's countervailing interests.",
+  "appellate_posture_note": "Non-dispositive anonymity order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2025cv13961/580529/16/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2025cv13961/580529/16/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 43,
+  "components": {
+    "app": 0,
+    "doc": 16,
+    "prac": 16,
+    "end": 3,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "case-management",
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Pseudonymous Litigation",
+  "subject_screen_exclusion_reason": "Pseudonymity order governing party identification rather than substantive liability or relief.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

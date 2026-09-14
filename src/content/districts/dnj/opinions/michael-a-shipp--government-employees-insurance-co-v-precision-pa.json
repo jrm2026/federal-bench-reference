@@ -1,0 +1,63 @@
+{
+  "id": "michael-a-shipp--government-employees-insurance-co-v-precision-pa",
+  "district": "dnj",
+  "judge_slug": "michael-a-shipp",
+  "judge_name": "Michael A. Shipp",
+  "judge_office": "district",
+  "caption": "Government Employees Insurance Co. v. Precision Pain & Spine Institute LLC",
+  "citation_line": "Government Employees Insurance Co. v. Precision Pain & Spine Institute LLC, No. 3:21-cv-16255; rev'd, 98 F.4th 463 (3d Cir. 2024)",
+  "docket": "3:21-cv-16255",
+  "reporter_cite": "98 F.4",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Shipp denied as moot a medical practice's motion to compel arbitration after GEICO amended its complaint in an insurance-fraud action.",
+  "qualification_rationale": "The consolidated appeal resolved both the arbitrability of New Jersey IFPA claims and whether a district court may treat a motion aimed at a superseded complaint as automatically moot.",
+  "appellate_posture_note": "The Third Circuit reversed in a precedential opinion, held that courts have discretion to apply an existing motion to an amended pleading, and directed arbitration of the IFPA claim.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/appellate-courts/ca3/23-1378/23-1378-2024-04-26-0.html",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/23-1378/23-1378-2024-04-26-0.html"
+    }
+  ],
+  "classification": "major",
+  "score_total": 76,
+  "components": {
+    "app": 25,
+    "doc": 19,
+    "prac": 16,
+    "end": 7,
+    "press": 1,
+    "career": 8
+  },
+  "subject_primary": "insurance-coverage",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "arbitration-forum-selection"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Insurance Fraud and Arbitration",
+  "screen_score": 87,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 21,
+    "disposition": 16,
+    "doctrine": 12,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

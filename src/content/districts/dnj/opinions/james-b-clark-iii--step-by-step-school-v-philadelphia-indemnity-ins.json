@@ -1,0 +1,56 @@
+{
+  "id": "james-b-clark-iii--step-by-step-school-v-philadelphia-indemnity-ins",
+  "district": "dnj",
+  "judge_slug": "james-b-clark-iii",
+  "judge_name": "James B. Clark III",
+  "judge_office": "magistrate",
+  "caption": "Step by Step School v. Philadelphia Indemnity Insurance Co.",
+  "citation_line": "Step by Step School v. Philadelphia Indemnity Insurance Co., No. 2:23-cv-02324, ECF No. 38 (D.N.J. Dec. 19, 2024)",
+  "docket": "2:23-cv-02324",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Awarded $7,779.12 under Rule 37 after four noticed depositions failed to proceed, but declined case-ending relief and other requested sanctions as disproportionate.",
+  "qualification_rationale": "A measured sanctions decision illustrating documentation of fees and the preference for a proportionate remedy short of terminating sanctions.",
+  "appellate_posture_note": "Non-dispositive sanctions order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2023cv02324/511657/38/0.pdf",
+  "links": [
+    {
+      "anchor": "Justia PDF",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2023cv02324/511657/38/0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 39,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 17,
+    "end": 1,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "spoliation-sanctions",
+    "fees-and-costs",
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Discovery Sanctions",
+  "subject_screen_exclusion_reason": "Monetary discovery sanction short of claim, defense, evidentiary-preclusion, or case-ending relief.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

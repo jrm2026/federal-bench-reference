@@ -1,0 +1,64 @@
+{
+  "id": "matthew-j-skahill--truong-v-delta-international-machinery-corp",
+  "district": "dnj",
+  "judge_slug": "matthew-j-skahill",
+  "judge_name": "Matthew J. Skahill",
+  "judge_office": "magistrate",
+  "caption": "Truong v. Delta International Machinery Corp.",
+  "citation_line": "Truong v. Delta International Machinery Corp., No. 1:19-cv-19384, ECF No. 51 (D.N.J. Oct. 29, 2021)",
+  "docket": "1:19-cv-19384",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "pending",
+  "headnote_district_ruling": "Recommended denying a Rule 702 motion to exclude a machine-safety expert in a table-saw products-liability case. The expert's experience, an existing alternative guard, and the relative simplicity of the engineering question were sufficient; several criticisms went to weight.",
+  "qualification_rationale": "A substantial application of Daubert and Third Circuit reliability doctrine to experience-based technical expertise, including when testing or physical inspection is unnecessary at the admissibility threshold.",
+  "appellate_posture_note": "R&R; no published substantive appellate treatment identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_19-cv-19384/pdf/USCOURTS-njd-1_19-cv-19384-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_19-cv-19384/pdf/USCOURTS-njd-1_19-cv-19384-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 48,
+  "components": {
+    "app": 0,
+    "doc": 17,
+    "prac": 16,
+    "end": 7,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "products-liability-mdl",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "expert-daubert",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Expert Evidence and Products Liability",
+  "screen_score": 66,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 17,
+    "disposition": 12,
+    "doctrine": 10,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

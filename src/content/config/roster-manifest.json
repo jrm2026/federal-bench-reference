@@ -1,0 +1,23 @@
+{
+  "district": "District of New Jersey",
+  "roster_source": "https://www.njd.uscourts.gov/our-judges",
+  "roster_read": "2026-09-03",
+  "research_cutoff": "2026-09-13",
+  "counts": {
+    "canonical_records": 41,
+    "rendered_current_bench": 37,
+    "rendered_fjc_reconciliation": 4,
+    "opinion_records": 95
+  },
+  "roster_source_note": "No single source is current. The Our Judges directory lags and does not distinguish district from magistrate judges; the Notices to the Bar lead. Reconcile both on every check.",
+  "carried_from_the_prior_roster": [
+    "The prior roster carried 43 records. Two are absent from this tree and the omission is deliberate in each case; the third, O'Hearn, was re-slugged from christine-p-o-hearn to christine-p-ohearn.",
+    "Michael A. Hammer retired in 2026 and Silagi fills his seat. He has no page. If an opinion he authored is ever selected, the entry must carry a former-judge label and must not present him as sitting. The poison list enforces the second half of that.",
+    "Cheryl L. Pollak is a recalled E.D.N.Y. magistrate judge sitting in this district by designation. She is not on the permanent roster and has no canonical page here. If she is ever added, her home district is edny, canonical is false, and E.D.N.Y. rulings may not be presented as District of New Jersey case law."
+  ],
+  "known_divergence_from_prior_report": [
+    "The 20/17 district-magistrate split is an inference from a page that does not draw it.",
+    "Cooper, Thompson, Sheridan and McNulty were labelled inactive senior. Withdrawn pending docket evidence; the label reappeared in the content build on Cooper and Thompson and was struck again.",
+    "Koons: the September 2025 panel opinion was vacated in December 2025; the en banc appeal is pending."
+  ]
+}

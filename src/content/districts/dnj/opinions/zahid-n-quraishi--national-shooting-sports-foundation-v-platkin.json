@@ -1,0 +1,65 @@
+{
+  "id": "zahid-n-quraishi--national-shooting-sports-foundation-v-platkin",
+  "district": "dnj",
+  "judge_slug": "zahid-n-quraishi",
+  "judge_name": "Zahid N. Quraishi",
+  "judge_office": "district",
+  "caption": "National Shooting Sports Foundation v. Platkin",
+  "citation_line": "National Shooting Sports Foundation v. Platkin, No. 3:22-cv-06646 (D.N.J. July 10, 2025), rev'd, No. 25-2546 (3d Cir. Sept. 8, 2026)",
+  "docket": "3:22-cv-06646",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "After New Jersey began enforcing its gun-industry public-nuisance law, Judge Quraishi reopened the association's constitutional challenge, found that the changed enforcement landscape supplied standing, but abstained under Younger because of related state enforcement litigation against an association member.",
+  "qualification_rationale": "The litigation addresses associational standing, pre-enforcement review, Younger abstention, the Protection of Lawful Commerce in Arms Act, and constitutional limits on state regulation of firearms commerce.",
+  "appellate_posture_note": "The Third Circuit agreed in a precedential opinion that standing now existed but reversed the Younger ruling because the association was not a party to any state proceeding and lacked the control or relationship needed to treat it as one.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/3:2022cv06646/504488/75/0.pdf",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/3:2022cv06646/504488/75/0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/25-2546/25-2546-2026-09-08.html"
+    }
+  ],
+  "classification": "major",
+  "score_total": 94,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 10,
+    "press": 9,
+    "career": 10
+  },
+  "subject_primary": "second-amendment",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Firearms Preemption and Abstention",
+  "screen_score": 92,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 18,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "william-j-martini--jorjani-v-new-jersey-institute-of-technology",
+  "district": "dnj",
+  "judge_slug": "william-j-martini",
+  "judge_name": "William J. Martini",
+  "judge_office": "district",
+  "caption": "Jorjani v. New Jersey Institute of Technology",
+  "citation_line": "Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422",
+  "docket": "2:18-cv-11693",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Martini initially granted summary judgment to NJIT on a former lecturer’s First Amendment retaliation claim arising from widely publicized off-campus remarks about race, politics and immigration. On remand after reversal, he again entered summary judgment in April 2026, this time on qualified-immunity and related grounds.",
+  "qualification_rationale": "The case drew press attention and presents a difficult public-university question: how Pickering balancing and qualified immunity apply to a lecturer’s controversial off-campus, non-job-duty speech.",
+  "appellate_posture_note": "The Third Circuit reversed the initial judgment in a precedential September 8, 2025 opinion, holding that the minimal documented disruption did not outweigh the employee’s speech interest, and remanded issues it had not reached. The April 2026 remand ruling is a new district judgment; no later appellate merits disposition was identified by the cutoff date.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2018cv11693/379876/209/",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/242588p.pdf"
+    },
+    {
+      "anchor": "2026 district ruling",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2018cv11693/379876/209/"
+    }
+  ],
+  "classification": "major",
+  "score_total": 78,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 12,
+    "end": 6,
+    "press": 8,
+    "career": 9
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [
+    "employment"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "First Amendment and Public Employment",
+  "screen_score": 88,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

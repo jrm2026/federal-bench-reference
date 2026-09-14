@@ -1,0 +1,44 @@
+{
+  "slug": "anne-elise-thompson",
+  "name": "Anne Elise Thompson",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "senior",
+  "vicinage": null,
+  "roster_sources": [
+    "fjc"
+  ],
+  "render_section": "fjc_reconciliation",
+  "service_line_reviewed": "Article III service reviewed: 1979–13 September 2026. Selected decisions: 2.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1934 in Philadelphia. Thompson earned a B.A. from Howard University (1955), an M.A. from Temple University (1957), and an LL.B. from Howard University School of Law (1964). Her career included the U.S. Department of Labor, public defense, municipal prosecution and judging, and service as Mercer County prosecutor. President Jimmy Carter appointed her in 1979. She served as chief judge from 1994 to 2001 and then assumed senior status. She was New Jersey’s first woman and first Black federal district judge.",
+    "education_sentences": [
+      "Thompson earned a B.A. from Howard University (1955), an M.A. from Temple University (1957), and an LL.B. from Howard University School of Law (1964)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1388736"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography and oral-history record"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [
+    {
+      "text": "The Federal Judicial Center catalogs a 2011 oral-history interview of Thompson conducted for the Historical Society of the U.S. District Court for the District of New Jersey. No separate freely accessible article authored by Thompson was located.",
+      "url": null
+    }
+  ],
+  "role_line": "Senior U.S. District Judge | Commission not shown as terminated in FJC data | Not listed in current DNJ directory"
+}

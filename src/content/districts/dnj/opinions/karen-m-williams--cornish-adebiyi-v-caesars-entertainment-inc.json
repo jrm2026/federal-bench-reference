@@ -1,0 +1,61 @@
+{
+  "id": "karen-m-williams--cornish-adebiyi-v-caesars-entertainment-inc",
+  "district": "dnj",
+  "judge_slug": "karen-m-williams",
+  "judge_name": "Karen M. Williams",
+  "judge_office": "district",
+  "caption": "Cornish-Adebiyi v. Caesars Entertainment, Inc.",
+  "citation_line": "Cornish-Adebiyi v. Caesars Entertainment, Inc., 2024 WL 4356188 (D.N.J. Sept. 30, 2024)",
+  "docket": null,
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Williams dismissed a putative antitrust class action alleging that Atlantic City casino-hotels used Cendyn’s AI-driven dynamic-pricing software to coordinate room rates, finding the complaint did not plausibly plead the “rim” of a hub-and-spoke conspiracy.",
+  "qualification_rationale": "The case is a leading modern test of how traditional Sherman Act pleading rules apply to competitors’ use of a shared pricing algorithm and exchange of nonpublic commercial data.",
+  "appellate_posture_note": "The Third Circuit reversed and remanded in a precedential opinion on July 29, 2026. Taking the allegations as true, it held that the complaint plausibly alleged a horizontal agreement facilitated by the shared algorithm; it did not decide ultimate liability.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/243006p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/243006p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 90,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 18,
+    "end": 7,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "antitrust",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Antitrust and Algorithmic Pricing",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

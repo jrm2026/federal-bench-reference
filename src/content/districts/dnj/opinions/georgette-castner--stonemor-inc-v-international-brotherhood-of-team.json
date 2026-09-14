@@ -1,0 +1,64 @@
+{
+  "id": "georgette-castner--stonemor-inc-v-international-brotherhood-of-team",
+  "district": "dnj",
+  "judge_slug": "georgette-castner",
+  "judge_name": "Georgette Castner",
+  "judge_office": "district",
+  "caption": "StoneMor, Inc. v. International Brotherhood of Teamsters, Local 469",
+  "citation_line": "StoneMor, Inc. v. International Brotherhood of Teamsters, Local 469, No. 3:22-cv-01388; aff’d, No. 23-1489 (3d Cir. July 10, 2024)",
+  "docket": "3:22-cv-01388",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Castner vacated a labor-arbitration award after concluding that the arbitrator disregarded unambiguous CBA language making the agreement binding at ratification and requiring a grievance within ten days.",
+  "qualification_rationale": "The case defines an important limit on the ordinarily extraordinary deference given to labor arbitrators: an arbitrator may not rewrite clear contractual timing and effective-date terms.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/231489p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/231489p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 70,
+  "components": {
+    "app": 25,
+    "doc": 16,
+    "prac": 13,
+    "end": 5,
+    "press": 2,
+    "career": 9
+  },
+  "subject_primary": "labor-cba",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "arbitration-forum-selection",
+    "default-and-vacatur"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Labor Arbitration",
+  "screen_score": 84,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 18,
+    "disposition": 20,
+    "doctrine": 9,
+    "treatment": 10,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

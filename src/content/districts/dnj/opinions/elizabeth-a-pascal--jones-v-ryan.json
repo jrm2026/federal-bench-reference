@@ -1,0 +1,55 @@
+{
+  "id": "elizabeth-a-pascal--jones-v-ryan",
+  "district": "dnj",
+  "judge_slug": "elizabeth-a-pascal",
+  "judge_name": "Elizabeth A. Pascal",
+  "judge_office": "magistrate",
+  "caption": "Jones v. Ryan",
+  "citation_line": "Jones v. Ryan, No. 1:23-cv-04557, ECF No. 160 (D.N.J. Jan. 23, 2026)",
+  "docket": "1:23-cv-04557",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied parties' motion to quash a nonparty surveyor's subpoena for lack of standing, compelled compliance after finding relevance and no timely objection, and denied a related request to limit or seal discovery in a civil-rights and property-boundary dispute.",
+  "qualification_rationale": "Consolidates practical Rules 26 and 45 guidance on third-party subpoena standing, unretained experts, enforcement, and sealing in one accessible ruling.",
+  "appellate_posture_note": "Non-dispositive discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/1%3A2023cv04557/516386/160/0.pdf",
+  "links": [
+    {
+      "anchor": "Justia PDF",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/1%3A2023cv04557/516386/160/0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 38,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 15,
+    "end": 2,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope",
+    "protective-orders-sealing"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Discovery and Subpoenas",
+  "subject_screen_exclusion_reason": "Routine third-party subpoena, relevance, and sealing dispute without merits or dispositive effect.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

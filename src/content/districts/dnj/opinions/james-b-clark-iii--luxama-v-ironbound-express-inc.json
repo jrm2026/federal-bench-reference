@@ -1,0 +1,67 @@
+{
+  "id": "james-b-clark-iii--luxama-v-ironbound-express-inc",
+  "district": "dnj",
+  "judge_slug": "james-b-clark-iii",
+  "judge_name": "James B. Clark III",
+  "judge_office": "magistrate",
+  "caption": "Luxama v. Ironbound Express, Inc.",
+  "citation_line": "Luxama v. Ironbound Express, Inc., No. 2:11-cv-02224, ECF No. 460 (D.N.J. Sept. 16, 2024)",
+  "docket": "2:11-cv-02224",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Acting on consent, entered a permanent injunction implementing a 2021 merits ruling that the motor carrier's owner-operator leases violated federal Truth-in-Leasing regulations. The court held that a three-year delay in proposing injunction language did not erase relief already granted.",
+  "qualification_rationale": "The only selected magistrate decision with identified Third Circuit merits review; it addresses class relief, settlement, excusable neglect, and Rule 65 specificity in an unusual procedural posture.",
+  "appellate_posture_note": "Affirmed in a nonprecedential opinion, Luxama v. Ironbound Express, Inc., No. 24-2928 (3d Cir. Sept. 12, 2025).",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2011cv02224/257744/460/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2011cv02224/257744/460/"
+    },
+    {
+      "anchor": "Third Circuit opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/242928np.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 69,
+  "components": {
+    "app": 18,
+    "doc": 16,
+    "prac": 18,
+    "end": 8,
+    "press": 0,
+    "career": 9
+  },
+  "subject_primary": "administrative-regulatory",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "injunctive-relief"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Motor Carrier Regulation and Injunctive Relief",
+  "screen_score": 80,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 25,
+    "analysis": 16,
+    "disposition": 20,
+    "doctrine": 9,
+    "treatment": 6,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "peter-g-sheridan--association-of-new-jersey-rifle-pistol-clubs-inc",
+  "district": "dnj",
+  "judge_slug": "peter-g-sheridan",
+  "judge_name": "Peter G. Sheridan",
+  "judge_office": "district",
+  "caption": "Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin",
+  "citation_line": "Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin, 742 F. Supp. 3d 421 (D.N.J. 2024)",
+  "docket": null,
+  "reporter_cite": "742 F. Supp. 3d 421",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Sheridan held New Jersey’s ban unconstitutional as applied to the Colt AR-15, but upheld the State’s ten-round magazine limit and rejected the related takings claim.",
+  "qualification_rationale": "The litigation is nationally important Second Amendment law. The 2026 en banc appellate decision was widely reported as the first federal-court-of-appeals decision invalidating a state assault-weapons ban.",
+  "appellate_posture_note": "The en banc Third Circuit agreed as to the AR-15, broadened the ruling to all covered semiautomatic rifles, reversed as to large-capacity magazines, and remanded as to other covered firearms. The mandate was stayed on August 4, 2026 pending potential Supreme Court review, so the practical relief was suspended at the cutoff date.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/242415p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit en banc opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/242415p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 95,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 10,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "second-amendment",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Constitutional Law and Firearms",
+  "screen_score": 94,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

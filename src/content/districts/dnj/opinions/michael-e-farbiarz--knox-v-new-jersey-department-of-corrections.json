@@ -1,0 +1,61 @@
+{
+  "id": "michael-e-farbiarz--knox-v-new-jersey-department-of-corrections",
+  "district": "dnj",
+  "judge_slug": "michael-e-farbiarz",
+  "judge_name": "Michael E. Farbiarz",
+  "judge_office": "district",
+  "caption": "Knox v. New Jersey Department of Corrections",
+  "citation_line": "Knox v. New Jersey Department of Corrections, No. 2:25-cv-01293 (D.N.J. Feb. 2, 2026)",
+  "docket": "2:25-cv-01293",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Farbiarz dismissed ADA, ADEA, and implied-covenant claims against the New Jersey Department of Corrections on sovereign-immunity grounds but allowed prospective-injunctive-relief claims against an individual supervisor to proceed under Ex parte Young.",
+  "qualification_rationale": "The opinion cleanly distinguishes state-agency immunity from the officer-suit exception in an employment setting. It meets the doctrinal gate but remains supplemental because it applies established law and has no identified appellate or press significance.",
+  "appellate_posture_note": "No appellate disposition was identified as of the cutoff.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2:2025cv01293/562879/19/",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2:2025cv01293/562879/19/"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 37,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 12,
+    "end": 2,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "employment",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Employment Discrimination and Sovereign Immunity",
+  "screen_score": 70,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 17,
+    "disposition": 18,
+    "doctrine": 8,
+    "treatment": 0,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district"
+}

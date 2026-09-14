@@ -1,0 +1,41 @@
+{
+  "slug": "peter-g-sheridan",
+  "name": "Peter G. Sheridan",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "senior",
+  "vicinage": null,
+  "roster_sources": [
+    "fjc"
+  ],
+  "render_section": "fjc_reconciliation",
+  "service_line_reviewed": "Article III service reviewed: 2006–13 September 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1950 in Cambridge, Massachusetts. Sheridan earned a B.S. from St. Peter’s College (1972) and a J.D. from Seton Hall University School of Law (1977). He clerked in New Jersey Superior Court, worked for the Port Authority, practiced privately, served as general counsel of the Atlantic City Casino Association, worked in Governor Thomas Kean’s office, and led the New Jersey Republican State Committee. President George W. Bush appointed him in 2006.",
+    "education_sentences": [
+      "Sheridan earned a B.S. from St. Peter’s College (1972) and a J.D. from Seton Hall University School of Law (1977)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1392436",
+      "https://law.justia.com/cases/federal/appellate-courts/ca3/24-2415/24-2415-2026-07-17.html"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Third Circuit en banc firearms opinion"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "Senior U.S. District Judge | Senior status since June 14, 2018; not in current DNJ directory | Not listed in current DNJ directory"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "justin-t-quinn--bfi-waste-systems-of-new-jersey-inc-v-township-o",
+  "district": "dnj",
+  "judge_slug": "justin-t-quinn",
+  "judge_name": "Justin T. Quinn",
+  "judge_office": "magistrate",
+  "caption": "BFI Waste Systems of New Jersey, Inc. v. Township of Monroe",
+  "citation_line": "BFI Waste Systems of New Jersey, Inc. v. Township of Monroe, No. 3:23-cv-00059, ECF No. 45 (D.N.J. Jan. 24, 2025)",
+  "docket": "3:23-cv-00059",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Allowed the deposition of a township mayor in landfill-remediation litigation. The opinion questioned whether a mayor of a smaller municipality is high-ranking for Morgan purposes and independently found the Buono exceptional-circumstances factors satisfied by first-hand involvement.",
+  "qualification_rationale": "Addresses an unsettled threshold in the high-ranking-official doctrine and forms part of a useful D.N.J. trio with Stevenson and Rodwell.",
+  "appellate_posture_note": "Non-dispositive discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2023cv00059/506692/45/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2023cv00059/506692/45/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 49,
+  "components": {
+    "app": 0,
+    "doc": 19,
+    "prac": 18,
+    "end": 4,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope",
+    "protective-orders-sealing"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Discovery from High Ranking Officials",
+  "subject_screen_exclusion_reason": "Non-dispositive ruling permitting a mayoral deposition.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

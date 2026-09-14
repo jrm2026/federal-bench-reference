@@ -1,0 +1,63 @@
+{
+  "id": "esther-salas--berkelhammer-v-adp-totalsource-group-inc",
+  "district": "dnj",
+  "judge_slug": "esther-salas",
+  "judge_name": "Esther Salas",
+  "judge_office": "district",
+  "caption": "Berkelhammer v. ADP TotalSource Group, Inc.",
+  "citation_line": "Berkelhammer v. ADP TotalSource Group, Inc., No. 22-1618 (3d Cir. July 17, 2023)",
+  "docket": "22-1618",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Salas compelled arbitration of participants’ derivative ERISA fiduciary-duty claims because the retirement plan, on whose behalf the claims were asserted, had agreed to arbitrate disputes with its investment adviser.",
+  "qualification_rationale": "The appeal supplied significant precedential guidance on whose consent controls when plan participants pursue claims belonging to an ERISA plan and on the interaction between representative ERISA litigation and arbitration agreements.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the plan’s agreement to arbitrate controlled because the participants’ claims belonged to the plan rather than to them individually.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/221618p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/221618p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 75,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 15,
+    "end": 8,
+    "press": 1,
+    "career": 8
+  },
+  "subject_primary": "employment",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "arbitration-forum-selection"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "ERISA and Arbitration",
+  "screen_score": 85,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 16,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

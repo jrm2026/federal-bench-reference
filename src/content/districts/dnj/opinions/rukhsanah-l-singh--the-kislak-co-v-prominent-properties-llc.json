@@ -1,0 +1,64 @@
+{
+  "id": "rukhsanah-l-singh--the-kislak-co-v-prominent-properties-llc",
+  "district": "dnj",
+  "judge_slug": "rukhsanah-l-singh",
+  "judge_name": "Rukhsanah L. Singh",
+  "judge_office": "magistrate",
+  "caption": "The Kislak Co. v. Prominent Properties LLC",
+  "citation_line": "The Kislak Co. v. Prominent Properties LLC, No. 3:22-cv-02482, ECF No. 13 (D.N.J. Feb. 14, 2023)",
+  "docket": "3:22-cv-02482",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "pending",
+  "headnote_district_ruling": "Recommended remand because post-removal counterclaims and third-party claims could not create federal-question jurisdiction, and recommended fees after finding no objectively reasonable basis for removal.",
+  "qualification_rationale": "A practical application of the well-pleaded-complaint rule to an attempted removal built on later pleadings rather than the state-court complaint.",
+  "appellate_posture_note": "R&R; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_22-cv-02482/pdf/USCOURTS-njd-3_22-cv-02482-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_22-cv-02482/pdf/USCOURTS-njd-3_22-cv-02482-0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 37,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 15,
+    "end": 2,
+    "press": 0,
+    "career": 6
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federal Jurisdiction and Removal",
+  "screen_score": 68,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 14,
+    "disposition": 20,
+    "doctrine": 7,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

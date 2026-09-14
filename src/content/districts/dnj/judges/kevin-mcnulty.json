@@ -1,0 +1,39 @@
+{
+  "slug": "kevin-mcnulty",
+  "name": "Kevin McNulty",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "senior",
+  "vicinage": null,
+  "roster_sources": [
+    "fjc"
+  ],
+  "render_section": "fjc_reconciliation",
+  "service_line_reviewed": "Article III service reviewed: 2012–13 September 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1954 in Elizabeth, New Jersey. McNulty earned a B.A. from Yale University (1976) and a J.D. from New York University School of Law (1983). He clerked for U.S. District Judge Frederick B. Lacey, practiced in New York, served as an Assistant U.S. Attorney in New Jersey—including as deputy criminal chief and appeals chief—and practiced in Newark. President Obama appointed him in 2012.",
+    "education_sentences": [
+      "McNulty earned a B.A. from Yale University (1976) and a J.D. from New York University School of Law (1983)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1394026"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "Senior U.S. District Judge | Senior status since October 31, 2023; not in current DNJ directory | Not listed in current DNJ directory"
+}

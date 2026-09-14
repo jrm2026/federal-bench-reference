@@ -1,0 +1,44 @@
+{
+  "slug": "julien-x-neals",
+  "name": "Julien X. Neals",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2021–13 September 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1965 in Newark. Neals earned a B.A. from Morehouse College (1986) and a J.D. from Emory University School of Law (1991). After a state appellate clerkship and private practice, he served as Newark’s chief municipal judge, corporation counsel, and business administrator, and later as Bergen County counsel and acting county administrator. President Biden appointed him.",
+    "education_sentences": [
+      "Neals earned a B.A. from Morehouse College (1986) and a J.D. from Emory University School of Law (1991)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/10226111",
+      "https://www.njd.uscourts.gov/content/julien-xavier-neals",
+      "https://apnews.com/article/664c187d7d09d57460076c7aa2f0c0bf"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile",
+      "Associated Press report on Apple ruling"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned June 22, 2021 | Newark"
+}

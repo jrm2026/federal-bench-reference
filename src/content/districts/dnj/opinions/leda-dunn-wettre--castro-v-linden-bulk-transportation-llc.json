@@ -1,0 +1,65 @@
+{
+  "id": "leda-dunn-wettre--castro-v-linden-bulk-transportation-llc",
+  "district": "dnj",
+  "judge_slug": "leda-dunn-wettre",
+  "judge_name": "Leda Dunn Wettre",
+  "judge_office": "magistrate",
+  "caption": "Castro v. Linden Bulk Transportation LLC",
+  "citation_line": "Castro v. Linden Bulk Transportation LLC, No. 2:19-cv-20442, ECF No. 27 (D.N.J. Apr. 20, 2020)",
+  "docket": "2:19-cv-20442",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "pending",
+  "headnote_district_ruling": "Recommended remand of a wage class action under CAFA's mandatory home-state exception after jurisdictional discovery showed 78 percent New Jersey citizenship. The opinion rejected waiver and focused on the sole defendant remaining when the remand issue was decided.",
+  "qualification_rationale": "A developed CAFA analysis applying Third Circuit precedent to party changes and addressing an unresolved timing question by treating the exception as abstention-like rather than an ordinary removal defect.",
+  "appellate_posture_note": "R&R; no published substantive appellate treatment identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_19-cv-20442/pdf/USCOURTS-njd-2_19-cv-20442-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_19-cv-20442/pdf/USCOURTS-njd-2_19-cv-20442-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 51,
+  "components": {
+    "app": 0,
+    "doc": 17,
+    "prac": 18,
+    "end": 8,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal",
+    "class-certification",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Class Action Jurisdiction",
+  "screen_score": 75,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 17,
+    "disposition": 20,
+    "doctrine": 10,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

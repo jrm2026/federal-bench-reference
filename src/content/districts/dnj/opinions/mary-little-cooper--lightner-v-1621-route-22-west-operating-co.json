@@ -1,0 +1,63 @@
+{
+  "id": "mary-little-cooper--lightner-v-1621-route-22-west-operating-co",
+  "district": "dnj",
+  "judge_slug": "mary-little-cooper",
+  "judge_name": "Mary Little Cooper",
+  "judge_office": "district",
+  "caption": "Lightner v. 1621 Route 22 West Operating Co.",
+  "citation_line": "Lightner v. 1621 Route 22 West Operating Co., Nos. 3:11-cv-02007, 3:11-cv-03960 & 3:11-cv-04072; appeal dismissed, Nos. 12-2122 & 12-2726 (3d Cir. Sept. 4, 2013)",
+  "docket": "3:11-cv-02007",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Cooper issued a 129-page decision granting in part an NLRB petition for interim relief under NLRA § 10(j), enjoining interference with union activity and directing reinstatement of two discharged employees while declining other requested relief.",
+  "qualification_rationale": "The order had concrete labor-relations consequences and illustrates fact-intensive § 10(j) administration. It is supplemental because later NLRB action mooted the appeal and prevented lasting precedential effect.",
+  "appellate_posture_note": "The Third Circuit dismissed the cross-appeals as moot and vacated the district opinion and order under Munsingwear principles after the NLRB decided the underlying administrative case.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/122122p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/122122p.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 39,
+  "components": {
+    "app": 10,
+    "doc": 10,
+    "prac": 15,
+    "end": 0,
+    "press": 0,
+    "career": 4
+  },
+  "subject_primary": "labor-cba",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "injunctive-relief"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Labor Injunctions",
+  "screen_score": 61,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 12,
+    "disposition": 15,
+    "doctrine": 3,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

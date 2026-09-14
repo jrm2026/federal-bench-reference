@@ -1,0 +1,61 @@
+{
+  "id": "madeline-cox-arleo--antar-v-borgata-hotel-casino-spa-llc",
+  "district": "dnj",
+  "judge_slug": "madeline-cox-arleo",
+  "judge_name": "Madeline Cox Arleo",
+  "judge_office": "district",
+  "caption": "Antar v. Borgata Hotel Casino & Spa, LLC",
+  "citation_line": "Antar v. Borgata Hotel Casino & Spa, LLC, 2024 WL 1672280 (D.N.J. Jan. 31, 2024)",
+  "docket": null,
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Arleo dismissed Consumer Fraud Act and negligence claims brought by a self-described compulsive gambler who alleged that casino and online-gaming operators continued to entice him despite knowing of his addiction.",
+  "qualification_rationale": "The ruling received national press attention and squarely addressed whether New Jersey’s detailed casino regime creates or leaves room for a civil duty to protect a known problem gambler who has not self-excluded.",
+  "appellate_posture_note": "The Third Circuit affirmed on April 28, 2025 in a nonprecedential opinion, agreeing that the complaint did not plausibly state CFA or negligence claims. The appellate disposition is persuasive but not binding precedent under the court’s internal procedures.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241364np.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit disposition",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/241364np.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 57,
+  "components": {
+    "app": 8,
+    "doc": 16,
+    "prac": 12,
+    "end": 3,
+    "press": 10,
+    "career": 8
+  },
+  "subject_primary": "consumer-fraud",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Consumer Fraud and Casino Regulation",
+  "screen_score": 76,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 18,
+    "disposition": 20,
+    "doctrine": 9,
+    "treatment": 2,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

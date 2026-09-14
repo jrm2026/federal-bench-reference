@@ -1,0 +1,61 @@
+{
+  "id": "zahid-n-quraishi--kim-v-hanlon",
+  "district": "dnj",
+  "judge_slug": "zahid-n-quraishi",
+  "judge_name": "Zahid N. Quraishi",
+  "judge_office": "district",
+  "caption": "Kim v. Hanlon",
+  "citation_line": "Kim v. Hanlon, No. 3:24-cv-01098; aff’d, No. 24-1594 (3d Cir. Apr. 17, 2024)",
+  "docket": "3:24-cv-01098",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "order",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Quraishi preliminarily barred use of New Jersey’s “county line” ballot design for the 2024 Democratic primary and required an office-block format with randomized order.",
+  "qualification_rationale": "The decision disrupted a ballot structure unique to New Jersey, drew national and statewide political coverage, and addressed severe burdens on candidates’ and voters’ First and Fourteenth Amendment rights.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, calling the district opinion thorough and carefully reasoned and finding no abuse of discretion. The preliminary injunction did not itself finally adjudicate the entire underlying case.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241594p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/241594p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 94,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 9,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "election-law",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Election Law",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 15,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

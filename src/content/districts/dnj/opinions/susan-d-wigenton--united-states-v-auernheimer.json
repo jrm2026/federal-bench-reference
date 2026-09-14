@@ -1,0 +1,63 @@
+{
+  "id": "susan-d-wigenton--united-states-v-auernheimer",
+  "district": "dnj",
+  "judge_slug": "susan-d-wigenton",
+  "judge_name": "Susan D. Wigenton",
+  "judge_office": "district",
+  "caption": "United States v. Auernheimer",
+  "citation_line": "United States v. Auernheimer, No. 2:11-cr-00470; conviction vacated, 748 F.3d 525 (3d Cir. 2014)",
+  "docket": "2:11-cr-00470",
+  "reporter_cite": "748 F.3d 525",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Wigenton rejected a venue challenge and entered judgment after a jury convicted Andrew Auernheimer of Computer Fraud and Abuse Act conspiracy and identity fraud arising from the collection of AT&T iPad subscriber data.",
+  "qualification_rationale": "The prosecution attracted sustained attention in computer-law circles and produced a major appellate venue ruling for crimes committed over interconnected networks.",
+  "appellate_posture_note": "The Third Circuit reversed the venue determination and vacated the conviction in a precedential opinion because no essential conduct element occurred in New Jersey.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/opinion/2669619/united-states-v-andrew-auernheimer/",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion (CourtListener)",
+      "url": "https://www.courtlistener.com/opinion/2669619/united-states-v-andrew-auernheimer/"
+    }
+  ],
+  "classification": "major",
+  "score_total": 92,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 18,
+    "end": 15,
+    "press": 5,
+    "career": 9
+  },
+  "subject_primary": "federal-criminal",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "venue-transfer"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Computer Crime and Venue",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

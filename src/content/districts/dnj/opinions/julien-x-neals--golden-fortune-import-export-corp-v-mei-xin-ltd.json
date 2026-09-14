@@ -1,0 +1,65 @@
+{
+  "id": "julien-x-neals--golden-fortune-import-export-corp-v-mei-xin-ltd",
+  "district": "dnj",
+  "judge_slug": "julien-x-neals",
+  "judge_name": "Julien X. Neals",
+  "judge_office": "district",
+  "caption": "Golden Fortune Import & Export Corp. v. Mei-Xin Ltd.",
+  "citation_line": "Golden Fortune Import & Export Corp. v. Mei-Xin Ltd., No. 2:22-cv-01369; rev'd, Nos. 22-1710 & 22-1885 (3d Cir. Aug. 5, 2022)",
+  "docket": "2:22-cv-01369",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Neals preliminarily enjoined termination of a long-running mooncake distribution agreement, found the dispute arbitrable, and directed an interim security arrangement pending arbitration.",
+  "qualification_rationale": "The case tested the New Jersey Franchise Practices Act's community-of-interest and gross-sales requirements and the proof needed to convert business loss into irreparable harm.",
+  "appellate_posture_note": "The Third Circuit reversed in a nonprecedential opinion, finding neither likely NJFPA coverage nor irreparable harm. The nonprecedential status limits the score.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/appellate-courts/ca3/22-1710/22-1710-2022-08-18.html",
+  "links": [
+    {
+      "anchor": "Third Circuit opinion",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/22-1710/22-1710-2022-08-18.html"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 58,
+  "components": {
+    "app": 10,
+    "doc": 17,
+    "prac": 15,
+    "end": 5,
+    "press": 1,
+    "career": 10
+  },
+  "subject_primary": "franchise-distribution",
+  "subject_secondary": [
+    "commercial-contract"
+  ],
+  "procedural_tags": [
+    "arbitration-forum-selection"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Franchise Law and Arbitration",
+  "screen_score": 76,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 19,
+    "disposition": 15,
+    "doctrine": 10,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

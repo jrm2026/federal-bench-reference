@@ -1,0 +1,44 @@
+{
+  "slug": "brian-r-martinotti",
+  "name": "Brian R. Martinotti",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2016–13 September 2026. Selected decisions: 2.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1961 in Englewood. Martinotti earned a B.S. from Fordham University (1983) and a J.D. from Seton Hall University School of Law (1986). After a New Jersey Tax Court clerkship, he practiced in Montvale, served in municipal roles, and sat on the New Jersey Superior Court from 2002 to 2016. President Obama appointed him.",
+    "education_sentences": [
+      "Martinotti earned a B.S. from Fordham University (1983) and a J.D. from Seton Hall University School of Law (1986)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1394871",
+      "https://www.njd.uscourts.gov/content/brian-r-martinotti",
+      "https://www.njd.uscourts.gov/mdl-cases"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile",
+      "DNJ MDL directory"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned July 11, 2016 | Newark"
+}

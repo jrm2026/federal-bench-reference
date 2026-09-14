@@ -1,0 +1,61 @@
+{
+  "id": "leda-dunn-wettre--garcia-v-missing-sock-laundry-service-llc",
+  "district": "dnj",
+  "judge_slug": "leda-dunn-wettre",
+  "judge_name": "Leda Dunn Wettre",
+  "judge_office": "magistrate",
+  "caption": "Garcia v. Missing Sock Laundry Service LLC",
+  "citation_line": "Garcia v. Missing Sock Laundry Service LLC, No. 2:24-cv-08045, ECF No. 38 (D.N.J. June 24, 2025)",
+  "docket": "2:24-cv-08045",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Approved a $125,000 FLSA settlement for laundry workers, including a general release supported by separately identified consideration and a one-third fee award; the agreement contained no confidentiality or non-disparagement clause.",
+  "qualification_rationale": "A compact settlement-approval model addressing bona fide dispute, installment-payment risk, releases, public-policy concerns, and percentage fees.",
+  "appellate_posture_note": "Final consent disposition of the settling parties' claims; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2024cv08045/552251/38/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2024cv08045/552251/38/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 40,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 16,
+    "end": 2,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "employment",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Wage and Hour Settlements",
+  "screen_score": 71,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 15,
+    "disposition": 20,
+    "doctrine": 8,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district"
+}

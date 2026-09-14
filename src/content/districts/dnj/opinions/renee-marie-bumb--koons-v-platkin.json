@@ -1,0 +1,65 @@
+{
+  "id": "renee-marie-bumb--koons-v-platkin",
+  "district": "dnj",
+  "judge_slug": "renee-marie-bumb",
+  "judge_name": "Renée Marie Bumb",
+  "judge_office": "district",
+  "caption": "Koons v. Platkin",
+  "citation_line": "Koons v. Platkin, 673 F. Supp. 3d 515 (D.N.J. 2023)",
+  "docket": null,
+  "reporter_cite": "673 F. Supp. 3d 515",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Chief Judge Bumb preliminarily enjoined substantial portions of New Jersey’s post-Bruen carry law, including restrictions affecting private property open to the public and vehicles, while sustaining other provisions.",
+  "qualification_rationale": "The ruling drew national attention and addressed a major post-Bruen question: how the historical-tradition test applies to modern “sensitive place” restrictions.",
+  "appellate_posture_note": "A Third Circuit panel opinion issued in September 2025 was vacated when rehearing en banc was granted on December 11, 2025. The case was argued en banc on February 11, 2026. As of this report’s cutoff, no new en banc merits opinion was identified. The district injunction, as modified by the Third Circuit’s June 20, 2023 partial stay, remains the operative interim framework; readers should confirm the live docket before relying on it.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/1%3A2022cv07464/506033/124/0.pdf?ts=1684339152",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/1%3A2022cv07464/506033/124/0.pdf?ts=1684339152"
+    },
+    {
+      "anchor": "En banc grant/vacatur",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/231900po1.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 83,
+  "components": {
+    "app": 18,
+    "doc": 20,
+    "prac": 18,
+    "end": 8,
+    "press": 10,
+    "career": 9
+  },
+  "subject_primary": "second-amendment",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Constitutional Law and Firearms",
+  "screen_score": 85,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 15,
+    "doctrine": 13,
+    "treatment": 7,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

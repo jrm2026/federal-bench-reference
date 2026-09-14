@@ -27,19 +27,19 @@
  *
  * Only dead links block publication. Blocked and unreachable mean the run was
  * inconclusive and has to be repeated with open network access, which is what
- * docs/HANDOFF.md section 5 asks for.
+ * docs/DESKTOP-SETUP.md section 5 asks for.
  *
- * Writes data/link-report.json. Exits 1 if anything is dead, 2 if the run was
+ * Writes link-report.json. Exits 1 if anything is dead, 2 if the run was
  * inconclusive, 0 if every URL resolved.
  */
 
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const JUDGES = join(HERE, "..", "data", "judges");
-const REPORT = join(HERE, "..", "data", "link-report.json");
+const DISTRICTS = join(HERE, "..", "src", "content", "districts");
+const REPORT = join(HERE, "..", "link-report.json");
 
 const ARCHIVE = process.argv.includes("--archive");
 const cIdx = process.argv.indexOf("--concurrency");
@@ -49,30 +49,34 @@ const TIMEOUT_MS = 30000;
 /** Every URL in the tree, with enough context to fix it when it breaks. */
 function collect() {
   const targets = [];
-  for (const file of readdirSync(JUDGES).filter((f) => f.endsWith(".json"))) {
-    const r = JSON.parse(readFileSync(join(JUDGES, file), "utf8"));
-    const push = (url, where) => { if (url) targets.push({ jurist_id: r.jurist_id, where, url }); };
+  const districts = readdirSync(DISTRICTS).filter((d) =>
+    existsSync(join(DISTRICTS, d, "judges")));
 
-    push(r.official_profile_url, "official_profile_url");
-    push(r.biography?.source_url, "biography.source_url");
-    push(r.status?.source_url, "status.source_url");
-    for (const [k, v] of Object.entries(r.practice_information || {})) {
-      if (typeof v === "string" && v.startsWith("http")) push(v, `practice_information.${k}`);
+  for (const d of districts) {
+    const jdir = join(DISTRICTS, d, "judges");
+    for (const file of readdirSync(jdir).filter((f) => f.endsWith(".json"))) {
+      const r = JSON.parse(readFileSync(join(jdir, file), "utf8"));
+      const push = (url, where) => { if (url) targets.push({ slug: r.slug, where, url }); };
+      (r.biography?.sources ?? []).forEach((u, i) =>
+        push(u, `biography source ${i + 1}${r.biography.source_labels?.[i] ? ` (${r.biography.source_labels[i]})` : ""}`));
+      for (const w of r.other_writings ?? []) push(w.url, "other_writings");
     }
-    const opinions = [
-      ...(r.significant_opinions || []),
-      ...Object.values(r.matter_relevant_opinions || {}).flat(),
-    ];
-    for (const o of opinions) {
-      push(o.public_url, `opinion "${o.caption}"`);
-      for (const ah of o.appellate_history || []) push(ah.url, `appellate history for "${o.caption}"`);
+
+    const odir = join(DISTRICTS, d, "opinions");
+    if (!existsSync(odir)) continue;
+    for (const file of readdirSync(odir).filter((f) => f.endsWith(".json"))) {
+      const o = JSON.parse(readFileSync(join(odir, file), "utf8"));
+      const push = (url, where) => { if (url) targets.push({ slug: o.judge_slug, where, url }); };
+      push(o.public_url, `opinion "${o.caption}" public_url`);
+      for (const l of o.links ?? []) push(l.url, `opinion "${o.caption}" [${l.anchor}]`);
     }
   }
+
   // De-duplicate by URL, keeping every reference so a break lists all pages hit.
   const byUrl = new Map();
   for (const t of targets) {
     if (!byUrl.has(t.url)) byUrl.set(t.url, { url: t.url, refs: [] });
-    byUrl.get(t.url).refs.push({ jurist_id: t.jurist_id, where: t.where });
+    byUrl.get(t.url).refs.push({ slug: t.slug, where: t.where });
   }
   return [...byUrl.values()];
 }
@@ -136,7 +140,7 @@ async function run() {
       results.push(r);
       const mark = r.ok ? (r.redirected ? "»" : "✓") : r.result === "dead" ? "✗" : "?";
       console.log(`  ${mark} ${r.status ?? r.error}  ${r.url}`);
-      if (!r.ok) for (const ref of r.refs) console.log(`        ${ref.jurist_id} — ${ref.where}`);
+      if (!r.ok) for (const ref of r.refs) console.log(`        ${ref.slug} — ${ref.where}`);
       if (ARCHIVE) await new Promise((s) => setTimeout(s, 1500)); // be polite to the archive
     }
   });
@@ -160,7 +164,7 @@ async function run() {
   }, null, 2) + "\n");
 
   console.log(`\n${results.length} checked, ${dead.length} dead, ${inconclusive} inconclusive, ${redirected.length} redirected`);
-  console.log(`report: data/link-report.json`);
+  console.log(`report: link-report.json`);
   if (redirected.length) {
     console.log("\nRedirects are not failures, but a redirected opinion URL should be");
     console.log("replaced with its final form so the stored citation is stable.");
@@ -174,7 +178,7 @@ async function run() {
     console.log("\nNothing resolved, on any host. That is the network, not the content: an");
     console.log("egress proxy answering 403 to CONNECT produces exactly this result. Run the");
     console.log("check from a machine with open access to the courts, GovInfo and the FJC.");
-    console.log("docs/HANDOFF.md section 5 covers it. This run proves nothing either way.");
+    console.log("docs/DESKTOP-SETUP.md section 5 covers it. This run proves nothing either way.");
   } else if (inconclusive) {
     console.log(`\n${inconclusive} URL(s) neither resolved nor answered as gone. Government hosts`);
     console.log("throttle automated requests, so retry these by hand or at lower concurrency");

@@ -1,0 +1,44 @@
+{
+  "slug": "renee-marie-bumb",
+  "name": "Renée Marie Bumb",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2006–13 September 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1960 in Bellevue, Ohio. Bumb earned a B.A. from Ohio State University (1981), an M.A. from the University of Chicago (1983), and a J.D. from Rutgers Law School–Newark (1987). After clerking for U.S. District Judge Garrett E. Brown Jr., she practiced privately and served as an Assistant U.S. Attorney in New Jersey from 1991 to 2006. President George W. Bush nominated her; she received her commission on June 12, 2006. She became chief judge in 2023 and serves on the Judicial Conference of the United States.",
+    "education_sentences": [
+      "Bumb earned a B.A. from Ohio State University (1981), an M.A. from the University of Chicago (1983), and a J.D. from Rutgers Law School–Newark (1987)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1392416",
+      "https://www.njd.uscourts.gov/content/ren%C3%A9e-marie-bumb",
+      "https://www2.ca3.uscourts.gov/opinarch/231900p.pdf"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile",
+      "Third Circuit Koons opinion (2025)"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "Chief U.S. District Judge | Active; Chief Judge since 2023 | Camden"
+}

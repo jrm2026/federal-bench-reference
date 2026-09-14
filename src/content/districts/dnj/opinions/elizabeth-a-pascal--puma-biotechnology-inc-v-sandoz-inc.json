@@ -1,0 +1,55 @@
+{
+  "id": "elizabeth-a-pascal--puma-biotechnology-inc-v-sandoz-inc",
+  "district": "dnj",
+  "judge_slug": "elizabeth-a-pascal",
+  "judge_name": "Elizabeth A. Pascal",
+  "judge_office": "magistrate",
+  "caption": "Puma Biotechnology, Inc. v. Sandoz Inc.",
+  "citation_line": "Puma Biotechnology, Inc. v. Sandoz Inc., No. 1:21-cv-19918, ECF No. 89 (D.N.J. Dec. 20, 2022)",
+  "docket": "1:21-cv-19918",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied without prejudice an unopposed request to redact and seal portions of a status-conference transcript in Hatch-Waxman litigation. Confidentiality designations and generalized competitive-harm claims did not satisfy the common-law right of access or Local Civil Rule 5.3.",
+  "qualification_rationale": "A detailed checklist for sealing motions in commercially sensitive pharmaceutical litigation, including particularized injury, less-restrictive alternatives, consolidation, and competent evidentiary support.",
+  "appellate_posture_note": "Non-dispositive sealing order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_21-cv-19918/pdf/USCOURTS-njd-1_21-cv-19918-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_21-cv-19918/pdf/USCOURTS-njd-1_21-cv-19918-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 44,
+  "components": {
+    "app": 0,
+    "doc": 16,
+    "prac": 16,
+    "end": 4,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "protective-orders-sealing",
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Public Access and Sealing",
+  "subject_screen_exclusion_reason": "Sealing and transcript-redaction order; it does not decide a claim, defense, remedy, or material merits issue.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

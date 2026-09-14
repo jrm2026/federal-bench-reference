@@ -1,0 +1,61 @@
+{
+  "id": "susan-d-wigenton--united-states-v-jackson",
+  "district": "dnj",
+  "judge_slug": "susan-d-wigenton",
+  "judge_name": "Susan D. Wigenton",
+  "judge_office": "district",
+  "caption": "United States v. Jackson",
+  "citation_line": "United States v. Jackson, Nos. 23-2492, 23-3016, 23-2992 & 23-2508 (3d Cir. Mar. 21, 2025)",
+  "docket": "23-2492",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Following reassignment after three prior sentencing appeals, Judge Wigenton resentenced Carolyn Jackson to 140 months and John Jackson to 108 months after reviewing the trial record, new presentence reports and the parties’ presentations.",
+  "qualification_rationale": "The resentencing completed an unusually protracted and closely watched prosecution and generated precedential rulings on judicial factfinding under the advisory Guidelines, sentence finality after vacatur and the law-of-the-case doctrine.",
+  "appellate_posture_note": "The Third Circuit affirmed both sentences in a precedential opinion.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/232492p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/232492p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 82,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 15,
+    "end": 8,
+    "press": 8,
+    "career": 8
+  },
+  "subject_primary": "federal-criminal",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federal Sentencing",
+  "screen_score": 86,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 21,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

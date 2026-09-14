@@ -1,0 +1,65 @@
+{
+  "id": "claire-c-cecchi--adp-llc-v-mork",
+  "district": "dnj",
+  "judge_slug": "claire-c-cecchi",
+  "judge_name": "Claire C. Cecchi",
+  "judge_office": "district",
+  "caption": "ADP, LLC v. Mork",
+  "citation_line": "ADP, LLC v. Mork, No. 2:17-cv-04613; appeal consolidated in ADP, LLC v. Rafferty, 923 F.3d 113 (3d Cir. 2019)",
+  "docket": "2:17-cv-04613",
+  "reporter_cite": "923 F.3d 113",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Cecchi denied preliminary enforcement of restrictive covenants that ADP required high-performing employees to accept as a condition of restricted-stock awards, treating the covenants as unenforceable in their then-present form.",
+  "qualification_rationale": "The litigation became an important New Jersey restrictive-covenant authority concerning legitimate business interests, employee hardship and judicial narrowing of overbroad covenants.",
+  "appellate_posture_note": "The Third Circuit vacated and remanded in a precedential opinion. It held that the covenants were not unenforceable in their entirety, recognized ADP’s legitimate interests, and directed the district courts to consider blue-penciling their scope.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/181796p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/181796p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 79,
+  "components": {
+    "app": 22,
+    "doc": 18,
+    "prac": 15,
+    "end": 12,
+    "press": 2,
+    "career": 10
+  },
+  "subject_primary": "restrictive-covenants",
+  "subject_secondary": [
+    "employment"
+  ],
+  "procedural_tags": [
+    "injunctive-relief"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Employment Restrictive Covenants",
+  "screen_score": 83,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 15,
+    "doctrine": 11,
+    "treatment": 9,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

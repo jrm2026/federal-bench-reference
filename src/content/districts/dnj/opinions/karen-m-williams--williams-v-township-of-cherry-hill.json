@@ -1,0 +1,63 @@
+{
+  "id": "karen-m-williams--williams-v-township-of-cherry-hill",
+  "district": "dnj",
+  "judge_slug": "karen-m-williams",
+  "judge_name": "Karen M. Williams",
+  "judge_office": "district",
+  "caption": "Williams v. Township of Cherry Hill",
+  "citation_line": "Williams v. Township of Cherry Hill, No. 1:26-cv-00893 (D.N.J. July 27, 2026)",
+  "docket": "1:26-cv-00893",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Williams dismissed a property owner's challenge to a municipal tax sale because the pleaded notice injury belonged to the mortgagee, not the owner, and neither Tyler nor the New Jersey Supreme Court's Roberto decision supplied third-party standing or the pleaded claim.",
+  "qualification_rationale": "The opinion is a useful post-Tyler and post-Roberto application of Article III injury, third-party standing, and tax-sale notice doctrine. It qualifies at the doctrinal gate but lacks appellate or public-attention indicators.",
+  "appellate_posture_note": "No appellate disposition was identified as of the cutoff.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/1:2026cv00893/590789/34/",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/1:2026cv00893/590789/34/"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 35,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 10,
+    "end": 2,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "rule-12-dismissal"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Tax Sales and Standing",
+  "screen_score": 71,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 17,
+    "disposition": 20,
+    "doctrine": 8,
+    "treatment": 0,
+    "practical": 2
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

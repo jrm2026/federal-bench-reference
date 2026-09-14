@@ -1,0 +1,44 @@
+{
+  "slug": "michael-a-shipp",
+  "name": "Michael A. Shipp",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2012–13 September 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1965 in Paterson. Shipp earned a B.S. from Rutgers University (1987) and a J.D. from Seton Hall University School of Law (1994). He clerked for New Jersey Supreme Court Justice James H. Coleman Jr., practiced in Newark, worked in the New Jersey Attorney General’s Office, and served as a District of New Jersey magistrate judge from 2007 to 2012. President Obama appointed him.",
+    "education_sentences": [
+      "Shipp earned a B.S. from Rutgers University (1987) and a J.D. from Seton Hall University School of Law (1994)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1394031",
+      "https://www.njd.uscourts.gov/content/michael-shipp",
+      "https://www2.ca3.uscourts.gov/opinarch/131713p.pdf"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile",
+      "Third Circuit PASPA opinion"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned July 26, 2012 | Trenton"
+}

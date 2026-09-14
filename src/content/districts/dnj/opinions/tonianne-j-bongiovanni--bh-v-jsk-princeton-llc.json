@@ -1,0 +1,63 @@
+{
+  "id": "tonianne-j-bongiovanni--bh-v-jsk-princeton-llc",
+  "district": "dnj",
+  "judge_slug": "tonianne-j-bongiovanni",
+  "judge_name": "Tonianne J. Bongiovanni",
+  "judge_office": "magistrate",
+  "caption": "B.H. v. JSK Princeton LLC",
+  "citation_line": "B.H. v. JSK Princeton LLC, No. 3:24-cv-08851, ECF No. 28 (D.N.J. Mar. 31, 2026)",
+  "docket": "3:24-cv-08851",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Allowed a hotel to implead alleged traffickers and other hotels on New Jersey contribution theories in a civil sex-trafficking action, finding no TVPRA preemption, but rejected common-law indemnification absent the special legal relationship New Jersey law requires.",
+  "qualification_rationale": "An uncommon application of Rule 14, contribution, indemnification, and preemption principles in the developing field of hotel civil liability under the TVPRA.",
+  "appellate_posture_note": "Non-dispositive impleader order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2024cv08851/553915/28/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2024cv08851/553915/28/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 43,
+  "components": {
+    "app": 0,
+    "doc": 16,
+    "prac": 16,
+    "end": 4,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [
+    "business-torts"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Civil Trafficking Contribution and Indemnity",
+  "screen_score": 65,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 16,
+    "disposition": 12,
+    "doctrine": 9,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

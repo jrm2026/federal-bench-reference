@@ -1,0 +1,61 @@
+{
+  "id": "madeline-cox-arleo--united-states-v-city-of-newark",
+  "district": "dnj",
+  "judge_slug": "madeline-cox-arleo",
+  "judge_name": "Madeline Cox Arleo",
+  "judge_office": "district",
+  "caption": "United States v. City of Newark",
+  "citation_line": "United States v. City of Newark, No. 2:16-cv-01731 — Newark Police consent-decree administration and termination",
+  "docket": "2:16-cv-01731",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Arleo approved and supervised a federal consent decree governing Newark police stops, searches, arrests, use of force, bias-free policing, civilian oversight, training, data systems and accountability. After years of monitoring, she found substantial compliance and terminated the decree in 2025.",
+  "qualification_rationale": "The matter reshaped the policies and accountability systems of New Jersey’s largest police department. Its significance rests on nearly a decade of institutional reform and judicial supervision, not on a single appellate holding.",
+  "appellate_posture_note": "The decree was terminated after the court found substantial compliance. No appellate merits disposition was identified; the career significance derives from the decree’s breadth, duration and practical effect.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/4517987/united-states-v-city-of-newark/",
+  "links": [
+    {
+      "anchor": "District docket (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/4517987/united-states-v-city-of-newark/"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 67,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 20,
+    "end": 12,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Police Reform and Consent Decrees",
+  "screen_score": 73,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 17,
+    "disposition": 20,
+    "doctrine": 8,
+    "treatment": 0,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "unlabeled"
+}

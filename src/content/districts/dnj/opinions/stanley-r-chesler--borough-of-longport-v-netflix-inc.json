@@ -1,0 +1,61 @@
+{
+  "id": "stanley-r-chesler--borough-of-longport-v-netflix-inc",
+  "district": "dnj",
+  "judge_slug": "stanley-r-chesler",
+  "judge_name": "Stanley R. Chesler",
+  "judge_office": "district",
+  "caption": "Borough of Longport v. Netflix, Inc.",
+  "citation_line": "Borough of Longport v. Netflix, Inc., No. 2:21-cv-15303; aff’d, No. 22-2139 (3d Cir. Feb. 29, 2024)",
+  "docket": "2:21-cv-15303",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Chesler dismissed municipalities’ putative class action seeking franchise fees from Netflix and Hulu under the New Jersey Cable Television Act.",
+  "qualification_rationale": "The case resolved a novel and economically significant attempt to apply legacy cable-franchise statutes to internet streaming services and to let municipalities enforce the statute directly.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the Act does not imply a municipal private right of action. Because that resolved the case, the court did not need to decide whether Netflix or Hulu is substantively a cable television company under the Act.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-22-02139/pdf/USCOURTS-ca3-22-02139-0.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-22-02139/pdf/USCOURTS-ca3-22-02139-0.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 76,
+  "components": {
+    "app": 25,
+    "doc": 17,
+    "prac": 16,
+    "end": 7,
+    "press": 4,
+    "career": 7
+  },
+  "subject_primary": "municipal-telecom",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Telecommunications and Streaming Regulation",
+  "screen_score": 87,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 19,
+    "disposition": 20,
+    "doctrine": 10,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

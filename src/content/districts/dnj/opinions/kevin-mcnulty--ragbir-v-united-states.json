@@ -1,0 +1,65 @@
+{
+  "id": "kevin-mcnulty--ragbir-v-united-states",
+  "district": "dnj",
+  "judge_slug": "kevin-mcnulty",
+  "judge_name": "Kevin McNulty",
+  "judge_office": "district",
+  "caption": "Ragbir v. United States",
+  "citation_line": "Ragbir v. United States, No. 2:17-cv-01256, 2019 WL 1975462 (D.N.J. Jan. 25, 2019), aff'd, 950 F.3d 54 (3d Cir. 2020)",
+  "docket": "2:17-cv-01256",
+  "reporter_cite": "950 F.3d 54",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge McNulty denied coram nobis relief from a fraud conviction after an evidentiary hearing, rejecting ineffective-assistance and instructional claims advanced in an effort to avoid immigration consequences.",
+  "qualification_rationale": "The appeal produced a detailed precedential synthesis of the ancient writ's modern five prerequisites, including a particularly strict sound-reasons-for-delay requirement in immigration-consequence cases.",
+  "appellate_posture_note": "The Third Circuit affirmed, holding that the petitioner had not supplied sound reasons for the long delay and clarifying the governing coram nobis framework.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2:2017cv01256/345607/40/",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2:2017cv01256/345607/40/"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/191282p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 84,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 15,
+    "end": 12,
+    "press": 2,
+    "career": 10
+  },
+  "subject_primary": "federal-criminal",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Coram Nobis",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

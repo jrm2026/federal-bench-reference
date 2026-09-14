@@ -1,0 +1,63 @@
+{
+  "id": "brian-r-martinotti--government-employees-insurance-co-v-caring-pain",
+  "district": "dnj",
+  "judge_slug": "brian-r-martinotti",
+  "judge_name": "Brian R. Martinotti",
+  "judge_office": "district",
+  "caption": "Government Employees Insurance Co. v. Caring Pain Management, P.C.",
+  "citation_line": "Government Employees Insurance Co. v. Caring Pain Management, P.C., No. 2:22-cv-05017; rev'd, 98 F.4th 463 (3d Cir. 2024)",
+  "docket": "2:22-cv-05017",
+  "reporter_cite": "98 F.4",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Martinotti declined to compel arbitration of GEICO's New Jersey Insurance Fraud Prevention Act claim in litigation alleging fraudulent personal-injury-protection billing.",
+  "qualification_rationale": "The consolidated appeal resolved whether IFPA claims are arbitrable and clarified both the breadth of New Jersey's PIP arbitration scheme and the Federal Arbitration Act's command once a valid agreement covers the dispute.",
+  "appellate_posture_note": "The Third Circuit reversed in a precedential opinion and directed arbitration, holding that IFPA claims fall within the governing arbitration provisions.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/appellate-courts/ca3/23-1378/23-1378-2024-04-26-0.html",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/23-1378/23-1378-2024-04-26-0.html"
+    }
+  ],
+  "classification": "major",
+  "score_total": 76,
+  "components": {
+    "app": 25,
+    "doc": 19,
+    "prac": 16,
+    "end": 7,
+    "press": 1,
+    "career": 8
+  },
+  "subject_primary": "insurance-coverage",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "arbitration-forum-selection"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Insurance Fraud and Arbitration",
+  "screen_score": 87,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 21,
+    "disposition": 16,
+    "doctrine": 12,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only"
+}

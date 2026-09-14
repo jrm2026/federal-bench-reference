@@ -1,0 +1,67 @@
+{
+  "id": "michael-e-farbiarz--khalil-v-president",
+  "district": "dnj",
+  "judge_slug": "michael-e-farbiarz",
+  "judge_name": "Michael E. Farbiarz",
+  "judge_office": "district",
+  "caption": "Khalil v. President",
+  "citation_line": "Khalil v. President, 777 F. Supp. 3d 369 (D.N.J. 2025); appeal, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)",
+  "docket": "25-2162",
+  "reporter_cite": "777 F. Supp. 3d 369",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Farbiarz held that the District of New Jersey could hear Mahmoud Khalil’s habeas petition after his rapid interstate transfers, preliminarily enjoined removal on a foreign-policy ground, and later ordered release from detention.",
+  "qualification_rationale": "The case drew intense national attention and raised first-order questions about habeas geography, immediate-custodian rules, First Amendment retaliation and the INA’s channeling of removal-related review.",
+  "appellate_posture_note": "A divided precedential Third Circuit panel agreed that the New Jersey court had habeas jurisdiction as the district of confinement, but held that 8 U.S.C. § 1252(b)(9) stripped subject-matter jurisdiction over the removal-related claims. It vacated the challenged orders and remanded with instructions to dismiss without reaching the constitutional merits. Rehearing en banc was denied on May 22, 2026; the mandate was stayed pending a certiorari petition. Supreme Court docket No. 26A90 extended the petition deadline to September 21, 2026; no petition was shown on the docket by the September 10 cutoff.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/252162p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/252162p.pdf"
+    },
+    {
+      "anchor": "Supreme Court docket 26A90",
+      "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26A90.html"
+    }
+  ],
+  "classification": "major",
+  "score_total": 94,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 9,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "immigration",
+  "subject_secondary": [
+    "civil-rights"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Immigration Habeas",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 15,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

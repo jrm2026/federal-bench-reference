@@ -1,0 +1,54 @@
+{
+  "id": "jose-r-almonte--novartis-ag-v-novadoz-pharmaceuticals-llc",
+  "district": "dnj",
+  "judge_slug": "jose-r-almonte",
+  "judge_name": "José R. Almonte",
+  "judge_office": "magistrate",
+  "caption": "Novartis AG v. Novadoz Pharmaceuticals LLC",
+  "citation_line": "Novartis AG v. Novadoz Pharmaceuticals LLC, No. 2:25-cv-00849, ECF No. 111 (D.N.J. Aug. 4, 2026)",
+  "docket": "2:25-cv-00849",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied without prejudice discovery into why Novartis filed a trade-dress and trademark action over generic ENTRESTO tablets. Subjective filing motives were not relevant to laches on the record presented, and a possible future Lanham Act fee claim did not justify the request.",
+  "qualification_rationale": "Focused guidance on the boundary between merits discovery and litigation-motive discovery in pharmaceutical trademark litigation.",
+  "appellate_posture_note": "Non-dispositive discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2025cv00849/562035/111/0.pdf",
+  "links": [
+    {
+      "anchor": "Justia PDF",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2025cv00849/562035/111/0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 46,
+  "components": {
+    "app": 0,
+    "doc": 17,
+    "prac": 18,
+    "end": 3,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "trademark-unfair-competition",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Trademark Discovery",
+  "subject_screen_exclusion_reason": "Non-dispositive dispute over the permissible scope of trademark discovery.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

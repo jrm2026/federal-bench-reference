@@ -1,0 +1,64 @@
+{
+  "id": "sharon-a-king--chambers-v-rowan-university",
+  "district": "dnj",
+  "judge_slug": "sharon-a-king",
+  "judge_name": "Sharon A. King",
+  "judge_office": "magistrate",
+  "caption": "Chambers v. Rowan University",
+  "citation_line": "Chambers v. Rowan University, No. 1:23-cv-02094, ECF No. 63 (D.N.J. Nov. 26, 2024)",
+  "docket": "1:23-cv-02094",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "adopted",
+  "headnote_district_ruling": "Recommended enforcing an oral settlement placed on the record in a pro se Title VII case. Applying New Jersey contract law, the court found agreement on the essential terms and rejected duress because the asserted pressures were not attributable to Rowan and the colloquy showed knowing assent.",
+  "qualification_rationale": "A clear, reusable treatment of on-the-record settlement, pro se assent, and New Jersey's demanding duress standard.",
+  "appellate_posture_note": "Adopted in full on December 27, 2024, ECF No. 65; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_23-cv-02094/pdf/USCOURTS-njd-1_23-cv-02094-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_23-cv-02094/pdf/USCOURTS-njd-1_23-cv-02094-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 40,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 15,
+    "end": 3,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "commercial-contract",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "case-management",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Settlement Enforcement",
+  "screen_score": 73,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 15,
+    "disposition": 18,
+    "doctrine": 8,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district"
+}

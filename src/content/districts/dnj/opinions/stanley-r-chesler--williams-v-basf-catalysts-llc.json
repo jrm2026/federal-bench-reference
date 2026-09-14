@@ -1,0 +1,64 @@
+{
+  "id": "stanley-r-chesler--williams-v-basf-catalysts-llc",
+  "district": "dnj",
+  "judge_slug": "stanley-r-chesler",
+  "judge_name": "Stanley R. Chesler",
+  "judge_office": "district",
+  "caption": "Williams v. BASF Catalysts LLC",
+  "citation_line": "Williams v. BASF Catalysts LLC, No. 2:11-cv-01754; aff'd in part and rev'd in part, 765 F.3d 306 (3d Cir. 2014)",
+  "docket": "2:11-cv-01754",
+  "reporter_cite": "765 F.3d 306",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Chesler dismissed claims alleging that BASF and its lawyers had concealed and destroyed evidence that talc products contained asbestos, causing earlier personal-injury claimants to abandon, dismiss, or settle their cases.",
+  "qualification_rationale": "The case became a substantial Third Circuit authority on fraud, fraudulent concealment, the New Jersey litigation privilege, spoliation injury, Rooker-Feldman, and the limits of prospective relief aimed at prior state litigation.",
+  "appellate_posture_note": "The Third Circuit reversed dismissal of the fraud and fraudulent-concealment claims, affirmed dismissal of the New Jersey RICO claim, and rejected relief directed at hypothetical future state proceedings.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-13-01089/pdf/USCOURTS-ca3-13-01089-0.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-13-01089/pdf/USCOURTS-ca3-13-01089-0.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 88,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 15,
+    "end": 15,
+    "press": 3,
+    "career": 10
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "privilege-crime-fraud",
+    "spoliation-sanctions"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Fraud Litigation Privilege and Spoliation",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

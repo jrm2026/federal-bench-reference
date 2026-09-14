@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import OpinionEntry from '../../../../components/OpinionEntry.astro';
+import taxonomy from '../../../../content/config/taxonomy.json';
+
+export async function getStaticPaths() {
+  const judges = await getCollection('judges');
+  const opinions = await getCollection('opinions');
+  return judges.filter(j => j.data.canonical).map(j => ({
+    params: { district: j.data.district, slug: j.data.slug },
+    props: {
+      judge: j.data,
+      ops: opinions.filter(o => o.data.judge_slug === j.data.slug &&
+                                o.data.district === j.data.district).map(o => o.data),
+    },
+  }));
+}
+const { judge, ops } = Astro.props;
+const isMag = judge.office.startsWith('magistrate');
+const selected = ops.filter(o => o.subject_screen === 'qualifying')
+  .sort((a, b) => (b.citation_line.match(/(19|20)\d\d/)?.[0] ?? '') .localeCompare(a.citation_line.match(/(19|20)\d\d/)?.[0] ?? ''));
+const procOnly = ops.filter(o => o.subject_screen === 'excluded');
+const intake = taxonomy.subject.intake_filter;
+const counts = Object.fromEntries(intake.map(t => [t,
+  ops.filter(o => o.subject_primary === t || o.subject_secondary.includes(t)).length]));
+const label = (t) => t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+---
+<Base title={`Hon. ${judge.name} — Federal Bench Reference`} district={judge.district}>
+  <div class="breadcrumb"><a href={`/districts/${judge.district}/`}>District of New Jersey</a> › Judges › {judge.name}</div>
+
+  <div class="judgehead">
+    <h1>Hon. {judge.name}</h1>
+    <div class="role">{isMag ? 'United States Magistrate Judge' : 'United States District Judge'} · District of New Jersey</div>
+    {judge.vicinage && <span class="chip">{judge.vicinage}</span>}
+    {judge.render_section === 'fjc_reconciliation' &&
+      <span class="chip">FJC record · not on current court directory</span>}
+  </div>
+
+  {isMag &&
+    <section class="block">
+      <h2>Role on the docket</h2>
+      <p class="summary">Magistrate judges in this district manage scheduling and discovery, conduct settlement
+      conferences, handle criminal initial proceedings, and decide dispositive matters on referral or with the
+      consent of the parties. Rulings below are labeled as orders or as reports and recommendations, with the
+      district judge's disposition noted where one has been entered.</p>
+    </section>}
+
+  <section class="block">
+    <h2>Biography</h2>
+    {judge.biography
+      ? <>
+          <p class="summary">{judge.biography.text}</p>
+          {judge.biography.source_note &&
+            <div class="notice neutral">{judge.biography.source_note}</div>}
+          <p class="srcline">
+            Sources: {judge.biography.source_labels.map((l, i) =>
+              <>{i > 0 && ' · '}<a href={judge.biography.sources[i]} style="color:var(--accent);text-decoration:none">{l}</a></>)}
+            {' · verified '}{judge.biography.last_verified}
+          </p>
+        </>
+      : <div class="empty"><strong>Biography pending review</strong>Verified biography will appear here.</div>}
+    {judge.service_line_reviewed && <p class="srcline">{judge.service_line_reviewed}</p>}
+  </section>
+
+  {judge.other_writings?.length > 0 &&
+    <section class="block">
+      <h2>Other writings</h2>
+      {judge.other_writings.map(w =>
+        <p class="summary">{w.url ? <a href={w.url} style="color:var(--accent);text-decoration:none">{w.text}</a> : w.text}</p>)}
+    </section>}
+
+  {judge.record_status !== 'represented'
+    ? <section class="block">
+        <h2>Selected decisions</h2>
+        <div class="empty"><strong>{judge.record_status === 'developing' ? 'Developing record' : 'None identified'}</strong>{judge.record_status_note}</div>
+      </section>
+    : <section class="block">
+        <h2>Selected decisions</h2>
+        <p class="windownote">{isMag
+          ? 'Five most recent verified entries per category. No date cutoff.'
+          : 'Career screen. Newest first.'}</p>
+        {selected.map(op => <OpinionEntry op={op} />)}
+      </section>}
+
+  {procOnly.length > 0 &&
+    <section class="block">
+      <h2>Procedural rulings</h2>
+      <p class="windownote">Discovery, sealing, and case-management rulings. Indexed by procedure only.</p>
+      {procOnly.map(op => <OpinionEntry op={op} />)}
+    </section>}
+
+  <section class="block">
+    <h2>Decisions by matter type</h2>
+    <p class="windownote">Commercial matter types. Rolling five years.</p>
+    <div class="taggrid">
+      {intake.slice(0, 8).map(t =>
+        <div>{label(t)}<span>{counts[t] ? `${counts[t]} entr${counts[t] === 1 ? 'y' : 'ies'}` : 'No entries'}</span></div>)}
+    </div>
+    <div class="notice neutral" style="margin-top:12px">Commercial matter-type coverage is under development.
+    Absence of an entry is not evidence that no ruling was made.</div>
+  </section>
+</Base>

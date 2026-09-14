@@ -1,4 +1,7 @@
-# Desktop handoff
+# Desktop setup
+
+`docs/handoff.md` is the specification. This is the part of it that runs at
+your desk.
 
 Everything below runs at your desk. None of it can run in a chat session:
 there are no GitHub credentials there and network egress reaches package
@@ -6,17 +9,15 @@ registries only.
 
 ## 1. Repository
 
+The repository exists and the content layer, the review gate and the deployment
+configuration are in it. Clone it:
+
 ```sh
-cd ~/projects
-mkdir federal-bench-reference && cd federal-bench-reference
-tar -xzf ~/Downloads/federal-bench-content.tar.gz --strip-components=1
-
-# If the Astro scaffold from the earlier session survived, copy it in now.
-# Scaffold and content layer belong in one repository, not two.
-
-git init -b main
-git add -A
-git commit -m "Content layer, review gate, and deployment config"
+git clone git@github.com:jrm2026/federal-bench-reference.git
+cd federal-bench-reference
+npm install
+npm run validate
+npx astro build
 ```
 
 Create the repository on GitHub under your personal account, **private**,
@@ -52,7 +53,7 @@ Settings → Secrets and variables → Actions:
 
 Never in the tree. `.gitignore` already excludes `.env`.
 
-## 4. Cloudflare Pages
+## 4. Cloudflare Workers
 
 - Workers & Pages → Create → Pages → Connect to Git → select the repository
 - Production branch `main`

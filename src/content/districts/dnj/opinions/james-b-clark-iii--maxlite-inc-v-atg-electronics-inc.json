@@ -1,0 +1,66 @@
+{
+  "id": "james-b-clark-iii--maxlite-inc-v-atg-electronics-inc",
+  "district": "dnj",
+  "judge_slug": "james-b-clark-iii",
+  "judge_name": "James B. Clark III",
+  "judge_office": "magistrate",
+  "caption": "MaxLite, Inc. v. ATG Electronics, Inc.",
+  "citation_line": "MaxLite, Inc. v. ATG Electronics, Inc., No. 2:15-cv-01116, ECF No. 185 (D.N.J. Mar. 15, 2018)",
+  "docket": "2:15-cv-01116",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "adopted",
+  "headnote_district_ruling": "Recommended allowing employee defendants to plead a crossclaim that their corporate employer owed defense costs, but denying a preliminary injunction compelling ongoing payment because the extraordinary-relief factors were not met.",
+  "qualification_rationale": "A detailed treatment of Rule 13 crossclaims, corporate advancement obligations, and preliminary relief over litigation funding in a commercial/IP dispute.",
+  "appellate_posture_note": "Adopted on May 14, 2018, ECF No. 189; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_15-cv-01116/pdf/USCOURTS-njd-2_15-cv-01116-3.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_15-cv-01116/pdf/USCOURTS-njd-2_15-cv-01116-3.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 43,
+  "components": {
+    "app": 0,
+    "doc": 16,
+    "prac": 16,
+    "end": 4,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "closely-held-fiduciary",
+  "subject_secondary": [
+    "commercial-contract"
+  ],
+  "procedural_tags": [
+    "injunctive-relief",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Corporate Advancement and Preliminary Relief",
+  "screen_score": 70,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 16,
+    "disposition": 14,
+    "doctrine": 9,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district"
+}

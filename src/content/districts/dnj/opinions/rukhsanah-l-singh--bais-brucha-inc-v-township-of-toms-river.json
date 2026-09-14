@@ -1,0 +1,63 @@
+{
+  "id": "rukhsanah-l-singh--bais-brucha-inc-v-township-of-toms-river",
+  "district": "dnj",
+  "judge_slug": "rukhsanah-l-singh",
+  "judge_name": "Rukhsanah L. Singh",
+  "judge_office": "magistrate",
+  "caption": "Bais Brucha Inc. v. Township of Toms River",
+  "citation_line": "Bais Brucha Inc. v. Township of Toms River, No. 3:21-cv-03239, ECF No. 53 (D.N.J. Nov. 3, 2022)",
+  "docket": "3:21-cv-03239",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "adopted",
+  "headnote_district_ruling": "Allowed supplemental federal constitutional and RLUIPA allegations concerning post-complaint zoning amendments under Rule 15(d), and separately recommended dismissal of an NJLAD land-use claim because New Jersey law assigns exclusive jurisdiction to Superior Court.",
+  "qualification_rationale": "Combines supplemental pleading, religious-land-use litigation, a federal consent order, and an unusual state-law forum restriction.",
+  "appellate_posture_note": "The district judge adopted the NJLAD recommendation on January 9, 2023; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2021cv03239/461769/53/",
+  "links": [
+    {
+      "anchor": "Justia opinion and R&R",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2021cv03239/461769/53/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 48,
+  "components": {
+    "app": 0,
+    "doc": 16,
+    "prac": 18,
+    "end": 6,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Religious Land Use and State Civil Rights Jurisdiction",
+  "screen_score": 72,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 16,
+    "disposition": 15,
+    "doctrine": 9,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}

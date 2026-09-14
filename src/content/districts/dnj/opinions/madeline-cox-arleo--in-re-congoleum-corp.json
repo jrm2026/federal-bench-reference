@@ -1,0 +1,61 @@
+{
+  "id": "madeline-cox-arleo--in-re-congoleum-corp",
+  "district": "dnj",
+  "judge_slug": "madeline-cox-arleo",
+  "judge_name": "Madeline Cox Arleo",
+  "judge_office": "district",
+  "caption": "In re Congoleum Corp.",
+  "citation_line": "In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)",
+  "docket": "23-1295",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "order",
+  "rr_disposition": null,
+  "headnote_district_ruling": "On bankruptcy appeal, Judge Arleo reversed an order reopening Congoleum’s long-closed bankruptcy and rejected the bankruptcy court’s conclusion that a plan finding insulated Bath Iron Works from environmental liabilities.",
+  "qualification_rationale": "The dispute arose from decades of asbestos and environmental litigation and presented important questions about post-confirmation bankruptcy jurisdiction, reopening a closed case, interpretation of a confirmation order, notice, res judicata, and third-party releases.",
+  "appellate_posture_note": "After panel rehearing, the Third Circuit reversed the district judgment in a precedential opinion and reinstated the bankruptcy court’s result, concluding that reopening was proper and that the confirmation finding bound Occidental.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/231295p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/231295p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 77,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 17,
+    "end": 7,
+    "press": 2,
+    "career": 8
+  },
+  "subject_primary": "bankruptcy",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Bankruptcy and Environmental Liability",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only"
+}

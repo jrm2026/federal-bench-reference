@@ -1,0 +1,55 @@
+{
+  "id": "jessica-s-allen--adp-inc-v-wise-payments-ltd",
+  "district": "dnj",
+  "judge_slug": "jessica-s-allen",
+  "judge_name": "Jessica S. Allen",
+  "judge_office": "magistrate",
+  "caption": "ADP, Inc. v. Wise Payments Ltd.",
+  "citation_line": "ADP, Inc. v. Wise Payments Ltd., No. 2:21-cv-12457, ECF No. 52 (D.N.J. July 19, 2022)",
+  "docket": "2:21-cv-12457",
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied a stay of federal trademark and unfair-competition litigation in favor of suspended TTAB proceedings because the Board matters were not advanced, could not supply the full range of relief, and were unlikely to simplify the case.",
+  "qualification_rationale": "A practical Landis analysis of the relationship between district-court trademark litigation and parallel administrative proceedings.",
+  "appellate_posture_note": "Non-dispositive stay order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_21-cv-12457/pdf/USCOURTS-njd-2_21-cv-12457-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_21-cv-12457/pdf/USCOURTS-njd-2_21-cv-12457-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 42,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 15,
+    "end": 5,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "trademark-unfair-competition",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "case-management",
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Trademark Litigation Stays",
+  "subject_screen_exclusion_reason": "Case-management stay ruling that does not decide the trademark claims or a material defense.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district"
+}
