@@ -9,17 +9,21 @@ work from it.
 Nothing here renders. `src/content` is the published tree; this directory is not
 in the content collections.
 
-Of the forty-five:
+Of the forty-five, by how recoverable each is — the full inventory, with every
+citation, is in `docs/HELD-ENTRIES.md`:
 
-- **33 carry a district docket number** and are re-sourceable. Twenty-one are in
-  the deterministic GovInfo package form (`USCOURTS-njd-<vicinage>_<docket>`).
-  `scripts/resolve-links.mjs` is written for exactly this and has never been run
-  against the live APIs.
-- **12 carry no docket.** Several of those have an `F. Supp.` reporter citation,
-  which means a district decision was published and can be found by citation —
-  *NCAA v. Governor of New Jersey* (Shipp, 926 F. Supp. 2d 551) and *ANJRPC v.
-  Platkin* (Sheridan, 742 F. Supp. 3d 421) among them. The rest carry only an
-  `F.3d` cite, which means the record as written is the appellate opinion.
+- **21 carry a district docket.** `scripts/resolve-links.mjs` was written for
+  exactly these; GovInfo package IDs are deterministic from the docket.
+- **12 carry an appellate docket where the district docket belongs.** That defect
+  was already on the worklist. One lookup each.
+- **2 name a published district decision with no docket** — *NCAA v. Governor of
+  New Jersey*, 926 F. Supp. 2d 551, and *ANJRPC v. Platkin*, 742 F. Supp. 3d 421.
+  Findable by citation.
+- **7 carry only an appellate citation.** As written, the entry is the appeal.
+  Re-research from the district docket or drop it.
+- **3 carry neither a docket nor a reporter citation.**
+
+Thirty-five of the forty-five come back with a lookup. Ten need research.
 
 To restore one: resolve a district-level link, set `link_level` to `district`,
 move the file back into `src/content/districts/dnj/opinions/`, and raise the
