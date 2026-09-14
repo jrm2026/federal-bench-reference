@@ -125,10 +125,27 @@ async function cl(path, params = {}) {
 /** Follow an absolute `next` cursor URL under the same pacing and auth. */
 const clNext = (url) => request(new URL(url));
 
-/** The CourtListener docket id for a district docket number. */
-async function docketIdFor(districtDocket) {
-  const d = await cl('/dockets/', { court: COURT, docket_number: districtDocket, fields: 'id,case_name' });
-  return d.results?.[0]?.id ?? null;
+/**
+ * CourtListener docket ids for a district docket number — plural on purpose.
+ *
+ * One docket number can carry several records: a scrape and a PACER purchase of
+ * the same case, or a transfer between vicinages. Sovereign Bank v. REMI Capital
+ * has both a 3:09-cv-01580 with Sheridan and a duplicate with no assignment, and
+ * ANJRPC exists at 1:18-cv-10507 and 3:18-cv-10507. Taking results[0] picks
+ * whichever the index returns first, which is often the empty one — and an empty
+ * docket looks exactly like a case with no notice of appeal.
+ *
+ * Richer records first, so the walk tries the one most likely to carry entries.
+ */
+async function docketIdsFor(districtDocket) {
+  const d = await cl('/dockets/', {
+    court: COURT, docket_number: districtDocket,
+    fields: 'id,case_name,assigned_to_str,date_filed,date_terminated',
+  });
+  return (d.results ?? [])
+    .map((r) => ({ id: r.id, weight: (r.assigned_to_str ? 2 : 0) + (r.date_terminated ? 1 : 0) }))
+    .sort((a, b) => b.weight - a.weight)
+    .map((r) => r.id);
 }
 
 /**
@@ -335,10 +352,17 @@ for (const f of files) {
     // whom. Skip a record that already carries a signature-line attribution.
     if (o.authorship_source !== 'docket_entry_signature') {
       try {
-        const id = await docketIdFor(row.district_docket);
-        if (!id) { row.note = 'docket not in RECAP'; }
+        const ids = await docketIdsFor(row.district_docket);
+        if (!ids.length) { row.note = 'docket not in RECAP'; }
         else {
-          const d = await decisionFromDocket(id, row.appellate_docket);
+          // Try each candidate; a duplicate with no entries is indistinguishable
+          // from a case with no appeal until you look at the next one.
+          let d = null;
+          for (const id of ids) {
+            d = await decisionFromDocket(id, row.appellate_docket);
+            if (d?.ecf) break;
+          }
+          if (ids.length > 1 && !d?.ecf) row.note = `${ids.length} docket records, none yielding an appeal`;
           row.ecf = d?.ecf ?? null;
           row.decision_date = d?.date ?? null;
           row.signed_by = d?.judge ?? null;
