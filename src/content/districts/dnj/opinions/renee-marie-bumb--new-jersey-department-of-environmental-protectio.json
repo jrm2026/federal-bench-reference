@@ -6,7 +6,13 @@
   "judge_office": "district",
   "caption": "New Jersey Department of Environmental Protection v. E.I. du Pont de Nemours & Co.",
   "citation_line": "New Jersey Department of Environmental Protection v. E.I. du Pont de Nemours & Co., Nos. 1:19-cv-14758, 1:19-cv-14765, 1:19-cv-14766 & 3:19-cv-14767 (D.N.J. Aug. 7, 2026)",
-  "docket": "1:19-cv-14758",
+  "district_docket": "1:19-cv-14758",
+  "appellate_docket": null,
+  "additional_dockets": [
+    "1:19-cv-14765",
+    "1:19-cv-14766",
+    "3:19-cv-14767"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

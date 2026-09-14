@@ -6,7 +6,13 @@
   "judge_office": "district",
   "caption": "United States v. Jackson",
   "citation_line": "United States v. Jackson, Nos. 23-2492, 23-3016, 23-2992 & 23-2508 (3d Cir. Mar. 21, 2025)",
-  "docket": "23-2492",
+  "district_docket": null,
+  "appellate_docket": "23-2492",
+  "additional_dockets": [
+    "23-3016",
+    "23-2992",
+    "23-2508"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

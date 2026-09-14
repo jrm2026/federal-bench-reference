@@ -6,7 +6,11 @@
   "judge_office": "district",
   "caption": "Jorjani v. New Jersey Institute of Technology",
   "citation_line": "Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422",
-  "docket": "2:18-cv-11693",
+  "district_docket": "2:18-cv-11693",
+  "appellate_docket": null,
+  "additional_dockets": [
+    "2:20-cv-01422"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

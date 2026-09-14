@@ -16,7 +16,8 @@ specification; this file is the operating summary.
     npm run signoffs      # the curator's ledger
     npm run dev
     npm run build         # gates, then astro build; exit 1 blocks the deploy
-    node scripts/resolve-links.mjs --district=dnj   # needs COURTLISTENER_TOKEN
+    node scripts/resolve-links.mjs --district=dnj      # needs COURTLISTENER_TOKEN
+    node scripts/reconcile-dockets.mjs --district=dnj --held   # same
     node scripts/check-links.mjs                    # needs open network access
 
 ## The one rule that governs everything
@@ -69,10 +70,24 @@ fails the build rather than rendering. Subject and procedural tags must come
 from `taxonomy.json`; there is no free-text tagging. Display labels live in
 `taxonomy.labels`; the keys are the authority.
 
-**Opinion identity is `judge_slug` + `caption` + `docket`.** Caption alone
-collides on this corpus — *United States v. Jackson* appears on two judges'
+**Opinion identity is `judge_slug` + `caption` + `district_docket`.** Caption
+alone collides on this corpus — *United States v. Jackson* appears on two judges'
 pages, *Veterans Guardian v. Platkin* on two more. A matcher keyed on caption
 will silently consume the wrong record. This has already happened once.
+
+**A district docket and an appellate docket are different numbers for the same
+litigation, and only one of them identifies a district decision.** They lived in
+a single `docket` field until 14 September 2026, and a Third Circuit number
+stood in for the district one on twelve records because the significance screen
+keyed on the existence of an appeal. The field is now split into
+`district_docket` and `appellate_docket`. Never write an appellate number into
+the first. `scripts/reconcile-dockets.mjs` recovers a district docket from an
+appellate one; `docs/DOCKET-RECONCILIATION.md` is the research that remains.
+
+**An entry belongs on a judge's page only when the district court's own decision
+is available.** An appellate opinion shows what the circuit did, not what the
+judge did. The gate fails any significant-tier entry whose `link_level` is not
+`district`.
 
 **Captions drift between the district court and the appeal.** *Bryman v. Murphy*
 on appeal is *Govatos v. Murphy* below. Resolve by docket, never by name.

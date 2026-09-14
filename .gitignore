@@ -31,3 +31,6 @@ Thumbs.db
 
 # Wrangler local state
 .wrangler/
+
+# Written by scripts/reconcile-dockets.mjs. Regenerable.
+docket-reconciliation.json

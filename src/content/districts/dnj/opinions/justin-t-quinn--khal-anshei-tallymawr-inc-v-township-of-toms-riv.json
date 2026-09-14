@@ -6,7 +6,11 @@
   "judge_office": "magistrate",
   "caption": "Khal Anshei Tallymawr Inc. v. Township of Toms River",
   "citation_line": "Khal Anshei Tallymawr Inc. v. Township of Toms River, Nos. 3:21-cv-02716 & 3:21-cv-03239, ECF No. 168 (D.N.J. Aug. 8, 2024)",
-  "docket": "3:21-cv-02716",
+  "district_docket": "3:21-cv-02716",
+  "appellate_docket": null,
+  "additional_dockets": [
+    "3:21-cv-03239"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

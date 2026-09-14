@@ -6,7 +6,11 @@
   "judge_office": "district",
   "caption": "Golden Fortune Import & Export Corp. v. Mei-Xin Ltd.",
   "citation_line": "Golden Fortune Import & Export Corp. v. Mei-Xin Ltd., No. 2:22-cv-01369; rev'd, Nos. 22-1710 & 22-1885 (3d Cir. Aug. 5, 2022)",
-  "docket": "2:22-cv-01369",
+  "district_docket": "2:22-cv-01369",
+  "appellate_docket": "22-1710",
+  "additional_dockets": [
+    "22-1885"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

@@ -6,7 +6,11 @@
   "judge_office": "district",
   "caption": "Khalil v. President",
   "citation_line": "Khalil v. President, 777 F. Supp. 3d 369 (D.N.J. 2025); appeal, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)",
-  "docket": "25-2162",
+  "district_docket": null,
+  "appellate_docket": "25-2162",
+  "additional_dockets": [
+    "25-2357"
+  ],
   "reporter_cite": "777 F. Supp. 3d 369",
   "court": "D.N.J.",
   "tier": "significant",

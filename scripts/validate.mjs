@@ -16,6 +16,7 @@ const SCBANDS = [[60,100,'principal'],[45,59,'useful'],[35,44,'supplemental']];
 const FORBIDDEN = /grant_rate|reversal_rate|affirmance_rate|win_rate|denial_rate|avg_time|average_time|ideolog|lean|score_percentile|ranking/i;
 
 const err = [];
+const warn = [];
 const districts = readdirSync(ROOT).filter(d => existsSync(join(ROOT, d, 'judges')));
 const canonical = new Map();
 
@@ -54,10 +55,18 @@ for (const d of districts) {
     const id = o.id;
     for (const k of Object.keys(o)) if (FORBIDDEN.test(k)) err.push(`${id}: forbidden aggregate field '${k}'`);
 
-    // identity: caption alone is not a key on this corpus
-    const key = `${o.judge_slug}|${o.caption}|${o.docket ?? o.reporter_cite ?? ''}`;
-    if (seen.has(key)) err.push(`${id}: duplicate judge+caption+docket identity`);
+    // identity: caption alone is not a key on this corpus, and the docket that
+    // identifies a district decision is the district court's, never the appeal's
+    const key = `${o.judge_slug}|${o.caption}|${o.district_docket ?? o.reporter_cite ?? ''}`;
+    if (seen.has(key)) err.push(`${id}: duplicate judge+caption+district docket identity`);
     seen.add(key);
+
+    // An entry belongs on a judge's page only when the district court's own
+    // decision is available. An appellate opinion shows what the circuit did.
+    if (o.tier === 'significant' && o.link_level !== 'district')
+      err.push(`${id}: significant tier with link_level '${o.link_level}' — no district-court decision`);
+    if (o.tier === 'significant' && !o.district_docket)
+      warn.push(`${id}: no district docket recorded${o.appellate_docket ? ` (appellate docket ${o.appellate_docket} is on the record)` : ''}`);
 
     if (!SUBJ.has(o.subject_primary)) err.push(`${id}: subject '${o.subject_primary}' not in vocabulary`);
     if ((o.subject_secondary ?? []).length > 2) err.push(`${id}: more than 2 secondary subjects`);
@@ -117,9 +126,10 @@ const compliance = runComplianceGates({
 });
 err.push(...compliance.errors);
 
-if (compliance.warnings.length) {
-  console.warn(`${compliance.warnings.length} warning(s):`);
-  for (const w of compliance.warnings) console.warn('  ~ ' + w);
+const allWarn = [...warn, ...compliance.warnings];
+if (allWarn.length) {
+  console.warn(`${allWarn.length} warning(s):`);
+  for (const w of allWarn) console.warn('  ~ ' + w);
 }
 for (const n of compliance.notes) console.log('note: ' + n);
 

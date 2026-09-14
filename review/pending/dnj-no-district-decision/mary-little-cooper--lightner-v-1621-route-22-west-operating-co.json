@@ -6,7 +6,13 @@
   "judge_office": "district",
   "caption": "Lightner v. 1621 Route 22 West Operating Co.",
   "citation_line": "Lightner v. 1621 Route 22 West Operating Co., Nos. 3:11-cv-02007, 3:11-cv-03960 & 3:11-cv-04072; appeal dismissed, Nos. 12-2122 & 12-2726 (3d Cir. Sept. 4, 2013)",
-  "docket": "3:11-cv-02007",
+  "district_docket": "3:11-cv-02007",
+  "appellate_docket": "12-2122",
+  "additional_dockets": [
+    "3:11-cv-03960",
+    "3:11-cv-04072",
+    "12-2726"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

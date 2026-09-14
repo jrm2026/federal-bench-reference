@@ -6,7 +6,11 @@
   "judge_office": "district",
   "caption": "United States v. McIver",
   "citation_line": "United States v. McIver, No. 2:25-cr-00388; appeal, Nos. 25-3573 & 26-1122 (3d Cir. Aug. 26, 2026)",
-  "docket": "2:25-cr-00388",
+  "district_docket": "2:25-cr-00388",
+  "appellate_docket": "25-3573",
+  "additional_dockets": [
+    "26-1122"
+  ],
   "reporter_cite": null,
   "court": "D.N.J.",
   "tier": "significant",

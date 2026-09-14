@@ -52,7 +52,12 @@ const opinions = defineCollection({
     judge_office: z.enum(['district', 'magistrate']),
     caption: z.string(),
     citation_line: z.string(),
-    docket: z.string().nullable(),
+    // One docket field could hold either court's number, and a Third Circuit
+    // docket came to stand in for the district one across a dozen records.
+    // Identity and the district-decision rule both key on district_docket.
+    district_docket: z.string().nullable(),
+    appellate_docket: z.string().nullable(),
+    additional_dockets: z.array(z.string()).default([]),
     reporter_cite: z.string().nullable(),
     court: z.string(),
     tier: z.enum(['significant', 'recent']),
