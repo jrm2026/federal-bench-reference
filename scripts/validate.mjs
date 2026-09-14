@@ -67,6 +67,13 @@ for (const d of districts) {
       err.push(`${id}: significant tier with link_level '${o.link_level}' — no district-court decision`);
     // Who decided is not a matter of inference. An entry may carry a judge's
     // name only when a source that names the author was actually read.
+    // opinion_text means "the document this entry links to names its author".
+    // That is only true when the link is the district court's own decision; an
+    // appellate PDF names the panel, and the district judge only as the judge
+    // appealed from, which is a different source with a different name.
+    if (o.authorship_source === 'opinion_text' && o.link_level !== 'district')
+      err.push(`${id}: authorship_source 'opinion_text' but link_level is '${o.link_level}' — ` +
+               `the linked document is the appeal, not the decision`);
     if (o.tier === 'significant' && o.authorship_source === 'unverified')
       err.push(`${id}: authorship unverified — no signature line or cover page read`);
     if (o.authored_by && o.authorship_source !== 'unverified' &&
