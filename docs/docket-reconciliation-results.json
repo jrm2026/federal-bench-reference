@@ -54,11 +54,11 @@
   "esther-salas--berkelhammer-v-adp-totalsource-group-inc": {
     "district_docket": "2:20-cv-05696",
     "vicinage_inferred": false,
-    "case_name_below": "Berkelhammer v. ADP TotalSource Group, Inc.",
-    "judge_confirmed": null,
-    "judge_conflict": "Record attributes this to Esther Salas. The docket's current assignment is Evelyn Padin. Padin was not on the bench when the case was filed in May 2020, so a reassignment is likely and the CourtListener field shows the present assignment, not the judge appealed from. Read the Third Circuit cover page in No. 22-1618, which names the district judge. Do not restore this entry to either judge's page until that is read.",
-    "date_filed": "2020-05-07",
-    "source": "CourtListener RECAP docket search, court=njd"
+    "appellate_docket_confirmed": "22-1618",
+    "judge_confirmed": "Esther Salas",
+    "source": "Third Circuit opinion cover page, No. 22-1618, read via CourtListener opinion text",
+    "cover_page": "On Appeal from the United States District Court for the District of New Jersey (D.C. No. 2-20-cv-05696), District Judge: Honorable Esther Salas",
+    "resolved_conflict": "CourtListener's docket assignment showed Evelyn Padin. The cover page names Esther Salas as the judge appealed from. The record was correct; the docket field reports the current assignment, not the judge who decided."
   },
   "karen-m-williams--cornish-adebiyi-v-caesars-entertainment-inc": {
     "district_docket": "1:23-cv-02536",
@@ -116,11 +116,11 @@
   "kevin-mcnulty--jm-v-summit-city-board-of-education": {
     "district_docket": "2:19-cv-00159",
     "vicinage_inferred": false,
-    "case_name_below": "J.M. v. Summit City Board of Education",
-    "judge_confirmed": null,
-    "judge_conflict": "The docket carries no assignment in CourtListener, so McNulty is not confirmed from this source. Timing fits: the appeal, No. 20-3391, was taken in 2020, which rules out the two 2023 J.M. dockets before Neals and Padin. Confirm the judge from the Third Circuit cover page before restoring.",
-    "date_filed": "2019-01-07",
-    "source": "CourtListener RECAP docket search, court=njd"
+    "appellate_docket_confirmed": "20-3391",
+    "judge_confirmed": "Kevin McNulty",
+    "source": "Third Circuit opinion cover page, No. 20-3391, read via CourtListener opinion text",
+    "cover_page": "On Appeal from the United States District Court for the District of New Jersey (D.C. No. 2-19-cv-00159), District Judge: Honorable Kevin McNulty",
+    "resolved_conflict": "CourtListener's docket assignment showed no assignment recorded. The cover page names Kevin McNulty as the judge appealed from. The record was correct; the docket field reports the current assignment, not the judge who decided."
   },
   "michael-a-shipp--veterans-guardian-va-claim-consulting-llc-v-plat": {
     "district_docket": "3:23-cv-20660",
@@ -151,11 +151,11 @@
   "susan-d-wigenton--huertas-v-bayer-us-llc": {
     "district_docket": "2:21-cv-20021",
     "vicinage_inferred": false,
-    "case_name_below": "Huertas v. Bayer U.S. LLC",
-    "judge_confirmed": null,
-    "judge_conflict": "Record attributes this to Susan D. Wigenton. The docket is assigned to Stanley R. Chesler. Both sit in Newark, so a reassignment is possible, but the entry cannot go on Wigenton's page until the Third Circuit cover page in No. 23-2178 names the judge appealed from. If it names Chesler, the entry belongs on Chesler's page, not Wigenton's.",
-    "date_filed": "2021-11-16",
-    "source": "CourtListener RECAP docket search, court=njd"
+    "appellate_docket_confirmed": "23-2178",
+    "judge_confirmed": "Susan D. Wigenton",
+    "source": "Third Circuit opinion cover page, No. 23-2178, read via CourtListener opinion text",
+    "cover_page": "On Appeal from the United States District Court for the District of New Jersey (District Court No. 2-21-cv-20021), District Judge: Honorable Susan D. Wigenton",
+    "resolved_conflict": "CourtListener's docket assignment showed Stanley R. Chesler. The cover page names Susan D. Wigenton as the judge appealed from. The record was correct; the docket field reports the current assignment, not the judge who decided."
   },
   "katharine-s-hayden--united-states-v-jackson": {
     "district_docket": null,

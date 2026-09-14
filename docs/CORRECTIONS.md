@@ -297,3 +297,39 @@ The tone gate refused the bare word "predict," which fired on *KalshiEX LLC v.
 Flaherty* — a case about prediction markets. The pattern now requires the word
 to sit near a judge, a court, a ruling or an outcome, and may not straddle two
 fields.
+
+---
+
+# Judge conflicts settled from the Third Circuit cover pages, 14 September 2026
+
+Reconciling appellate dockets to district dockets threw three conflicts, where
+CourtListener's docket assignment named a different judge than the record did.
+All three were read against the Third Circuit's own opinion and all three
+resolved in favour of the record.
+
+*Berkelhammer v. ADP TotalSource Group, Inc.*, No. 22-1618: "On Appeal from the
+United States District Court for the District of New Jersey (D.C. No.
+2-20-cv-05696), District Judge: Honorable Esther Salas." The docket's current
+assignment is Evelyn Padin, who was not on the bench when the case was filed.
+
+*Huertas v. Bayer US LLC*, No. 23-2178: "(District Court No. 2-21-cv-20021),
+District Judge: Honorable Susan D. Wigenton." The docket's current assignment is
+Stanley R. Chesler.
+
+*J.M. v. Summit City Board of Education*, No. 20-3391: "(D.C. No. 2-19-cv-00159),
+District Judge: Honorable Kevin McNulty." The docket carried no assignment at
+all in CourtListener.
+
+The lesson is worth more than the three corrections. A docket's `assignedTo`
+field reports who holds the case now, which after a reassignment, an elevation
+or a senior-status transition is not who decided it. Attributing a decision from
+that field would have put three entries on the wrong judges' pages, and on a
+site whose premise is that it never says anything unverified about a sitting
+judge, that is the failure mode to design against. The cover page of the
+appellate opinion names the judge appealed from. Use it.
+
+Each record's headnote and appellate posture note was also checked against the
+opinion text and all six statements hold. Salas compelled arbitration and was
+affirmed. Wigenton dismissed for want of standing and was partially reversed for
+applying too demanding a standard. McNulty upheld the administrative
+determination and was affirmed, over a dissent by Judge Greenaway.

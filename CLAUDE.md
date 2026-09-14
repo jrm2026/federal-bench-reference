@@ -84,6 +84,14 @@ keyed on the existence of an appeal. The field is now split into
 the first. `scripts/reconcile-dockets.mjs` recovers a district docket from an
 appellate one; `docs/DOCKET-RECONCILIATION.md` is the research that remains.
 
+**A docket's assigned judge is not the judge who decided.** CourtListener's
+`assignedTo` reports the *current* assignment. It had drifted on all three
+records checked against the source: *Berkelhammer* showed Padin where Salas
+decided, *Huertas* showed Chesler where Wigenton decided, and *J.M. v. Summit
+City* showed nothing at all. Never attribute a decision from that field. Every
+precedential Third Circuit opinion names the judge appealed from on its cover
+page — "District Judge: Honorable ___" — and that is the authority.
+
 **An entry belongs on a judge's page only when the district court's own decision
 is available.** An appellate opinion shows what the circuit did, not what the
 judge did. The gate fails any significant-tier entry whose `link_level` is not
