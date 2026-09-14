@@ -93,6 +93,37 @@ async function cl(path, params = {}) {
   return res.json();
 }
 
+/** Follow an absolute `next` cursor URL under the same pacing and auth. */
+async function clNext(url) {
+  const wait = GAP_MS - (Date.now() - last);
+  if (wait > 0) await sleep(wait);
+  last = Date.now();
+  const res = await fetch(url, { headers: TOKEN ? { Authorization: `Token ${TOKEN}` } : {} });
+  if (res.status === 429) throw new Error('throttled — set COURTLISTENER_TOKEN');
+  if (!res.ok) throw new Error(`${res.status} ${new URL(url).pathname}`);
+  return res.json();
+}
+
+/** The CourtListener docket id for a district docket number. */
+async function docketIdFor(districtDocket) {
+  const d = await cl('/dockets/', { court: COURT, docket_number: districtDocket, fields: 'id,case_name' });
+  return d.results?.[0]?.id ?? null;
+}
+
+/** Every entry on a docket. D.N.J. dockets run to hundreds; cap the walk. */
+async function allDocketEntries(docketId, maxPages = 20) {
+  let page = await cl('/docket-entries/', {
+    docket: docketId, order_by: 'entry_number',
+    fields: 'entry_number,date_filed,description', page_size: 100,
+  });
+  const rows = [...(page.results ?? [])];
+  for (let i = 1; i < maxPages && page.next; i++) {
+    page = await clNext(page.next);
+    rows.push(...(page.results ?? []));
+  }
+  return rows;
+}
+
 /** GovInfo package IDs are deterministic from a district docket. */
 export function govinfoPackage(docket) {
   const m = /^(\d):(\d{2}-(?:cv|cr|mc|md)-\d{3,6})$/.exec(docket ?? '');
@@ -127,23 +158,52 @@ export function appealedFrom(description) {
   return m ? m[1] : null;
 }
 
+/** "USCA Case Number 22-1618 for 135 Notice of Appeal" -> {circuit, noaEntry}. */
+export function uscaLink(description) {
+  const m = /USCA Case Number\s+([\d-]+)\s+for\s+(\d+)\s+Notice of Appeal/i.exec(description ?? '');
+  return m ? { circuit: m[1], noaEntry: m[2] } : null;
+}
+
 /**
- * Walk a district docket for the decision the appeal was taken from, and the
- * judge who signed it. Returns { ecf, date, judge } or null.
+ * Walk a district docket for the decision the appeal was taken from and the
+ * judge who signed it.
+ *
+ * Cross-appeals mean a docket can carry several notices of appeal. Where the
+ * record knows its circuit number, the "USCA Case Number ... for ... Notice of
+ * Appeal" entry ties one notice to that appeal, and that is the one to follow.
+ * Otherwise take the first notice on the docket.
+ *
+ * Returns { ecf, date, judge, description, via } or null.
  */
-export async function decisionFromDocket(docketId) {
-  const entries = await cl('/docket-entries/', {
-    docket: docketId, order_by: 'date_filed', fields: 'entry_number,date_filed,description',
-  });
-  const rows = entries.results ?? [];
-  const noa = rows.find((r) => appealedFrom(r.description));
-  if (!noa) return null;
-  const target = appealedFrom(noa.description);
-  const order = rows.find((r) => String(r.entry_number) === target);
-  if (!order) return { ecf: target, date: null, judge: null, note: 'order entry not on this page' };
+export async function decisionFromDocket(docketId, appellateDocket = null) {
+  const rows = await allDocketEntries(docketId);
+  const byNumber = new Map(rows.filter((r) => r.entry_number != null)
+                               .map((r) => [String(r.entry_number), r]));
+
+  let noaEntry = null, via = 'first notice of appeal on the docket';
+  if (appellateDocket) {
+    const tie = rows.map((r) => uscaLink(r.description))
+                    .find((u) => u && u.circuit === appellateDocket);
+    if (tie) { noaEntry = tie.noaEntry; via = `USCA ${tie.circuit} tied to entry ${tie.noaEntry}`; }
+  }
+  if (!noaEntry) {
+    const noa = rows.find((r) => appealedFrom(r.description));
+    if (noa) noaEntry = appealedFrom(noa.description);
+  }
+  if (!noaEntry) return { ecf: null, date: null, judge: null, via: null,
+                          note: `no notice of appeal among ${rows.length} entries` };
+
+  // The notice names the order; the order's entry names who signed it.
+  const noa = byNumber.get(String(noaEntry));
+  const target = noa ? appealedFrom(noa.description) ?? noaEntry : noaEntry;
+  const order = byNumber.get(String(target));
+  if (!order) return { ecf: target, date: null, judge: null, via,
+                       note: `order ${target} not among ${rows.length} entries` };
+
   const sig = signedBy(order.description);
-  return { ecf: target, date: sig?.date ?? order.date_filed, judge: sig?.judge ?? null,
-           description: order.description };
+  return { ecf: String(target), date: sig?.date ?? order.date_filed, judge: sig?.judge ?? null,
+           description: order.description, via,
+           note: sig ? null : 'entry carries no "Signed by" line' };
 }
 
 /** Path 2: originating-court information hung off the appellate docket. */
@@ -210,26 +270,59 @@ for (const f of files) {
   if (row.district_docket) {
     const pkg = govinfoPackage(row.district_docket);
     row.govinfo = pkg ? `https://www.govinfo.gov/app/details/${pkg}` : null;
+
+    // The docket names the decision and who signed it. This is the point of the
+    // exercise: a docket number says where to look, not what was decided or by
+    // whom. Skip a record that already carries a signature-line attribution.
+    if (o.authorship_source !== 'docket_entry_signature') {
+      try {
+        const id = await docketIdFor(row.district_docket);
+        if (!id) { row.note = 'docket not in RECAP'; }
+        else {
+          const d = await decisionFromDocket(id, row.appellate_docket);
+          row.ecf = d?.ecf ?? null;
+          row.decision_date = d?.date ?? null;
+          row.signed_by = d?.judge ?? null;
+          row.via = d?.via ?? null;
+          if (d?.note) row.note = d.note;
+          if (WRITE && d?.ecf) {
+            o.decision_ecf_number = d.ecf;
+            o.decision_date = d.date ?? o.decision_date;
+            if (d.judge) { o.authored_by = d.judge; o.authorship_source = 'docket_entry_signature'; }
+            writeFileSync(path, JSON.stringify(o, null, 2) + '\n');
+          }
+        }
+      } catch (e) {
+        row.note = `docket walk failed: ${e.message}`;
+      }
+    } else {
+      row.ecf = o.decision_ecf_number; row.signed_by = o.authored_by; row.via = 'already recorded';
+    }
   }
 
-  // Whether the judge on the located decision is the judge on the page is the
-  // check the gate cannot make. Flag it rather than assume it.
-  if (row.district_judge && !row.district_judge.split(/\s+/).some((w) =>
-        w.length > 3 && o.judge_name.includes(w)))
-    row.note = `cover page names ${row.district_judge}; record says ${o.judge_name} — RECONCILE`;
+  // Who signed is the check the gate cannot make for itself. A mismatch means
+  // the entry is on the wrong judge's page, so say so loudly rather than write it.
+  const named = row.signed_by ?? row.district_judge;
+  if (named && !named.split(/\s+/).some((w) => w.length > 3 && o.judge_name.includes(w)))
+    row.note = `SIGNED BY ${named} — record says ${o.judge_name}. Do not restore until reconciled.`;
 
   rows.push(row);
-  const mark = row.resolved_by ? '+' : row.district_docket ? ' ' : '!';
-  console.log(`  ${mark} ${(row.district_docket ?? '—').padEnd(16)} ${row.caption.slice(0, 48)}`);
+  const mark = row.note?.startsWith('SIGNED BY') ? 'X'
+             : row.signed_by ? '+' : row.district_docket ? ' ' : '!';
+  console.log(`  ${mark} ${(row.district_docket ?? '—').padEnd(16)} ` +
+              `${(row.ecf ? 'ECF ' + row.ecf : '').padEnd(9)} ` +
+              `${(row.signed_by ?? '').padEnd(22)} ${row.caption.slice(0, 40)}`);
   if (row.note) console.log(`      ${row.note}`);
 }
 
 const out = join(ROOT, 'docket-reconciliation.json');
 writeFileSync(out, JSON.stringify({ district: DISTRICT, held: HELD, generated: new Date().toISOString(), rows }, null, 2) + '\n');
 
-const resolved = rows.filter((r) => r.resolved_by).length;
 const known = rows.filter((r) => r.district_docket).length;
-console.log(`\n${rows.length} records · ${known} with a district docket · ${resolved} resolved this run`);
+const signed = rows.filter((r) => r.signed_by).length;
+const mismatched = rows.filter((r) => r.note?.startsWith('SIGNED BY')).length;
+console.log(`\n${rows.length} records · ${known} with a district docket · ` +
+            `${signed} with a signing judge from the docket · ${mismatched} attributed to the wrong judge`);
 console.log(`worksheet: docket-reconciliation.json${WRITE ? '' : '  (dry run — pass --write to fill district_docket)'}`);
 if (!TOKEN) console.log('COURTLISTENER_TOKEN is unset; this ran at 5 requests/minute.');
 }
