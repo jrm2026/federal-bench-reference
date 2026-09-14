@@ -15,7 +15,9 @@
     "signoffs": "node scripts/sign-record.mjs --verify-all",
     "check-links": "node scripts/check-links.mjs",
     "build": "npm run validate && astro build",
-    "check": "npm run validate && astro check && astro build"
+    "check": "npm run validate && astro check && astro build",
+    "reconcile": "node --env-file-if-exists=.env scripts/reconcile-dockets.mjs",
+    "resolve-links": "node --env-file-if-exists=.env scripts/resolve-links.mjs"
   },
   "dependencies": {
     "astro": "^7.3.2"

@@ -16,8 +16,10 @@ specification; this file is the operating summary.
     npm run signoffs      # the curator's ledger
     npm run dev
     npm run build         # gates, then astro build; exit 1 blocks the deploy
-    node scripts/resolve-links.mjs --district=dnj      # needs COURTLISTENER_TOKEN
-    node scripts/reconcile-dockets.mjs --district=dnj --held   # same
+    npm run resolve-links -- --district=dnj    # needs COURTLISTENER_TOKEN
+    npm run reconcile -- --district=dnj --held # same
+    # Both read .env via --env-file-if-exists. Calling node directly does not:
+    # Node ignores .env unless told, and the run falls back to the 5/min throttle.
     node scripts/check-links.mjs                    # needs open network access
 
 ## The one rule that governs everything

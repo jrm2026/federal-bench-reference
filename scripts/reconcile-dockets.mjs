@@ -45,6 +45,10 @@
  *
  * Needs COURTLISTENER_TOKEN. Without one the API throttles at five requests a
  * minute, which is not enough to walk a corpus.
+ *
+ * Node does not read .env on its own. Use `npm run reconcile -- --district=dnj --held`
+ * or pass the flag yourself: `node --env-file=.env scripts/...`. Without it the
+ * token in .env is invisible and the run silently falls back to the throttle.
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';

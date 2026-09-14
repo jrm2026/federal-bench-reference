@@ -15,6 +15,10 @@
  *   node scripts/resolve-links.mjs --district=dnj [--limit=N] [--apply-dry-run]
  *
  * Env: COURTLISTENER_TOKEN (optional), GOVINFO_API_KEY (optional, DEMO_KEY works)
+ *
+ * Node does not read .env on its own. Use `npm run reconcile -- --district=dnj --held`
+ * or pass the flag yourself: `node --env-file=.env scripts/...`. Without it the
+ * token in .env is invisible and the run silently falls back to the throttle.
  */
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
