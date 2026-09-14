@@ -97,6 +97,12 @@ async function request(url) {
       const backoff = Number.isFinite(retryAfter) && retryAfter > 0
         ? retryAfter * 1000
         : Math.min(60000, 2000 * 2 ** attempt);
+      // Tens of minutes is a quota reset, not a burst limit. Sitting on it helps
+      // nobody: --write has persisted the work, so stop and resume after.
+      if (backoff > 300000) {
+        throw new Error(`quota exhausted — CourtListener asks for ${Math.round(backoff / 60000)} minutes. ` +
+                        `Work so far is written; re-run later and it resumes.`);
+      }
       gapMs = Math.min(15000, Math.round(gapMs * 1.5));
       process.stderr.write(`      throttled; waiting ${Math.round(backoff / 1000)}s, pacing now ${gapMs}ms\n`);
       await sleep(backoff);
@@ -125,18 +131,35 @@ async function docketIdFor(districtDocket) {
   return d.results?.[0]?.id ?? null;
 }
 
-/** Every entry on a docket. D.N.J. dockets run to hundreds; cap the walk. */
-async function allDocketEntries(docketId, maxPages = 20) {
+/**
+ * Entries newest first, one page at a time, stopping as soon as `done` is happy.
+ *
+ * Reading a whole docket to find one entry is what exhausted the quota: a
+ * 900-entry docket is nine calls, and most of them are scheduling orders. A
+ * notice of appeal is near the end of a case by definition, so newest-first
+ * usually finds it on page one.
+ */
+async function entriesUntil(docketId, done, maxPages = 6) {
+  const rows = [];
   let page = await cl('/docket-entries/', {
-    docket: docketId, order_by: 'entry_number',
+    docket: docketId, order_by: '-date_filed',
     fields: 'entry_number,date_filed,description', page_size: 100,
   });
-  const rows = [...(page.results ?? [])];
-  for (let i = 1; i < maxPages && page.next; i++) {
+  rows.push(...(page.results ?? []));
+  for (let i = 1; i < maxPages && page.next && !done(rows); i++) {
     page = await clNext(page.next);
     rows.push(...(page.results ?? []));
   }
   return rows;
+}
+
+/** One entry by its number, without pulling the docket around it. */
+async function entryByNumber(docketId, entryNumber) {
+  const r = await cl('/docket-entries/', {
+    docket: docketId, entry_number: entryNumber,
+    fields: 'entry_number,date_filed,description',
+  });
+  return r.results?.[0] ?? null;
 }
 
 /** GovInfo package IDs are deterministic from a district docket. */
@@ -167,10 +190,26 @@ export function signedBy(description) {
            date: `${year}-${mm.padStart(2, '0')}-${dd.padStart(2, '0')}` };
 }
 
-/** "NOTICE OF APPEAL as to 133 Order" -> the entry number appealed from. */
+/**
+ * "NOTICE OF APPEAL as to 133 Order" -> the entry number appealed from.
+ *
+ * Clerks write these several ways, and a regex anchored on one of them reports
+ * "no notice of appeal" on a docket that plainly has one. Seen in D.N.J.:
+ *   NOTICE OF APPEAL as to 133 Order
+ *   NOTICE OF APPEAL by PLAINTIFF as to 45 Judgment
+ *   AMENDED NOTICE OF APPEAL as to 210 Opinion
+ *   NOTICE OF APPEAL to the Third Circuit re 88 Order
+ */
 export function appealedFrom(description) {
-  const m = /NOTICE OF APPEAL\s+as to\s+(\d+)/i.exec(description ?? '');
+  const d = description ?? '';
+  if (!/NOTICE OF APPEAL/i.test(d)) return null;
+  const m = /NOTICE OF APPEAL\b[^.]{0,80}?\b(?:as to|re:?|from)\s+(?:ECF\s*(?:No\.?)?\s*)?#?\s*(\d+)/i.exec(d);
   return m ? m[1] : null;
+}
+
+/** Is this entry a notice of appeal at all, even if it names no document? */
+export function isNoticeOfAppeal(description) {
+  return /NOTICE OF APPEAL/i.test(description ?? '');
 }
 
 /** "USCA Case Number 22-1618 for 135 Notice of Appeal" -> {circuit, noaEntry}. */
@@ -191,29 +230,34 @@ export function uscaLink(description) {
  * Returns { ecf, date, judge, description, via } or null.
  */
 export async function decisionFromDocket(docketId, appellateDocket = null) {
-  const rows = await allDocketEntries(docketId);
-  const byNumber = new Map(rows.filter((r) => r.entry_number != null)
-                               .map((r) => [String(r.entry_number), r]));
+  const rows = await entriesUntil(docketId, (r) => r.some((x) => isNoticeOfAppeal(x.description)));
 
-  let noaEntry = null, via = 'first notice of appeal on the docket';
+  let noaEntry = null, via = 'first notice of appeal found';
   if (appellateDocket) {
     const tie = rows.map((r) => uscaLink(r.description))
                     .find((u) => u && u.circuit === appellateDocket);
     if (tie) { noaEntry = tie.noaEntry; via = `USCA ${tie.circuit} tied to entry ${tie.noaEntry}`; }
   }
-  if (!noaEntry) {
-    const noa = rows.find((r) => appealedFrom(r.description));
-    if (noa) noaEntry = appealedFrom(noa.description);
+  let target = null;
+  if (noaEntry) {
+    const noa = rows.find((r) => String(r.entry_number) === String(noaEntry))
+             ?? await entryByNumber(docketId, noaEntry);
+    target = noa ? appealedFrom(noa.description) : null;
   }
-  if (!noaEntry) return { ecf: null, date: null, judge: null, via: null,
-                          note: `no notice of appeal among ${rows.length} entries` };
+  if (!target) {
+    const noa = rows.find((r) => appealedFrom(r.description));
+    target = noa ? appealedFrom(noa.description) : null;
+  }
+  if (!target) {
+    const any = rows.some((r) => isNoticeOfAppeal(r.description));
+    return { ecf: null, date: null, judge: null, via: null,
+             note: any ? `notice of appeal names no document (${rows.length} entries read)`
+                       : `no notice of appeal in the ${rows.length} most recent entries` };
+  }
 
-  // The notice names the order; the order's entry names who signed it.
-  const noa = byNumber.get(String(noaEntry));
-  const target = noa ? appealedFrom(noa.description) ?? noaEntry : noaEntry;
-  const order = byNumber.get(String(target));
-  if (!order) return { ecf: target, date: null, judge: null, via,
-                       note: `order ${target} not among ${rows.length} entries` };
+  const order = rows.find((r) => String(r.entry_number) === String(target))
+             ?? await entryByNumber(docketId, target);
+  if (!order) return { ecf: target, date: null, judge: null, via, note: `entry ${target} not retrievable` };
 
   const sig = signedBy(order.description);
   return { ecf: String(target), date: sig?.date ?? order.date_filed, judge: sig?.judge ?? null,
