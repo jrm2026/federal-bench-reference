@@ -64,8 +64,8 @@
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
   "link_level": "appellate_only",
-  "authorship_source": "opinion_text",
+  "authorship_source": "docket_entry_signature",
   "authored_by": "Claire C. Cecchi",
-  "decision_ecf_number": null,
-  "decision_date": null
+  "decision_ecf_number": "43",
+  "decision_date": "2018-06-22"
 }
