@@ -73,36 +73,51 @@ const DIR = HELD
   ? join(ROOT, 'review', 'pending', 'dnj-no-district-decision')
   : join(ROOT, 'src', 'content', 'districts', DISTRICT, 'opinions');
 
-// CourtListener allows 5 requests a minute unauthenticated. Pace accordingly
-// rather than collecting 429s.
-const GAP_MS = TOKEN ? 250 : 13000;
+// CourtListener throttles unauthenticated callers at five requests a minute. A
+// token lifts that, but not to unlimited: a quarter-second gap collects 429s
+// within seconds. Pace conservatively and back off when the server says to,
+// rather than treating a throttle as a failure.
+let gapMs = TOKEN ? 1200 : 13000;
 let last = 0;
+let throttleEvents = 0;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+async function request(url) {
+  for (let attempt = 0; attempt < 6; attempt++) {
+    const wait = gapMs - (Date.now() - last);
+    if (wait > 0) await sleep(wait);
+    last = Date.now();
+    const res = await fetch(url, { headers: TOKEN ? { Authorization: `Token ${TOKEN}` } : {} });
+
+    if (res.status === 429) {
+      throttleEvents++;
+      // Honour Retry-After where the server sends one; otherwise back off, and
+      // widen the standing gap so the rest of the run stops provoking it.
+      const retryAfter = Number(res.headers.get('retry-after'));
+      const backoff = Number.isFinite(retryAfter) && retryAfter > 0
+        ? retryAfter * 1000
+        : Math.min(60000, 2000 * 2 ** attempt);
+      gapMs = Math.min(15000, Math.round(gapMs * 1.5));
+      process.stderr.write(`      throttled; waiting ${Math.round(backoff / 1000)}s, pacing now ${gapMs}ms\n`);
+      await sleep(backoff);
+      continue;
+    }
+    if (!res.ok) throw new Error(`${res.status} ${new URL(url).pathname}`);
+    return res.json();
+  }
+  throw new Error(TOKEN
+    ? 'still throttled after six retries — CourtListener is rate-limiting this token'
+    : 'throttled and no COURTLISTENER_TOKEN is set');
+}
+
 async function cl(path, params = {}) {
-  const wait = GAP_MS - (Date.now() - last);
-  if (wait > 0) await sleep(wait);
-  last = Date.now();
   const url = new URL(CL + path);
   for (const [k, v] of Object.entries(params)) if (v != null) url.searchParams.set(k, v);
-  const res = await fetch(url, {
-    headers: TOKEN ? { Authorization: `Token ${TOKEN}` } : {},
-  });
-  if (res.status === 429) throw new Error('throttled — set COURTLISTENER_TOKEN');
-  if (!res.ok) throw new Error(`${res.status} ${url.pathname}`);
-  return res.json();
+  return request(url);
 }
 
 /** Follow an absolute `next` cursor URL under the same pacing and auth. */
-async function clNext(url) {
-  const wait = GAP_MS - (Date.now() - last);
-  if (wait > 0) await sleep(wait);
-  last = Date.now();
-  const res = await fetch(url, { headers: TOKEN ? { Authorization: `Token ${TOKEN}` } : {} });
-  if (res.status === 429) throw new Error('throttled — set COURTLISTENER_TOKEN');
-  if (!res.ok) throw new Error(`${res.status} ${new URL(url).pathname}`);
-  return res.json();
-}
+const clNext = (url) => request(new URL(url));
 
 /** The CourtListener docket id for a district docket number. */
 async function docketIdFor(districtDocket) {
@@ -285,7 +300,13 @@ for (const f of files) {
           row.signed_by = d?.judge ?? null;
           row.via = d?.via ?? null;
           if (d?.note) row.note = d.note;
-          if (WRITE && d?.ecf) {
+
+          // A signature naming someone other than the judge on the page is the
+          // finding, not a value to store. Leave the record alone and report it.
+          const mismatch = d?.judge && !d.judge.split(/\s+/).some(
+            (w) => w.length > 3 && o.judge_name.includes(w));
+
+          if (WRITE && d?.ecf && !mismatch) {
             o.decision_ecf_number = d.ecf;
             o.decision_date = d.date ?? o.decision_date;
             if (d.judge) { o.authored_by = d.judge; o.authorship_source = 'docket_entry_signature'; }
@@ -324,5 +345,9 @@ const mismatched = rows.filter((r) => r.note?.startsWith('SIGNED BY')).length;
 console.log(`\n${rows.length} records · ${known} with a district docket · ` +
             `${signed} with a signing judge from the docket · ${mismatched} attributed to the wrong judge`);
 console.log(`worksheet: docket-reconciliation.json${WRITE ? '' : '  (dry run — pass --write to fill district_docket)'}`);
+if (throttleEvents) console.log(`${throttleEvents} throttle event(s); final pacing ${gapMs}ms between calls.`);
 if (!TOKEN) console.log('COURTLISTENER_TOKEN is unset; this ran at 5 requests/minute.');
+console.log(WRITE
+  ? 'Records written. Re-run to continue: those already attributed are skipped.'
+  : 'Dry run. Re-run with --write so progress persists and a throttled run can resume.');
 }
