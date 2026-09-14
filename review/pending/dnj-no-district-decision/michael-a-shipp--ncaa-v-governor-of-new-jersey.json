@@ -59,5 +59,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only"
+  "link_level": "appellate_only",
+  "authorship_source": "unverified",
+  "decision_ecf_number": null,
+  "decision_date": null,
+  "authored_by": null
 }

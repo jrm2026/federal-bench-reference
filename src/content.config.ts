@@ -58,6 +58,18 @@ const opinions = defineCollection({
     district_docket: z.string().nullable(),
     appellate_docket: z.string().nullable(),
     additional_dockets: z.array(z.string()).default([]),
+    // Which document on the district docket is the decision, and who signed it.
+    // A docket's assigned judge is who holds the case now; the signature line on
+    // the entry is who decided. Only the latter may attribute an entry.
+    decision_ecf_number: z.string().nullable().default(null),
+    decision_date: z.string().nullable().default(null),
+    authored_by: z.string().nullable().default(null),
+    authorship_source: z.enum([
+      'docket_entry_signature',   // "Signed by Judge X on DATE" on the docket
+      'appellate_cover_page',     // "District Judge: Honorable X" on the appeal
+      'opinion_text',             // the decision itself names its author
+      'unverified',               // nothing above — may not publish
+    ]).default('unverified'),
     reporter_cite: z.string().nullable(),
     court: z.string(),
     tier: z.enum(['significant', 'recent']),

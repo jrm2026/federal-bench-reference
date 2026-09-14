@@ -61,5 +61,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "district"
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "decision_ecf_number": null,
+  "decision_date": null,
+  "authored_by": "Jessica S. Allen"
 }

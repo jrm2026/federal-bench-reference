@@ -84,13 +84,32 @@ keyed on the existence of an appeal. The field is now split into
 the first. `scripts/reconcile-dockets.mjs` recovers a district docket from an
 appellate one; `docs/DOCKET-RECONCILIATION.md` is the research that remains.
 
-**A docket's assigned judge is not the judge who decided.** CourtListener's
-`assignedTo` reports the *current* assignment. It had drifted on all three
-records checked against the source: *Berkelhammer* showed Padin where Salas
-decided, *Huertas* showed Chesler where Wigenton decided, and *J.M. v. Summit
-City* showed nothing at all. Never attribute a decision from that field. Every
-precedential Third Circuit opinion names the judge appealed from on its cover
-page — "District Judge: Honorable ___" — and that is the authority.
+**A docket's assigned judge is not the judge who decided.** District cases are
+reassigned constantly. CourtListener's `assignedTo` reports the *current*
+assignment and had drifted on all three records checked against the source:
+*Berkelhammer* showed Padin where Salas decided, *Huertas* showed Chesler where
+Wigenton decided, *J.M. v. Summit City* showed nothing at all. The Berkelhammer
+docket records its own mid-case reassignment — "Magistrate Judge Michael A.
+Hammer no longer assigned to the case". Never attribute a decision from that
+field.
+
+Three sources do name the author, and every record says which one it used in
+`authorship_source`. The gate refuses to publish an entry that says
+`unverified`, and refuses one whose `authored_by` does not match the page it
+sits on.
+
+1. `docket_entry_signature` — the best of the three, because it also yields the
+   ECF number and the date. Walk the district docket: the notice of appeal names
+   the order it is taken from ("NOTICE OF APPEAL as to 133 Order"), a later entry
+   ties it to the circuit number ("USCA Case Number 22-1618 for 135 Notice of
+   Appeal"), and the order's own entry ends "Signed by Judge Esther Salas on
+   3/31/2022". `scripts/reconcile-dockets.mjs` does this walk.
+2. `appellate_cover_page` — "District Judge: Honorable ___" on the appeal.
+3. `opinion_text` — the decision document itself, which the entry links to.
+
+RECAP carries the docket text for D.N.J. but rarely the PDFs; `is_available` is
+false on most entries. So the docket establishes *who decided and which
+document*, and a free public copy still has to come from GovInfo or the court.
 
 **An entry belongs on a judge's page only when the district court's own decision
 is available.** An appellate opinion shows what the circuit did, not what the

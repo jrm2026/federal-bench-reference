@@ -65,5 +65,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only"
+  "link_level": "appellate_only",
+  "authorship_source": "opinion_text",
+  "authored_by": "Julien X. Neals",
+  "decision_ecf_number": null,
+  "decision_date": null
 }

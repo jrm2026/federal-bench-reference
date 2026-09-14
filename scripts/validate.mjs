@@ -65,6 +65,13 @@ for (const d of districts) {
     // decision is available. An appellate opinion shows what the circuit did.
     if (o.tier === 'significant' && o.link_level !== 'district')
       err.push(`${id}: significant tier with link_level '${o.link_level}' — no district-court decision`);
+    // Who decided is not a matter of inference. An entry may carry a judge's
+    // name only when a source that names the author was actually read.
+    if (o.tier === 'significant' && o.authorship_source === 'unverified')
+      err.push(`${id}: authorship unverified — no signature line or cover page read`);
+    if (o.authored_by && o.authorship_source !== 'unverified' &&
+        !o.authored_by.split(/\s+/).some((w) => w.length > 3 && o.judge_name.includes(w)))
+      err.push(`${id}: signed by '${o.authored_by}' but filed under ${o.judge_name}`);
     if (o.tier === 'significant' && !o.district_docket)
       warn.push(`${id}: no district docket recorded${o.appellate_docket ? ` (appellate docket ${o.appellate_docket} is on the record)` : ''}`);
 

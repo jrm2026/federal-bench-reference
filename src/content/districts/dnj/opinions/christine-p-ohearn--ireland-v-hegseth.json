@@ -5,7 +5,7 @@
   "judge_name": "Christine P. O’Hearn",
   "judge_office": "district",
   "caption": "Ireland v. Hegseth",
-  "citation_line": "Ireland v. Hegseth, No. 1:25-cv-01918 (D.N.J. Mar. 24, 2025)",
+  "citation_line": "Ireland v. Hegseth, No. 1:25-cv-01918, ECF No. 28 (D.N.J. Mar. 24, 2025)",
   "district_docket": "1:25-cv-01918",
   "appellate_docket": null,
   "additional_dockets": [],
@@ -59,5 +59,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "district"
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "decision_ecf_number": "28",
+  "decision_date": "2025-03-24",
+  "authored_by": "Christine P. O'Hearn"
 }

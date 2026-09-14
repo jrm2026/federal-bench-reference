@@ -24,6 +24,20 @@
  *      take the district docket off the cover page, which states it as
  *      "(D.C. Civil Action No. 2-11-cv-01754), District Judge: Honorable ___".
  *
+ * Then walk the district docket to find the decision and its author. The docket
+ * text carries both, and it is the better evidence:
+ *
+ *   a. Find the notice of appeal. Its description names the order appealed from
+ *      — "NOTICE OF APPEAL as to 133 Order" — and a later entry ties the appeal
+ *      to its circuit number: "USCA Case Number 22-1618 for 135 Notice of Appeal".
+ *   b. Fetch that entry. Its description ends "Signed by Judge Esther Salas on
+ *      3/31/2022", which is who decided, the date, and the ECF number in one line.
+ *
+ * Never take the author from the docket's assigned_to. That is who holds the case
+ * now. Berkelhammer's docket shows Padin where Salas decided; Huertas shows
+ * Chesler where Wigenton decided; and the Berkelhammer docket records its own
+ * reassignment mid-case ("Magistrate Judge Michael A. Hammer no longer assigned").
+ *
  * Writes a worksheet by default and changes nothing. --write fills
  * district_docket where a path resolved it, and never sets a link or a
  * link_level: what document is the decision appealed from is a reading, not a
@@ -91,6 +105,41 @@ export function districtFromOpinionText(text) {
     district_docket: dk ? dk[1].replace('-', ':') : null,
     district_judge: jd ? jd[1].trim().replace(/\s+/g, ' ') : null,
   };
+}
+
+/** "Signed by Judge Esther Salas on 3/31/2022" -> the author and the date. */
+export function signedBy(description) {
+  const m = /Signed by\s+(?:the\s+)?(?:Honorable\s+)?(?:Chief\s+)?(?:U\.?S\.?\s+)?(?:District\s+|Magistrate\s+|Senior\s+)*Judge\s+([A-Z][A-Za-z.''\- ]+?)\s+on\s+(\d{1,2}\/\d{1,2}\/\d{2,4})/.exec(description ?? '');
+  if (!m) return null;
+  const [mm, dd, yy] = m[2].split('/');
+  const year = yy.length === 2 ? `20${yy}` : yy;
+  return { judge: m[1].trim().replace(/\s+/g, ' '),
+           date: `${year}-${mm.padStart(2, '0')}-${dd.padStart(2, '0')}` };
+}
+
+/** "NOTICE OF APPEAL as to 133 Order" -> the entry number appealed from. */
+export function appealedFrom(description) {
+  const m = /NOTICE OF APPEAL\s+as to\s+(\d+)/i.exec(description ?? '');
+  return m ? m[1] : null;
+}
+
+/**
+ * Walk a district docket for the decision the appeal was taken from, and the
+ * judge who signed it. Returns { ecf, date, judge } or null.
+ */
+export async function decisionFromDocket(docketId) {
+  const entries = await cl('/docket-entries/', {
+    docket: docketId, order_by: 'date_filed', fields: 'entry_number,date_filed,description',
+  });
+  const rows = entries.results ?? [];
+  const noa = rows.find((r) => appealedFrom(r.description));
+  if (!noa) return null;
+  const target = appealedFrom(noa.description);
+  const order = rows.find((r) => String(r.entry_number) === target);
+  if (!order) return { ecf: target, date: null, judge: null, note: 'order entry not on this page' };
+  const sig = signedBy(order.description);
+  return { ecf: target, date: sig?.date ?? order.date_filed, judge: sig?.judge ?? null,
+           description: order.description };
 }
 
 /** Path 2: originating-court information hung off the appellate docket. */

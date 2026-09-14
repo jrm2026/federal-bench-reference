@@ -5,7 +5,7 @@
   "judge_name": "Esther Salas",
   "judge_office": "district",
   "caption": "Berkelhammer v. ADP TotalSource Group, Inc.",
-  "citation_line": "Berkelhammer v. ADP TotalSource Group, Inc., No. 22-1618 (3d Cir. July 17, 2023)",
+  "citation_line": "Berkelhammer v. ADP TotalSource Group, Inc., No. 2:20-cv-05696, ECF No. 133 (D.N.J. Mar. 31, 2022), aff’d, 74 F.4th 115 (3d Cir. 2023)",
   "district_docket": "2:20-cv-05696",
   "appellate_docket": "22-1618",
   "additional_dockets": [],
@@ -61,5 +61,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only"
+  "link_level": "appellate_only",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Esther Salas",
+  "decision_ecf_number": "133",
+  "decision_date": "2022-03-31"
 }
