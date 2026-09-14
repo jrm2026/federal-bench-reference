@@ -43,6 +43,17 @@ would be more useful.
    from the opinion ("granted in part"). Never "sharply rejected", never
    "plaintiff-friendly". The gates check the records for this; they cannot check
    prose you write, so you have to.
+
+   The hard case is not the adjective, it is the accurate sentence. The held
+   *United States v. Jackson* entry on Hayden's page states that the Third
+   Circuit vacated her sentences three times and then reassigned sentencing to
+   another judge, and justifies the selection "partly because of the unusual
+   sequence of appellate reversals". Every word is sourced. On a page bearing
+   her name it still lands as a verdict on the judge, and selection resting on
+   how an appellate court treated her is outcome-based selection whatever the
+   verb. The neutrality gate warns on that framing rather than blocking it,
+   because the sentence may be the only honest way to state the posture. The
+   curator decides whether the page can carry it.
 3. **Every page renders through `src/layouts/Base.astro`**, which carries the
    attorney-advertising banner and the sponsor footer. No page opts out. The
    gates walk all of `src/pages` and fail any page that does not import it.

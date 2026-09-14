@@ -82,6 +82,18 @@ const OUTCOME_SELECTION = [
   /\bcases? (in )?which (the|this) (judge|court) (granted|denied|sided)\b/i,
 ];
 
+// Selection justified by what an appellate court did to the judge. These read as
+// neutral procedural history and land as a verdict on the judge, which is why
+// they warn rather than block: the sentence may be the only honest way to state
+// the posture, and a human decides whether the page can carry it.
+const APPELLATE_SELECTION = [
+  /\bbecause of\b[^.]{0,60}\b(reversal|revers(ed|als)|vacatur|vacated|remand)/i,
+  /\b(reversed|vacated|remanded)\b[^.]{0,40}\b(three|four|five|repeatedly|multiple) times\b/i,
+  /\b(three|four|five|multiple|repeated)\b[^.]{0,30}\b(reversals|vacaturs|remands)\b/i,
+  /\breassigned\b[^.]{0,60}\b(to (another|a different) (judge|district judge)|after (the )?(third|second|fourth) remand)\b/i,
+  /\bunusual sequence of\b[^.]{0,30}\b(appellate )?(reversals|remands)\b/i,
+];
+
 // --- Gate 6 ----------------------------------------------------------------
 const DISTURBED = /(vacat|revers|remand|stay|withdraw|supersed|abrogat|cert(iorari)? granted)/i;
 
@@ -177,6 +189,11 @@ export function runComplianceGates(opts = {}) {
       // Gate 5 — neutrality
       for (const rx of [...TALLY, ...OUTCOME_SELECTION]) {
         if (rx.test(surface)) err(file, "neutrality", `tally or outcome-based selection language: ${rx}`);
+      }
+      for (const rx of APPELLATE_SELECTION) {
+        if (rx.test(surface))
+          warn(file, "neutrality", `selection or framing rests on appellate treatment of the judge: ${rx}. ` +
+               `Accurate is not the same as publishable — read the rendered page and decide.`);
       }
 
       // Gate 7 — poison list
