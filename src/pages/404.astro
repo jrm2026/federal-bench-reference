@@ -1,24 +1,18 @@
 ---
-import Base from "../layouts/Base.astro";
+import Base from '../layouts/Base.astro';
 ---
-
-<Base title="Page not found" noindex={true}>
-  <div class="pagehead">
+<Base title="Page not found — Federal Bench Reference">
+  <div class="judgehead">
     <h1>Page not found</h1>
     <div class="role">404</div>
   </div>
-
   <section class="block">
-    <div class="prose">
-      <p>
-        Judge pages are addressed by slug, and a slug changes when a name is corrected. If you
-        followed a link from something printed or mailed, the entry may have moved.
-      </p>
-      <div class="footlinks">
-        <a href="/judges/">Judges</a>
-        <a href="/topics/">Topics</a>
-        <a href="/about/">About &amp; Methodology</a>
-      </div>
+    <p class="summary">Judge pages are addressed by slug, and a slug changes when a name is
+    corrected. If you followed a link from something printed or mailed, the entry may have moved.</p>
+    <div class="footlinks">
+      <a href="/districts/dnj/">District of New Jersey</a>
+      <a href="/topics/">Matter types</a>
+      <a href="/about/">About &amp; Methodology</a>
     </div>
   </section>
 </Base>

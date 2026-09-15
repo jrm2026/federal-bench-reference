@@ -1,0 +1,70 @@
+{
+  "id": "jamel-k-semper--la-quinta-franchising-llc-v-shin-hospitality-inc",
+  "district": "dnj",
+  "judge_slug": "jamel-k-semper",
+  "judge_name": "Jamel K. Semper",
+  "judge_office": "district",
+  "caption": "La Quinta Franchising LLC v. Shin Hospitality, Inc.",
+  "citation_line": "La Quinta Franchising LLC v. Shin Hospitality, Inc., No. 2:22-cv-05183, ECF No. 79 (D.N.J. September 29, 2025)",
+  "district_docket": "2:22-cv-05183",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "recent",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": null,
+  "qualification_rationale": null,
+  "appellate_posture_note": "No appellate disposition identified as of 2026-09-15.",
+  "headnote_status": "draft",
+  "public_url": "https://www.courtlistener.com/docket/64916088/79/la-quinta-franchising-llc-v-shin-hospitality-inc/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 79 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/64916088/79/la-quinta-franchising-llc-v-shin-hospitality-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.500668/gov.uscourts.njd.500668.79.0.pdf"
+    }
+  ],
+  "link_level": "district",
+  "classification": null,
+  "score_total": null,
+  "components": {},
+  "subject_screen": "qualifying",
+  "subject_label": "Franchise and distribution",
+  "subject_screen_exclusion_reason": null,
+  "publish_subject_index": true,
+  "subject_primary": "franchise-distribution",
+  "subject_secondary": [],
+  "subject_index_only": false,
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "decision_ecf_number": "79",
+  "decision_date": "2025-09-29",
+  "authored_by": "Jamel K. Semper",
+  "authorship_source": "docket_entry_signature",
+  "research_cutoff": "2026-09-15",
+  "status_checked": "2026-09-15",
+  "last_verified": "2026-09-15",
+  "_ingest": {
+    "source": "recap",
+    "matched_subject": "franchise-distribution",
+    "matched_terms": "\"New Jersey Franchise Practices Act\" OR \"franchise agreement\" OR \"distributorship\"",
+    "docket_entry": "OPINION filed.  Signed by Judge Jamel K. Semper on 9/29/2025. (mlh)",
+    "nature_of_suit": "Contract: Franchise",
+    "nature_of_suit_reading": "Docketed Contract: Franchise, consistent with the tag.",
+    "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
+    "subject_is_hypothesis": true,
+    "needs": [
+      "CONFIRM THE SUBJECT against the holding, then retag or discard",
+      "headnote written from the public opinion",
+      "procedural tags",
+      "link verified to resolve"
+    ]
+  }
+}

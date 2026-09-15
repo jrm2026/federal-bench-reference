@@ -1,0 +1,75 @@
+{
+  "id": "michael-a-shipp--veterans-guardian-va-claim-consulting-llc-v-plat",
+  "district": "dnj",
+  "judge_slug": "michael-a-shipp",
+  "judge_name": "Michael A. Shipp",
+  "judge_office": "district",
+  "caption": "Veterans Guardian VA Claim Consulting LLC v. Platkin",
+  "citation_line": "Veterans Guardian VA Claim Consulting LLC v. Platkin, No. 3:23-cv-20660, ECF No. 37 (D.N.J. Jan. 5, 2024), vacated, No. 24-1097 (3d Cir. Apr. 1, 2025)",
+  "district_docket": "3:23-cv-20660",
+  "appellate_docket": "24-1097",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Shipp denied preliminary relief against a New Jersey law restricting compensation for advice and assistance concerning veterans-benefit claims, reasoning that the law regulated conduct rather than protected speech.",
+  "qualification_rationale": "The case concerns the First Amendment status of paid professional advice, the regulation of a nationwide veterans-benefits consulting industry, and the constitutional distinction between regulating the price of services and burdening speech itself.",
+  "appellate_posture_note": "The Third Circuit vacated and remanded in a precedential opinion. It held that paid claims advice likely constitutes protected speech and directed separate analysis of the law’s distinct restrictions under the proper First Amendment framework.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/67826735/37/veterans-guardian-va-claim-consulting-llc-v-platkin/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 37 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/67826735/37/veterans-guardian-va-claim-consulting-llc-v-platkin/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.533378/gov.uscourts.njd.533378.37.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/241097p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 78,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 17,
+    "end": 5,
+    "press": 3,
+    "career": 8
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "First Amendment and Professional Regulation",
+  "screen_score": 88,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 15,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Michael A. Shipp",
+  "decision_ecf_number": "37",
+  "decision_date": "2024-01-05"
+}

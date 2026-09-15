@@ -1,124 +1,110 @@
-# Federal Bench Reference — District of New Jersey
+# Federal Bench Reference
 
-A static site generated from a content layer that no page escapes without
-clearing review. `data/` holds the facts, `scripts/validate-content.mjs` decides
-whether they are fit to publish, and `src/` renders only what has cleared.
-
-    src/pages/                the routes; judge pages under /judges/ and
-                              unreviewed records under /drafts/judges/
-    src/components/JudgeBody.astro  the judge page, from templates/judge-page.html
-    src/layouts/Base.astro    the approved design's shell and stylesheet
-    src/lib/content.js        loads data/ and splits published from draft
-    src/config/site.js        firm and curator blocks; unset, and guarded
-    astro.config.mjs          static output to dist/
-    wrangler.jsonc            Workers static assets, serving dist/
-    data/judges/*.json        43 jurist records, structural facts populated,
-                              narrative facts null and unverified
-    data/roster-manifest.json counts and the divergences from the prior report
-    data/poison-list.json     facts confirmed wrong; the gate blocks their return
-    scripts/build-roster.py   regenerates the records from the roster source
-    scripts/patch-verified.py applies the content checked on 2026-09-03
-    scripts/validate-content.mjs  the build gate
-    docs/CORRECTIONS.md       what was wrong, and the source for each fix
-    docs/VERIFICATION-WORKLIST.md  what to do next, in order
-    docs/SELECTION-SPEC.md    which opinions belong on a page, and why
-    docs/LAUNCH-CHECKLIST.md  everything between a working build and a live site
-    docs/HANDOFF.md           desktop setup, exact commands, Claude Code brief
-    data/signoffs.json        the curator's ledger; CODEOWNERS-protected
-    scripts/sign-record.mjs   records a sign-off, bound to a content hash
-    scripts/check-links.mjs   resolves every URL; needs open network access
-    .github/workflows/        the gate, on push, on PR, and weekly
-    public/_headers           edge headers; carries the noindex launch switch
-    public/_redirects         secondary domain to primary
-    templates/judge-page.html the approved design, stripped of all specimen facts
-
-## Build the site
+A neutral, sourced reference to the federal bench. District of New Jersey
+first, built to absorb SDNY, EDNY and further districts as subdirectories under
+one domain. It supports a direct-mail program: the recipient is an out-of-state
+defendant newly served in D.N.J. who has not yet appeared through counsel, and
+the letter points at the page for the judges on the docket.
 
     npm install
-    npm run build          # runs the gate, then astro build; exit 1 blocks
-    npm run dev            # local preview on :4321
+    npm run validate      # the gates; run before every commit
+    npm run dev           # local preview on :4321
+    npm run build         # gates, then astro build; exit 1 blocks the deploy
 
-`npm run build` is the Workers Builds build command. It writes `dist/`, which is
-what `wrangler.jsonc` serves. `public/` is Astro's static passthrough directory,
-so `_headers`, `_redirects` and both robots files are copied into `dist/` and
-read from its root, which is where Workers looks for them.
+`CLAUDE.md` is the operating summary. `docs/handoff.md` is the specification.
 
-A record renders under `/judges/` when `publish` is true and under
-`/drafts/judges/` otherwise — the same flag the gate keys on, so the gate and
-the site cannot disagree about what is published. Drafts exist because
-`data/signoffs.json` asks the curator to read the rendered page rather than the
-JSON before signing. They carry their own `noindex` tag, `robots.launch.txt`
-disallows `/drafts/`, and `INCLUDE_DRAFTS=0` drops them from the build.
+## Layout
 
-`data/` sits outside the assets root. The judge records are versioned here and
-never served; only what Astro renders reaches the edge.
+    src/content/districts/<d>/judges/*.json    the jurists, one file each
+    src/content/districts/<d>/opinions/*.json  the decisions, one file each
+    src/content/config/                        taxonomy, policy, firm, curator
+    src/content/config/poison-list.json        facts confirmed wrong
+    src/content/config/signoffs.json           the curator's ledger
+    src/content.config.ts                      strict schemas; malformed fails the build
+    src/pages/districts/[district]/            bench index and judge pages
+    src/layouts/Base.astro                     the shell, the banner, the footer
+    scripts/validate.mjs                       schema, taxonomy, scoring, identity
+    scripts/gates-compliance.mjs               what a reader is allowed to see
+    scripts/sign-record.mjs                    the curator's sign-off, hash-bound
+    scripts/check-links.mjs                    resolves every URL; needs open network
+    scripts/resolve-links.mjs                  fills missing district links
+    review/pending/                            where ingestion proposes; a human merges
+    docs/                                      the specification and the open decisions
+    public/_headers                            edge headers; carries the noindex switch
+    wrangler.jsonc                             Workers static assets, serving dist/
 
-## Run the gate
+`src/content/` sits outside the assets root. The records are versioned here and
+never served; only what Astro renders into `dist/` reaches the edge.
 
-    node scripts/validate-content.mjs
-    node scripts/validate-content.mjs --stale-days 30
+## The one rule
 
-Wire it into the build and into CI. Exit 1 blocks. `npm run build` already does.
-
-## Sign-off
-
-The `reviewer` field inside a judge record is self-reported and an automated
-process can type any name into it. Authority therefore lives in
-`data/signoffs.json`, which CODEOWNERS protects, and each entry is bound to a
-sha256 of the record's publishable content. Edit a signed record and the hash
-stops matching, the sign-off lapses, and the build blocks until a human signs
-again. Editorial notes are excluded from the hash, so a correction can be
-reworded without invalidating a sign-off on the substance.
-
-    node scripts/sign-record.mjs <jurist_id> --reviewer "Name"
-    node scripts/sign-record.mjs --verify-all
+Nothing about a sitting judge publishes unverified, and the site describes what
+a judge has **done** — never what a judge will do. That is not editorial taste.
+It is what keeps the site inside RPC 8.4(e) and 8.2, and the whole design
+follows from it.
 
 ## The gates
 
-1. Schema. Every roster fact names its source and its check date.
-2. Review. `publish: true` requires a named reviewer and a review date on the
-   biography and on every opinion, and a headnote on every opinion. Publish the
-   citation and the link alone, or hold the entry.
-3. Westlaw firewall. No subscription research service anywhere in reader-facing
-   content. Editorial notes are excluded so a correction can name its error.
-4. Sources. Opinion and biography links must resolve to GovInfo, CourtListener
-   or RECAP, Justia, uscourts.gov, ca3, njd or the FJC. Advocacy, party,
-   commercial-AI and press hosts are refused.
-5. Tone. Language that characterizes the judge rather than the holding fails the
-   build. Prediction language fails the build.
-6. Appellate currency. Any vacated, reversed, stayed or remanded posture needs a
-   status check inside the window.
-7. Poison list. A fact once corrected cannot reappear.
+`npm run validate` runs both halves and exit 1 blocks the build.
 
-Verification states are `unverified`, `source-checked` and `verified`. Only
-`verified` clears the gate, and only a named human can set it.
+Data integrity, in `scripts/validate.mjs`: strict schemas; a closed subject and
+procedural vocabulary; score components that must sum to their total and clear
+their independent floors; the five-per-judge cap; declared counts that must
+match the records on disk; and opinion identity keyed on judge, caption **and**
+docket, because caption alone collides on this corpus. Every page must render
+through `Base.astro`, which carries the advertising banner.
 
+Compliance, in `scripts/gates-compliance.mjs`:
 
-## Rebuilding from scratch
+1. Fail closed. A missing gate file stops the run rather than switching a gate
+   off. A tree that once arrived without its gate files reported "passed."
+2. Westlaw firewall. No subscription research service in reader-facing content.
+3. Sources. Opinion links must resolve to a free public repository — GovInfo,
+   CourtListener, Justia, uscourts.gov, ca3 or the FJC. Advocacy, party,
+   commercial-AI and commercial-press hosts are refused. Biography sources
+   outside that list warn rather than block.
+4. Tone. Language characterizing the judge rather than the holding fails.
+5. Neutrality. Tallies and outcome-based selection language fail. A tally is a
+   prediction wearing the costume of a fact.
+6. Appellate currency. A vacated, reversed, stayed or remanded posture needs a
+   status check inside the window — 45 days, `--stale-days` to change it.
+7. Poison list. A fact once corrected may not reappear.
+8. Sign-off ledger. Lapsed and orphaned entries block. Unsigned records are
+   reported; `--require-signoffs` makes them block.
 
-The builder seeds and never overwrites. Verification is layered on top by the
-patch scripts, so a rebuild cannot erase a curator's sign-off:
+No per-judge aggregate statistics of any kind — not computed, not stored, not
+rendered. The gate fails on field names matching that pattern. Aggregation
+across the whole bench, as on `/topics/`, is fine.
 
-    python3 scripts/build-roster.py      # creates missing records only
-    python3 scripts/patch-verified.py    # source-checked content, 2026-09-03
-    python3 scripts/patch-batch1.py      # roster and biography verification
-    python3 scripts/patch-batch2.py      # appellate postures
-    python3 scripts/patch-batch3.py      # biographies, in progress: Kiel
-    node scripts/validate-content.mjs
+## Sign-off
 
-Run in that order on an empty `data/judges/` and the tree reproduces exactly.
-Add each new patch script to that list as it is written; a rebuild that omits
-one produces a tree that looks right and is not.
-`build-roster.py --check` writes nothing and reports drift: records on the
-roster source missing from the tree, records in the tree no longer on the roster
-source, and divergence in name, office or vicinage. CI runs it on every push.
+The confidence field inside a record is self-reported, and an automated process
+with write access to `src/content` can set it. Authority therefore lives in
+`src/content/config/signoffs.json`, which CODEOWNERS protects, and each entry is
+bound to a sha256 of everything on that judge's page: the biography and every
+opinion record keyed to the slug. Edit any of it and the hash stops matching,
+the sign-off lapses, and the gate reports it. Scores and workflow dates are
+excluded, so re-scoring a decision does not lapse a sign-off on the substance.
 
-Drift is a signal, not an error. The court's directory changed, or a patch
-script deliberately changed something. A human decides which.
+    node scripts/sign-record.mjs <slug> --reviewer "Name"
+    node scripts/sign-record.mjs --verify-all
+
+Read the rendered page, not the JSON, and ask the question the gate cannot:
+would a reader infer a tendency from this selection?
 
 ## Deployment posture
 
+This is a Workers project, not Pages. The difference is not cosmetic: Workers
+allows only relative URLs in `_redirects` and rejects the whole file over one
+absolute rule.
+
 The preview is `noindex` at the edge and behind Cloudflare Access. Removing the
 `X-Robots-Tag` line from `public/_headers` is the launch switch and the last
-item on the checklist. Everything above it on that list is a decision, not a
-task, and none of the decisions are Claude's.
+item on `docs/LAUNCH-CHECKLIST.md`. Everything above it on that list is a
+decision, not a task, and none of the decisions are Claude's.
+
+## Ownership
+
+Repository, domain and API credentials belong to Jay R. McDaniel personally.
+The sponsoring firm appears only in `src/content/config/firm.json`, which takes
+per-district overrides, so it detaches cleanly.

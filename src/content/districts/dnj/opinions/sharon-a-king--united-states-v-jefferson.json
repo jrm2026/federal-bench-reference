@@ -1,0 +1,69 @@
+{
+  "id": "sharon-a-king--united-states-v-jefferson",
+  "district": "dnj",
+  "judge_slug": "sharon-a-king",
+  "judge_name": "Sharon A. King",
+  "judge_office": "magistrate",
+  "caption": "United States v. Jefferson",
+  "citation_line": "United States v. Jefferson, No. 1:25-cv-01931, ECF No. 4 (D.N.J. May 20, 2025)",
+  "district_docket": "1:25-cv-01931",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "pending",
+  "headnote_district_ruling": "Recommended summary enforcement of a False Claims Act civil investigative demand for oral testimony from a former employee of an investigation target. The opinion treated the CID like an administrative subpoena and applied the correspondingly narrow scope of judicial review.",
+  "qualification_rationale": "A useful public explanation of the federal government's pre-complaint FCA information-gathering power and the respondent's limited grounds for resisting a CID.",
+  "appellate_posture_note": "R&R with a proposed order appended; no later adoption or substantive appellate review identified through the cutoff.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_25-cv-01931/pdf/USCOURTS-njd-1_25-cv-01931-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_25-cv-01931/pdf/USCOURTS-njd-1_25-cv-01931-0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 37,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 15,
+    "end": 2,
+    "press": 0,
+    "career": 6
+  },
+  "subject_primary": "administrative-regulatory",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "False Claims Act Investigations",
+  "screen_score": 68,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 14,
+    "disposition": 20,
+    "doctrine": 7,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Sharon A. King",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

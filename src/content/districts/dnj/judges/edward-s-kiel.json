@@ -1,0 +1,42 @@
+{
+  "slug": "edward-s-kiel",
+  "name": "Edward S. Kiel",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2024–13 September 2026. Selected decisions: 0.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 1,
+  "actual_selected_count": 1,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1965 in Daegu, South Korea. Kiel earned B.A. and B.S.E.E. degrees from Rutgers University (1988) and a J.D. from Notre Dame Law School (1991). He clerked for New Jersey Superior Court Judge Michael R. Imbriani and practiced in Princeton, Montvale, and Hackensack before serving as a District of New Jersey magistrate judge from 2019 to 2024. President Joseph R. Biden Jr. nominated him to the district court.",
+    "education_sentences": [
+      "degrees from Rutgers University (1988) and a J.D. from Notre Dame Law School (1991)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/13761566",
+      "https://www.njd.uscourts.gov/content/edward-s-kiel"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned March 25, 2024 | Camden"
+}

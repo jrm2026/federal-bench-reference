@@ -1,0 +1,42 @@
+{
+  "slug": "andrea-d-bergman",
+  "name": "Andrea D. Bergman",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Trenton / Fort Dix",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Part-time; appointed March 14, 2024 through September 13, 2026. Selected decisions: 0.",
+  "record_status": "developing",
+  "record_status_note": "None identified after the expanded public-source screen. The part-time Fort Dix criminal and post-conviction docket is materially underrepresented in free opinion repositories.",
+  "declared_selected_count": 0,
+  "actual_selected_count": 0,
+  "link_from_mail": false,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Bergman earned a B.A. from Skidmore College (1990) and a J.D. from Santa Clara University School of Law (1995). She worked at the ACLU of New Jersey before law school, practiced briefly after graduation, served as a research-and-writing attorney for the federal defender, and was an Assistant Federal Public Defender in New Jersey from 1999 until her appointment. Her position is part-time and centered on Fort Dix matters.",
+    "education_sentences": [
+      "Bergman earned a B.A. from Skidmore College (1990) and a J.D. from Santa Clara University School of Law (1995)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.njd.uscourts.gov/content/andrea-d-bergman",
+      "https://www.njd.uscourts.gov/sites/njd/files/NoticetotheBarAB.pdf"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "Official appointment notice"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "Part-Time U.S. Magistrate Judge | Appointed March 14, 2024; Fort Dix duty station | Trenton / Fort Dix"
+}

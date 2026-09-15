@@ -1,0 +1,76 @@
+{
+  "id": "michael-a-shipp--ncaa-v-governor-of-new-jersey-2014",
+  "district": "dnj",
+  "judge_slug": "michael-a-shipp",
+  "judge_name": "Michael A. Shipp",
+  "judge_office": "district",
+  "caption": "NCAA v. Governor of New Jersey",
+  "citation_line": "NCAA v. Governor of New Jersey, 61 F. Supp. 3d 488 (D.N.J. 2014), aff’d, 832 F.3d 389 (3d Cir. 2016) (en banc), rev’d sub nom. Murphy v. NCAA, 584 U.S. 453 (2018)",
+  "district_docket": "3:12-cv-04947",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "61 F. Supp. 3d 488",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Shipp held that New Jersey’s 2014 partial repeal of its sports-wagering prohibitions authorized sports gambling within the meaning of PASPA, and enjoined it.",
+  "qualification_rationale": "The litigation was nationally consequential: it determined whether states could legalize sports betting and produced a major Supreme Court federalism decision.",
+  "appellate_posture_note": "The en banc Third Circuit affirmed, holding that a selective repeal channelling wagering to particular operators and venues is an authorization. The Supreme Court reversed in Murphy, holding that PASPA’s prohibition on state authorization violated the anti-commandeering rule and that the offending provisions were not severable.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/5811046/198/national-collegiate-athletic-association-v-christie/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 198 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5811046/198/national-collegiate-athletic-association-v-christie/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.277952/gov.uscourts.njd.277952.198.0.pdf"
+    },
+    {
+      "anchor": "Supreme Court opinion",
+      "url": "https://www.supremecourt.gov/opinions/17pdf/16-476_dbfi.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 100,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 15,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "gaming-wagering",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federalism and Sports Wagering",
+  "screen_score": 94,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "decision_ecf_number": "198",
+  "decision_date": "2014-11-21",
+  "authored_by": "Michael A. Shipp",
+  "decision_selection_note": "ECF 198 of two published Shipp decisions on this docket, and the one the Supreme Court reversed."
+}

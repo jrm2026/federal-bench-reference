@@ -1,0 +1,61 @@
+{
+  "id": "andre-m-espinosa--stevenson-v-city-of-newark",
+  "district": "dnj",
+  "judge_slug": "andre-m-espinosa",
+  "judge_name": "André M. Espinosa",
+  "judge_office": "magistrate",
+  "caption": "Stevenson v. City of Newark",
+  "citation_line": "Stevenson v. City of Newark, No. 2:20-cv-18722, ECF No. 76 (D.N.J. Apr. 9, 2024)",
+  "district_docket": "2:20-cv-18722",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Applied Morgan and Buono to permit a limited deposition of Newark Mayor Ras Baraka. Although there was no smoking gun, the record did not place him so far outside the alleged discrimination and retaliation that discovery could safely omit his testimony.",
+  "qualification_rationale": "A developed, balanced application of the high-ranking-official doctrine that later D.N.J. opinions use as a reference point.",
+  "appellate_posture_note": "Non-dispositive protective order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2020cv18722/454523/76/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2020cv18722/454523/76/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 49,
+  "components": {
+    "app": 0,
+    "doc": 18,
+    "prac": 18,
+    "end": 5,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope",
+    "protective-orders-sealing"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Discovery from High Ranking Officials",
+  "subject_screen_exclusion_reason": "Non-dispositive ruling defining the permitted scope of a public official's deposition.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "André M. Espinosa",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

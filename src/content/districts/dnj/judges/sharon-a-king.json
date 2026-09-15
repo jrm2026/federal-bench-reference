@@ -1,0 +1,44 @@
+{
+  "slug": "sharon-a-king",
+  "name": "Sharon A. King",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Camden",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed April 22, 2021 through September 13, 2026. Selected decisions: 2.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "King earned a B.S. from Boston University and a J.D. from Rutgers Law School–Camden (1993). Before joining the bench, she was a partner at King & King, where her practice included civil rights, police misconduct, and wrongful-death litigation. She chaired the New Jersey State Bar Association’s Federal Practice and Procedure Section and served on the court’s Lawyers Advisory Committee.",
+    "education_sentences": [
+      "King earned a B.S. from Boston University and a J.D. from Rutgers Law School–Camden (1993)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.njd.uscourts.gov/content/sharon-king",
+      "https://www.uscourts.gov/about-federal-courts/about-federal-judges/judicial-milestones/sharon-a-king",
+      "https://www.saiber.com/insights/publications/2021-06-10-a-brief-survey-of-recent-appointments-to-the-united-states-district-court-for-the-district-of-new-jersey/_pdfx/2021-06-10-a-brief-survey-of-recent-appointments-to-the-united-states-district-court-for-the-district-of-new-jersey.pdf"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "U.S. Courts milestone",
+      "Saiber appointment survey"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed April 22, 2021 | Camden"
+}

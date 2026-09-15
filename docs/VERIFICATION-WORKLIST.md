@@ -1,9 +1,47 @@
 # Verification worklist
 
-43 records exist. None is publishable. The gate reports `0 marked publish=true`,
-which is the correct state on day one. Work in this order.
+## Where this stands
 
-## 1. Roster confirmation (blocks everything, one sitting)
+41 judge records and 95 decision records are in the tree. Every biography is
+drafted from primary sources and carries a confidence value and a check date.
+The gates pass. No record carries a curator sign-off, so nothing here has been
+read by a human on the rendered page, which is the thing the gates cannot do.
+
+Sections 1 and 3 below were written against the earlier scaffold, where the
+biographies were empty. The content build closed most of both. What survives of
+them is listed here, and sections 2, 4, 5 and 6 stand as written.
+
+Open, in the order I would take them:
+
+1. **Antar v. Borgata has no district-level link.** The 1 February 2024 letter
+   order was cited to a gambling-trade press copy, which the sources gate
+   refuses, and the record carries no docket to resolve one by. The entry is
+   marked `appellate_only` and renders the warning strip. Find the docket, or
+   drop the entry and adjust Arleo's declared count.
+2. **Ireland v. Hegseth points at a docket, not the order.** The order itself
+   was cited to FindLaw. FindLaw is not an advocacy, party or press host, so the
+   stated rule does not plainly refuse it, but it is a Thomson Reuters property
+   on a site whose premise is a Westlaw firewall. Decide it. If it is allowed,
+   add the host to the allowlist in `scripts/gates-compliance.mjs` and restore
+   the link alongside the docket.
+3. **Sixteen biography sources sit outside the free-public list.** They warn
+   rather than block: AP, three law-firm biographies, a bar association, a law
+   school, Martindale, attorneys.org, Ballotpedia and the Sedona Conference.
+   Martindale and Ballotpedia are the weak ones. Replace or accept each.
+4. **44 records lack a district-level link.** `scripts/resolve-links.mjs` is
+   written and has never been run against the live APIs. It needs
+   `COURTLISTENER_TOKEN`; the free tier throttles at five requests a minute.
+5. **The matter-relevant tier does not exist.** It is what the mail campaign
+   actually needs. Section 4 below governs the selection.
+6. **`firm.json` still holds `[address]` and `[phone]`.** The contact page
+   suppresses the block rather than print the brackets, but the site should not
+   go live with them unset.
+
+Work in this order.
+
+---
+
+## 1. Roster confirmation (largely closed by the content build)
 
 Confirm from the court and the FJC, not from the prior report:
 
@@ -34,7 +72,7 @@ standing schedule after it:
   provisions survived.
 - *McIver* — Count Three is on remand to Judge Semper. Track it.
 
-## 3. Biographies and page spine (37 records)
+## 3. Biographies and page spine (drafted; sign-off outstanding)
 
 Move the practice information block and the appearing-from-out-of-state material
 above the case list on the judge page template. Those sections are complete for

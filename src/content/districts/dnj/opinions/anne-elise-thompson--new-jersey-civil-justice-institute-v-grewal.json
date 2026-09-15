@@ -1,0 +1,69 @@
+{
+  "id": "anne-elise-thompson--new-jersey-civil-justice-institute-v-grewal",
+  "district": "dnj",
+  "judge_slug": "anne-elise-thompson",
+  "judge_name": "Anne Elise Thompson",
+  "judge_office": "district",
+  "caption": "New Jersey Civil Justice Institute v. Grewal",
+  "citation_line": "New Jersey Civil Justice Institute v. Grewal, No. 3:19-cv-17518 (D.N.J. Mar. 25, 2021)",
+  "district_docket": "3:19-cv-17518",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Thompson granted summary judgment and enjoined enforcement of N.J.S.A. § 10:5-12.7 against employment arbitration agreements governed by the Federal Arbitration Act, holding that the state provision was FAA-preempted.",
+  "qualification_rationale": "The ruling drew New Jersey legal and political press because it invalidated, in significant part, a state employment-law measure designed to prevent prospective waiver of statutory and jury-trial rights.",
+  "appellate_posture_note": "No published Third Circuit merits disposition was identified in this research. The significance rests on the district injunction and its immediate effect on New Jersey employment arbitration.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2019cv17518/415967/47/",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2019cv17518/415967/47/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 58,
+  "components": {
+    "app": 0,
+    "doc": 18,
+    "prac": 20,
+    "end": 5,
+    "press": 7,
+    "career": 8
+  },
+  "subject_primary": "employment",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "arbitration-forum-selection"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Employment Arbitration and FAA Preemption",
+  "screen_score": 80,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 0,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Anne Elise Thompson",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

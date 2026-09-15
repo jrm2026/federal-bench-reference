@@ -1,0 +1,47 @@
+{
+  "slug": "william-j-martini",
+  "name": "William J. Martini",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "senior",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2002–13 September 2026. Selected decisions: 0.",
+  "record_status": "represented",
+  "record_status_note": "1 moved out of scope as criminal subject matter.",
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1947 in Passaic. Martini earned a B.A. from Villanova University (1968) and a J.D. from Rutgers Law School–Newark (1972). His career included a state-court clerkship, county and federal prosecution, private practice, local elected office, service as a Passaic County freeholder, one term in the U.S. House of Representatives, and service on the Port Authority board. President George W. Bush appointed him in 2002.",
+    "education_sentences": [
+      "Martini earned a B.A. from Villanova University (1968) and a J.D. from Rutgers Law School–Newark (1972)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/1391656",
+      "https://www.njd.uscourts.gov/content/william-j-martini"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [
+    {
+      "text": "“A View of Rutgers Law from the Bench and Beyond,” 61 Rutgers Law Review 301 (2009), a reflective essay on the law school and legal profession. Open publication",
+      "url": "https://www.rutgerslawreview.com/wp-content/uploads/archive/vol61/Issue2/Martini_v61n2.pdf"
+    }
+  ],
+  "role_line": "Senior U.S. District Judge | Senior status since February 10, 2015 | Newark"
+}

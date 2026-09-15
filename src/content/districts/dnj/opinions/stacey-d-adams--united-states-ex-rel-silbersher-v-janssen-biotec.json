@@ -1,0 +1,70 @@
+{
+  "id": "stacey-d-adams--united-states-ex-rel-silbersher-v-janssen-biotec",
+  "district": "dnj",
+  "judge_slug": "stacey-d-adams",
+  "judge_name": "Stacey D. Adams",
+  "judge_office": "magistrate",
+  "caption": "United States ex rel. Silbersher v. Janssen Biotech, Inc.",
+  "citation_line": "United States ex rel. Silbersher v. Janssen Biotech, Inc., No. 2:19-cv-12107, ECF No. 454 (D.N.J. Sept. 22, 2025)",
+  "district_docket": "2:19-cv-12107",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied a False Claims Act relator's objection to a special master's privilege ruling after independently reviewing fifty documents. The court distinguished the threshold for in camera review from the higher showing needed to defeat privilege under the crime-fraud exception.",
+  "qualification_rationale": "A useful intersection of Rule 53 review, special-master management, attorney-client privilege, and crime-fraud doctrine in complex pharmaceutical litigation.",
+  "appellate_posture_note": "Non-dispositive discovery ruling; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_19-cv-12107/pdf/USCOURTS-njd-2_19-cv-12107-4.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_19-cv-12107/pdf/USCOURTS-njd-2_19-cv-12107-4.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 45,
+  "components": {
+    "app": 0,
+    "doc": 16,
+    "prac": 17,
+    "end": 4,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "privilege-crime-fraud",
+    "privilege-work-product"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Attorney Client Privilege and Crime Fraud",
+  "screen_score": 57,
+  "screen_classification": "useful",
+  "screen_components": {
+    "centrality": 20,
+    "analysis": 16,
+    "disposition": 8,
+    "doctrine": 9,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Stacey D. Adams",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

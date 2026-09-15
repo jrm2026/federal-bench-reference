@@ -1,0 +1,75 @@
+{
+  "id": "william-j-martini--hassan-v-city-of-new-york",
+  "district": "dnj",
+  "judge_slug": "william-j-martini",
+  "judge_name": "William J. Martini",
+  "judge_office": "district",
+  "caption": "Hassan v. City of New York",
+  "citation_line": "Hassan v. City of New York, No. 2:12-cv-03401, ECF No. 40 (D.N.J. Feb. 20, 2014), rev’d, 804 F.3d 277 (3d Cir. 2015)",
+  "district_docket": "2:12-cv-03401",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "804 F.3d 277",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Martini dismissed constitutional claims brought by Muslim individuals and organizations challenging the New York Police Department’s post-September 11 surveillance program in New Jersey.",
+  "qualification_rationale": "The case arose from nationally reported surveillance of Muslim communities and produced a major precedential equal-protection and standing opinion concerning government classification on the basis of religion.",
+  "appellate_posture_note": "The Third Circuit reversed, holding that the plaintiffs plausibly alleged injury, discriminatory purpose and intentional discrimination, and permitted the constitutional claims to proceed.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/4310716/40/hassan-v-the-city-of-new-york/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 40 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/4310716/40/hassan-v-the-city-of-new-york/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.275273.40.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit opinion",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/14-1688/14-1688-2016-02-02.html"
+    }
+  ],
+  "classification": "major",
+  "score_total": 98,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 18,
+    "end": 15,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Equal Protection and Government Surveillance",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "William J. Martini",
+  "decision_ecf_number": "40",
+  "decision_date": "2014-02-20"
+}

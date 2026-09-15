@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+export async function getStaticPaths() {
+  const judges = await getCollection('judges');
+  const districts = [...new Set(judges.map(j => j.data.district))];
+  return districts.map(d => ({ params: { district: d },
+    props: { judges: judges.filter(j => j.data.district === d).map(j => j.data) } }));
+}
+const { judges } = Astro.props;
+const d = Astro.params.district;
+const vics = ['Camden', 'Newark', 'Trenton', 'Trenton / Fort Dix'];
+const bench = judges.filter(j => j.render_section === 'current_bench');
+const fjc = judges.filter(j => j.render_section === 'fjc_reconciliation');
+const dj = bench.filter(j => j.office === 'district');
+const mj = bench.filter(j => j.office.startsWith('magistrate'));
+const byVic = (list) => vics.map(v => [v, list.filter(j => j.vicinage === v)]).filter(([, l]) => l.length);
+const row = (j) => `${j.district}|${j.slug}`;
+---
+<Base title="District of New Jersey — Federal Bench Reference" district={d}>
+  <div class="breadcrumb">District of New Jersey</div>
+  <div class="judgehead">
+    <h1>District of New Jersey</h1>
+    <div class="role">United States District Court · {bench.length + fjc.length} judges</div>
+  </div>
+
+  <section class="block">
+    <h2>District judges</h2>
+    <ul class="benchlist">
+      {dj.map(j => <li><a href={`/districts/${j.district}/judges/${j.slug}/`}>Hon. {j.name}</a>
+        <div class="meta">{j.roster_group === 'senior' ? 'Senior status' : 'Active'} · {j.actual_selected_count} selected decisions</div></li>)}
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Magistrate judges</h2>
+    {byVic(mj).map(([v, list]) =>
+      <div class="benchgroup">
+        <h3>{v}</h3>
+        <ul class="benchlist">
+          {list.map(j => <li><a href={`/districts/${j.district}/judges/${j.slug}/`}>Hon. {j.name}</a>
+            <div class="meta">{j.record_status === 'represented'
+              ? `${j.actual_selected_count} selected decisions`
+              : j.record_status === 'developing' ? 'Developing record' : 'None identified'}</div></li>)}
+        </ul>
+      </div>)}
+  </section>
+
+  {fjc.length > 0 &&
+    <section class="block">
+      <h2>Additional judges identified by FJC reconciliation</h2>
+      <p class="windownote">These judges do not appear in the court's current chambers directory, but Federal
+      Judicial Center data does not record termination of their commissions. Both sources are shown so the
+      roster can be represented accurately.</p>
+      <ul class="benchlist">
+        {fjc.map(j => <li><a href={`/districts/${j.district}/judges/${j.slug}/`}>Hon. {j.name}</a>
+          <div class="meta">FJC record only · {j.actual_selected_count} selected decisions</div></li>)}
+      </ul>
+    </section>}
+</Base>

@@ -1,0 +1,42 @@
+{
+  "slug": "tonianne-j-bongiovanni",
+  "name": "Tonianne J. Bongiovanni",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Trenton",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed April 14, 2003 through September 13, 2026. Selected decisions: 2.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Bongiovanni earned a B.A. from New Jersey City University (1980) and a J.D. from Seton Hall University School of Law (1988). She has served as a District of New Jersey magistrate judge since 2003 and has taught as an adjunct at Seton Hall Law.",
+    "education_sentences": [
+      "Bongiovanni earned a B.A. from New Jersey City University (1980) and a J.D. from Seton Hall University School of Law (1988)."
+    ],
+    "confidence": "partial",
+    "source_note": "Publicly accessible sources reviewed provide limited detail about pre-bench practice. No inference is drawn.",
+    "sources": [
+      "https://www.njd.uscourts.gov/content/tonianne-j-bongiovanni",
+      "https://law.shu.edu/profiles/adjunct.html"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "Seton Hall adjunct directory"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed April 14, 2003 | Trenton"
+}

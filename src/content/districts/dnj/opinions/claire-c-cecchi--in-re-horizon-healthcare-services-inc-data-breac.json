@@ -1,0 +1,78 @@
+{
+  "id": "claire-c-cecchi--in-re-horizon-healthcare-services-inc-data-breac",
+  "district": "dnj",
+  "judge_slug": "claire-c-cecchi",
+  "judge_name": "Claire C. Cecchi",
+  "judge_office": "district",
+  "caption": "In re Horizon Healthcare Services Inc. Data Breach Litigation",
+  "citation_line": "In re Horizon Healthcare Services Inc. Data Breach Litigation, No. 2:13-cv-07418, ECF No. 47 (D.N.J. Mar. 31, 2015), vacated, 846 F.3d 625 (3d Cir. 2017)",
+  "district_docket": "2:13-cv-07418",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "846 F.3d 625",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Cecchi dismissed a putative class action arising from the theft of laptops containing personal and health information, concluding that the plaintiffs had not alleged a cognizable injury because they did not show actual misuse of the data.",
+  "qualification_rationale": "The appeal became an important post-Spokeo standing decision. It held that an alleged violation of the Fair Credit Reporting Act can constitute a concrete injury even without demonstrated misuse of the stolen information, and it remains influential in data-breach standing disputes.",
+  "appellate_posture_note": "The Third Circuit vacated and remanded in a precedential opinion, holding that Congress had created a remedy for unauthorized transfers of personal information and that the alleged disclosure itself supplied Article III injury.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/5832351/47/in-re-horizon-healthcare-services-inc-data-breach-litigation/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 47 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5832351/47/in-re-horizon-healthcare-services-inc-data-breach-litigation/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.298072/gov.uscourts.njd.298072.47.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/152309p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 90,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 17,
+    "end": 15,
+    "press": 4,
+    "career": 9
+  },
+  "subject_primary": "data-privacy-cybersecurity",
+  "subject_secondary": [
+    "consumer-fraud"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Data Privacy and Article III Standing",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Claire C. Cecchi",
+  "decision_ecf_number": "47",
+  "decision_date": "2015-03-31",
+  "decision_selection_note": "The opinion behind ECF 48/50. You appeal from the order; the reasoning the Third Circuit vacated at 846 F.3d 625 is here. ECF 157 is the 2021 re-dismissal after remand."
+}

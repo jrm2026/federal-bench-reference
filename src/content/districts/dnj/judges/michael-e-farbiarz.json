@@ -1,0 +1,49 @@
+{
+  "slug": "michael-e-farbiarz",
+  "name": "Michael E. Farbiarz",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2023–13 September 2026. Selected decisions: 1.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1973 in New York City. Farbiarz earned an A.B. from Harvard College (1995) and a J.D. from Yale Law School (1999). He clerked for U.S. District Judge Michael B. Mukasey and Second Circuit Judge José A. Cabranes; practiced in New York; served as an Assistant U.S. Attorney in the Southern District of New York; and held senior legal, inspector-general, and governance posts at the Port Authority. President Biden nominated him.",
+    "education_sentences": [
+      "Farbiarz earned an A.B. from Harvard College (1995) and a J.D. from Yale Law School (1999)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/13619511",
+      "https://www.njd.uscourts.gov/content/michael-e-farbiarz",
+      "https://law.justia.com/cases/federal/appellate-courts/ca3/25-2162/25-2162-2026-01-15.html"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile",
+      "Third Circuit Khalil opinion"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [
+    {
+      "text": "“Accuracy and Adjudication: The Promise of Extraterritorial Due Process,” 116 Columbia Law Review 625 (2016). The article argues for accuracy-oriented due-process protections in extraterritorial adjudication. Open publication",
+      "url": "https://columbialawreview.org/wp-content/uploads/2016/04/April-2016-6-Article-Farbiarz.pdf"
+    }
+  ],
+  "role_line": "U.S. District Judge | Active; commissioned May 5, 2023 | Newark"
+}

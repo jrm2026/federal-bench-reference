@@ -2,7 +2,7 @@
 
 Checked 3 September 2026 against the court's own directory, the Federal Judicial
 Center, and the appellate dockets. Each correction is enforced in code: the
-poison list in `data/poison-list.json` blocks any build in which a corrected
+poison list in `src/content/config/poison-list.json` blocks any build in which a corrected
 error reappears.
 
 ## Roster
@@ -238,3 +238,98 @@ different direction.
 Remaining before launch: the thirty-seven biographies, the taxonomy-aligned case
 selection, and the link check. None needs this session. The first two are bulk
 work best batched by source; the third needs open network access.
+
+---
+
+# Corrections applied on the merge, 14 September 2026
+
+The content build and the review scaffold were developed separately and merged
+here. The scaffold's gates ran against the content build's records for the first
+time. Two of the corrections above had reappeared, which is the case for keeping
+the poison list.
+
+## Poison list hits
+
+**`ezel.ai` was cited as a biography source for six judges.** McNulty, Sheridan,
+Bongiovanni, Cooper, Clark and Thompson each carried it under the label "Public
+rulings index." A commercial AI aggregator is not an acceptable source on a site
+whose premise is official and free repositories. The URL and its label were
+removed from all six records. Each retains at least one primary source.
+
+**The "Inactive senior" label was back on Cooper and Thompson.** It appeared in
+`role_line`, which renders on the page. The label was withdrawn in September for
+want of docket evidence and may not be reused without it. Struck from both. The
+two remaining clauses — that the commission is not shown as terminated in FJC
+data, and that the judge is not listed in the current directory — are
+observations with sources and stay. McNulty and Sheridan already carried the
+corrected form, which states the senior-status date instead.
+
+## Sources
+
+Five opinion entries linked to hosts the sources gate refuses. Four were
+re-sourced to CourtListener, each verified against the docket, the court and the
+assigned judge:
+
+- *FTC v. Wyndham Worldwide Corp.* — was the FTC's own copy, a party host. Now
+  the CourtListener opinion; D.N.J., Salas, 7 April 2014, 10 F. Supp. 3d 602.
+- *United States v. Auernheimer* — was hosted by the EFF, an advocacy host. Now
+  the CourtListener opinion; 3d Cir., 11 April 2014, No. 13-1816, 748 F.3d 525.
+- *United States v. City of Newark* — was the Department of Justice's copy of the
+  consent decree, a party host. Now the CourtListener docket; 2:16-cv-01731,
+  assigned to Arleo, filed 30 March 2016.
+- *Ireland v. Hegseth* — was FindLaw. Now the CourtListener docket;
+  1:25-cv-01918, assigned to O'Hearn, filed 17 March 2025. The record gave the
+  docket as 25-cv-01918, without the vicinage prefix; corrected. Whether FindLaw
+  is an acceptable host at all is open and is item 2 on the worklist.
+- *Antar v. Borgata Hotel Casino & Spa* — the only copy of the 1 February 2024
+  letter order was on a gambling-trade press site. Removed, with no substitute:
+  the record carries no docket to resolve one by. The entry now rests on its
+  Third Circuit link, is marked `appellate_only`, and renders the strip saying
+  no free public copy of the district order was located.
+
+## Gate change
+
+The page check read only the top level of `src/pages`, so a page under
+`src/pages/districts/` could render without the advertising banner and the gate
+would not see it. It now walks the tree.
+
+The tone gate refused the bare word "predict," which fired on *KalshiEX LLC v.
+Flaherty* — a case about prediction markets. The pattern now requires the word
+to sit near a judge, a court, a ruling or an outcome, and may not straddle two
+fields.
+
+---
+
+# Judge conflicts settled from the Third Circuit cover pages, 14 September 2026
+
+Reconciling appellate dockets to district dockets threw three conflicts, where
+CourtListener's docket assignment named a different judge than the record did.
+All three were read against the Third Circuit's own opinion and all three
+resolved in favour of the record.
+
+*Berkelhammer v. ADP TotalSource Group, Inc.*, No. 22-1618: "On Appeal from the
+United States District Court for the District of New Jersey (D.C. No.
+2-20-cv-05696), District Judge: Honorable Esther Salas." The docket's current
+assignment is Evelyn Padin, who was not on the bench when the case was filed.
+
+*Huertas v. Bayer US LLC*, No. 23-2178: "(District Court No. 2-21-cv-20021),
+District Judge: Honorable Susan D. Wigenton." The docket's current assignment is
+Stanley R. Chesler.
+
+*J.M. v. Summit City Board of Education*, No. 20-3391: "(D.C. No. 2-19-cv-00159),
+District Judge: Honorable Kevin McNulty." The docket carried no assignment at
+all in CourtListener.
+
+The lesson is worth more than the three corrections. A docket's `assignedTo`
+field reports who holds the case now, which after a reassignment, an elevation
+or a senior-status transition is not who decided it. Attributing a decision from
+that field would have put three entries on the wrong judges' pages, and on a
+site whose premise is that it never says anything unverified about a sitting
+judge, that is the failure mode to design against. The cover page of the
+appellate opinion names the judge appealed from. Use it.
+
+Each record's headnote and appellate posture note was also checked against the
+opinion text and all six statements hold. Salas compelled arbitration and was
+affirmed. Wigenton dismissed for want of standing and was partially reversed for
+applying too demanding a standard. McNulty upheld the administrative
+determination and was affirmed, over a dissent by Judge Greenaway.

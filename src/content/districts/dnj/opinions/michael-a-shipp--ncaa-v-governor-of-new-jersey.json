@@ -1,0 +1,72 @@
+{
+  "id": "michael-a-shipp--ncaa-v-governor-of-new-jersey",
+  "district": "dnj",
+  "judge_slug": "michael-a-shipp",
+  "judge_name": "Michael A. Shipp",
+  "judge_office": "district",
+  "caption": "NCAA v. Governor of New Jersey",
+  "citation_line": "NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), aff’d sub nom. Nat’l Collegiate Athletic Ass’n v. Christie, 730 F.3d 208 (3d Cir. 2013)",
+  "district_docket": "3:12-cv-04947",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "926 F. Supp. 2d 551",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Shipp granted summary judgment and a permanent injunction against New Jersey’s 2012 sports-wagering law, holding that PASPA was a valid exercise of the commerce power and did not commandeer the State.",
+  "qualification_rationale": "The litigation was nationally consequential: it determined whether states could legalize sports betting and produced a major Supreme Court federalism decision.",
+  "appellate_posture_note": "The Third Circuit affirmed in a divided precedential opinion, holding that PASPA imposed no affirmative command on the States and so did not offend the anti-commandeering rule. That reasoning was later abrogated by Murphy v. NCAA, 584 U.S. 453 (2018), which arose from the separate 2014 proceeding.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/5811046/142/national-collegiate-athletic-association-v-christie/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 142 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5811046/142/national-collegiate-athletic-association-v-christie/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.277952/gov.uscourts.njd.277952.142.0.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 100,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 15,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "gaming-wagering",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federalism and Sports Wagering",
+  "screen_score": 94,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "decision_ecf_number": "142",
+  "decision_date": "2013-02-28",
+  "authored_by": "Michael A. Shipp",
+  "decision_selection_note": "ECF 142 of two published Shipp decisions on this docket. The Murphy reversal attaches to the 2014 proceeding at 61 F. Supp. 3d 488, not to this one."
+}

@@ -1,0 +1,69 @@
+{
+  "id": "mary-little-cooper--coleman-v-home-depot-inc",
+  "district": "dnj",
+  "judge_slug": "mary-little-cooper",
+  "judge_name": "Mary Little Cooper",
+  "judge_office": "district",
+  "caption": "Coleman v. Home Depot, Inc.",
+  "citation_line": "Coleman v. Home Depot, Inc., 306 F.3d 1333 (3d Cir. 2002)",
+  "district_docket": null,
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "306 F.3d 1333",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Cooper excluded an EEOC letter finding reasonable cause to believe race and sex discrimination had occurred, and a jury returned a defense verdict.",
+  "qualification_rationale": "The appeal resolved a circuit-divided evidence question: whether an EEOC determination that is admissible under the public-records exception is nevertheless subject to exclusion under Federal Rule of Evidence 403.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that EEOC determination letters are not per se admissible and may be excluded case by case when Rule 403 considerations substantially outweigh probative value.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/003496.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/003496.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 80,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 15,
+    "end": 15,
+    "press": 1,
+    "career": 6
+  },
+  "subject_primary": "employment",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "evidentiary-rulings"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Evidence and Agency Determinations",
+  "screen_score": 77,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 22,
+    "analysis": 20,
+    "disposition": 10,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "appellate_only",
+  "authorship_source": "unverified",
+  "authored_by": null,
+  "decision_ecf_number": null,
+  "decision_date": null
+}

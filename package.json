@@ -3,18 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Federal Bench Reference — District of New Jersey. Static site generated from the content layer in data/.",
+  "description": "Federal Bench Reference — a neutral, sourced reference to the federal bench, District of New Jersey first.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "gate": "node scripts/validate-content.mjs",
-    "drift": "python3 scripts/build-roster.py --check",
-    "signoffs": "node scripts/sign-record.mjs --verify-all",
-    "build": "npm run gate && astro build",
     "dev": "astro dev",
     "preview": "astro preview",
-    "check-links": "node scripts/check-links.mjs"
+    "astro": "astro",
+    "validate": "node scripts/validate.mjs",
+    "signoffs": "node scripts/sign-record.mjs --verify-all",
+    "check-links": "node scripts/check-links.mjs",
+    "build": "npm run validate && astro build && node scripts/gen-edge-headers.mjs",
+    "check": "npm run validate && astro check && astro build && node scripts/gen-edge-headers.mjs",
+    "reconcile": "node --env-file-if-exists=.env scripts/reconcile-dockets.mjs",
+    "resolve-decisions": "node --env-file-if-exists=.env scripts/resolve-decisions.mjs",
+    "resolve-links": "node --env-file-if-exists=.env scripts/resolve-links.mjs",
+    "ingest": "node --env-file-if-exists=.env scripts/ingest-decisions.mjs",
+    "inventory": "node scripts/inventory-held.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.2"
   },
   "devDependencies": {
-    "astro": "^7.3.2",
     "wrangler": "^4.130.0"
+  },
+  "allowScripts": {
+    "esbuild": true
   }
 }

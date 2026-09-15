@@ -1,0 +1,28 @@
+---
+const { op } = Astro.props;
+const DOC = { opinion: 'Opinion', order: 'Order', report_recommendation: 'Report & Recommendation' };
+const RR = { adopted: 'Adopted by the district judge', modified: 'Modified by the district judge',
+             rejected: 'Rejected by the district judge', pending: 'No adoption located' };
+const link = op.public_url ?? op.links?.[0]?.url;
+const treat = op.appellate_posture_note ?? '';
+const live = /vacat|rehearing en banc|remand|reversed|certiorari|confirm the live docket/i.test(treat);
+---
+<div class="opinion">
+  {op.subject_label && <div class="subjectlabel">{op.subject_label}</div>}
+  <p class="cite">{link ? <a href={link}>{op.caption}</a> : op.caption}</p>
+  <div class="citeline">{op.citation_line}</div>
+  <div>
+    <span class="tag">{DOC[op.document_type]}</span>
+    {op.motion_type && <span class="tag">{op.motion_type}</span>}
+    {op.disposition && <span class="tag">{op.disposition}</span>}
+    {op.rr_disposition && <span class="tag">{RR[op.rr_disposition]}</span>}
+  </div>
+  {op.headnote_status === 'published'
+    ? <p class="summary">{op.headnote_district_ruling}</p>
+    : <div class="empty"><strong>Headnote drafted</strong>Awaiting editorial review.</div>}
+  {op.qualification_rationale && <p class="why"><b>Why selected. </b>{op.qualification_rationale}</p>}
+  {treat && <div class={`notice ${live ? 'warn' : 'neutral'}`}>{treat}</div>}
+  {op.link_level === 'appellate_only' &&
+    <div class="notice warn">Link resolves to an appellate opinion. No free public copy of the district opinion located.</div>}
+  <div class="srcline">{(op.links ?? []).map(l => l.anchor).join(' · ')} · status checked {op.status_checked}</div>
+</div>

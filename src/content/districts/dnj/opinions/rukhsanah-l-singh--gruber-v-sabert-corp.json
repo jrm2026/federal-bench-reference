@@ -1,0 +1,70 @@
+{
+  "id": "rukhsanah-l-singh--gruber-v-sabert-corp",
+  "district": "dnj",
+  "judge_slug": "rukhsanah-l-singh",
+  "judge_name": "Rukhsanah L. Singh",
+  "judge_office": "magistrate",
+  "caption": "Gruber v. Sabert Corp.",
+  "citation_line": "Gruber v. Sabert Corp., No. 3:21-cv-13312, ECF No. 107 (D.N.J. June 20, 2025)",
+  "district_docket": "3:21-cv-13312",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Refused to reconsider an adverse inference after an employee who said he burned relevant notebooks later found three incomplete notebooks, and imposed additional fees and preclusion sanctions for inadequate search, delayed production, and missing pages.",
+  "qualification_rationale": "A fact-rich treatment of spoliation through nonproduction, Rules 26(e) and 26(g), reconsideration based on purportedly new evidence, and proportionate cumulative sanctions.",
+  "appellate_posture_note": "Non-dispositive sanctions order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/3%3A2021cv13312/476962/107/0.pdf",
+  "links": [
+    {
+      "anchor": "Justia PDF",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/3%3A2021cv13312/476962/107/0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 46,
+  "components": {
+    "app": 0,
+    "doc": 17,
+    "prac": 18,
+    "end": 3,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "spoliation-sanctions",
+    "evidentiary-rulings"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Spoliation and Evidentiary Sanctions",
+  "screen_score": 64,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 21,
+    "analysis": 17,
+    "disposition": 12,
+    "doctrine": 10,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "decision_ecf_number": null,
+  "decision_date": null,
+  "authored_by": "Rukhsanah L. Singh"
+}
