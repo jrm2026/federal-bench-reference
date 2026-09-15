@@ -3,8 +3,8 @@
 Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
 re-run it. An entry belongs on a judge's page only when the district court's
 own decision is available; an appellate opinion shows what the circuit did,
-not what the judge did. 10 entries failed that test and sit in
-`review/pending/dnj-no-district-decision/`, which does not render. 73 remain published.
+not what the judge did. 7 entries failed that test and sit in
+`review/pending/dnj-no-district-decision/`, which does not render. 76 remain published.
 
 Every held entry came from a District Judge. No magistrate judge lost one.
 The significant tier was scored on career significance, and a district
@@ -20,13 +20,13 @@ directory's README says where the line falls and which look-alikes stay.
 
 | | Count | What it means |
 |---|---|---|
-| **A** | 7 | A district docket is on the record. A district link resolves from it. |
+| **A** | 4 | A district docket is on the record. A district link resolves from it. |
 | **B** | 1 | The docket on the record is the Third Circuit’s. The district docket is missing. |
 | **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
 | **D** | 1 | The record carries only an appellate citation. As written, this entry is the appeal. |
 | **E** | 1 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-8 of the 10 are recoverable with a lookup.
+5 of the 7 are recoverable with a lookup.
 2 need research or should be dropped.
 
 ## What the docket actually holds
@@ -37,7 +37,7 @@ disagree the verdict governs.
 
 | | Count | What it means |
 |---|---|---|
-| `ok` | 5 | a signed district decision by this judge, PDF held |
+| `ok` | 2 | a signed district decision by this judge, PDF held |
 | `empty` | 2 | no signed orders indexed |
 
 ---
@@ -82,17 +82,16 @@ kept 2 · held 0
   `www.courtlistener.com`
 
 ## Stanley R. Chesler
-kept 3 · held 1
+kept 4 · held 0
 
 - **Kept.** Borough of Longport v. Netflix, Inc., No. 2:21-cv-15303; aff’d, No. 22-2139 (3d Cir. Feb. 29, 2024)  
   `www.courtlistener.com`
 - **Kept.** In re Nickelodeon Consumer Privacy Litigation, 827 F.3d 262 (3d Cir. 2016)  
   `www.courtlistener.com`
+- **Kept.** Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC, No. 2:23-cv-20964; aff’d, No. 2024-1936 (Fed. Cir. Dec. 20, 2024)  
+  `www.courtlistener.com`
 - **Kept.** Williams v. BASF Catalysts LLC, No. 2:11-cv-01754; aff'd in part and rev'd in part, 765 F.3d 306 (3d Cir. 2014)  
   `www.courtlistener.com`
-- **Held (A).** · `ok` Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC, No. 2:23-cv-20964; aff’d, No. 2024-1936 (Fed. Cir. Dec. 20, 2024)  
-  A district docket is on the record. A district link resolves from it.
-  5 signed orders by this judge: ECF 148 (2025-06-12), ECF 124 (2024-11-04), ECF 98 (2024-06-13), ECF 88 (2024-06-10), ECF 54 (2024-03-08). Pick one.
 
 ## Mary Little Cooper
 kept 1 · held 1
@@ -130,13 +129,12 @@ kept 1 · held 0
   `www.courtlistener.com`
 
 ## William J. Martini
-kept 1 · held 1
+kept 2 · held 0
 
 - **Kept.** Hassan v. City of New York, 804 F.3d 277 (3d Cir. 2015)  
   `www.courtlistener.com`
-- **Held (A).** · `ok` Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422  
-  A district docket is on the record. A district link resolves from it.
-  10 signed orders by this judge: ECF 209 (2026-04-20), ECF 188 (2024-07-29), ECF 189 (2024-07-29), ECF 163 (2023-11-09), ECF 164 (2023-11-09), ECF 67 (2021-05-26), ECF 29 (2019-06-26), ECF 28 (2019-06-26), ECF 15 (2019-03-12), ECF 14 (2019-03-12). Pick one.
+- **Kept.** Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422  
+  `www.courtlistener.com`
 
 ## Brian R. Martinotti
 kept 2 · held 0
@@ -183,13 +181,12 @@ kept 2 · held 0
   `cases.justia.com`
 
 ## Esther Salas
-kept 1 · held 1
+kept 2 · held 0
 
+- **Kept.** Berkelhammer v. ADP TotalSource Group, Inc., No. 2:20-cv-05696, ECF No. 133 (D.N.J. Mar. 31, 2022), aff’d, 74 F.4th 115 (3d Cir. 2023)  
+  `www.courtlistener.com`
 - **Kept.** FTC v. Wyndham Worldwide Corp., 10 F. Supp. 3d 602 (D.N.J. 2014), aff’d, 799 F.3d 236 (3d Cir. 2015)  
   `www.courtlistener.com`
-- **Held (A).** · `ok` Berkelhammer v. ADP TotalSource Group, Inc., No. 2:20-cv-05696, ECF No. 133 (D.N.J. Mar. 31, 2022), aff’d, 74 F.4th 115 (3d Cir. 2023)  
-  A district docket is on the record. A district link resolves from it.
-  8 signed orders by this judge: ECF 270 (2025-02-13), ECF 148 (2022-08-23), ECF 149 (2022-08-23), ECF 150 (2022-08-23), ECF 151 (2022-08-23), ECF 132 (2022-03-31), ECF 133 (2022-03-31), ECF 91 (2021-06-03). Pick one.
 
 ## Peter G. Sheridan
 kept 3 · held 0

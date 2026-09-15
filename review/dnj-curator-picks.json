@@ -40,6 +40,18 @@
     "susan-d-wigenton--huertas-v-bayer-us-llc": {
       "ecf": "48",
       "rationale": "Appeal 23-2178, filed 2023. ECF 27 is the first dismissal."
+    },
+    "stanley-r-chesler--teva-branded-pharmaceutical-products-rd-inc-v-am": {
+      "ecf": "88",
+      "rationale": "Opinion and order of 10 June 2024 denying Teva's motion to dismiss the counterclaims and granting partial judgment on the pleadings — the delisting ruling. The docket text truncates before the operative half. Affirmed, No. 24-1936 (Fed. Cir. Dec. 20, 2024)."
+    },
+    "william-j-martini--jorjani-v-new-jersey-institute-of-technology": {
+      "ecf": "188",
+      "rationale": "Summary judgment for NJIT, reversed at No. 24-2588 (3d Cir. Sept. 8, 2025). Justia indexes Document 188 as the decision below; the 2019 and 2023 opinions are earlier rulings and ECF 209 is post-remand."
+    },
+    "esther-salas--berkelhammer-v-adp-totalsource-group-inc": {
+      "ecf": "133",
+      "rationale": "Order and judgment compelling arbitration as to NFP, and what the notice of appeal at ECF 135 runs from. No opinion precedes it on this docket — the only Salas opinions, ECF 148 and 150, post-date the appeal — so here the order is the decision. Affirmed, No. 22-1618 (3d Cir. July 17, 2023)."
     }
   }
 }

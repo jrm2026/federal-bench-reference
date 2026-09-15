@@ -18,8 +18,16 @@
   "qualification_rationale": "The decision addressed the boundary between drug and device patents in the Hatch-Waxman system, with direct consequences for the timing of generic competition and the availability of the statutory counterclaim remedy.",
   "appellate_posture_note": "The Federal Circuit lifted its stay and affirmed the delisting order in a precedential opinion.",
   "headnote_status": "published",
-  "public_url": "https://www.cafc.uscourts.gov/opinions-orders/24-1936.OPINION.12-20-2024_2439730.pdf",
+  "public_url": "https://www.courtlistener.com/docket/67863598/88/teva-branded-pharmaceutical-products-rd-llc-v-amneal-pharmaceuticals-of/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 88 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/67863598/88/teva-branded-pharmaceutical-products-rd-llc-v-amneal-pharmaceuticals-of/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.534165/gov.uscourts.njd.534165.88.0.pdf"
+    },
     {
       "anchor": "Federal Circuit precedential opinion",
       "url": "https://www.cafc.uscourts.gov/opinions-orders/24-1936.OPINION.12-20-2024_2439730.pdf"
@@ -59,9 +67,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "unlabeled",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Stanley R. Chesler",
+  "decision_ecf_number": "88",
+  "decision_date": "2024-06-10",
+  "decision_selection_note": "Opinion and order of 10 June 2024 denying Teva's motion to dismiss the counterclaims and granting partial judgment on the pleadings — the delisting ruling. The docket text truncates before the operative half. Affirmed, No. 24-1936 (Fed. Cir. Dec. 20, 2024)."
 }

@@ -20,8 +20,16 @@
   "qualification_rationale": "The case drew press attention and presents a difficult public-university question: how Pickering balancing and qualified immunity apply to a lecturer’s controversial off-campus, non-job-duty speech.",
   "appellate_posture_note": "The Third Circuit reversed the initial judgment in a precedential September 8, 2025 opinion, holding that the minimal documented disruption did not outweigh the employee’s speech interest, and remanded issues it had not reached. The April 2026 remand ruling is a new district judgment; no later appellate merits disposition was identified by the cutoff date.",
   "headnote_status": "published",
-  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/2%3A2018cv11693/379876/209/",
+  "public_url": "https://www.courtlistener.com/docket/7454273/188/jorjani-v-new-jersey-institute-of-technology/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 188 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/7454273/188/jorjani-v-new-jersey-institute-of-technology/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.379876/gov.uscourts.njd.379876.188.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/242588p.pdf"
@@ -67,9 +75,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "William J. Martini",
+  "decision_ecf_number": "188",
+  "decision_date": "2024-07-29",
+  "decision_selection_note": "Summary judgment for NJIT, reversed at No. 24-2588 (3d Cir. Sept. 8, 2025). Justia indexes Document 188 as the decision below; the 2019 and 2023 opinions are earlier rulings and ECF 209 is post-remand."
 }

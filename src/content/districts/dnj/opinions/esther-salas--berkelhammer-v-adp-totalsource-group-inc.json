@@ -18,8 +18,16 @@
   "qualification_rationale": "The appeal supplied significant precedential guidance on whose consent controls when plan participants pursue claims belonging to an ERISA plan and on the interaction between representative ERISA litigation and arbitration agreements.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the plan’s agreement to arbitrate controlled because the participants’ claims belonged to the plan rather than to them individually.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/221618p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/17139634/133/berkelhammer-v-adp-totalsource-group-inc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 133 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/17139634/133/berkelhammer-v-adp-totalsource-group-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.434434/gov.uscourts.njd.434434.133.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/221618p.pdf"
@@ -61,9 +69,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
+  "link_level": "district",
   "authorship_source": "docket_entry_signature",
   "authored_by": "Esther Salas",
   "decision_ecf_number": "133",
-  "decision_date": "2022-03-31"
+  "decision_date": "2022-03-31",
+  "decision_selection_note": "Order and judgment compelling arbitration as to NFP, and what the notice of appeal at ECF 135 runs from. No opinion precedes it on this docket — the only Salas opinions, ECF 148 and 150, post-date the appeal — so here the order is the decision. Affirmed, No. 22-1618 (3d Cir. July 17, 2023)."
 }
