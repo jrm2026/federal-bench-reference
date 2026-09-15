@@ -1,0 +1,45 @@
+{
+  "_note": "Which ECF number each held record describes, decided by the curator where the docket carries several reasoned opinions and the text cannot say which one the entry is about. scripts/propose-decisions.mjs applies these alongside the records it can resolve unambiguously. Recorded 15 September 2026.",
+  "picks": {
+    "brian-r-martinotti--government-employees-insurance-co-v-caring-pain": {
+      "ecf": "38",
+      "rationale": "Reversed at 98 F.4th 463 (3d Cir. Apr. 2024); the three 2025 opinions are post-remand."
+    },
+    "claire-c-cecchi--in-re-horizon-healthcare-services-inc-data-breac": {
+      "ecf": "47",
+      "rationale": "The opinion behind ECF 48/50. You appeal from the order; the reasoning the Third Circuit vacated at 846 F.3d 625 is here. ECF 157 is the 2021 re-dismissal after remand."
+    },
+    "evelyn-padin--handal-v-innovative-industrial-properties-inc": {
+      "ecf": "67",
+      "rationale": "The record describes dismissal with prejudice and appeal 24-2829 was filed in 2024. ECF 55 is the earlier dismissal."
+    },
+    "michael-a-shipp--government-employees-insurance-co-v-precision-pa": {
+      "ecf": "46",
+      "rationale": "Reversed at 98 F.4th 463 with its companion GEICO appeal; ECF 111 is post-remand."
+    },
+    "michael-a-shipp--ncaa-v-governor-of-new-jersey": {
+      "ecf": "142",
+      "rationale": "= 926 F. Supp. 2d 551. The citation line also names 61 F. Supp. 3d 488, which is ECF 198 and belongs in its own entry."
+    },
+    "peter-g-sheridan--association-of-new-jersey-rifle-pistol-clubs-inc": {
+      "ecf": "228",
+      "rationale": "= 742 F. Supp. 3d 421. ECF 148 is an order consolidating cases."
+    },
+    "peter-g-sheridan--oakwood-laboratories-llc-v-thanoo": {
+      "ecf": "83",
+      "rationale": "The docket marks this entry VACATED, matching the Third Circuit vacatur at 999 F.3d 892."
+    },
+    "robert-kirsch--new-jersey-v-dow-chemical-co": {
+      "ecf": "86",
+      "rationale": "Appeal 24-1753, so the notice of appeal was filed in spring 2024."
+    },
+    "stanley-r-chesler--in-re-nickelodeon-consumer-privacy-litigation": {
+      "ecf": "84",
+      "rationale": "The July 2014 opinion dismissed with leave to amend; this is the final dismissal reviewed at 827 F.3d 262."
+    },
+    "susan-d-wigenton--huertas-v-bayer-us-llc": {
+      "ecf": "48",
+      "rationale": "Appeal 23-2178, filed 2023. ECF 27 is the first dismissal."
+    }
+  }
+}

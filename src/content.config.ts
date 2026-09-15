@@ -63,6 +63,10 @@ const opinions = defineCollection({
     // the entry is who decided. Only the latter may attribute an entry.
     decision_ecf_number: z.string().nullable().default(null),
     decision_date: z.string().nullable().default(null),
+    // Why this ECF number and not another on the same docket. Present only
+    // where a curator chose among several reasoned opinions — the docket text
+    // says what each document is, never which one an entry is about.
+    decision_selection_note: z.string().nullable().default(null),
     authored_by: z.string().nullable().default(null),
     authorship_source: z.enum([
       'docket_entry_signature',   // "Signed by Judge X on DATE" on the docket

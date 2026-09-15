@@ -18,8 +18,16 @@
   "qualification_rationale": "The appeal became an important post-Spokeo standing decision. It held that an alleged violation of the Fair Credit Reporting Act can constitute a concrete injury even without demonstrated misuse of the stolen information, and it remains influential in data-breach standing disputes.",
   "appellate_posture_note": "The Third Circuit vacated and remanded in a precedential opinion, holding that Congress had created a remedy for unauthorized transfers of personal information and that the alleged disclosure itself supplied Article III injury.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/152309p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/5832351/47/in-re-horizon-healthcare-services-inc-data-breach-litigation/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 47 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5832351/47/in-re-horizon-healthcare-services-inc-data-breach-litigation/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.298072/gov.uscourts.njd.298072.47.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/152309p.pdf"
@@ -61,9 +69,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
+  "link_level": "district",
   "authorship_source": "docket_entry_signature",
   "authored_by": "Claire C. Cecchi",
-  "decision_ecf_number": "50",
-  "decision_date": "2015-05-07"
+  "decision_ecf_number": "47",
+  "decision_date": "2015-03-31",
+  "decision_selection_note": "The opinion behind ECF 48/50. You appeal from the order; the reasoning the Third Circuit vacated at 846 F.3d 625 is here. ECF 157 is the 2021 re-dismissal after remand."
 }

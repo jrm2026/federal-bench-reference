@@ -18,8 +18,16 @@
   "qualification_rationale": "The litigation is nationally important Second Amendment law. The 2026 en banc appellate decision was widely reported as the first federal-court-of-appeals decision invalidating a state assault-weapons ban.",
   "appellate_posture_note": "The en banc Third Circuit agreed as to the AR-15, broadened the ruling to all covered semiautomatic rifles, reversed as to large-capacity magazines, and remanded as to other covered firearms. The mandate was stayed on August 4, 2026 pending potential Supreme Court review, so the practical relief was suspended at the cutoff date.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/242415p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/7147045/228/do-not-file-in-this-case-transferred-to-camden-new-civil-action-no/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 228 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/7147045/228/do-not-file-in-this-case-transferred-to-camden-new-civil-action-no/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.378098/gov.uscourts.njd.378098.228.0_1.pdf"
+    },
     {
       "anchor": "Third Circuit en banc opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/242415p.pdf"
@@ -59,9 +67,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Peter G. Sheridan",
+  "decision_ecf_number": "228",
+  "decision_date": "2024-07-30",
+  "decision_selection_note": "= 742 F. Supp. 3d 421. ECF 148 is an order consolidating cases."
 }

@@ -18,8 +18,16 @@
   "qualification_rationale": "The precedential ruling clarifies the boundary of federal-officer removal for a private manufacturer that helped develop and sold products meeting government specifications—a recurring issue in mass-tort and environmental litigation.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the record did not establish the required government-assistance or delegation relationship.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241753p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/67320220/86/attorney-general-of-the-state-of-new-jersey-v-the-dow-chemical-company/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 86 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/67320220/86/attorney-general-of-the-state-of-new-jersey-v-the-dow-chemical-company/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.511993/gov.uscourts.njd.511993.86.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/241753p.pdf"
@@ -61,9 +69,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Robert Kirsch",
+  "decision_ecf_number": "86",
+  "decision_date": "2024-04-23",
+  "decision_selection_note": "Appeal 24-1753, so the notice of appeal was filed in spring 2024."
 }

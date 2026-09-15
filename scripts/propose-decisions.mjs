@@ -44,12 +44,19 @@ const write = Boolean(args.get('write'));
 
 const HELD_DIR = path.join('review', 'pending', `${district}-no-district-decision`);
 const REPORT = path.join('docs', `decision-resolution-${district}.json`);
+const PICKS = path.join('review', `${district}-curator-picks.json`);
 
 if (!fs.existsSync(REPORT)) {
   console.error(`no ${REPORT}. Run resolve-decisions first.`);
   process.exit(1);
 }
 const report = JSON.parse(fs.readFileSync(REPORT, 'utf8'));
+
+// Where a docket carries several reasoned opinions, the docket text cannot say
+// which one an entry describes — only somebody who knows the case can. Those
+// decisions live in a file rather than in a command history, with the reason
+// beside each, so the next person can see why ECF 47 and not ECF 157.
+const picks = fs.existsSync(PICKS) ? (JSON.parse(fs.readFileSync(PICKS, 'utf8')).picks ?? {}) : {};
 
 /**
  * What the clerk called it. The docket text is the authority: a document
@@ -81,7 +88,9 @@ for (const [key, entry] of Object.entries(report)) {
   const substantive = scored.filter((c) => c.rank === 1);
 
   let verdict, pick = null;
-  if (reasoned.length === 1) { verdict = 'propose'; pick = reasoned[0]; }
+  const curated = picks[key] && scored.find((c) => String(c.ecf) === String(picks[key].ecf));
+  if (curated) { verdict = 'propose'; pick = { ...curated, curated: picks[key].rationale }; }
+  else if (reasoned.length === 1) { verdict = 'propose'; pick = reasoned[0]; }
   else if (reasoned.length > 1) verdict = 'ambiguous';
   else if (substantive.length) verdict = 'orders-only';
   else verdict = 'no-pdf';
@@ -97,6 +106,7 @@ console.log(`${rows.length} held records carry a resolution\n`);
 for (const r of proposed) {
   console.log(`  OK  ${r.key.slice(0, 66)}`);
   console.log(`      ECF ${r.pick.ecf} signed ${r.pick.date_signed} — ${(r.pick.description ?? '').replace(/\s+/g, ' ').slice(0, 70)}`);
+  if (r.pick.curated) console.log(`      curator: ${r.pick.curated.slice(0, 110)}`);
 }
 
 for (const [label, note] of [
@@ -125,6 +135,7 @@ if (write) {
       authored_by: r.pick.judge,
       authorship_source: 'docket_entry_signature',
       link_level: 'district',
+      ...(r.pick.curated ? { decision_selection_note: r.pick.curated } : {}),
       // The docket-entry page, matching the convention already in src/content,
       // with the PDF beside it. The page survives a RECAP reprocessing that
       // could move the storage path.

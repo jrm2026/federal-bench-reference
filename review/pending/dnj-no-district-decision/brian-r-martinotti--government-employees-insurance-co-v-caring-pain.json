@@ -18,8 +18,16 @@
   "qualification_rationale": "The consolidated appeal resolved whether IFPA claims are arbitrable and clarified both the breadth of New Jersey's PIP arbitration scheme and the Federal Arbitration Act's command once a valid agreement covers the dispute.",
   "appellate_posture_note": "The Third Circuit reversed in a precedential opinion and directed arbitration, holding that IFPA claims fall within the governing arbitration provisions.",
   "headnote_status": "published",
-  "public_url": "https://law.justia.com/cases/federal/appellate-courts/ca3/23-1378/23-1378-2024-04-26-0.html",
+  "public_url": "https://www.courtlistener.com/docket/64885960/38/government-employees-insurance-co-v-caring-pain-management-pc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 38 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/64885960/38/government-employees-insurance-co-v-caring-pain-management-pc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.500165/gov.uscourts.njd.500165.38.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/23-1378/23-1378-2024-04-26-0.html"
@@ -61,9 +69,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Brian R. Martinotti",
+  "decision_ecf_number": "38",
+  "decision_date": "2023-05-31",
+  "decision_selection_note": "Reversed at 98 F.4th 463 (3d Cir. Apr. 2024); the three 2025 opinions are post-remand."
 }

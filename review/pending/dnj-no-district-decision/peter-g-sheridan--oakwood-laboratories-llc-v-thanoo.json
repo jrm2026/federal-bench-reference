@@ -18,8 +18,16 @@
   "qualification_rationale": "The precedential appeal became a leading Third Circuit authority on pleading claims under the Defend Trade Secrets Act, including identification of trade secrets and plausible allegations of acquisition, disclosure or use.",
   "appellate_posture_note": "The Third Circuit vacated and remanded, concluding that the detailed third amended complaint readily satisfied federal pleading requirements and clarifying DTSA pleading standards.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/193707p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/6124124/83/oakwood-laboratories-llc-v-thanoo/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 83 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/6124124/83/oakwood-laboratories-llc-v-thanoo/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.351406/gov.uscourts.njd.351406.83.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/193707p.pdf"
@@ -62,9 +70,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Peter G. Sheridan",
+  "decision_ecf_number": "83",
+  "decision_date": "2019-10-23",
+  "decision_selection_note": "The docket marks this entry VACATED, matching the Third Circuit vacatur at 999 F.3d 892."
 }

@@ -18,8 +18,16 @@
   "qualification_rationale": "The litigation was nationally consequential: it determined whether states could legalize sports betting and produced a major Supreme Court federalism decision.",
   "appellate_posture_note": "The Third Circuit affirmed, including en banc review of the 2014-law dispute. The Supreme Court reversed in Murphy, holding that PASPA’s prohibition on state authorization of sports gambling violated the anti-commandeering rule and that the offending provisions were not severable.",
   "headnote_status": "published",
-  "public_url": "https://www.supremecourt.gov/opinions/17pdf/16-476_dbfi.pdf",
+  "public_url": "https://www.courtlistener.com/docket/5811046/142/national-collegiate-athletic-association-v-christie/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 142 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5811046/142/national-collegiate-athletic-association-v-christie/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.277952/gov.uscourts.njd.277952.142.0.pdf"
+    },
     {
       "anchor": "Supreme Court opinion",
       "url": "https://www.supremecourt.gov/opinions/17pdf/16-476_dbfi.pdf"
@@ -59,9 +67,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "decision_ecf_number": null,
-  "decision_date": null,
-  "authored_by": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "decision_ecf_number": "142",
+  "decision_date": "2013-02-28",
+  "authored_by": "Michael A. Shipp",
+  "decision_selection_note": "= 926 F. Supp. 2d 551. The citation line also names 61 F. Supp. 3d 488, which is ECF 198 and belongs in its own entry."
 }

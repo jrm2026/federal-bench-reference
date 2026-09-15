@@ -18,8 +18,16 @@
   "qualification_rationale": "The case addresses standing for consumers who bought allegedly contaminated products but suffered no physical injury, an important and recurring question in pharmaceutical, food, product-recall, and putative class litigation.",
   "appellate_posture_note": "The Third Circuit partially reversed in a precedential opinion, holding that the district court had imposed too demanding a standing standard on purchasers alleging an economic overpayment injury.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/232178p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/61463600/48/huertas-v-bayer-us-llc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 48 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/61463600/48/huertas-v-bayer-us-llc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.487197/gov.uscourts.njd.487197.48.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/232178p.pdf"
@@ -61,9 +69,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
-  "authorship_source": "appellate_cover_page",
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
   "authored_by": "Susan D. Wigenton",
-  "decision_ecf_number": null,
-  "decision_date": null
+  "decision_ecf_number": "48",
+  "decision_date": "2023-05-23",
+  "decision_selection_note": "Appeal 23-2178, filed 2023. ECF 27 is the first dismissal."
 }
