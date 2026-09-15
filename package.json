@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Federal Bench Reference — a neutral, sourced reference to the federal bench, District of New Jersey first.",
+  "description": "Federal Bench Reference \u2014 a neutral, sourced reference to the federal bench, District of New Jersey first.",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -17,8 +17,10 @@
     "build": "npm run validate && astro build",
     "check": "npm run validate && astro check && astro build",
     "reconcile": "node --env-file-if-exists=.env scripts/reconcile-dockets.mjs",
+    "resolve-decisions": "node --env-file-if-exists=.env scripts/resolve-decisions.mjs",
     "resolve-links": "node --env-file-if-exists=.env scripts/resolve-links.mjs",
-    "ingest": "node --env-file-if-exists=.env scripts/ingest-decisions.mjs"
+    "ingest": "node --env-file-if-exists=.env scripts/ingest-decisions.mjs",
+    "inventory": "node scripts/inventory-held.mjs"
   },
   "dependencies": {
     "astro": "^7.3.2"

@@ -18,7 +18,8 @@ specification; this file is the operating summary.
     npm run build         # gates, then astro build; exit 1 blocks the deploy
     npm run resolve-links -- --district=dnj    # needs COURTLISTENER_TOKEN
     npm run reconcile -- --district=dnj --held # same
-    node scripts/resolve-decisions.mjs --district=dnj --held   # token required
+    npm run resolve-decisions -- --district=dnj --held  # needs COURTLISTENER_TOKEN
+    npm run inventory -- --district=dnj        # regenerates docs/HELD-ENTRIES.md
     npm run ingest -- --district=dnj           # proposes the recent tier; GOVINFO_API_KEY
     # Both read .env via --env-file-if-exists. Calling node directly does not:
     # Node ignores .env unless told, and the run falls back to the 5/min throttle.

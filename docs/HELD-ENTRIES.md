@@ -1,30 +1,41 @@
 # Kept and held entries — District of New Jersey
 
-Generated 14 September 2026 from the tree. An entry belongs on a judge's page
-only when the district court's own decision is available; an appellate opinion
-shows what the circuit did, not what the judge did. Forty-five entries failed
-that test and moved to `review/pending/dnj-no-district-decision/`, which does not
-render. Fifty remain published.
+Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
+re-run it. An entry belongs on a judge's page only when the district court's
+own decision is available; an appellate opinion shows what the circuit did,
+not what the judge did. 45 entries failed that test and sit in
+`review/pending/dnj-no-district-decision/`, which does not render. 50 remain published.
 
-Every held entry came from a District Judge. No magistrate judge lost one. The
-significant tier was scored on career significance, and a district decision
-important enough to score is a district decision important enough to appeal, so
-it survives in free repositories as a Third Circuit PDF. Magistrate work is not
-appealed and sits in GovInfo at the district level.
+Every held entry came from a District Judge. No magistrate judge lost one.
+The significant tier was scored on career significance, and a district
+decision important enough to score is a district decision important enough
+to appeal, so it survives in free repositories as a Third Circuit PDF.
+Magistrate work is not appealed and sits in GovInfo at the district level.
 
-## How recoverable the held entries are
+## What the record carries
 
 | | Count | What it means |
 |---|---|---|
-| **A** | 21 | A district docket is on the record. `scripts/resolve-links.mjs` resolves these; GovInfo package IDs are deterministic from the docket. |
-| **B** | 12 | The docket on the record is the Third Circuit's, recorded where the district docket belongs. One lookup each. |
-| **C** | 2 | The district decision is published in *F. Supp.* and findable by citation. *NCAA v. Governor* and *ANJRPC v. Platkin*. |
-| **D** | 7 | The record carries only an appellate citation. As written, the entry is the appeal. Re-research or drop. |
-| **E** | 3 | No docket, no reporter citation. |
+| **A** | 36 | A district docket is on the record. A district link resolves from it. |
+| **B** | 6 | The docket on the record is the Third Circuit’s. The district docket is missing. |
+| **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
+| **D** | 1 | The record carries only an appellate citation. As written, this entry is the appeal. |
+| **E** | 2 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-Thirty-five of the forty-five are recoverable with a lookup. Ten need research or
-should be dropped.
+42 of the 45 are recoverable with a lookup.
+3 need research or should be dropped.
 
+No resolution report yet. Run `scripts/resolve-decisions.mjs --district=dnj --held`
+and re-run this to fold in what each docket actually holds.
+
+## Defects in held records
+
+`npm run validate` walks `src/content` and these records are not there,
+so nothing checks them until the moment one is restored and the gate sees
+it for the first time. 2 would fail today.
+
+- `claire-c-cecchi--adp-llc-v-mork` — authorship_source 'opinion_text' but link_level is 'appellate_only' — the linked document is the appeal, not the decision
+- `claire-c-cecchi--in-re-horizon-healthcare-services-inc-data-breac` — authorship_source 'opinion_text' but link_level is 'appellate_only' — the linked document is the appeal, not the decision
 
 ---
 
@@ -37,9 +48,9 @@ kept 0 · held 3
 - **Held (E).** Antar v. Borgata Hotel Casino & Spa, LLC, 2024 WL 1672280 (D.N.J. Jan. 31, 2024)  
   No docket and no reporter citation. Nothing on the record to resolve from.
 - **Held (B).** In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)  
-  The docket on the record, 23-1295, is the Third Circuit's. The district docket is missing.
+  The docket on the record is the Third Circuit’s. The district docket is missing.
 - **Held (A).** United States v. City of Newark, No. 2:16-cv-01731 — Newark Police consent-decree administration and termination  
-  District docket 2:16-cv-01731 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Renée Marie Bumb
 kept 2 · held 1
@@ -49,110 +60,110 @@ kept 2 · held 1
 - **Kept.** New Jersey Department of Environmental Protection v. E.I. du Pont de Nemours & Co., Nos. 1:19-cv-14758, 1:19-cv-14765, 1:19-cv-14766 & 3:19-cv-14767 (D.N.J. Aug. 7, 2026)  
   `cases.justia.com`
 - **Held (A).** Bryman v. Murphy, No. 1:23-cv-12601; aff’d, No. 24-2947 (3d Cir. Dec. 5, 2025)  
-  District docket 1:23-cv-12601 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Georgette Castner
 kept 0 · held 1
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** StoneMor, Inc. v. International Brotherhood of Teamsters, Local 469, No. 3:22-cv-01388; aff’d, No. 23-1489 (3d Cir. July 10, 2024)  
-  District docket 3:22-cv-01388 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Claire C. Cecchi
 kept 0 · held 2
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** ADP, LLC v. Mork, No. 2:17-cv-04613; appeal consolidated in ADP, LLC v. Rafferty, 923 F.3d 113 (3d Cir. 2019)  
-  District docket 2:17-cv-04613 is on the record. A district link resolves from it.
-- **Held (D).** In re Horizon Healthcare Services Inc. Data Breach Litigation, 846 F.3d 625 (3d Cir. 2017)  
-  The record carries only the appellate citation, 846 F.3d 625. As written, this entry is the appeal.
+  A district docket is on the record. A district link resolves from it.
+- **Held (A).** In re Horizon Healthcare Services Inc. Data Breach Litigation, 846 F.3d 625 (3d Cir. 2017)  
+  A district docket is on the record. A district link resolves from it.
 
 ## Stanley R. Chesler
 kept 0 · held 4
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** Borough of Longport v. Netflix, Inc., No. 2:21-cv-15303; aff’d, No. 22-2139 (3d Cir. Feb. 29, 2024)  
-  District docket 2:21-cv-15303 is on the record. A district link resolves from it.
-- **Held (D).** In re Nickelodeon Consumer Privacy Litigation, 827 F.3d 262 (3d Cir. 2016)  
-  The record carries only the appellate citation, 827 F.3d 262. As written, this entry is the appeal.
+  A district docket is on the record. A district link resolves from it.
+- **Held (A).** In re Nickelodeon Consumer Privacy Litigation, 827 F.3d 262 (3d Cir. 2016)  
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC, No. 2:23-cv-20964; aff’d, No. 2024-1936 (Fed. Cir. Dec. 20, 2024)  
-  District docket 2:23-cv-20964 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** Williams v. BASF Catalysts LLC, No. 2:11-cv-01754; aff'd in part and rev'd in part, 765 F.3d 306 (3d Cir. 2014)  
-  District docket 2:11-cv-01754 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Mary Little Cooper
 kept 0 · held 3
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (D).** Coleman v. Home Depot, Inc., 306 F.3d 1333 (3d Cir. 2002)  
-  The record carries only the appellate citation, 306 F.3d 1333. As written, this entry is the appeal.
+  The record carries only an appellate citation. As written, this entry is the appeal.
 - **Held (A).** Lightner v. 1621 Route 22 West Operating Co., Nos. 3:11-cv-02007, 3:11-cv-03960 & 3:11-cv-04072; appeal dismissed, Nos. 12-2122 & 12-2726 (3d Cir. Sept. 4, 2013)  
-  District docket 3:11-cv-02007 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 - **Held (B).** United States v. Smith, No. 12-1516 (3d Cir. Aug. 6, 2013)  
-  The docket on the record, 12-1516, is the Third Circuit's. The district docket is missing.
+  The docket on the record is the Third Circuit’s. The district docket is missing.
 
 ## Michael E. Farbiarz
 kept 1 · held 1
 
 - **Kept.** Knox v. New Jersey Department of Corrections, No. 2:25-cv-01293 (D.N.J. Feb. 2, 2026)  
   `law.justia.com`
-- **Held (B).** Khalil v. President, 777 F. Supp. 3d 369 (D.N.J. 2025); appeal, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)  
-  The docket on the record, 25-2162, is the Third Circuit's. The district docket is missing.
+- **Held (A).** Khalil v. President, 777 F. Supp. 3d 369 (D.N.J. 2025); appeal, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)  
+  A district docket is on the record. A district link resolves from it.
 
 ## Katharine S. Hayden
 kept 0 · held 3
 
 - **Kept: none.** The page reads "Developing record."
-- **Held (B).** Honda Lease Trust v. Malanga’s Automotive, No. 24-2369 (3d Cir. Sept. 15, 2025)  
-  The docket on the record, 24-2369, is the Third Circuit's. The district docket is missing.
-- **Held (D).** United States v. Gwinnett, 483 F.3d 200 (3d Cir. 2007)  
-  The record carries only the appellate citation, 483 F.3d 200. As written, this entry is the appeal.
-- **Held (D).** United States v. Jackson, 862 F.3d 365 (3d Cir. 2017), with later sentencing appeals  
-  The record carries only the appellate citation, 862 F.3d 365. As written, this entry is the appeal.
+- **Held (A).** Honda Lease Trust v. Malanga’s Automotive, No. 24-2369 (3d Cir. Sept. 15, 2025)  
+  A district docket is on the record. A district link resolves from it.
+- **Held (B).** United States v. Gwinnett, 483 F.3d 200 (3d Cir. 2007)  
+  The docket on the record is the Third Circuit’s. The district docket is missing.
+- **Held (B).** United States v. Jackson, 862 F.3d 365 (3d Cir. 2017), with later sentencing appeals  
+  The docket on the record is the Third Circuit’s. The district docket is missing.
 
 ## Edward S. Kiel
 kept 0 · held 1
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** KalshiEX LLC v. Flaherty, No. 1:25-cv-02152; aff’d, No. 25-1922 (3d Cir. Apr. 6, 2026)  
-  District docket 1:25-cv-02152 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Robert Kirsch
 kept 0 · held 1
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** New Jersey v. Dow Chemical Co., No. 3:23-cv-02449; aff’d, No. 24-1753 (3d Cir. June 11, 2025)  
-  District docket 3:23-cv-02449 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## William J. Martini
 kept 0 · held 3
 
 - **Kept: none.** The page reads "Developing record."
-- **Held (D).** Hassan v. City of New York, 804 F.3d 277 (3d Cir. 2015)  
-  The record carries only the appellate citation, 804 F.3d 277. As written, this entry is the appeal.
+- **Held (A).** Hassan v. City of New York, 804 F.3d 277 (3d Cir. 2015)  
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422  
-  District docket 2:18-cv-11693 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** United States v. Soto, No. 2:20-cr-00903; sentence vacated, No. 23-1827 (3d Cir. Nov. 20, 2024)  
-  District docket 2:20-cr-00903 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Brian R. Martinotti
 kept 0 · held 2
 
 - **Kept: none.** The page reads "Developing record."
-- **Held (B).** Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25, No. 24-1298 (3d Cir. Aug. 1, 2025)  
-  The docket on the record, 24-1298, is the Third Circuit's. The district docket is missing.
+- **Held (A).** Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25, No. 24-1298 (3d Cir. Aug. 1, 2025)  
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** Government Employees Insurance Co. v. Caring Pain Management, P.C., No. 2:22-cv-05017; rev'd, 98 F.4th 463 (3d Cir. 2024)  
-  District docket 2:22-cv-05017 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Kevin McNulty
 kept 1 · held 2
 
 - **Kept.** Ragbir v. United States, No. 2:17-cv-01256, 2019 WL 1975462 (D.N.J. Jan. 25, 2019), aff'd, 950 F.3d 54 (3d Cir. 2020)  
   `law.justia.com`
-- **Held (B).** J.M. v. Summit City Board of Education, No. 20-3391 (3d Cir. July 1, 2022)  
-  The docket on the record, 20-3391, is the Third Circuit's. The district docket is missing.
+- **Held (A).** J.M. v. Summit City Board of Education, No. 20-3391 (3d Cir. July 1, 2022)  
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** Matrix Distributors, Inc. v. National Association of Boards of Pharmacy, No. 2:18-cv-17462; appeal, No. 20-3638 (3d Cir. May 19, 2022)  
-  District docket 2:18-cv-17462 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Julien X. Neals
 kept 1 · held 2
@@ -160,26 +171,26 @@ kept 1 · held 2
 - **Kept.** Theodore v. United States, No. 2:23-cv-00664 (D.N.J. Mar. 20, 2026)  
   `law.justia.com`
 - **Held (A).** Golden Fortune Import & Export Corp. v. Mei-Xin Ltd., No. 2:22-cv-01369; rev'd, Nos. 22-1710 & 22-1885 (3d Cir. Aug. 5, 2022)  
-  District docket 2:22-cv-01369 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** United States v. Figueroa, No. 2:14-cr-00672; aff’d, No. 23-1742 (3d Cir. Aug. 25, 2026)  
-  District docket 2:14-cr-00672 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Christine P. O’Hearn
 kept 2 · held 1
 
 - **Kept.** Duran v. Fairton Federal Correctional Institution, No. 1:23-cv-12960 (D.N.J. June 2, 2026)  
   `law.justia.com`
-- **Kept.** Ireland v. Hegseth, No. 1:25-cv-01918 (D.N.J. Mar. 24, 2025)  
+- **Kept.** Ireland v. Hegseth, No. 1:25-cv-01918, ECF No. 28 (D.N.J. Mar. 24, 2025)  
   `www.courtlistener.com`
 - **Held (B).** Thieme v. Warden Fort Dix FCI, No. 23-1697 (3d Cir. Oct. 8, 2025)  
-  The docket on the record, 23-1697, is the Third Circuit's. The district docket is missing.
+  The docket on the record is the Third Circuit’s. The district docket is missing.
 
 ## Evelyn Padin
 kept 0 · held 1
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** Handal v. Innovative Industrial Properties, Inc., No. 2:22-cv-02359; aff’d, No. 24-2829 (3d Cir. Oct. 15, 2025)  
-  District docket 2:22-cv-02359 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Zahid N. Quraishi
 kept 1 · held 1
@@ -187,44 +198,44 @@ kept 1 · held 1
 - **Kept.** National Shooting Sports Foundation v. Platkin, No. 3:22-cv-06646 (D.N.J. July 10, 2025), rev'd, No. 25-2546 (3d Cir. Sept. 8, 2026)  
   `cases.justia.com`
 - **Held (A).** Kim v. Hanlon, No. 3:24-cv-01098; aff’d, No. 24-1594 (3d Cir. Apr. 17, 2024)  
-  District docket 3:24-cv-01098 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Esther Salas
 kept 1 · held 1
 
 - **Kept.** FTC v. Wyndham Worldwide Corp., 10 F. Supp. 3d 602 (D.N.J. 2014), aff’d, 799 F.3d 236 (3d Cir. 2015)  
   `www.courtlistener.com`
-- **Held (B).** Berkelhammer v. ADP TotalSource Group, Inc., No. 22-1618 (3d Cir. July 17, 2023)  
-  The docket on the record, 22-1618, is the Third Circuit's. The district docket is missing.
+- **Held (A).** Berkelhammer v. ADP TotalSource Group, Inc., No. 2:20-cv-05696, ECF No. 133 (D.N.J. Mar. 31, 2022), aff’d, 74 F.4th 115 (3d Cir. 2023)  
+  A district docket is on the record. A district link resolves from it.
 
 ## Jamel K. Semper
 kept 0 · held 1
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** United States v. McIver, No. 2:25-cr-00388; appeal, Nos. 25-3573 & 26-1122 (3d Cir. Aug. 26, 2026)  
-  District docket 2:25-cr-00388 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 
 ## Peter G. Sheridan
 kept 0 · held 3
 
 - **Kept: none.** The page reads "Developing record."
-- **Held (C).** Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin, 742 F. Supp. 3d 421 (D.N.J. 2024)  
-  The district decision is published at 742 F. Supp. 3d 421. No docket on the record.
-- **Held (D).** Oakwood Laboratories LLC v. Thanoo, 999 F.3d 892 (3d Cir. 2021)  
-  The record carries only the appellate citation, 999 F.3d 892. As written, this entry is the appeal.
-- **Held (B).** Sovereign Bank v. REMI Capital, Inc., No. 21-2289 (3d Cir. Sept. 15, 2022)  
-  The docket on the record, 21-2289, is the Third Circuit's. The district docket is missing.
+- **Held (A).** Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin, 742 F. Supp. 3d 421 (D.N.J. 2024)  
+  A district docket is on the record. A district link resolves from it.
+- **Held (A).** Oakwood Laboratories LLC v. Thanoo, 999 F.3d 892 (3d Cir. 2021)  
+  A district docket is on the record. A district link resolves from it.
+- **Held (A).** Sovereign Bank v. REMI Capital, Inc., No. 21-2289 (3d Cir. Sept. 15, 2022)  
+  A district docket is on the record. A district link resolves from it.
 
 ## Michael A. Shipp
 kept 0 · held 3
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (A).** Government Employees Insurance Co. v. Precision Pain & Spine Institute LLC, No. 3:21-cv-16255; rev'd, 98 F.4th 463 (3d Cir. 2024)  
-  District docket 3:21-cv-16255 is on the record. A district link resolves from it.
-- **Held (C).** NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), and 61 F. Supp. 3d 488 (D.N.J. 2014); reversed in Murphy v. NCAA, 584 U.S. 453 (2018)  
-  The district decision is published at 926 F. Supp. 2d 551. No docket on the record.
-- **Held (B).** Veterans Guardian VA Claim Consulting LLC v. Platkin, No. 24-1097 (3d Cir. Apr. 1, 2025)  
-  The docket on the record, 24-1097, is the Third Circuit's. The district docket is missing.
+  A district docket is on the record. A district link resolves from it.
+- **Held (A).** NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), and 61 F. Supp. 3d 488 (D.N.J. 2014); reversed in Murphy v. NCAA, 584 U.S. 453 (2018)  
+  A district docket is on the record. A district link resolves from it.
+- **Held (A).** Veterans Guardian VA Claim Consulting LLC v. Platkin, No. 24-1097 (3d Cir. Apr. 1, 2025)  
+  A district docket is on the record. A district link resolves from it.
 
 ## Anne Elise Thompson
 kept 2 · held 0
@@ -238,23 +249,22 @@ kept 2 · held 0
 kept 0 · held 4
 
 - **Kept: none.** The page reads "Developing record."
-- **Held (B).** Huertas v. Bayer US LLC, No. 23-2178 (3d Cir. Nov. 7, 2024)  
-  The docket on the record, 23-2178, is the Third Circuit's. The district docket is missing.
+- **Held (A).** Huertas v. Bayer US LLC, No. 23-2178 (3d Cir. Nov. 7, 2024)  
+  A district docket is on the record. A district link resolves from it.
 - **Held (A).** United States v. Auernheimer, No. 2:11-cr-00470; conviction vacated, 748 F.3d 525 (3d Cir. 2014)  
-  District docket 2:11-cr-00470 is on the record. A district link resolves from it.
+  A district docket is on the record. A district link resolves from it.
 - **Held (E).** United States v. Baroni and Kelly; Supreme Court review in Kelly v. United States, 590 U.S. 391 (2020)  
   No docket and no reporter citation. Nothing on the record to resolve from.
 - **Held (B).** United States v. Jackson, Nos. 23-2492, 23-3016, 23-2992 & 23-2508 (3d Cir. Mar. 21, 2025)  
-  The docket on the record, 23-2492, is the Third Circuit's. The district docket is missing.
+  The docket on the record is the Third Circuit’s. The district docket is missing.
 
 ## Karen M. Williams
 kept 1 · held 1
 
 - **Kept.** Williams v. Township of Cherry Hill, No. 1:26-cv-00893 (D.N.J. July 27, 2026)  
   `law.justia.com`
-- **Held (E).** Cornish-Adebiyi v. Caesars Entertainment, Inc., 2024 WL 4356188 (D.N.J. Sept. 30, 2024)  
-  No docket and no reporter citation. Nothing on the record to resolve from.
-
+- **Held (A).** Cornish-Adebiyi v. Caesars Entertainment, Inc., 2024 WL 4356188 (D.N.J. Sept. 30, 2024)  
+  A district docket is on the record. A district link resolves from it.
 
 ---
 
@@ -387,4 +397,3 @@ kept 3 · held 0
   `www.govinfo.gov`
 - **Kept.** Garcia v. Missing Sock Laundry Service LLC, No. 2:24-cv-08045, ECF No. 38 (D.N.J. June 24, 2025)  
   `law.justia.com`
-
