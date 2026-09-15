@@ -1,0 +1,80 @@
+{
+  "id": "michael-e-farbiarz--khalil-v-joyce-injunction",
+  "district": "dnj",
+  "judge_slug": "michael-e-farbiarz",
+  "judge_name": "Michael E. Farbiarz",
+  "judge_office": "district",
+  "caption": "Khalil v. Joyce",
+  "citation_line": "Khalil v. Joyce, No. 2:25-cv-01963, ECF No. 272 (D.N.J. May 28, 2025), vacated sub nom. Khalil v. President United States of America, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)",
+  "district_docket": "2:25-cv-01963",
+  "appellate_docket": "25-2162",
+  "additional_dockets": [
+    "25-2357"
+  ],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Farbiarz preliminarily enjoined removal resting on the Secretary of State’s foreign-policy determination, finding the petitioner likely to succeed on his challenge to that ground. He stayed the injunction on 11 June and on 20 June ordered release from detention.",
+  "qualification_rationale": "The first federal decision to enjoin a removal grounded on the foreign-policy provision of the INA, on a record in which the initiating document cited protected speech.",
+  "appellate_posture_note": "A divided precedential Third Circuit panel agreed that the New Jersey court had habeas jurisdiction as the district of confinement, but held that 8 U.S.C. § 1252(b)(9) stripped subject-matter jurisdiction over the removal-related claims. It vacated the challenged orders and remanded with instructions to dismiss.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/69757814/272/khalil-v-joyce/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 272 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/69757814/272/khalil-v-joyce/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.564334/gov.uscourts.njd.564334.272.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/252162p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 94,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 9,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "immigration",
+  "subject_secondary": [
+    "civil-rights"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Immigration Habeas",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 15,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Michael E. Farbiarz",
+  "decision_ecf_number": "272",
+  "decision_date": "2025-05-28",
+  "decision_selection_note": "ECF 272, one of two entries split from a single record on 15 September 2026; the jurisdictional opinion is ECF 214. The release order of 20 June is ECF 316 and carries no accompanying opinion, so it is described here rather than given an entry of its own."
+}

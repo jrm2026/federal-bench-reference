@@ -38,3 +38,15 @@ the decision is hard to find. Nothing was written.
 The case is also, on the caption, one of the four that look criminal and are
 not: the United States is the plaintiff in a civil-rights enforcement action.
 That is recorded in `dnj-out-of-scope-criminal/README.md` and stays true.
+
+## Khalil v. President — superseded by a split
+
+Moved here 15 September 2026, not dropped on the merits. The record described
+three rulings at once: habeas jurisdiction after the interstate transfers, the
+preliminary injunction against removal on the foreign-policy ground, and the
+order of release. It is replaced by two entries, ECF 214 and ECF 272, and the
+file is kept only so the supersession is legible.
+
+The release order is ECF 316 of 20 June 2025 and carries no accompanying
+opinion, so it is described inside the injunction entry rather than given one
+of its own — the rule at the head of this file.

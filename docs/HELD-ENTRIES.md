@@ -3,8 +3,8 @@
 Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
 re-run it. An entry belongs on a judge's page only when the district court's
 own decision is available; an appellate opinion shows what the circuit did,
-not what the judge did. 6 entries failed that test and sit in
-`review/pending/dnj-no-district-decision/`, which does not render. 77 remain published.
+not what the judge did. 5 entries failed that test and sit in
+`review/pending/dnj-no-district-decision/`, which does not render. 79 remain published.
 
 Every held entry came from a District Judge. No magistrate judge lost one.
 The significant tier was scored on career significance, and a district
@@ -20,13 +20,13 @@ directory's README says where the line falls and which look-alikes stay.
 
 | | Count | What it means |
 |---|---|---|
-| **A** | 3 | A district docket is on the record. A district link resolves from it. |
+| **A** | 2 | A district docket is on the record. A district link resolves from it. |
 | **B** | 1 | The docket on the record is the Third Circuit’s. The district docket is missing. |
 | **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
 | **D** | 1 | The record carries only an appellate citation. As written, this entry is the appeal. |
 | **E** | 1 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-4 of the 6 are recoverable with a lookup.
+3 of the 5 are recoverable with a lookup.
 2 need research or should be dropped.
 
 ## What the docket actually holds
@@ -37,7 +37,6 @@ disagree the verdict governs.
 
 | | Count | What it means |
 |---|---|---|
-| `ok` | 1 | a signed district decision by this judge, PDF held |
 | `empty` | 2 | no signed orders indexed |
 
 ---
@@ -99,13 +98,14 @@ kept 1 · held 1
   The record carries only an appellate citation. As written, this entry is the appeal.
 
 ## Michael E. Farbiarz
-kept 1 · held 1
+kept 3 · held 0
 
+- **Kept.** Khalil v. Joyce, No. 2:25-cv-01963, ECF No. 272 (D.N.J. May 28, 2025), vacated sub nom. Khalil v. President United States of America, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)  
+  `www.courtlistener.com`
+- **Kept.** Khalil v. Joyce, 777 F. Supp. 3d 369 (D.N.J. 2025), vacated sub nom. Khalil v. President United States of America, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)  
+  `www.courtlistener.com`
 - **Kept.** Knox v. New Jersey Department of Corrections, No. 2:25-cv-01293 (D.N.J. Feb. 2, 2026)  
   `law.justia.com`
-- **Held (A).** · `ok` Khalil v. President, 777 F. Supp. 3d 369 (D.N.J. 2025); appeal, Nos. 25-2162 & 25-2357 (3d Cir. Jan. 15, 2026)  
-  A district docket is on the record. A district link resolves from it.
-  20 signed orders by this judge: ECF 374 (2025-08-08), ECF 367 (2025-07-25), ECF 355 (2025-07-17), ECF 350 (2025-07-16), ECF 346 (2025-07-10), ECF 316 (2025-06-20), ECF 306 (2025-06-13), ECF 299 (2025-06-11), ECF 278 (2025-06-04), ECF 272 (2025-05-28), ECF 262 (2025-05-21), ECF 222 (2025-05-01), ECF 214 (2025-04-29), ECF 215 (2025-04-29), ECF 216 (2025-04-29), ECF 217 (2025-04-29), ECF 188 (2025-04-10), ECF 178 (2025-04-08), ECF 172 (2025-04-04), ECF 171 (2025-04-04). Pick one.
 
 ## Katharine S. Hayden
 kept 1 · held 0
