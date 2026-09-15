@@ -3,8 +3,8 @@
 Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
 re-run it. An entry belongs on a judge's page only when the district court's
 own decision is available; an appellate opinion shows what the circuit did,
-not what the judge did. 2 entries failed that test and sit in
-`review/pending/dnj-no-district-decision/`, which does not render. 81 remain published.
+not what the judge did. 1 entries failed that test and sit in
+`review/pending/dnj-no-district-decision/`, which does not render. 82 remain published.
 
 Every held entry came from a District Judge. No magistrate judge lost one.
 The significant tier was scored on career significance, and a district
@@ -20,13 +20,13 @@ directory's README says where the line falls and which look-alikes stay.
 
 | | Count | What it means |
 |---|---|---|
-| **A** | 2 | A district docket is on the record. A district link resolves from it. |
+| **A** | 1 | A district docket is on the record. A district link resolves from it. |
 | **B** | 0 | The docket on the record is the Third Circuit’s. The district docket is missing. |
 | **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
 | **D** | 0 | The record carries only an appellate citation. As written, this entry is the appeal. |
 | **E** | 0 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-2 of the 2 are recoverable with a lookup.
+1 of the 1 are recoverable with a lookup.
 0 need research or should be dropped.
 
 ## What the docket actually holds
@@ -37,7 +37,6 @@ disagree the verdict governs.
 
 | | Count | What it means |
 |---|---|---|
-| `empty` | 1 | no signed orders indexed |
 
 ---
 
@@ -62,11 +61,10 @@ kept 3 · held 0
   `cases.justia.com`
 
 ## Georgette Castner
-kept 0 · held 1
+kept 1 · held 0
 
-- **Kept: none.** The page reads "Developing record."
-- **Held (A).** · `empty` StoneMor, Inc. v. International Brotherhood of Teamsters, Local 469, No. 3:22-cv-01388; aff’d, No. 23-1489 (3d Cir. July 10, 2024)  
-  A district docket is on the record. A district link resolves from it.
+- **Kept.** StoneMor, Inc. v. International Brotherhood of Teamsters, Local 469, No. 3:22-cv-01388, ECF No. 13 (D.N.J. Feb. 24, 2023), aff’d, No. 23-1489 (3d Cir. July 10, 2024)  
+  `www.courtlistener.com`
 
 ## Claire C. Cecchi
 kept 2 · held 0

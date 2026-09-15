@@ -60,9 +60,9 @@
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
   "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null,
-  "decision_selection_note": "District docket 2:22-cv-00423, captioned below as Occidental Chemical Corp. v. Bath Iron Works Corp. — a bankruptcy appeal takes the parties’ names, not the debtor’s. CourtListener holds three duplicate dockets for this number. The decision itself is not yet located."
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Madeline Cox Arleo",
+  "decision_ecf_number": "25",
+  "decision_date": "2023-01-31",
+  "decision_selection_note": "ECF 25 of 2:22-cv-00423, found under the short docket form 22-cv-423: “ORDER reversing the Bankruptcy Court’s Order, and First Congoleum Bankruptcy is closed. Signed by Judge Madeline Cox Arleo on 1/31/2023.” Captioned below as Occidental Chemical Corp. v. Bath Iron Works Corp., because a bankruptcy appeal takes the parties’ names. RECAP holds no PDF of it and CourtListener carries three duplicate dockets for the number, so this stays held until a free public copy is located — GovInfo next."
 }
