@@ -76,9 +76,9 @@ function flatten(payload) {
     for (const d of docs) {
       out.push({
         ecf: d.document_number ?? d.entry_number ?? null,
-        date: d.entry_date_filed ?? null,
         description: d.description ?? '',
         short: d.short_description ?? '',
+        date_filed: d.entry_date_filed ?? null,
         available: Boolean(d.is_available),
         pdf: d.filepath_local
           ? `https://storage.courtlistener.com/${d.filepath_local}`
@@ -98,9 +98,16 @@ async function signedOrders(districtDocket) {
     q: '"Signed by Judge"',
     order_by: 'entry_date_filed desc',
   });
+  // signedBy returns { judge, date }, and that `date` is when the judge signed,
+  // which is not the date the clerk entered it. Keep both under distinct names.
+  // Spreading the two together silently replaced one with the other; on Horizon
+  // ECF 141 they are five months apart.
   return flatten(payload)
-    .map((d) => ({ ...d, ...(signedBy(d.description) ?? {}) }))
-    .filter((d) => d.judge);
+    .map((d) => {
+      const sig = signedBy(d.description);
+      return sig ? { ...d, judge: sig.judge, date_signed: sig.date } : null;
+    })
+    .filter(Boolean);
 }
 
 function load(dir) {
@@ -155,7 +162,8 @@ for (const { file, rec, held } of records) {
               `${mine.length} by this judge, ${withPdf.length} with a PDF` +
               (others.length ? `; other signers: ${[...new Set(others.map((o) => o.judge))].join(', ')}` : ''));
   for (const o of withPdf.slice(0, 4)) {
-    console.log(`       ECF ${o.ecf} ${o.date} — ${(o.short || o.description).slice(0, 78)}`);
+    const drift = o.date_filed && o.date_filed !== o.date_signed ? ` (entered ${o.date_filed})` : '';
+    console.log(`       ECF ${o.ecf} signed ${o.date_signed}${drift} — ${(o.short || o.description).slice(0, 64)}`);
   }
 
   report[path.basename(file, '.json')] = {
@@ -164,7 +172,7 @@ for (const { file, rec, held } of records) {
     caption: rec.caption,
     flag,
     candidates: mine.map((o) => ({
-      ecf: o.ecf, date: o.date, signed_date: o.date_signed, judge: o.judge,
+      ecf: o.ecf, date_signed: o.date_signed, date_filed: o.date_filed, judge: o.judge,
       available: o.available, pdf: o.pdf, page: o.page,
       description: o.description.slice(0, 300),
     })),
@@ -176,7 +184,7 @@ for (const { file, rec, held } of records) {
     const next = {
       ...rec,
       decision_ecf_number: String(only.ecf),
-      decision_date: only.date,
+      decision_date: only.date_signed,
       authored_by: only.judge,
       authorship_source: 'docket_entry_signature',
     };
