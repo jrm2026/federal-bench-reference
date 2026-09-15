@@ -50,6 +50,7 @@ const args = new Map(process.argv.slice(2).map((a) => {
 const district = args.get('district') ?? 'dnj';
 const write = Boolean(args.get('write'));
 const heldOnly = Boolean(args.get('held'));
+const refresh = Boolean(args.get('refresh'));
 
 const COURT = { dnj: 'njd' };
 const court = COURT[district];
@@ -130,10 +131,26 @@ console.log(hasToken()
   : 'No COURTLISTENER_TOKEN — anonymous throttle is five requests a minute; this will pace itself.');
 console.log('');
 
-const report = {};
+// Resume. A free CourtListener account gets 125 search requests a day, and a
+// sweep that re-asks a question it has already answered spends the budget on
+// nothing. Records already carrying a verdict are skipped unless --refresh.
+// Without this the client's own "re-run later and it resumes" was a promise
+// nothing kept.
+const dest = path.join('docs', `decision-resolution-${district}.json`);
+const report = fs.existsSync(dest) && !refresh
+  ? JSON.parse(fs.readFileSync(dest, 'utf8'))
+  : {};
+const done = (key) => Boolean(report[key]?.flag);
+const skipped = records.filter(({ file }) => done(path.basename(file, '.json'))).length;
+if (skipped) {
+  console.log(`${skipped} already resolved in ${dest} — skipping. --refresh re-asks them.`);
+  console.log('');
+}
+
 let resolved = 0, mismatched = 0, noPdf = 0, empty = 0, failed = 0;
 
 for (const { file, rec, held } of records) {
+  if (done(path.basename(file, '.json'))) continue;
   const page = rec.judge_slug;
   const label = `${page} · ${rec.caption}`.slice(0, 72);
   let orders;
@@ -143,6 +160,12 @@ for (const { file, rec, held } of records) {
     failed++;
     console.log(`  !  ${label}\n     ${e.message}`);
     report[path.basename(file, '.json')] = { error: e.message, district_docket: rec.district_docket };
+    fs.writeFileSync(dest, JSON.stringify(report, null, 2) + '\n');
+    if (/quota exhausted/.test(e.message)) {
+      console.log('\n  stopping: the daily quota is spent. Re-run after it resets and');
+      console.log(`  the ${Object.values(report).filter((r) => r.flag).length} records already resolved are skipped.`);
+      break;
+    }
     continue;
   }
 
@@ -178,6 +201,7 @@ for (const { file, rec, held } of records) {
     })),
     other_signers: [...new Set(others.map((o) => o.judge))],
   };
+  fs.writeFileSync(dest, JSON.stringify(report, null, 2) + '\n');
 
   if (write && flag === 'ok' && withPdf.length === 1) {
     const only = withPdf[0];
@@ -193,7 +217,6 @@ for (const { file, rec, held } of records) {
   }
 }
 
-const dest = path.join('docs', `decision-resolution-${district}.json`);
 fs.writeFileSync(dest, JSON.stringify(report, null, 2) + '\n');
 
 console.log('');
