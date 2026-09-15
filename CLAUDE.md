@@ -208,7 +208,7 @@ the same pass.
 Lookback windows and caps live in `policy.json`. Render the governing window as
 a line under each section heading so the reader can calibrate.
 
-The subject window is 20 years, widened from 5 on 15 September 2026. Five years
+The subject window is 25 years, widened from 5 on 15 September 2026. Five years
 returned nothing for trade secrets on any judge while real district decisions in
 the subject sat just outside it on judges with empty pages. Candidates are
 ordered newest first and the cap fills from the top, so a judge with recent

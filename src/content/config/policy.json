@@ -1,13 +1,13 @@
 {
   "lookback": {
     "significant": null,
-    "subject_district_years": 20,
+    "subject_district_years": 25,
     "procedural_district_years": 3,
     "magistrate_entries_per_tag": 5,
     "daubert_floor": "2023-12-01",
     "discovery_scope_flag_before": "2015-12-01",
     "mail_link_preferred_years": 3,
-    "_subject_window_note": "Widened from 5 to 20 years on 15 September 2026. A five-year window returned nothing for trade secrets on any judge, while real district decisions in the subject sat just outside it on judges with empty pages. Candidates are ordered newest first and the per-tag cap fills from the top, so a judge with recent decisions still gets recent ones; the older material only surfaces where there is nothing newer."
+    "_subject_window_note": "Widened to 25 years on 15 September 2026, from 5. A five-year window returned nothing for trade secrets on any judge, while real district decisions in the subject sat outside it on judges with empty pages. Candidates are ordered newest first and the per-tag cap fills from the top, so a judge with recent decisions still gets recent ones; older material surfaces only where there is nothing newer. Note that a window this wide reaches back past the statutes the reader's own complaint will be pleaded under — see doctrinal_watersheds."
   },
   "caps": {
     "significant_per_judge": 5,
