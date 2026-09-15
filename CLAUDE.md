@@ -18,6 +18,7 @@ specification; this file is the operating summary.
     npm run build         # gates, then astro build; exit 1 blocks the deploy
     npm run resolve-links -- --district=dnj    # needs COURTLISTENER_TOKEN
     npm run reconcile -- --district=dnj --held # same
+    node scripts/resolve-decisions.mjs --district=dnj --held   # token required
     npm run ingest -- --district=dnj           # proposes the recent tier; GOVINFO_API_KEY
     # Both read .env via --env-file-if-exists. Calling node directly does not:
     # Node ignores .env unless told, and the run falls back to the 5/min throttle.
@@ -113,7 +114,10 @@ assignment and had drifted on all three records checked against the source:
 Wigenton decided, *J.M. v. Summit City* showed nothing at all. The Berkelhammer
 docket records its own mid-case reassignment — "Magistrate Judge Michael A.
 Hammer no longer assigned to the case". Never attribute a decision from that
-field.
+field. Nor from the docket's most recent signer: *Brian Trematore Plumbing v.
+Sheet Metal Workers Local 25* is filed under Martinotti and its 2021 opinion is
+signed by Vazquez, who had the case first. One docket, two authors, and only the
+signature line distinguishes them.
 
 Three sources do name the author, and every record says which one it used in
 `authorship_source`. The gate refuses to publish an entry that says
@@ -121,17 +125,35 @@ Three sources do name the author, and every record says which one it used in
 sits on.
 
 1. `docket_entry_signature` — the best of the three, because it also yields the
-   ECF number and the date. Walk the district docket: the notice of appeal names
-   the order it is taken from ("NOTICE OF APPEAL as to 133 Order"), a later entry
-   ties it to the circuit number ("USCA Case Number 22-1618 for 135 Notice of
-   Appeal"), and the order's own entry ends "Signed by Judge Esther Salas on
-   3/31/2022". `scripts/reconcile-dockets.mjs` does this walk.
+   ECF number and the date. The clerk's line ends "Signed by Judge Esther Salas
+   on 3/31/2022", which is who decided, the date, and the document in one string.
+
+   Ask for it directly. RECAP's document index is full-text searchable, so
+   `type=rd & court=njd & docket_number=<n> & q="Signed by Judge"` returns every
+   signed order on a docket in a single request, each with its ECF number, date,
+   signing judge, and whether the PDF is held. `scripts/resolve-decisions.mjs`
+   does this. It needs a token: the v4 search endpoint answers 403 to an
+   anonymous caller, unlike the read endpoints, which answer and throttle.
+
+   `scripts/reconcile-dockets.mjs` instead walks the docket — notice of appeal,
+   the order it names, the entry that ties it to the circuit number — because
+   the walk was written before the search was understood. It reads 298 entries
+   on *Oakwood* to learn what one query answers, and it exhausted a day's quota
+   before finishing the corpus. Keep it only for recovering a district docket
+   from an appellate one, which search cannot do.
 2. `appellate_cover_page` — "District Judge: Honorable ___" on the appeal.
 3. `opinion_text` — the decision document itself, which the entry links to.
 
-RECAP carries the docket text for D.N.J. but rarely the PDFs; `is_available` is
-false on most entries. So the docket establishes *who decided and which
-document*, and a free public copy still has to come from GovInfo or the court.
+RECAP carries the docket text for D.N.J., and it carries more of the documents
+than this file claimed until 15 September 2026. `is_available` is false on most
+*entries*, which is true and beside the point: most entries are party filings
+nobody has bought. It is true of the signed opinions, and that is the only class
+this project needs. Five held dockets sampled through the search endpoint each
+returned at least one signed dispositive order with a PDF — *Oakwood* four of
+five, *Horizon* three, *ADP v. Mork*, *Trematore* and *GEICO* the rest. Try
+RECAP first on any docket that went up on appeal. GovInfo stays the source of
+record for the matter-relevant tier, where nothing was appealed and RECAP
+therefore holds much less.
 
 **An entry belongs on a judge's page only when the district court's own decision
 is available.** An appellate opinion shows what the circuit did, not what the
@@ -188,8 +210,14 @@ terms per subject live in `taxonomy.json` so they can be tuned without code.
 **CourtListener cannot supply this tier.** Its citable opinions collection
 returns 53 D.N.J. hits for "trade secret" whose newest is June 2016, and none
 inside a five-year window. Recent district decisions sit in RECAP as documents
-where `is_available` is false on most entries: the docket text is public, the
-PDF is not. The 44 published entries decided 2021 or later bear it out — 19 link
+whose PDFs are mostly not held: the docket text is public, the document is not.
+
+That is the opposite of what the held significant entries showed, and the
+difference is not a contradiction — it is the selection. RECAP fills when
+somebody pays PACER for a document, and somebody always pays on a case that went
+up on appeal. A routine Rule 12 ruling nobody appealed is exactly the document
+nobody bought. So the tier that needs RECAP least is the one it serves, and the
+matter-relevant tier still has to come from GovInfo. The 44 published entries decided 2021 or later bear it out — 19 link
 to GovInfo, 23 to Justia, one to CourtListener. GovInfo's USCOURTS collection is
 the source of record, and its package IDs are deterministic from the docket,
 which is also what makes a located decision verifiable afterwards.
@@ -276,7 +304,10 @@ none of the decisions are Claude's.
   and the gates check for them.
 - Sentence splitting on legal prose breaks on "St. John's", "U.S.", "Jr." — use
   the abbreviation-aware splitter in `scripts/extract-bios.py`.
-- CourtListener throttles at 5 requests/minute without a token. GovInfo package
+- CourtListener throttles at 5 requests/minute without a token, and caps a free
+  account at 125 requests/day — a cap a corpus sweep reaches long before the
+  per-minute one bites. The v4 *search* endpoint is different again: it refuses
+  an anonymous caller outright with a 403 rather than throttling. GovInfo package
   IDs are deterministic from the docket (`USCOURTS-njd-1_23-cv-12601`), so try it
   first. Justia district paths are predictable but need one probe for the case ID.
 - `legacy/` holds the superseded scaffold — the flat `data/judges` tree, its

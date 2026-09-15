@@ -47,6 +47,11 @@ export async function request(url) {
       await sleep(backoff);
       continue;
     }
+    if (res.status === 403 && !TOKEN) {
+      throw new Error(`403 ${new URL(url).pathname} — this endpoint requires a token. ` +
+                      `The v4 search endpoint refuses anonymous callers outright; ` +
+                      `set COURTLISTENER_TOKEN and re-run.`);
+    }
     if (!res.ok) throw new Error(`${res.status} ${new URL(url).pathname}`);
     return res.json();
   }
