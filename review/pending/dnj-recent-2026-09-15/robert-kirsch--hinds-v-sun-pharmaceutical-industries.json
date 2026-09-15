@@ -34,7 +34,7 @@
   "score_total": null,
   "components": {},
   "subject_screen": "qualifying",
-  "subject_label": "consumer-fraud",
+  "subject_label": "Consumer fraud",
   "subject_screen_exclusion_reason": null,
   "publish_subject_index": true,
   "subject_primary": "consumer-fraud",
@@ -63,6 +63,10 @@
       "headnote written from the public opinion",
       "procedural tags",
       "link verified to resolve"
-    ]
+    ],
+    "nature_of_suit": "Personal Injury: Health Care/Pharmaceutical Personal Injury Product Liability",
+    "nature_of_suit_reading": "Docketed Personal Injury: Health Care/Pharmaceutical Personal Injury Product Liability, which does not name this subject. Read the opinion before promoting.",
+    "proposed_disposition": "drop — pharmaceutical products liability is not on the intake list",
+    "subject_conflict": true
   }
 }

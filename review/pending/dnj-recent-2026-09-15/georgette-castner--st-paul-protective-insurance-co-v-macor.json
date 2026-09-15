@@ -34,10 +34,10 @@
   "score_total": null,
   "components": {},
   "subject_screen": "qualifying",
-  "subject_label": "Copyright",
+  "subject_label": "Insurance coverage",
   "subject_screen_exclusion_reason": null,
   "publish_subject_index": true,
-  "subject_primary": "copyright",
+  "subject_primary": "insurance-coverage",
   "subject_secondary": [],
   "subject_index_only": false,
   "procedural_tags": [],
@@ -63,6 +63,9 @@
       "headnote written from the public opinion",
       "procedural tags",
       "link verified to resolve"
-    ]
+    ],
+    "retagged_from": "copyright",
+    "nature_of_suit": "Insurance",
+    "nature_of_suit_reading": "Docketed Insurance, consistent with the tag."
   }
 }

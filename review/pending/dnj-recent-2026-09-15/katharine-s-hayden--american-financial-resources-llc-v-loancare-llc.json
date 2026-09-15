@@ -63,6 +63,10 @@
       "headnote written from the public opinion",
       "procedural tags",
       "link verified to resolve"
-    ]
+    ],
+    "nature_of_suit": "Negotiable Instrument",
+    "nature_of_suit_reading": "Docketed Negotiable Instrument, which does not name this subject. Read the opinion before promoting.",
+    "proposed_disposition": "consider commercial-contract",
+    "subject_conflict": true
   }
 }

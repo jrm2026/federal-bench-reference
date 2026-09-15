@@ -57,10 +57,16 @@
     "matched_terms": "\"trade secret\" OR \"Defend Trade Secrets Act\" OR \"misappropriation of trade secrets\"",
     "docket_entry": "OPINION. Signed by Judge Jamel K. Semper on 6/30/2026.",
     "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
+    "subject_is_hypothesis": true,
     "needs": [
+      "CONFIRM THE SUBJECT against the holding, then retag or discard",
       "headnote written from the public opinion",
       "procedural tags",
       "link verified to resolve"
-    ]
+    ],
+    "nature_of_suit": "Civil Rights: Jobs",
+    "nature_of_suit_reading": "Docketed Civil Rights: Jobs, which does not name this subject. Read the opinion before promoting.",
+    "proposed_disposition": "consider employment",
+    "subject_conflict": true
   }
 }

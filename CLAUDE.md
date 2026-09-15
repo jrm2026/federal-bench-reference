@@ -316,6 +316,38 @@ is why the held significant entries were so well covered. What that reasoning
 got wrong was the inference that nobody buys anything else: a busy commercial
 docket generates purchases for reasons other than appeal.
 
+**Ask for the signature line in the query, and ask for both forms.** Every
+subject search appends `AND ("Signed by Judge" OR "Signed by Magistrate
+Judge")`. The phrase lives in the clerk's docket text rather than the document,
+so it cuts a result set from complaints, briefs and exhibit stacks down to
+signed orders and opinions, and it guarantees the authorship source the record
+needs. The second form is not optional and not a substring of the first: a
+magistrate's line reads "Signed by Magistrate Judge Matthew J. Skahill". Query
+only the first and the sweep returns no magistrate decision at all, which is
+indistinguishable from scarcity.
+
+**A subject tag from full-text search is a hypothesis; the docket's
+nature-of-suit code is the cheapest way to test it.** The search matches terms
+anywhere in the document, not in the holding, so the tag is a guess until a
+human reads the opinion. The code is the plaintiff's civil cover sheet as the
+clerk recorded it — a fact about the case, not the ruling — so it can never
+confirm a tag. It contradicts a wrong one for one call to `/dockets/<id>/`, and
+on this corpus it does so about a fifth of the time. *Ocean Port Enterprise*
+surfaced on "LLC operating agreement" and is docketed Rent Lease & Ejectment;
+*Miller v. Brozen* surfaced on "breach of fiduciary duty" and is docketed
+ERISA; *Arro-Mark v. Warren* surfaced on "closely held" and is docketed under
+the DTSA. None became a record. Of the eleven written before the code was being
+read, five carry a contradiction. `natureOfSuitReading` in
+`scripts/lib/proposal.mjs` states the three readings, and a contradicted record
+carries `_ingest.subject_conflict`. The code never moves a tag on its own: a
+franchise docket can still produce a covenant ruling, and a Franchise Practices
+Act claim is coded "Other Statutory Actions".
+
+**Take the PDF path from the API or leave it out.** Most RECAP paths are
+`gov.uscourts.njd.<pacer>.<ecf>.0.pdf`, which makes constructing one look safe.
+The *Universal Property* opinion is filed at `.165.0_1.pdf` and the constructed
+form is a dead link. The docket-entry page is the durable link anyway.
+
 Why this tier matters more than the significant one. Of the 48 published
 entries, eleven are on an intake-list subject and nine of those were decided
 in 2021 or later, and seven intake subjects — trade secrets, restrictive
@@ -327,6 +359,31 @@ fifteen District Judge pages. A recent Rule 12 ruling was never appealed, so
 there is no appellate opinion to mistake for it and it sits at the district
 level by construction. This tier serves the reader and refills those pages in
 the same pass.
+
+A sweep on 15 September 2026 proposed 36 candidates covering all thirteen
+intake subjects, on the eight thinnest District Judge pages. Two subjects came
+out lopsided, both for reasons about the forum rather than the research.
+
+Franchise is the richest vein and the best fit for this reader, and one fact
+causes both. Wyndham is headquartered in Parsippany, and Days Inns, Super 8,
+Travelodge, Baymont, Microtel, AmericInn and La Quinta are its brands; their
+franchise agreements carry D.N.J. forum clauses. The docket fills with a
+Newark plaintiff suing an out-of-state franchisee who has just been served and
+has no New Jersey counsel — the mail program's reader, described exactly.
+
+Closely held and fiduciary is the opposite, and it is thin structurally rather
+than for want of looking. Oppression, dissolution and the duties among owners
+are state-law claims, and the federal door is diversity, which usually shuts:
+an LLC takes the citizenship of its members, so a member suing his own company
+is not diverse from it. *Zambelli Fireworks v. Wood*, 592 F.3d 412 (3d Cir.
+2010). What reaches D.N.J. is the residue — a foreign parent, a diverse buyer,
+an arbitration to confirm. Let the page stay short and say so.
+
+The magistrate pages cannot be filled from this source. Querying all five thin
+magistrate pages across the intake subjects returns eleven documents, every one
+of them scheduling, pro hac vice, a motion to quash or leave to amend, and
+three of the five judges return nothing at all. That is the coverage note on the
+magistrate template, confirmed rather than assumed.
 
 Lookback windows and caps live in `policy.json`. Render the governing window as
 a line under each section heading so the reader can calibrate.
@@ -423,8 +480,11 @@ none of the decisions are Claude's.
 ## Current state
 
 Built and passing: 49 pages, 41 judges with verified biographies and source
-links, 48 published decisions with 35 more held, both gate halves, the sign-off
-ledger, the poison list, CI, and the daily-ingest workflow skeleton.
+links, 82 published decisions and none held, both gate halves, the sign-off
+ledger, the poison list, CI, and the daily-ingest workflow skeleton. Every
+record published is the career screen; the matter-relevant tier has 36
+candidates proposed and none promoted, because promotion needs a headnote and a
+headnote is written by a human from the opinion.
 
 Criminal subject matter was excluded on 15 September 2026 and twelve records
 moved to `review/pending/dnj-out-of-scope-criminal/`: two that were published,
@@ -435,10 +495,12 @@ were disproportionately the ones carrying no district docket — the held set's
 hard cases fell from nine to three.
 
 `docs/VERIFICATION-WORKLIST.md` holds the open items in the order I would take
-them. The first two came out of the merge: *Antar v. Borgata* has no
-district-level link and no docket to resolve one by, and the FindLaw question on
-*Ireland v. Hegseth* is undecided. After those, link resolution, then the
-matter-relevant tier, then the firm block, then the Phase 3 news module.
+them. The matter-relevant sweep is done and its output is in
+`review/pending/dnj-recent-2026-09-15/`, thirty-six proposals across all
+thirteen intake subjects, seven of them carrying a nature-of-suit conflict that
+the README lists by name. Confirming the subject and writing the headnote is
+the next real work, and it is the curator's. After that, the FindLaw question
+on *Ireland v. Hegseth*, then the firm block, then the Phase 3 news module.
 
 `ingest-daily.yml` now calls `scripts/ingest-decisions.mjs`, which exists. It
 needs `GOVINFO_API_KEY` in Actions secrets; on DEMO_KEY it throttles hard.

@@ -78,7 +78,18 @@ export async function findBySubject({ court, terms, since, limit = 40 }) {
   const payload = await cl('/search/', {
     type: 'rd',
     court,
-    q: `(${terms}) AND (OPINION OR "MEMORANDUM OPINION")`,
+    // The clerk's signature line lives in the docket text, not the document, so
+    // this cuts the result set to signed orders and opinions and drops the
+    // complaints, briefs and exhibit stacks that otherwise fill the first page.
+    // It also guarantees the one thing every record needs, an authorship source
+    // that is not a guess — the filter below discards anything without a
+    // signature anyway, so asking for it up front stops that waste.
+    //
+    // Both forms, and they are not substrings of each other: a magistrate's
+    // line reads "Signed by Magistrate Judge Matthew J. Skahill". Query only
+    // the first and the sweep returns no magistrate decision at all, and
+    // nobody can tell that from scarcity.
+    q: `(${terms}) AND ("Signed by Judge" OR "Signed by Magistrate Judge")`,
     filed_after: since,
     available_only: 'on',
     order_by: 'entry_date_filed desc',
@@ -110,13 +121,18 @@ export async function findBySubject({ court, terms, since, limit = 40 }) {
 }
 
 /**
- * Docket number and case name for a set of docket ids.
+ * Docket number, case name and nature of suit for a set of docket ids.
  *
  * One request each, because the dockets endpoint takes only range operators on
  * id — no `in` filter — and the search index does not carry the docket number
  * down to the document level. A thirteen-subject sweep at five candidates a
  * subject is about sixty-five lookups, most of them repeats within a subject,
  * so the cache below matters more than the batching would have.
+ *
+ * The nature-of-suit code is worth the field. It is the plaintiff's civil cover
+ * sheet as the clerk recorded it, so it says nothing about the holding and can
+ * never confirm a subject tag — but it contradicts a wrong one cheaply, and on
+ * this corpus it has done so repeatedly. See natureOfSuitReading in proposal.mjs.
  */
 const cache = new Map();
 
@@ -125,7 +141,8 @@ export async function docketsById(ids) {
   for (const id of new Set(ids.filter(Boolean))) {
     if (!cache.has(id)) {
       try {
-        cache.set(id, await cl(`/dockets/${id}/`, { fields: 'id,docket_number,case_name' }));
+        cache.set(id, await cl(`/dockets/${id}/`,
+          { fields: 'id,docket_number,case_name,nature_of_suit' }));
       } catch {
         cache.set(id, null);           // a docket that will not resolve is not fatal
       }

@@ -113,6 +113,13 @@
     "copyright": "Copyright",
     "commercial-contract": "Commercial contract",
     "business-torts": "Business torts",
+    "closely-held-fiduciary": "Closely held business and fiduciary duty",
+    "franchise-distribution": "Franchise and distribution",
+    "securities": "Securities",
+    "consumer-fraud": "Consumer fraud",
+    "employment": "Employment",
+    "insurance-coverage": "Insurance coverage",
+    "data-privacy-cybersecurity": "Data privacy and cybersecurity",
     "arbitration-forum-selection": "Arbitration and forum selection",
     "case-management": "Case management",
     "class-certification": "Class certification",
@@ -147,7 +154,7 @@
     "securities": "\"Securities Exchange Act\" OR \"Rule 10b-5\" OR \"securities fraud\"",
     "consumer-fraud": "\"Consumer Fraud Act\" OR \"ascertainable loss\" OR \"consumer fraud\"",
     "employment": "\"Title VII\" OR \"New Jersey Law Against Discrimination\" OR \"wrongful termination\"",
-    "insurance-coverage": "\"duty to defend\" OR \"insurance coverage\" OR \"declaratory judgment\" AND policy",
+    "insurance-coverage": "\"duty to defend\" OR \"insurance coverage\" OR (\"declaratory judgment\" AND policy)",
     "data-privacy-cybersecurity": "\"data breach\" OR \"Video Privacy Protection Act\" OR \"personally identifiable information\""
   }
 }

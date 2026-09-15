@@ -46,6 +46,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { searchUscourts, granule, pdfUrl, usingDemoKey, stats } from './lib/govinfo.mjs';
 import { findBySubject, docketsById } from './lib/recap.mjs';
+import { natureOfSuitReading } from './lib/proposal.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -112,6 +113,7 @@ function proposal(hit, judge, subject) {
   const caption = hit.caseName;
   const docket = normaliseDocket(hit.docketNumber);
   const url = hit.url;
+  const nos = hit.natureOfSuit ?? null;
   // The link is the decision, so the document names its author. Only claim that
   // when the name on it matches the page the entry would sit on.
   const named = (hit.namedJudge ?? '').trim();
@@ -177,9 +179,18 @@ function proposal(hit, judge, subject) {
       judge_field: named || null,
       docket_entry: hit.description ?? null,
       matched_text: hit.snippet ?? null,
+      nature_of_suit: nos,
+      nature_of_suit_reading: natureOfSuitReading(subject, nos),
       window: `${CUTOFF} to ${TODAY} (${YEARS}y subject lookback)`,
       predates_watershed: hit.predatesWatershed ?? null,
+      // The tag records which search found the document, and a full-text search
+      // matches terms anywhere in it, not in the holding. Nobody promotes one of
+      // these without reading the opinion.
+      subject_is_hypothesis: true,
+      ...(nos && /does not name this subject/.test(natureOfSuitReading(subject, nos))
+        ? { subject_conflict: true } : {}),
       needs: [
+        'CONFIRM THE SUBJECT against the holding, then retag or discard',
         'headnote written from the public opinion',
         'procedural tags',
         'link verified to resolve',
@@ -252,7 +263,8 @@ for (const subject of SUBJECTS) {
       issued = hit.dateSigned ?? hit.dateFiled;
       url = hit.page ?? hit.pdf;
       extra = { ecf: hit.ecf, pdf: hit.pdf, signedBy: hit.judge,
-                description: hit.description, snippet: hit.snippet };
+                description: hit.description, snippet: hit.snippet,
+                natureOfSuit: hit.docket.nature_of_suit ?? null };
     } else {
       if (!hit.packageId || !hit.granuleId) continue;
       let g;
@@ -263,7 +275,9 @@ for (const subject of SUBJECTS) {
       docketNumber = g.caseNumber ?? null;
       issued = g.dateIssued ?? hit.dateIssued ?? null;
       url = pdfUrl(hit.packageId, hit.granuleId);
-      extra = { packageId: hit.packageId, granuleId: hit.granuleId };
+      // GovInfo carries the opinion, not the docket, so there is no
+      // nature-of-suit code on this path and the tag stands unchecked.
+      extra = { packageId: hit.packageId, granuleId: hit.granuleId, natureOfSuit: null };
     }
 
     const surname = [...bySurname.keys()].find((sn) => new RegExp(`\\b${sn}\\b`, 'i').test(named ?? ''));
