@@ -1,12 +1,13 @@
 {
   "lookback": {
     "significant": null,
-    "subject_district_years": 5,
+    "subject_district_years": 20,
     "procedural_district_years": 3,
     "magistrate_entries_per_tag": 5,
     "daubert_floor": "2023-12-01",
     "discovery_scope_flag_before": "2015-12-01",
-    "mail_link_preferred_years": 3
+    "mail_link_preferred_years": 3,
+    "_subject_window_note": "Widened from 5 to 20 years on 15 September 2026. A five-year window returned nothing for trade secrets on any judge, while real district decisions in the subject sat just outside it on judges with empty pages. Candidates are ordered newest first and the per-tag cap fills from the top, so a judge with recent decisions still gets recent ones; the older material only surfaces where there is nothing newer."
   },
   "caps": {
     "significant_per_judge": 5,
@@ -23,5 +24,23 @@
     "rule": "Prefer settled opinions: decided, affirmed or unappealed, and more than two years old.",
     "reason": "Every disturbed-posture entry costs a recurring status check under the appellate-currency gate, forever. A 2022 personal-jurisdiction ruling costs nothing to maintain. A case on a stayed mandate costs a check every month — ANJRPC is one, and its clock runs out in late October.",
     "soft_cap_disturbed_entries": 12
+  },
+  "doctrinal_watersheds": {
+    "trade-secrets": {
+      "date": "2016-05-11",
+      "what": "Defend Trade Secrets Act enacted. A D.N.J. decision before this date applies the New Jersey Trade Secrets Act or common law, not the federal cause of action most complaints now plead."
+    },
+    "restrictive-covenants": {
+      "date": "2016-05-11",
+      "what": "Same DTSA boundary: pre-2016 covenant decisions often travel with trade-secret claims pleaded only under state law."
+    },
+    "data-privacy-cybersecurity": {
+      "date": "2018-05-25",
+      "what": "GDPR, and the state-law wave that followed. Earlier decisions predate the current statutory landscape."
+    },
+    "_procedural": {
+      "date": "2015-12-01",
+      "what": "The December 2015 Federal Rules amendments rewrote Rule 26(b)(1) proportionality. A discovery ruling before this date may state a superseded standard. This is the discovery_scope_flag_before date, applied to any procedural tag."
+    }
   }
 }

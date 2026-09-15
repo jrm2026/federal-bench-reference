@@ -208,6 +208,23 @@ the same pass.
 Lookback windows and caps live in `policy.json`. Render the governing window as
 a line under each section heading so the reader can calibrate.
 
+The subject window is 20 years, widened from 5 on 15 September 2026. Five years
+returned nothing for trade secrets on any judge while real district decisions in
+the subject sat just outside it on judges with empty pages. Candidates are
+ordered newest first and the cap fills from the top, so a judge with recent
+decisions still gets recent ones and the older material surfaces only where
+nothing newer exists.
+
+A wider window reaches back past changes in the law. `policy.json` carries
+`doctrinal_watersheds`, and the ingest flags any candidate decided before the
+watershed for its subject — the DTSA on 11 May 2016 for trade secrets and
+restrictive covenants, the December 2015 Rule 26(b)(1) amendments for discovery.
+A 2009 D.N.J. trade-secrets ruling applies the New Jersey Trade Secrets Act or
+common law, not the federal cause of action the reader's complaint probably
+pleads. Say so on the page or do not publish it. The flag never drops a
+candidate; it makes the currency problem visible to whoever writes the
+headnote.
+
 ## Page templates
 
 District judge pages lead with significant decisions, then matter type, then

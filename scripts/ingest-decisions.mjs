@@ -162,7 +162,16 @@ function proposal(hit, judge, subject) {
       govinfo_granule: hit.granuleId,
       govinfo_judge_field: named || null,
       window: `${CUTOFF} to ${TODAY} (${YEARS}y subject lookback)`,
-      needs: ['headnote written from the public opinion', 'procedural tags', 'link verified to resolve'],
+      predates_watershed: hit.predatesWatershed ?? null,
+      needs: [
+        'headnote written from the public opinion',
+        'procedural tags',
+        'link verified to resolve',
+        ...(hit.predatesWatershed
+          ? [`decided before ${hit.predatesWatershed.date}: ${hit.predatesWatershed.what} ` +
+             `Say so on the page or do not publish it.`]
+          : []),
+      ],
     },
   };
 }
@@ -225,6 +234,12 @@ for (const subject of SUBJECTS) {
     const kept = perJudge.get(key) ?? 0;
     if (kept >= PER_TAG) continue;
 
+    // A decision inside the window can still predate the statute the reader's
+    // case will be pleaded under. Flag it; do not silently drop it.
+    const ws = policy.doctrinal_watersheds?.[subject];
+    const issued = g.dateIssued ?? hit.dateIssued ?? null;
+    const predates = ws && issued && issued < ws.date;
+
     const p = proposal({
       caseName: g.title ?? hit.title,
       docketNumber: g.caseNumber ?? null,
@@ -233,6 +248,7 @@ for (const subject of SUBJECTS) {
       namedJudge: named,
       packageId: hit.packageId,
       granuleId: hit.granuleId,
+      predatesWatershed: predates ? ws : null,
     }, judge, subject);
 
     const idKey = `${p.judge_slug}|${p.caption}|${p.district_docket ?? ''}`;
@@ -240,7 +256,9 @@ for (const subject of SUBJECTS) {
     seen.add(idKey);
     proposals.push(p);
     perJudge.set(key, kept + 1);
-    console.log(`  + ${judge.name.padEnd(22).slice(0, 22)} ${subject.padEnd(26)} ${p.decision_date ?? '—'}  ${String(p.caption).slice(0, 38)}`);
+    console.log(`  ${predates ? '~' : '+'} ${judge.name.padEnd(22).slice(0, 22)} ${subject.padEnd(24)} ` +
+                `${p.decision_date ?? '—'}  ${String(p.caption).slice(0, 36)}` +
+                (predates ? `  [predates ${ws.date}]` : ''));
   }
 }
 
