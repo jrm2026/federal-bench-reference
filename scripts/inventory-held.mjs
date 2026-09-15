@@ -47,7 +47,11 @@ const readAll = (dir) => !fs.existsSync(dir) ? [] :
 const held = readAll(HELD_DIR);
 const published = readAll(PUB_DIR);
 const judges = readAll(JUDGE_DIR).map(({ rec }) => rec);
-const report = fs.existsSync(REPORT) ? JSON.parse(fs.readFileSync(REPORT, 'utf8')) : null;
+// An empty report is not a report. The file exists from the moment a run starts
+// writing incrementally, so presence alone says nothing about whether anything
+// was resolved; a run that died on its first request leaves one behind.
+const rawReport = fs.existsSync(REPORT) ? JSON.parse(fs.readFileSync(REPORT, 'utf8')) : null;
+const report = rawReport && Object.values(rawReport).some((r) => r.flag) ? rawReport : null;
 
 /** An appellate reporter cite names the appeal; a district one names the decision. */
 const isDistrictReporter = (c) => /F\.\s*Supp\./i.test(c ?? '');
