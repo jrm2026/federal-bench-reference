@@ -12,7 +12,7 @@
  * a link change on a sitting judge's page goes through the same review gate as
  * anything else.
  *
- *   node scripts/resolve-links.mjs --district=dnj [--limit=N] [--apply-dry-run]
+ *   node scripts/resolve-links.mjs --district=dnj [--limit=N] [--only=<id or caption>]
  *
  * Env: COURTLISTENER_TOKEN (optional), GOVINFO_API_KEY (optional, DEMO_KEY works)
  *
@@ -20,7 +20,7 @@
  * or pass the flag yourself: `node --env-file=.env scripts/...`. Without it the
  * token in .env is invisible and the run silently falls back to the throttle.
  */
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const args = Object.fromEntries(process.argv.slice(2)
@@ -34,7 +34,11 @@ const CL_COURT = { dnj: 'njd', sdny: 'nysd', edny: 'nyed' }[DISTRICT];
 const GOVINFO_COURT = { dnj: 'njd', sdny: 'nysd', edny: 'nyed' }[DISTRICT];
 const JUSTIA_PATH = { dnj: 'new-jersey/njdce', sdny: 'new-york/nysdce', edny: 'new-york/nyedce' }[DISTRICT];
 
+// Published records, and the held ones — which are the only records that
+// actually need a link. Reading src/content alone made this script unable to
+// help the set it was written for.
 const SRC = `src/content/districts/${DISTRICT}/opinions`;
+const HELD = `review/pending/${DISTRICT}-no-district-decision`;
 const OUT = `review/pending/links`;
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -60,8 +64,8 @@ async function getJSON(url, headers = {}) {
 
 /** GovInfo: package id is deterministic from the docket; granules list the documents. */
 async function tryGovInfo(rec) {
-  if (!isDistrictDocket(rec.docket)) return null;
-  const pkg = `USCOURTS-${GOVINFO_COURT}-${pkgDocket(rec.docket)}`;
+  if (!isDistrictDocket(rec.district_docket)) return null;
+  const pkg = `USCOURTS-${GOVINFO_COURT}-${pkgDocket(rec.district_docket)}`;
   const summary = await getJSON(
     `https://api.govinfo.gov/packages/${pkg}/summary?api_key=${GOVINFO_KEY}`);
   if (!summary || summary._throttled) return summary?._throttled ? { _throttled: true } : null;
@@ -77,7 +81,7 @@ async function tryGovInfo(rec) {
     title: pick.title ?? summary.title,
     date: summary.dateIssued ?? null,
     granules: list.length,
-    verified_docket: rec.docket,
+    verified_docket: rec.district_docket,
   };
 }
 
@@ -86,8 +90,8 @@ async function tryCourtListener(rec) {
   const h = CL_TOKEN ? { Authorization: `Token ${CL_TOKEN}` } : {};
   const base = 'https://www.courtlistener.com/api/rest/v4/search/';
   const queries = [];
-  if (isDistrictDocket(rec.docket))
-    queries.push(`${base}?type=o&court=${CL_COURT}&docket_number=${encodeURIComponent(rec.docket)}`);
+  if (isDistrictDocket(rec.district_docket))
+    queries.push(`${base}?type=o&court=${CL_COURT}&docket_number=${encodeURIComponent(rec.district_docket)}`);
   if (rec.reporter_cite && /F\.\s*Supp/.test(rec.reporter_cite))
     queries.push(`${base}?type=o&citation=${encodeURIComponent(rec.reporter_cite)}`);
   queries.push(`${base}?type=o&court=${CL_COURT}&q=${encodeURIComponent(rec.caption)}`);
@@ -108,7 +112,7 @@ async function tryCourtListener(rec) {
 
 /** Justia: the docket path is deterministic; the internal case id is not, so probe. */
 async function tryJustia(rec) {
-  const jd = isDistrictDocket(rec.docket) ? justiaDocket(rec.docket) : null;
+  const jd = isDistrictDocket(rec.district_docket) ? justiaDocket(rec.district_docket) : null;
   if (!jd) return null;
   const url = `https://law.justia.com/cases/federal/district-courts/${JUSTIA_PATH}/${jd}/`;
   const r = await fetch(url, { headers: { 'User-Agent': 'FederalBenchReference/1.0' } });
@@ -128,9 +132,13 @@ const NO_WRITTEN_OPINION = /trial and judgment|judgment and sentencing|plea and 
 
 async function main() {
   mkdirSync(OUT, { recursive: true });
-  const files = readdirSync(SRC).filter(f => f.endsWith('.json'));
-  const recs = files.map(f => ({ f, r: JSON.parse(readFileSync(join(SRC, f), 'utf8')) }))
-    .filter(x => x.r.link_level !== 'district').slice(0, LIMIT);
+  const dirs = [SRC, ...(existsSync(HELD) ? [HELD] : [])];
+  const recs = dirs.flatMap((d) => readdirSync(d).filter((f) => f.endsWith('.json'))
+      .map((f) => ({ f: join(d, f), r: JSON.parse(readFileSync(join(d, f), 'utf8')) })))
+    .filter((x) => x.r.link_level !== 'district')
+    .filter((x) => !args.only || x.r.id === args.only || (x.r.caption ?? '').includes(args.only))
+    .slice(0, LIMIT);
+  console.log(`${recs.length} record(s) without a district link` + (args.only ? ` matching '${args.only}'` : ''));
 
   const report = { resolved: [], no_written_opinion: [], unresolved: [], throttled: 0 };
 
@@ -148,7 +156,7 @@ async function main() {
       } catch (e) { /* try the next source */ }
     }
     if (hit) {
-      report.resolved.push({ id: r.id, caption: r.caption, docket: r.docket, ...hit });
+      report.resolved.push({ id: r.id, caption: r.caption, docket: r.district_docket, ...hit });
       writeFileSync(join(OUT, `${r.id}.json`), JSON.stringify({
         id: r.id, file: f,
         change: { public_url: hit.url, link_level: 'district' },
@@ -161,7 +169,7 @@ async function main() {
         ],
       }, null, 2));
     } else {
-      report.unresolved.push({ id: r.id, caption: r.caption, docket: r.docket,
+      report.unresolved.push({ id: r.id, caption: r.caption, docket: r.district_docket,
         reporter_cite: r.reporter_cite, current: r.links?.[0]?.anchor ?? null });
     }
   }

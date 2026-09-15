@@ -5,7 +5,7 @@
   "judge_name": "Madeline Cox Arleo",
   "judge_office": "district",
   "caption": "In re Congoleum Corp.",
-  "citation_line": "In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)",
+  "citation_line": "In re Congoleum Corp., No. 2:22-cv-00423, ECF No. 25 (D.N.J. Jan. 31, 2023), rev’d, No. 23-1295 (3d Cir. Aug. 22, 2025)",
   "district_docket": "2:22-cv-00423",
   "appellate_docket": "23-1295",
   "additional_dockets": [],
@@ -64,5 +64,5 @@
   "authored_by": "Madeline Cox Arleo",
   "decision_ecf_number": "25",
   "decision_date": "2023-01-31",
-  "decision_selection_note": "ECF 25 of 2:22-cv-00423, found under the short docket form 22-cv-423: “ORDER reversing the Bankruptcy Court’s Order, and First Congoleum Bankruptcy is closed. Signed by Judge Madeline Cox Arleo on 1/31/2023.” Captioned below as Occidental Chemical Corp. v. Bath Iron Works Corp., because a bankruptcy appeal takes the parties’ names. RECAP holds no PDF of it and CourtListener carries three duplicate dockets for the number, so this stays held until a free public copy is located — GovInfo next."
+  "decision_selection_note": "ECF 25 of 2:22-cv-00423, the district docket the Third Circuit names as D.C. No. 2:22-cv-00423: “ORDER reversing the Bankruptcy Court’s Order, and First Congoleum Bankruptcy is closed. Signed by Judge Madeline Cox Arleo on 1/31/2023.” Captioned below as Occidental Chemical Corp. v. Bath Iron Works Corp., because a bankruptcy appeal takes the parties’ names. Held for want of a free public copy, and three sources have been tried: GovInfo has no package for this docket, which fits — its USCOURTS collection carries written opinions and this is an order. RECAP cannot be checked through search either, because CourtListener matches 2:22-cv-00423 loosely and returns the Passaic River CERCLA docket instead. What remains is a PACER look to see whether an opinion accompanies ECF 25 at all: if none does, this drops for the reason City of Newark did."
 }

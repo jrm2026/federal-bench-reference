@@ -47,7 +47,7 @@ kept 1 · held 1
 
 - **Kept.** Antar v. Borgata Hotel Casino & Spa, LLC, No. 2:22-cv-05785, ECF No. 59 (D.N.J. Jan. 31, 2024), aff’d sub nom. Antar v. BetMGM, LLC, No. 24-1364 (3d Cir. Apr. 28, 2025)  
   `www.courtlistener.com`
-- **Held (A).** In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)  
+- **Held (A).** In re Congoleum Corp., No. 2:22-cv-00423, ECF No. 25 (D.N.J. Jan. 31, 2023), rev’d, No. 23-1295 (3d Cir. Aug. 22, 2025)  
   A district docket is on the record. A district link resolves from it.
 
 ## Renée Marie Bumb
