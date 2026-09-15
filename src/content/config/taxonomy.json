@@ -19,11 +19,9 @@
       "patent",
       "products-liability-mdl",
       "civil-rights",
-      "criminal-public-corruption",
       "immigration",
       "election-law",
       "antitrust",
-      "federal-criminal",
       "civil-procedure-jurisdiction",
       "evidence-and-sanctions",
       "second-amendment",
@@ -32,7 +30,6 @@
       "gaming-wagering",
       "bankruptcy",
       "administrative-regulatory",
-      "habeas-post-conviction",
       "education-idea",
       "municipal-telecom"
     ],
@@ -47,17 +44,14 @@
       "commercial-contract",
       "consumer-fraud",
       "copyright",
-      "criminal-public-corruption",
       "data-privacy-cybersecurity",
       "education-idea",
       "election-law",
       "employment",
       "environmental",
       "evidence-and-sanctions",
-      "federal-criminal",
       "franchise-distribution",
       "gaming-wagering",
-      "habeas-post-conviction",
       "immigration",
       "insurance-coverage",
       "labor-cba",
@@ -69,7 +63,8 @@
       "securities",
       "trade-secrets",
       "trademark-unfair-competition"
-    ]
+    ],
+    "_excluded_criminal": "Criminal subject matter is out of scope. federal-criminal, criminal-public-corruption and habeas-post-conviction were removed on 15 September 2026. The reader is a civil defendant newly served and not yet represented, and selection among criminal outcomes on a page carrying an attorney-advertising banner reads as a verdict on the judge however factually each line is written. The line is subject matter, not docket type, so collateral post-conviction proceedings are excluded although they carry civil docket numbers. scripts/validate.mjs enforces this and also fails any cr docket. procedural.privilege-crime-fraud is the crime-fraud exception to attorney-client privilege, a civil discovery doctrine, and stays."
   },
   "procedural": {
     "all": [

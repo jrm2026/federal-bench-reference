@@ -37,6 +37,7 @@ const district = args.get('district') ?? 'dnj';
 const HELD_DIR = path.join('review', 'pending', `${district}-no-district-decision`);
 const PUB_DIR = path.join('src', 'content', 'districts', district, 'opinions');
 const JUDGE_DIR = path.join('src', 'content', 'districts', district, 'judges');
+const SCOPE_DIR = path.join('review', 'pending', `${district}-out-of-scope-criminal`);
 const REPORT = path.join('docs', `decision-resolution-${district}.json`);
 const OUT = path.join('docs', 'HELD-ENTRIES.md');
 
@@ -52,6 +53,7 @@ const judges = readAll(JUDGE_DIR).map(({ rec }) => rec);
 // was resolved; a run that died on its first request leaves one behind.
 const rawReport = fs.existsSync(REPORT) ? JSON.parse(fs.readFileSync(REPORT, 'utf8')) : null;
 const report = rawReport && Object.values(rawReport).some((r) => r.flag) ? rawReport : null;
+const outOfScope = readAll(SCOPE_DIR);
 
 /** An appellate reporter cite names the appeal; a district one names the decision. */
 const isDistrictReporter = (c) => /F\.\s*Supp\./i.test(c ?? '');
@@ -110,6 +112,12 @@ L.push(`decision important enough to score is a district decision important enou
 L.push(`to appeal, so it survives in free repositories as a Third Circuit PDF.`);
 L.push(`Magistrate work is not appealed and sits in GovInfo at the district level.`);
 L.push('');
+if (outOfScope.length) {
+  L.push(`${outOfScope.length} further entries are not held but excluded, as criminal subject`);
+  L.push(`matter. They are in \`${SCOPE_DIR}/\` and will not be restored; that`);
+  L.push(`directory's README says where the line falls and which look-alikes stay.`);
+  L.push('');
+}
 L.push(`## What the record carries`);
 L.push('');
 L.push(`| | Count | What it means |`);

@@ -71,13 +71,38 @@ would be more useful.
 7. **A fact once corrected may not reappear.** Add an entry to
    `src/content/config/poison-list.json` with every correction. The gate blocks
    any build in which one returns. This has already caught two.
+8. **Criminal subject matter is out of scope.** The reader is an out-of-state
+   defendant newly served with a *civil* complaint who has not yet appeared. A
+   criminal docket tells that reader nothing, and selection among criminal
+   outcomes on a page carrying an attorney-advertising banner reads as a verdict
+   on the judge however factually each line is written — which is the same
+   objection constraint 2 raises against the *Jackson* entry, and excluding
+   criminal is what finally answers it.
+
+   The line is subject matter, not docket type. A habeas petition, a § 2255
+   motion and a coram nobis petition each carry a civil docket number and are
+   excluded on their substance. `scripts/validate.mjs` fails on the three
+   removed subject keys and on any `cr` docket, and warns where a headnote reads
+   as a prosecution while its subject tag does not — which is how *United States
+   v. Smith* surfaced, tagged `evidence-and-sanctions` with a jury conviction
+   underneath.
+
+   Four look-alikes stay, and the reasons matter. *United States v. City of
+   Newark* is a police consent decree. *United States v. Jefferson* enforces a
+   False Claims Act civil investigative demand. *Elfar v. Township of Holmdel*
+   is a civil-rights plaintiff pleading malicious prosecution under the Tort
+   Claims Act — the tort is civil and the criminal case is only its predicate,
+   which is why the prose test warns rather than fails. And
+   `privilege-crime-fraud` is procedural, not a subject: it is the crime-fraud
+   exception to attorney-client privilege, and both records carrying it are
+   civil.
 
 ## Data model
 
     src/content/districts/<district>/
       district.json
       judges/<slug>.json      41 for dnj
-      opinions/<id>.json      95 for dnj
+      opinions/<id>.json      48 for dnj; 35 held, 12 out of scope
     src/content/config/       taxonomy, policy, firm, curator
                               poison-list, signoffs, roster-manifest
 
@@ -198,7 +223,7 @@ would a reader infer a tendency from this selection?
 ## Two tiers, selected on different criteria
 
 `tier: "significant"` is the career screen — scored, capped at five per judge,
-no date cutoff. All 95 current records are this tier.
+no date cutoff. All 48 published records are this tier, as are the 35 held.
 
 `tier: "recent"` is the matter-relevant tier: subject tag on the intake list,
 inside the lookback window, link resolves. Three gates, no scoring. Do not run
@@ -223,10 +248,11 @@ to GovInfo, 23 to Justia, one to CourtListener. GovInfo's USCOURTS collection is
 the source of record, and its package IDs are deterministic from the docket,
 which is also what makes a located decision verifiable afterwards.
 
-Why this tier matters more than the significant one. Of the 50 published
-entries, ten are both recent and on an intake-list subject, and seven intake
-subjects — trade secrets, restrictive covenants, copyright, business torts,
-consumer fraud, franchise, securities — have no entry at all. The significant
+Why this tier matters more than the significant one. Of the 48 published
+entries, eleven are on an intake-list subject and nine of those were decided
+in 2021 or later, and seven intake subjects — trade secrets, restrictive
+covenants, copyright, business torts, consumer fraud, franchise, securities —
+have no entry at all. The significant
 tier cannot fix that: it is a career screen, and a career-significant decision
 is one that got appealed, which is why the district-decision rule emptied
 fifteen District Judge pages. A recent Rule 12 ruling was never appealed, so
@@ -329,8 +355,16 @@ none of the decisions are Claude's.
 ## Current state
 
 Built and passing: 49 pages, 41 judges with verified biographies and source
-links, 95 scored and subject-screened decisions, both gate halves, the sign-off
+links, 48 published decisions with 35 more held, both gate halves, the sign-off
 ledger, the poison list, CI, and the daily-ingest workflow skeleton.
+
+Criminal subject matter was excluded on 15 September 2026 and twelve records
+moved to `review/pending/dnj-out-of-scope-criminal/`: two that were published,
+ten that were held. It emptied two judge pages, Neals and McNulty, whose only
+published entries were collateral post-conviction proceedings on civil dockets.
+It also cleared most of the unresolvable tail, because the criminal entries
+were disproportionately the ones carrying no district docket — the held set's
+hard cases fell from nine to three.
 
 `docs/VERIFICATION-WORKLIST.md` holds the open items in the order I would take
 them. The first two came out of the merge: *Antar v. Borgata* has no

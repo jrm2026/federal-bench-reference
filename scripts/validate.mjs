@@ -17,6 +17,19 @@ const FORBIDDEN = /grant_rate|reversal_rate|affirmance_rate|win_rate|denial_rate
 
 const err = [];
 const warn = [];
+
+// Criminal in substance, whatever the docket says. Removed from taxonomy.json on
+// 15 September 2026 and kept here so a record carrying one fails loudly rather
+// than falling through the closed-vocabulary check with a vague message.
+const CRIMINAL_SUBJECTS = new Set([
+  'federal-criminal', 'criminal-public-corruption', 'habeas-post-conviction',
+]);
+
+// Deliberately not a disposition test. "Convicted", "sentenced" and "indictment"
+// describe what happened to a defendant; "prosecution" alone is the predicate of
+// a civil malicious-prosecution claim and does not qualify.
+const CRIMINAL_PROSE =
+  /\b(jury convicted|was convicted|convicted him|convicted her|imposed a sentence|sentenced (?:him|her|the defendant)|returned an indictment|pleaded guilty|guilty plea)\b/i;
 const districts = readdirSync(ROOT).filter(d => existsSync(join(ROOT, d, 'judges')));
 const canonical = new Map();
 
@@ -54,6 +67,31 @@ for (const d of districts) {
   for (const o of ops) {
     const id = o.id;
     for (const k of Object.keys(o)) if (FORBIDDEN.test(k)) err.push(`${id}: forbidden aggregate field '${k}'`);
+
+    // Criminal subject matter is out of scope. The reader is a civil defendant
+    // newly served and not yet represented; a criminal docket tells them
+    // nothing, and selection among criminal outcomes on a page carrying an
+    // attorney-advertising banner reads as a verdict on the judge however
+    // factually each line is written.
+    //
+    // The line is subject matter, not docket type, so a habeas petition, a
+    // § 2255 motion and a coram nobis petition are excluded on their substance
+    // although each carries a civil docket number.
+    if (CRIMINAL_SUBJECTS.has(o.subject_primary))
+      err.push(`${id}: subject '${o.subject_primary}' is criminal — out of scope`);
+    for (const t of o.subject_secondary ?? [])
+      if (CRIMINAL_SUBJECTS.has(t)) err.push(`${id}: secondary subject '${t}' is criminal — out of scope`);
+    if (/-cr-/.test(o.district_docket ?? ''))
+      err.push(`${id}: district docket '${o.district_docket}' is a criminal docket — out of scope`);
+
+    // Prose only warns. United States v. Smith was tagged evidence-and-sanctions
+    // with a jury conviction underneath, so the tags alone do not catch
+    // everything; but Elfar v. Township of Holmdel is a civil-rights plaintiff
+    // pleading malicious prosecution under the Tort Claims Act, and a rule that
+    // failed on the word "prosecution" would delete it. A human reads these.
+    if (CRIMINAL_PROSE.test(o.headnote_district_ruling ?? ''))
+      warn.push(`${id}: headnote reads as a criminal prosecution while its subject is ` +
+                `'${o.subject_primary}' — confirm it is civil in substance`);
 
     // identity: caption alone is not a key on this corpus, and the docket that
     // identifies a district decision is the district court's, never the appeal's
