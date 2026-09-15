@@ -18,6 +18,7 @@ specification; this file is the operating summary.
     npm run build         # gates, then astro build; exit 1 blocks the deploy
     npm run resolve-links -- --district=dnj    # needs COURTLISTENER_TOKEN
     npm run reconcile -- --district=dnj --held # same
+    npm run ingest -- --district=dnj           # same; proposes the recent tier
     # Both read .env via --env-file-if-exists. Calling node directly does not:
     # Node ignores .env unless told, and the run falls back to the 5/min throttle.
     node scripts/check-links.mjs                    # needs open network access
@@ -177,10 +178,23 @@ would a reader infer a tendency from this selection?
 no date cutoff. All 95 current records are this tier.
 
 `tier: "recent"` is the matter-relevant tier: subject tag on the intake list,
-inside the lookback window, link resolves. Three gates, no scoring. **This tier
-does not exist yet and it is what the mail campaign actually needs.** Do not run
+inside the lookback window, link resolves. Three gates, no scoring. Do not run
 matter-relevant candidates through the significance rubric; it will reject
 exactly the ordinary trade-secrets TRO the recipient wants to see.
+
+`scripts/ingest-courtlistener.mjs` proposes for this tier. Search terms per
+subject live in `taxonomy.json` so they can be tuned without touching code.
+
+Why this tier matters more than the significant one. Of the 50 published
+entries, ten are both recent and on an intake-list subject, and seven intake
+subjects — trade secrets, restrictive covenants, copyright, business torts,
+consumer fraud, franchise, securities — have no entry at all. The significant
+tier cannot fix that: it is a career screen, and a career-significant decision
+is one that got appealed, which is why the district-decision rule emptied
+fifteen District Judge pages. A recent Rule 12 ruling was never appealed, so
+there is no appellate opinion to mistake for it and it sits at the district
+level by construction. This tier serves the reader and refills those pages in
+the same pass.
 
 Lookback windows and caps live in `policy.json`. Render the governing window as
 a line under each section heading so the reader can calibrate.

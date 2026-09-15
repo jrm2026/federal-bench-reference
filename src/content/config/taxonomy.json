@@ -139,5 +139,20 @@
     "subject-matter-jurisdiction-removal": "Subject-matter jurisdiction and removal",
     "summary-judgment": "Summary judgment",
     "venue-transfer": "Venue and transfer"
+  },
+  "search_terms": {
+    "trade-secrets": "\"trade secret\" OR \"Defend Trade Secrets Act\" OR \"misappropriation of trade secrets\"",
+    "restrictive-covenants": "\"restrictive covenant\" OR \"non-compete\" OR \"noncompetition agreement\" OR \"non-solicitation\"",
+    "trademark-unfair-competition": "\"Lanham Act\" OR \"likelihood of confusion\" OR \"unfair competition\" OR \"trademark infringement\"",
+    "copyright": "\"Copyright Act\" OR \"copyright infringement\" OR \"substantial similarity\"",
+    "commercial-contract": "\"breach of contract\" OR \"breach of the implied covenant\" OR \"commercial contract\"",
+    "business-torts": "\"tortious interference\" OR \"breach of fiduciary duty\" OR \"unjust enrichment\"",
+    "closely-held-fiduciary": "\"oppressed minority\" OR \"minority shareholder\" OR \"LLC operating agreement\" OR \"member oppression\"",
+    "franchise-distribution": "\"New Jersey Franchise Practices Act\" OR \"franchise agreement\" OR \"distributorship\"",
+    "securities": "\"Securities Exchange Act\" OR \"Rule 10b-5\" OR \"securities fraud\"",
+    "consumer-fraud": "\"Consumer Fraud Act\" OR \"ascertainable loss\" OR \"consumer fraud\"",
+    "employment": "\"Title VII\" OR \"New Jersey Law Against Discrimination\" OR \"wrongful termination\"",
+    "insurance-coverage": "\"duty to defend\" OR \"insurance coverage\" OR \"declaratory judgment\" AND policy",
+    "data-privacy-cybersecurity": "\"data breach\" OR \"Video Privacy Protection Act\" OR \"personally identifiable information\""
   }
 }

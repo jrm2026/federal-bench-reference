@@ -63,8 +63,8 @@ for (const d of districts) {
 
     // An entry belongs on a judge's page only when the district court's own
     // decision is available. An appellate opinion shows what the circuit did.
-    if (o.tier === 'significant' && o.link_level !== 'district')
-      err.push(`${id}: significant tier with link_level '${o.link_level}' — no district-court decision`);
+    if (o.link_level !== 'district')
+      err.push(`${id}: link_level '${o.link_level}' — no district-court decision available`);
     // Who decided is not a matter of inference. An entry may carry a judge's
     // name only when a source that names the author was actually read.
     // opinion_text means "the document this entry links to names its author".
@@ -74,12 +74,12 @@ for (const d of districts) {
     if (o.authorship_source === 'opinion_text' && o.link_level !== 'district')
       err.push(`${id}: authorship_source 'opinion_text' but link_level is '${o.link_level}' — ` +
                `the linked document is the appeal, not the decision`);
-    if (o.tier === 'significant' && o.authorship_source === 'unverified')
+    if (o.authorship_source === 'unverified')
       err.push(`${id}: authorship unverified — no signature line or cover page read`);
     if (o.authored_by && o.authorship_source !== 'unverified' &&
         !o.authored_by.split(/\s+/).some((w) => w.length > 3 && o.judge_name.includes(w)))
       err.push(`${id}: signed by '${o.authored_by}' but filed under ${o.judge_name}`);
-    if (o.tier === 'significant' && !o.district_docket)
+    if (!o.district_docket)
       warn.push(`${id}: no district docket recorded${o.appellate_docket ? ` (appellate docket ${o.appellate_docket} is on the record)` : ''}`);
 
     if (!SUBJ.has(o.subject_primary)) err.push(`${id}: subject '${o.subject_primary}' not in vocabulary`);
