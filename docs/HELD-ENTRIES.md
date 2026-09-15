@@ -3,8 +3,8 @@
 Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
 re-run it. An entry belongs on a judge's page only when the district court's
 own decision is available; an appellate opinion shows what the circuit did,
-not what the judge did. 7 entries failed that test and sit in
-`review/pending/dnj-no-district-decision/`, which does not render. 76 remain published.
+not what the judge did. 6 entries failed that test and sit in
+`review/pending/dnj-no-district-decision/`, which does not render. 77 remain published.
 
 Every held entry came from a District Judge. No magistrate judge lost one.
 The significant tier was scored on career significance, and a district
@@ -20,13 +20,13 @@ directory's README says where the line falls and which look-alikes stay.
 
 | | Count | What it means |
 |---|---|---|
-| **A** | 4 | A district docket is on the record. A district link resolves from it. |
+| **A** | 3 | A district docket is on the record. A district link resolves from it. |
 | **B** | 1 | The docket on the record is the Third Circuit’s. The district docket is missing. |
 | **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
 | **D** | 1 | The record carries only an appellate citation. As written, this entry is the appeal. |
 | **E** | 1 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-5 of the 7 are recoverable with a lookup.
+4 of the 6 are recoverable with a lookup.
 2 need research or should be dropped.
 
 ## What the docket actually holds
@@ -37,7 +37,7 @@ disagree the verdict governs.
 
 | | Count | What it means |
 |---|---|---|
-| `ok` | 2 | a signed district decision by this judge, PDF held |
+| `ok` | 1 | a signed district decision by this judge, PDF held |
 | `empty` | 2 | no signed orders indexed |
 
 ---
@@ -45,16 +45,13 @@ disagree the verdict governs.
 # District Judges
 
 ## Madeline Cox Arleo
-kept 0 · held 3
+kept 0 · held 2
 
 - **Kept: none.** The page reads "Developing record."
 - **Held (E).** Antar v. Borgata Hotel Casino & Spa, LLC, 2024 WL 1672280 (D.N.J. Jan. 31, 2024)  
   No docket and no reporter citation. Nothing on the record to resolve from.
 - **Held (B).** In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)  
   The docket on the record is the Third Circuit’s. The district docket is missing.
-- **Held (A).** · `ok` United States v. City of Newark, No. 2:16-cv-01731 — Newark Police consent-decree administration and termination  
-  A district docket is on the record. A district link resolves from it.
-  20 signed orders by this judge: ECF 443 (2025-11-19), ECF 434 (2025-09-03), ECF 431 (2025-08-05), ECF 429 (2025-07-09), ECF 428 (2025-07-01), ECF 423 (2025-06-17), ECF 424 (2025-06-17), ECF 425 (2025-06-17), ECF 410 (2025-04-02), ECF 411 (2025-04-02), ECF 408 (2025-04-02), ECF 409 (2025-04-02), ECF 412 (2025-03-31), ECF 400 (2025-02-05), ECF 398 (2025-02-05), ECF 399 (2025-02-05), ECF 387 (2024-11-22), ECF 388 (2024-11-22), ECF 389 (2024-11-22), ECF 378 (2024-08-30). Pick one.
 
 ## Renée Marie Bumb
 kept 2 · held 1
@@ -133,7 +130,7 @@ kept 2 · held 0
 
 - **Kept.** Hassan v. City of New York, No. 2:12-cv-03401, ECF No. 40 (D.N.J. Feb. 20, 2014), rev’d, 804 F.3d 277 (3d Cir. 2015)  
   `www.courtlistener.com`
-- **Kept.** Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422  
+- **Kept.** Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422, ECF No. 188 (D.N.J. July 29, 2024), rev’d, No. 24-2588 (3d Cir. Sept. 8, 2025)  
   `www.courtlistener.com`
 
 ## Brian R. Martinotti
@@ -191,7 +188,7 @@ kept 2 · held 0
 ## Peter G. Sheridan
 kept 3 · held 0
 
-- **Kept.** Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin, 742 F. Supp. 3d 421 (D.N.J. 2024)  
+- **Kept.** Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin, 742 F. Supp. 3d 421 (D.N.J. 2024), aff’d in part, rev’d in part sub nom. Ass’n of New Jersey Rifle & Pistol Clubs I v. Attorney General New Jersey, No. 24-2415 (3d Cir. July 17, 2026) (en banc)  
   `www.courtlistener.com`
 - **Kept.** Oakwood Laboratories LLC v. Thanoo, No. 3:17-cv-05090, ECF No. 83 (D.N.J. Oct. 23, 2019), vacated, 999 F.3d 892 (3d Cir. 2021)  
   `www.courtlistener.com`
@@ -199,11 +196,13 @@ kept 3 · held 0
   `www.courtlistener.com`
 
 ## Michael A. Shipp
-kept 3 · held 0
+kept 4 · held 0
 
 - **Kept.** Government Employees Insurance Co. v. Precision Pain & Spine Institute LLC, No. 3:21-cv-16255, ECF No. 46 (D.N.J. June 30, 2022), rev’d, 98 F.4th 463 (3d Cir. 2024)  
   `www.courtlistener.com`
-- **Kept.** NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), and 61 F. Supp. 3d 488 (D.N.J. 2014); reversed in Murphy v. NCAA, 584 U.S. 453 (2018)  
+- **Kept.** NCAA v. Governor of New Jersey, 61 F. Supp. 3d 488 (D.N.J. 2014), aff’d, 832 F.3d 389 (3d Cir. 2016) (en banc), rev’d sub nom. Murphy v. NCAA, 584 U.S. 453 (2018)  
+  `www.courtlistener.com`
+- **Kept.** NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), aff’d sub nom. Nat’l Collegiate Athletic Ass’n v. Christie, 730 F.3d 208 (3d Cir. 2013)  
   `www.courtlistener.com`
 - **Kept.** Veterans Guardian VA Claim Consulting LLC v. Platkin, No. 3:23-cv-20660, ECF No. 37 (D.N.J. Jan. 5, 2024), vacated, No. 24-1097 (3d Cir. Apr. 1, 2025)  
   `www.courtlistener.com`
@@ -225,7 +224,7 @@ kept 1 · held 0
 ## Karen M. Williams
 kept 2 · held 0
 
-- **Kept.** Cornish-Adebiyi v. Caesars Entertainment, Inc., 2024 WL 4356188 (D.N.J. Sept. 30, 2024)  
+- **Kept.** Cornish-Adebiyi v. Caesars Entertainment, Inc., No. 1:23-cv-02536, ECF No. 139 (D.N.J. Sept. 30, 2024), rev’d, No. 24-3006 (3d Cir. July 29, 2026)  
   `www.courtlistener.com`
 - **Kept.** Williams v. Township of Cherry Hill, No. 1:26-cv-00893 (D.N.J. July 27, 2026)  
   `law.justia.com`
