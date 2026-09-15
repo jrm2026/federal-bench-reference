@@ -78,25 +78,25 @@ kept 2 · held 0
 
 - **Kept.** ADP, LLC v. Mork, No. 2:17-cv-04613; appeal consolidated in ADP, LLC v. Rafferty, 923 F.3d 113 (3d Cir. 2019)  
   `www.courtlistener.com`
-- **Kept.** In re Horizon Healthcare Services Inc. Data Breach Litigation, 846 F.3d 625 (3d Cir. 2017)  
+- **Kept.** In re Horizon Healthcare Services Inc. Data Breach Litigation, No. 2:13-cv-07418, ECF No. 47 (D.N.J. Mar. 31, 2015), vacated, 846 F.3d 625 (3d Cir. 2017)  
   `www.courtlistener.com`
 
 ## Stanley R. Chesler
 kept 4 · held 0
 
-- **Kept.** Borough of Longport v. Netflix, Inc., No. 2:21-cv-15303; aff’d, No. 22-2139 (3d Cir. Feb. 29, 2024)  
+- **Kept.** Borough of Longport v. Netflix, Inc., No. 2:21-cv-15303, ECF No. 52 (D.N.J. May 20, 2022), aff’d, No. 22-2139 (3d Cir. Feb. 29, 2024)  
   `www.courtlistener.com`
-- **Kept.** In re Nickelodeon Consumer Privacy Litigation, 827 F.3d 262 (3d Cir. 2016)  
+- **Kept.** In re Nickelodeon Consumer Privacy Litigation, No. 2:12-cv-07829, ECF No. 84 (D.N.J. Jan. 20, 2015), aff’d in part, rev’d in part, 827 F.3d 262 (3d Cir. 2016)  
   `www.courtlistener.com`
-- **Kept.** Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC, No. 2:23-cv-20964; aff’d, No. 2024-1936 (Fed. Cir. Dec. 20, 2024)  
+- **Kept.** Teva Branded Pharmaceutical Products R&D, Inc. v. Amneal Pharmaceuticals of New York, LLC, No. 2:23-cv-20964, ECF No. 88 (D.N.J. June 10, 2024), aff’d, No. 2024-1936 (Fed. Cir. Dec. 20, 2024)  
   `www.courtlistener.com`
-- **Kept.** Williams v. BASF Catalysts LLC, No. 2:11-cv-01754; aff'd in part and rev'd in part, 765 F.3d 306 (3d Cir. 2014)  
+- **Kept.** Williams v. BASF Catalysts LLC, No. 2:11-cv-01754, ECF No. 129 (D.N.J. Dec. 12, 2012), aff’d in part, rev’d in part, 765 F.3d 306 (3d Cir. 2014)  
   `www.courtlistener.com`
 
 ## Mary Little Cooper
 kept 1 · held 1
 
-- **Kept.** Lightner v. 1621 Route 22 West Operating Co., Nos. 3:11-cv-02007, 3:11-cv-03960 & 3:11-cv-04072; appeal dismissed, Nos. 12-2122 & 12-2726 (3d Cir. Sept. 4, 2013)  
+- **Kept.** Lightner v. 1621 Route 22 West Operating Co., Nos. 3:11-cv-02007, 3:11-cv-03960 & 3:11-cv-04072, ECF No. 131 (D.N.J. Apr. 16, 2012), vacated, Nos. 12-2122 & 12-2726 (3d Cir. Sept. 4, 2013)  
   `www.courtlistener.com`
 - **Held (D).** Coleman v. Home Depot, Inc., 306 F.3d 1333 (3d Cir. 2002)  
   The record carries only an appellate citation. As written, this entry is the appeal.
@@ -113,25 +113,25 @@ kept 1 · held 1
 ## Katharine S. Hayden
 kept 1 · held 0
 
-- **Kept.** Honda Lease Trust v. Malanga’s Automotive, No. 24-2369 (3d Cir. Sept. 15, 2025)  
+- **Kept.** Honda Lease Trust v. Malanga’s Automotive, No. 2:22-cv-04862, ECF No. 35 (D.N.J. June 28, 2024), aff’d in part, rev’d in part, No. 24-2369 (3d Cir. Sept. 15, 2025)  
   `www.courtlistener.com`
 
 ## Edward S. Kiel
 kept 1 · held 0
 
-- **Kept.** KalshiEX LLC v. Flaherty, No. 1:25-cv-02152; aff’d, No. 25-1922 (3d Cir. Apr. 6, 2026)  
+- **Kept.** KalshiEX LLC v. Flaherty, No. 1:25-cv-02152, ECF No. 21 (D.N.J. Apr. 28, 2025), aff’d, No. 25-1922 (3d Cir. Apr. 6, 2026)  
   `www.courtlistener.com`
 
 ## Robert Kirsch
 kept 1 · held 0
 
-- **Kept.** New Jersey v. Dow Chemical Co., No. 3:23-cv-02449; aff’d, No. 24-1753 (3d Cir. June 11, 2025)  
+- **Kept.** New Jersey v. Dow Chemical Co., No. 3:23-cv-02449, ECF No. 86 (D.N.J. Apr. 23, 2024), aff’d, No. 24-1753 (3d Cir. June 11, 2025)  
   `www.courtlistener.com`
 
 ## William J. Martini
 kept 2 · held 0
 
-- **Kept.** Hassan v. City of New York, 804 F.3d 277 (3d Cir. 2015)  
+- **Kept.** Hassan v. City of New York, No. 2:12-cv-03401, ECF No. 40 (D.N.J. Feb. 20, 2014), rev’d, 804 F.3d 277 (3d Cir. 2015)  
   `www.courtlistener.com`
 - **Kept.** Jorjani v. New Jersey Institute of Technology, Nos. 2:18-cv-11693 & 2:20-cv-01422  
   `www.courtlistener.com`
@@ -139,23 +139,23 @@ kept 2 · held 0
 ## Brian R. Martinotti
 kept 2 · held 0
 
-- **Kept.** Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25, No. 24-1298 (3d Cir. Aug. 1, 2025)  
+- **Kept.** Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25, No. 2:21-cv-05285, ECF No. 76 (D.N.J. Jan. 19, 2024), aff’d, No. 24-1298 (3d Cir. Aug. 1, 2025)  
   `www.courtlistener.com`
-- **Kept.** Government Employees Insurance Co. v. Caring Pain Management, P.C., No. 2:22-cv-05017; rev'd, 98 F.4th 463 (3d Cir. 2024)  
+- **Kept.** Government Employees Insurance Co. v. Caring Pain Management, P.C., No. 2:22-cv-05017, ECF No. 38 (D.N.J. May 31, 2023), rev’d, 98 F.4th 463 (3d Cir. 2024)  
   `www.courtlistener.com`
 
 ## Kevin McNulty
 kept 2 · held 0
 
-- **Kept.** J.M. v. Summit City Board of Education, No. 20-3391 (3d Cir. July 1, 2022)  
+- **Kept.** J.M. v. Summit City Board of Education, No. 2:19-cv-00159, ECF No. 84 (D.N.J. Oct. 27, 2020), aff’d, No. 20-3391 (3d Cir. July 1, 2022)  
   `www.courtlistener.com`
-- **Kept.** Matrix Distributors, Inc. v. National Association of Boards of Pharmacy, No. 2:18-cv-17462; appeal, No. 20-3638 (3d Cir. May 19, 2022)  
+- **Kept.** Matrix Distributors, Inc. v. National Association of Boards of Pharmacy, No. 2:18-cv-17462, ECF No. 184 (D.N.J. Dec. 4, 2020), aff’d in part, rev’d in part, No. 20-3638 (3d Cir. May 19, 2022)  
   `www.courtlistener.com`
 
 ## Julien X. Neals
 kept 1 · held 0
 
-- **Kept.** Golden Fortune Import & Export Corp. v. Mei-Xin Ltd., No. 2:22-cv-01369; rev'd, Nos. 22-1710 & 22-1885 (3d Cir. Aug. 5, 2022)  
+- **Kept.** Golden Fortune Import & Export Corp. v. Mei-Xin Ltd., No. 2:22-cv-01369, ECF No. 18 (D.N.J. Apr. 4, 2022), rev’d, Nos. 22-1710 & 22-1885 (3d Cir. Aug. 5, 2022)  
   `www.courtlistener.com`
 
 ## Christine P. O’Hearn
@@ -169,13 +169,13 @@ kept 2 · held 0
 ## Evelyn Padin
 kept 1 · held 0
 
-- **Kept.** Handal v. Innovative Industrial Properties, Inc., No. 2:22-cv-02359; aff’d, No. 24-2829 (3d Cir. Oct. 15, 2025)  
+- **Kept.** Handal v. Innovative Industrial Properties, Inc., No. 2:22-cv-02359, ECF No. 67 (D.N.J. Sept. 25, 2024), aff’d, No. 24-2829 (3d Cir. Oct. 15, 2025)  
   `www.courtlistener.com`
 
 ## Zahid N. Quraishi
 kept 2 · held 0
 
-- **Kept.** Kim v. Hanlon, No. 3:24-cv-01098; aff’d, No. 24-1594 (3d Cir. Apr. 17, 2024)  
+- **Kept.** Kim v. Hanlon, No. 3:24-cv-01098, ECF No. 318 (D.N.J. June 2, 2025), aff’d, No. 24-1594 (3d Cir. Apr. 17, 2024)  
   `www.courtlistener.com`
 - **Kept.** National Shooting Sports Foundation v. Platkin, No. 3:22-cv-06646 (D.N.J. July 10, 2025), rev'd, No. 25-2546 (3d Cir. Sept. 8, 2026)  
   `cases.justia.com`
@@ -193,19 +193,19 @@ kept 3 · held 0
 
 - **Kept.** Association of New Jersey Rifle & Pistol Clubs, Inc. v. Platkin, 742 F. Supp. 3d 421 (D.N.J. 2024)  
   `www.courtlistener.com`
-- **Kept.** Oakwood Laboratories LLC v. Thanoo, 999 F.3d 892 (3d Cir. 2021)  
+- **Kept.** Oakwood Laboratories LLC v. Thanoo, No. 3:17-cv-05090, ECF No. 83 (D.N.J. Oct. 23, 2019), vacated, 999 F.3d 892 (3d Cir. 2021)  
   `www.courtlistener.com`
-- **Kept.** Sovereign Bank v. REMI Capital, Inc., No. 21-2289 (3d Cir. Sept. 15, 2022)  
+- **Kept.** Sovereign Bank v. REMI Capital, Inc., No. 3:09-cv-01580, ECF No. 91 (D.N.J. Sept. 24, 2018), aff’d, No. 21-2289 (3d Cir. Sept. 15, 2022)  
   `www.courtlistener.com`
 
 ## Michael A. Shipp
 kept 3 · held 0
 
-- **Kept.** Government Employees Insurance Co. v. Precision Pain & Spine Institute LLC, No. 3:21-cv-16255; rev'd, 98 F.4th 463 (3d Cir. 2024)  
+- **Kept.** Government Employees Insurance Co. v. Precision Pain & Spine Institute LLC, No. 3:21-cv-16255, ECF No. 46 (D.N.J. June 30, 2022), rev’d, 98 F.4th 463 (3d Cir. 2024)  
   `www.courtlistener.com`
 - **Kept.** NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), and 61 F. Supp. 3d 488 (D.N.J. 2014); reversed in Murphy v. NCAA, 584 U.S. 453 (2018)  
   `www.courtlistener.com`
-- **Kept.** Veterans Guardian VA Claim Consulting LLC v. Platkin, No. 24-1097 (3d Cir. Apr. 1, 2025)  
+- **Kept.** Veterans Guardian VA Claim Consulting LLC v. Platkin, No. 3:23-cv-20660, ECF No. 37 (D.N.J. Jan. 5, 2024), vacated, No. 24-1097 (3d Cir. Apr. 1, 2025)  
   `www.courtlistener.com`
 
 ## Anne Elise Thompson
@@ -219,7 +219,7 @@ kept 2 · held 0
 ## Susan D. Wigenton
 kept 1 · held 0
 
-- **Kept.** Huertas v. Bayer US LLC, No. 23-2178 (3d Cir. Nov. 7, 2024)  
+- **Kept.** Huertas v. Bayer US LLC, No. 2:21-cv-20021, ECF No. 48 (D.N.J. May 23, 2023), rev’d in part, No. 23-2178 (3d Cir. Nov. 7, 2024)  
   `www.courtlistener.com`
 
 ## Karen M. Williams
