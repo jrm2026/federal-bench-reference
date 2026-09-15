@@ -18,8 +18,16 @@
   "qualification_rationale": "The case addresses the intersection of § 9(a) collective-bargaining relationships, construction-industry labor agreements and the NLRB’s one-employee-unit doctrine—an issue on which the appellate panel divided in part.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the attempted repudiation was ineffective and that the CBA remained in effect.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241298p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/59734632/76/brian-trematore-plumbing-heating-inc-v-sheet-metal-workers-local-union/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 76 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/59734632/76/brian-trematore-plumbing-heating-inc-v-sheet-metal-workers-local-union/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.464706/gov.uscourts.njd.464706.76.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/241298p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Brian R. Martinotti",
+  "decision_ecf_number": "76",
+  "decision_date": "2024-01-19"
 }

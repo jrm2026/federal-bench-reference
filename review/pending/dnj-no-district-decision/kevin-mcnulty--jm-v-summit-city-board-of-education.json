@@ -18,8 +18,16 @@
   "qualification_rationale": "The precedential appeal gives detailed guidance on when observable behavioral and academic difficulties trigger a school district’s duty to evaluate a child under the IDEA and Section 504, a recurring issue in special-education litigation.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, sustaining the district court’s legal and factual conclusions and its treatment of the administrative record.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/203391p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/14638129/84/jm-v-summit-city-board-of-education/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 84 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/14638129/84/jm-v-summit-city-board-of-education/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.390969/gov.uscourts.njd.390969.84.0_3.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/203391p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "appellate_cover_page",
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
   "authored_by": "Kevin McNulty",
-  "decision_ecf_number": null,
-  "decision_date": null
+  "decision_ecf_number": "84",
+  "decision_date": "2020-10-27"
 }

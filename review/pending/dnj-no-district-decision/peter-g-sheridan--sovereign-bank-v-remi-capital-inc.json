@@ -18,8 +18,16 @@
   "qualification_rationale": "The precedential decision gives practical guidance on drafting settlements and consent judgments and on the limits of a district court’s authority to enforce obligations that the parties did not clearly incorporate into the judgment.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, emphasizing that parties must state their bargain with precision and that a court may not divine and enforce an otherwise silent term.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/212289p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/7427722/91/sovereign-bank-v-remi-capital-inc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 91 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/7427722/91/sovereign-bank-v-remi-capital-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.363041/gov.uscourts.njd.363041.91.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/212289p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Peter G. Sheridan",
+  "decision_ecf_number": "91",
+  "decision_date": "2018-09-24"
 }

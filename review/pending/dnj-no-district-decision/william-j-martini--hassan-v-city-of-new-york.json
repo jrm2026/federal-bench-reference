@@ -18,8 +18,16 @@
   "qualification_rationale": "The case arose from nationally reported surveillance of Muslim communities and produced a major precedential equal-protection and standing opinion concerning government classification on the basis of religion.",
   "appellate_posture_note": "The Third Circuit reversed, holding that the plaintiffs plausibly alleged injury, discriminatory purpose and intentional discrimination, and permitted the constitutional claims to proceed.",
   "headnote_status": "published",
-  "public_url": "https://law.justia.com/cases/federal/appellate-courts/ca3/14-1688/14-1688-2016-02-02.html",
+  "public_url": "https://www.courtlistener.com/docket/4310716/40/hassan-v-the-city-of-new-york/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 40 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/4310716/40/hassan-v-the-city-of-new-york/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.275273.40.0.pdf"
+    },
     {
       "anchor": "Third Circuit opinion",
       "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/14-1688/14-1688-2016-02-02.html"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "William J. Martini",
+  "decision_ecf_number": "40",
+  "decision_date": "2014-02-20"
 }

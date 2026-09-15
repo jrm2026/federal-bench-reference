@@ -20,8 +20,16 @@
   "qualification_rationale": "The case tested the New Jersey Franchise Practices Act's community-of-interest and gross-sales requirements and the proof needed to convert business loss into irreparable harm.",
   "appellate_posture_note": "The Third Circuit reversed in a nonprecedential opinion, finding neither likely NJFPA coverage nor irreparable harm. The nonprecedential status limits the score.",
   "headnote_status": "published",
-  "public_url": "https://law.justia.com/cases/federal/appellate-courts/ca3/22-1710/22-1710-2022-08-18.html",
+  "public_url": "https://www.courtlistener.com/docket/63157444/18/golden-fortune-import-export-corporation-v-mei-xin-limited/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 18 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/63157444/18/golden-fortune-import-export-corporation-v-mei-xin-limited/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.492508/gov.uscourts.njd.492508.18.0.pdf"
+    },
     {
       "anchor": "Third Circuit opinion",
       "url": "https://law.justia.com/cases/federal/appellate-courts/ca3/22-1710/22-1710-2022-08-18.html"
@@ -65,9 +73,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Julien Xavier Neals",
+  "decision_ecf_number": "18",
+  "decision_date": "2022-04-04"
 }

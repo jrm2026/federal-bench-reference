@@ -18,8 +18,16 @@
   "qualification_rationale": "The case resolved a novel and economically significant attempt to apply legacy cable-franchise statutes to internet streaming services and to let municipalities enforce the statute directly.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the Act does not imply a municipal private right of action. Because that resolved the case, the court did not need to decide whether Netflix or Hulu is substantively a cable television company under the Act.",
   "headnote_status": "published",
-  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-22-02139/pdf/USCOURTS-ca3-22-02139-0.pdf",
+  "public_url": "https://www.courtlistener.com/docket/60182097/52/borough-of-longport-v-netflix-inc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 52 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/60182097/52/borough-of-longport-v-netflix-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.480108/gov.uscourts.njd.480108.52.0_2.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-22-02139/pdf/USCOURTS-ca3-22-02139-0.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Stanley R. Chesler",
+  "decision_ecf_number": "52",
+  "decision_date": "2022-05-20"
 }

@@ -18,8 +18,16 @@
   "qualification_rationale": "The case became a substantial Third Circuit authority on fraud, fraudulent concealment, the New Jersey litigation privilege, spoliation injury, Rooker-Feldman, and the limits of prospective relief aimed at prior state litigation.",
   "appellate_posture_note": "The Third Circuit reversed dismissal of the fraud and fraudulent-concealment claims, affirmed dismissal of the New Jersey RICO claim, and rejected relief directed at hypothetical future state proceedings.",
   "headnote_status": "published",
-  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-13-01089/pdf/USCOURTS-ca3-13-01089-0.pdf",
+  "public_url": "https://www.courtlistener.com/docket/4310336/129/williams-v-basf-catalysts-llc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 129 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/4310336/129/williams-v-basf-catalysts-llc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.256072.129.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca3-13-01089/pdf/USCOURTS-ca3-13-01089-0.pdf"
@@ -62,9 +70,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Stanley R. Chesler",
+  "decision_ecf_number": "129",
+  "decision_date": "2012-12-12"
 }

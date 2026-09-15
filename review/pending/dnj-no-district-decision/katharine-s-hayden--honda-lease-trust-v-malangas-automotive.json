@@ -18,8 +18,16 @@
   "qualification_rationale": "The case provides significant constitutional guidance for municipalities, towing companies, vehicle owners, and secured or leasing interests concerning notice and process when an impounded vehicle accrues storage charges.",
   "appellate_posture_note": "The Third Circuit affirmed in part and reversed in part in a precedential opinion. It held that the municipal policies violated procedural due process while rejecting the Fourth Amendment and takings claims.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/242369p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/64863298/35/honda-lease-trust-v-malangas-automotive/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 35 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/64863298/35/honda-lease-trust-v-malangas-automotive/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.499823/gov.uscourts.njd.499823.35.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/242369p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Katharine S. Hayden",
+  "decision_ecf_number": "35",
+  "decision_date": "2024-06-28"
 }

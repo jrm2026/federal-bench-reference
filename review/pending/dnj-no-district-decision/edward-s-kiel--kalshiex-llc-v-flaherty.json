@@ -18,8 +18,16 @@
   "qualification_rationale": "The case sits at the new boundary between federally regulated prediction markets and state sports-wagering regimes, with direct consequences for federalism, derivatives regulation and online betting.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that Kalshi showed a reasonable likelihood that the Commodity Exchange Act’s exclusive-jurisdiction structure preempts otherwise applicable New Jersey gambling law.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/251922p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/69815094/21/kalshiex-llc-v-flaherty/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 21 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/69815094/21/kalshiex-llc-v-flaherty/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.564738/gov.uscourts.njd.564738.21.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/251922p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Edward S. Kiel",
+  "decision_ecf_number": "21",
+  "decision_date": "2025-04-28"
 }

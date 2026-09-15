@@ -18,8 +18,16 @@
   "qualification_rationale": "The decision disrupted a ballot structure unique to New Jersey, drew national and statewide political coverage, and addressed severe burdens on candidates’ and voters’ First and Fourteenth Amendment rights.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, calling the district opinion thorough and carefully reasoned and finding no abuse of discretion. The preliminary injunction did not itself finally adjudicate the entire underlying case.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241594p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/68282579/318/kim-v-hanlon/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 318 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/68282579/318/kim-v-hanlon/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.541006/gov.uscourts.njd.541006.250.0_1.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/241594p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Zahid N. Quraishi",
+  "decision_ecf_number": "318",
+  "decision_date": "2025-06-02"
 }

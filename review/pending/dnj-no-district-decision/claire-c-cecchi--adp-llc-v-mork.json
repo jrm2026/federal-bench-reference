@@ -18,8 +18,16 @@
   "qualification_rationale": "The litigation became an important New Jersey restrictive-covenant authority concerning legitimate business interests, employee hardship and judicial narrowing of overbroad covenants.",
   "appellate_posture_note": "The Third Circuit vacated and remanded in a precedential opinion. It held that the covenants were not unenforceable in their entirety, recognized ADP’s legitimate interests, and directed the district courts to consider blue-penciling their scope.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/181796p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/6501529/43/adp-llc-v-mork/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 43 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/6501529/43/adp-llc-v-mork/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.350664/gov.uscourts.njd.350664.43.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/181796p.pdf"
@@ -63,7 +71,7 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
+  "link_level": "district",
   "authorship_source": "docket_entry_signature",
   "authored_by": "Claire C. Cecchi",
   "decision_ecf_number": "43",

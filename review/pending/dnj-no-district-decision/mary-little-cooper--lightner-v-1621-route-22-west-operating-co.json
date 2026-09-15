@@ -22,8 +22,16 @@
   "qualification_rationale": "The order had concrete labor-relations consequences and illustrates fact-intensive § 10(j) administration. It is supplemental because later NLRB action mooted the appeal and prevented lasting precedential effect.",
   "appellate_posture_note": "The Third Circuit dismissed the cross-appeals as moot and vacated the district opinion and order under Munsingwear principles after the NLRB decided the underlying administrative case.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/122122p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/5801395/131/lightner-v-1621-route-22-west-operating-company-llc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 131 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5801395/131/lightner-v-1621-route-22-west-operating-company-llc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.256765/gov.uscourts.njd.256765.131.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/122122p.pdf"
@@ -65,9 +73,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Mary L. Cooper",
+  "decision_ecf_number": "131",
+  "decision_date": "2012-04-16"
 }

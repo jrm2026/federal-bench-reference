@@ -18,8 +18,16 @@
   "qualification_rationale": "The case is a leading modern test of how traditional Sherman Act pleading rules apply to competitors’ use of a shared pricing algorithm and exchange of nonpublic commercial data.",
   "appellate_posture_note": "The Third Circuit reversed and remanded in a precedential opinion on July 29, 2026. Taking the allegations as true, it held that the complaint plausibly alleged a horizontal agreement facilitated by the shared algorithm; it did not decide ultimate liability.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/243006p.pdf",
+  "public_url": "https://www.courtlistener.com/docket/67356054/139/cornish-adebiyi-v-caesars-entertainment-inc/",
   "links": [
+    {
+      "anchor": "District opinion, ECF 139 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/67356054/139/cornish-adebiyi-v-caesars-entertainment-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.512272/gov.uscourts.njd.512272.139.0.pdf"
+    },
     {
       "anchor": "Third Circuit precedential opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/243006p.pdf"
@@ -59,9 +67,9 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Karen M. Williams",
+  "decision_ecf_number": "139",
+  "decision_date": "2024-09-30"
 }
