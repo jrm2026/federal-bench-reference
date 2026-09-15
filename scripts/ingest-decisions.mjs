@@ -172,7 +172,11 @@ function proposal(hit, judge, subject) {
 const judgeDir = join(ROOT, 'src', 'content', 'districts', DISTRICT, 'judges');
 let judges = readdirSync(judgeDir).map((f) => JSON.parse(readFileSync(join(judgeDir, f), 'utf8')));
 if (ONE_JUDGE) judges = judges.filter((j) => j.slug === ONE_JUDGE);
-judges = judges.filter((j) => j.render_section === 'current_bench');
+// Every judge on the roster, not just the current_bench section. Cooper,
+// Sheridan, McNulty and Thompson render under fjc_reconciliation and three of
+// the four have empty or near-empty pages — exactly the judges this tier exists
+// to serve. Filtering them out was silently excluding the need.
+// Judges with no page at all are excluded by having no record to begin with.
 
 const seen = existingKeys();
 const outDir = join(ROOT, 'review', 'pending', `${DISTRICT}-recent-${TODAY}`);

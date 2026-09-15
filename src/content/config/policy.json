@@ -8,5 +8,20 @@
     "discovery_scope_flag_before": "2015-12-01",
     "mail_link_preferred_years": 3
   },
-  "caps": { "significant_per_judge": 5, "recent_per_tag": 5, "subject_secondary_max": 2 }
+  "caps": {
+    "significant_per_judge": 5,
+    "recent_per_tag": 5,
+    "subject_secondary_max": 2
+  },
+  "thin_bench_rule": {
+    "problem": "A defendant assigned to a new or senior judge lands on a page with no decisions. Seventeen current-bench judges and two senior judges are in that state now.",
+    "fix": "The practice information block and the appearing-from-out-of-state material are the spine of every judge page, above the case list, not an addendum below it. They are complete for every judge on day one, they come from the court, and for this reader they may be the more useful content anyway.",
+    "never": "Do not pad a thin bench with off-taxonomy filler. An honest empty state beats a sentence that says nothing.",
+    "carried_from": "The rule was written into the prior taxonomy and left behind in the merge. Restored 15 September 2026."
+  },
+  "maintenance_bias": {
+    "rule": "Prefer settled opinions: decided, affirmed or unappealed, and more than two years old.",
+    "reason": "Every disturbed-posture entry costs a recurring status check under the appellate-currency gate, forever. A 2022 personal-jurisdiction ruling costs nothing to maintain. A case on a stayed mandate costs a check every month — ANJRPC is one, and its clock runs out in late October.",
+    "soft_cap_disturbed_entries": 12
+  }
 }
