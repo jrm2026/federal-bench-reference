@@ -193,6 +193,17 @@ is available.** An appellate opinion shows what the circuit did, not what the
 judge did. The gate fails any significant-tier entry whose `link_level` is not
 `district`.
 
+The test is whether a judge wrote something, not how the case ended. Entering a
+consent decree is ministerial: the parties write the terms and the court signs,
+so a docket that records only the entry and its administration holds nothing
+this reader can use. That is why *United States v. City of Newark* was dropped
+rather than held — nine years of orders, not one reasoned opinion among them.
+But where a court writes an opinion alongside the decree, examining its scope or
+adequacy, the power to enter and enforce it, an objection, or a motion to modify
+or terminate, that opinion is a decision and the entry qualifies like any other.
+The same distinction governs stipulated judgments and settlement approvals: ask
+what the judge explained, never what label the disposition carries.
+
 **Captions drift between the district court and the appeal.** *Bryman v. Murphy*
 on appeal is *Govatos v. Murphy* below. Resolve by docket, never by name.
 
