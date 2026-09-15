@@ -116,8 +116,15 @@ alone collides on this corpus — *United States v. Jackson* appears on two judg
 pages, *Veterans Guardian v. Platkin* on two more. A matcher keyed on caption
 will silently consume the wrong record. This has already happened once.
 
-Both collisions turn out to be one case before two judges, which is why the
-district docket is part of identity but does not by itself distinguish the
+A docket also carries more than one decision. *NCAA v. Governor of New Jersey*
+is 926 F. Supp. 2d 551 and 61 F. Supp. 3d 488, both Shipp, both on
+3:12-cv-04947 — the 2012 law and the 2014 partial repeal — and only the second
+was reversed in *Murphy*. One record said both and could say neither
+accurately, so identity now carries `decision_ecf_number` too: ECF 142 and ECF
+198 are different entries on one docket.
+
+Both caption collisions turn out to be one case before two judges, which is why
+the district docket is part of identity but does not by itself distinguish the
 entries. *Jackson* was tried and sentenced before Hayden, then reassigned to
 Wigenton for resentencing after three sentencing appeals: one criminal docket,
 two decisions, two pages, both correct. *Veterans Guardian* is 3:23-cv-20660 with

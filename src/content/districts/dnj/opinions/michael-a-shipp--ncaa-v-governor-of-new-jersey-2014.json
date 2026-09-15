@@ -1,32 +1,36 @@
 {
-  "id": "michael-a-shipp--ncaa-v-governor-of-new-jersey",
+  "id": "michael-a-shipp--ncaa-v-governor-of-new-jersey-2014",
   "district": "dnj",
   "judge_slug": "michael-a-shipp",
   "judge_name": "Michael A. Shipp",
   "judge_office": "district",
   "caption": "NCAA v. Governor of New Jersey",
-  "citation_line": "NCAA v. Governor of New Jersey, 926 F. Supp. 2d 551 (D.N.J. 2013), aff’d sub nom. Nat’l Collegiate Athletic Ass’n v. Christie, 730 F.3d 208 (3d Cir. 2013)",
+  "citation_line": "NCAA v. Governor of New Jersey, 61 F. Supp. 3d 488 (D.N.J. 2014), aff’d, 832 F.3d 389 (3d Cir. 2016) (en banc), rev’d sub nom. Murphy v. NCAA, 584 U.S. 453 (2018)",
   "district_docket": "3:12-cv-04947",
   "appellate_docket": null,
   "additional_dockets": [],
-  "reporter_cite": "926 F. Supp. 2d 551",
+  "reporter_cite": "61 F. Supp. 3d 488",
   "court": "D.N.J.",
   "tier": "significant",
   "document_type": "opinion",
   "rr_disposition": null,
-  "headnote_district_ruling": "Judge Shipp granted summary judgment and a permanent injunction against New Jersey’s 2012 sports-wagering law, holding that PASPA was a valid exercise of the commerce power and did not commandeer the State.",
+  "headnote_district_ruling": "Judge Shipp held that New Jersey’s 2014 partial repeal of its sports-wagering prohibitions authorized sports gambling within the meaning of PASPA, and enjoined it.",
   "qualification_rationale": "The litigation was nationally consequential: it determined whether states could legalize sports betting and produced a major Supreme Court federalism decision.",
-  "appellate_posture_note": "The Third Circuit affirmed in a divided precedential opinion, holding that PASPA imposed no affirmative command on the States and so did not offend the anti-commandeering rule. That reasoning was later abrogated by Murphy v. NCAA, 584 U.S. 453 (2018), which arose from the separate 2014 proceeding.",
+  "appellate_posture_note": "The en banc Third Circuit affirmed, holding that a selective repeal channelling wagering to particular operators and venues is an authorization. The Supreme Court reversed in Murphy, holding that PASPA’s prohibition on state authorization violated the anti-commandeering rule and that the offending provisions were not severable.",
   "headnote_status": "published",
-  "public_url": "https://www.courtlistener.com/docket/5811046/142/national-collegiate-athletic-association-v-christie/",
+  "public_url": "https://www.courtlistener.com/docket/5811046/198/national-collegiate-athletic-association-v-christie/",
   "links": [
     {
-      "anchor": "District opinion, ECF 142 (CourtListener)",
-      "url": "https://www.courtlistener.com/docket/5811046/142/national-collegiate-athletic-association-v-christie/"
+      "anchor": "District opinion, ECF 198 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/5811046/198/national-collegiate-athletic-association-v-christie/"
     },
     {
       "anchor": "District opinion PDF (RECAP)",
-      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.277952/gov.uscourts.njd.277952.142.0.pdf"
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.277952/gov.uscourts.njd.277952.198.0.pdf"
+    },
+    {
+      "anchor": "Supreme Court opinion",
+      "url": "https://www.supremecourt.gov/opinions/17pdf/16-476_dbfi.pdf"
     }
   ],
   "classification": "major",
@@ -65,8 +69,8 @@
   "subject_index_only": true,
   "link_level": "district",
   "authorship_source": "docket_entry_signature",
-  "decision_ecf_number": "142",
-  "decision_date": "2013-02-28",
+  "decision_ecf_number": "198",
+  "decision_date": "2014-11-21",
   "authored_by": "Michael A. Shipp",
-  "decision_selection_note": "ECF 142 of two published Shipp decisions on this docket. The Murphy reversal attaches to the 2014 proceeding at 61 F. Supp. 3d 488, not to this one."
+  "decision_selection_note": "ECF 198 of two published Shipp decisions on this docket, and the one the Supreme Court reversed."
 }

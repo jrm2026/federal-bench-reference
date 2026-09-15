@@ -96,7 +96,12 @@ for (const d of districts) {
 
     // identity: caption alone is not a key on this corpus, and the docket that
     // identifies a district decision is the district court's, never the appeal's
-    const key = `${o.judge_slug}|${o.caption}|${o.district_docket ?? o.reporter_cite ?? ''}`;
+    // A docket can carry two published decisions by the same judge. NCAA v.
+    // Governor of New Jersey is 926 F. Supp. 2d 551 and 61 F. Supp. 3d 488, both
+    // Shipp, both on 3:12-cv-04947, and only the second was reversed in Murphy.
+    // The ECF number is what separates them.
+    const key = `${o.judge_slug}|${o.caption}|${o.district_docket ?? o.reporter_cite ?? ''}` +
+                `|${o.decision_ecf_number ?? ''}`;
     if (seen.has(key)) err.push(`${id}: duplicate judge+caption+district docket identity`);
     seen.add(key);
 
