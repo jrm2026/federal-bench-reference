@@ -66,20 +66,32 @@ employment to five. That is the right direction. A trade-secrets heading holding
 two employment cases would have been the exact failure this section is about,
 and employment at five is still one per judge except Semper, who has two.
 
-Three still carry a conflict, flagged as `_ingest.subject_conflict`:
+Reading the *Universal Property* opinion forced a distinction the reading logic
+had been missing. That case is a franchise termination under the Petroleum
+Marketing Practices Act — seventeen Circle K gas-station franchise agreements in
+Florida, each a lease plus a fuel supply contract, assigned to Lehigh Gas and
+terminated in February 2020 — and it is docketed Other Statutory Actions because
+a PMPA claim is a federal statutory action. The code had no franchise box to
+tick. It was not contradicting the tag; it had nothing to say about it.
+
+So `natureOfSuitReading` now separates a contradiction from a catch-all. Codes
+whose distinguishing half is the word "Other" — Contract: Other, Civil Rights:
+Other, P.I.: Other, Other Statutory Actions — are silent rather than contrary,
+and no longer set `subject_conflict`. Every real contradiction this sweep found
+came from a specific code: ERISA, Pharmaceutical Personal Injury, Civil Rights:
+Jobs, Rent Lease & Ejectment, Negotiable Instrument. The change sharpens the
+test rather than relaxing it.
+
+That leaves one contradiction:
 
     American Financial Resources v.        business torts   → Negotiable
       LoanCare                                                Instrument
-    Universal Property Services v.         franchise        → Other Statutory
-      Lehigh Gas                                              Actions
-    Tucker v. The Arc                      employment       → Civil Rights: Other
 
-The code does not move these, and each for its own reason. Universal Property is
-pleaded under the Franchise Practices Act, which the clerk codes as a statutory
-action, so the conflict is probably the coding's limit rather than the tag's
-error. A negotiable-instrument docket can carry tortious-interference counts.
-Civil Rights: Other covers disability and public-accommodation claims as well as
-employment ones. Read the opinion.
+and two records where the code is silent and the opinion still decides the tag:
+*Tucker v. The Arc*, docketed Civil Rights: Other, which covers disability and
+public-accommodation claims as well as employment ones; and *Universal
+Property*, now read and confirmed. Its `_ingest.subject_confirmed` records what
+was read and why the tag stands.
 
 A wrong tag is worse here than a missing one. It would put a decision under a
 matter type a reader chose *because it matches the complaint they were served

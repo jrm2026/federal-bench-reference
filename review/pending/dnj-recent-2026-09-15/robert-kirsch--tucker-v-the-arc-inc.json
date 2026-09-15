@@ -53,7 +53,7 @@
     "matched_terms": "\"Title VII\" OR \"New Jersey Law Against Discrimination\" OR \"wrongful termination\"",
     "docket_entry": "OPINION.  Signed by Judge Robert Kirsch on 9/3/2026. (sms2)",
     "nature_of_suit": "Civil Rights: Other",
-    "nature_of_suit_reading": "Docketed Civil Rights: Other, which does not name this subject. Read the opinion before promoting.",
+    "nature_of_suit_reading": "Docketed Civil Rights: Other, a catch-all that names no subject, so the code is silent rather than contrary. The opinion still decides the tag.",
     "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
     "subject_is_hypothesis": true,
     "needs": [
@@ -62,7 +62,6 @@
       "procedural tags",
       "PDF link added — the search did not report a storage path",
       "link verified to resolve"
-    ],
-    "subject_conflict": true
+    ]
   }
 }

@@ -54,6 +54,15 @@ const NOS_FOR_SUBJECT = {
   'insurance-coverage': /insurance/i,
 };
 
+// Codes whose distinguishing half is the word "Other": Contract: Other, Civil
+// Rights: Other, P.I.: Other, Other Statutory Actions. A catch-all cannot
+// contradict a tag, because it names nothing to contradict it with. Universal
+// Property is the case that forced the distinction — a franchise termination
+// pleaded under the Petroleum Marketing Practices Act is a statutory action on
+// the cover sheet, and the code has no franchise box to tick unless the claim
+// sounds in contract. The reading has to say "silent", not "wrong".
+const CATCH_ALL = /(?::\s*other|^(?:\d+\s+)?other statutory actions?)$/i;
+
 export function natureOfSuitReading(subject, nos) {
   if (!nos) return 'The docket reports no nature-of-suit code.';
   if (subject === 'data-privacy-cybersecurity')
@@ -62,6 +71,9 @@ export function natureOfSuitReading(subject, nos) {
       + 'corroborates nor contradicts the tag.';
   const pattern = NOS_FOR_SUBJECT[subject];
   if (pattern && pattern.test(nos)) return `Docketed ${nos}, consistent with the tag.`;
+  if (CATCH_ALL.test(nos.trim()))
+    return `Docketed ${nos}, a catch-all that names no subject, so the code is `
+      + 'silent rather than contrary. The opinion still decides the tag.';
   return `Docketed ${nos}, which does not name this subject. Read the opinion before promoting.`;
 }
 

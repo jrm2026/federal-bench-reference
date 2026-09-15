@@ -344,8 +344,17 @@ v. Strive Asset Management*, were retagged from trade secrets to employment
 where the code and the caption agreed. `natureOfSuitReading` in
 `scripts/lib/proposal.mjs` states the three readings, and a contradicted record
 carries `_ingest.subject_conflict`. The code never moves a tag on its own: a
-franchise docket can still produce a covenant ruling, and a Franchise Practices
-Act claim is coded "Other Statutory Actions".
+franchise docket can still produce a covenant ruling.
+
+A code whose distinguishing half is the word "Other" — Contract: Other, Civil
+Rights: Other, P.I.: Other, Other Statutory Actions — is a catch-all and cannot
+contradict anything, because it names nothing to contradict with. Reading the
+*Universal Property* opinion is what forced the distinction: a franchise
+termination pleaded under the Petroleum Marketing Practices Act is a statutory
+action on the cover sheet, and the code has no franchise box to tick unless the
+claim sounds in contract. Every real contradiction on this corpus came from a
+specific code — ERISA, Pharmaceutical Personal Injury, Civil Rights: Jobs, Rent
+Lease & Ejectment, Negotiable Instrument.
 
 **Take the PDF path from the API or leave it out.** Most RECAP paths are
 `gov.uscourts.njd.<pacer>.<ecf>.0.pdf`, which makes constructing one look safe.
@@ -501,8 +510,8 @@ hard cases fell from nine to three.
 `docs/VERIFICATION-WORKLIST.md` holds the open items in the order I would take
 them. The matter-relevant sweep is done and its output is in
 `review/pending/dnj-recent-2026-09-15/`, thirty-six proposals across all
-thirteen intake subjects, three of them carrying a nature-of-suit conflict that
-the README lists by name. Confirming the subject and writing the headnote is
+thirteen intake subjects, one of them carrying a nature-of-suit conflict that
+the README names. Confirming the subject and writing the headnote is
 the next real work, and it is the curator's. After that, the FindLaw question
 on *Ireland v. Hegseth*, then the firm block, then the Phase 3 news module.
 

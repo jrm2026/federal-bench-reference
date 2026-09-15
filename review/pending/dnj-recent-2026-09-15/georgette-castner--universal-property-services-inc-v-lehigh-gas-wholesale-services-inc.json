@@ -57,15 +57,17 @@
     "matched_terms": "\"New Jersey Franchise Practices Act\" OR \"franchise agreement\" OR \"distributorship\"",
     "docket_entry": "OPINION. Signed by Judge Georgette Castner on 1/15/2026. (amv) (Entered: 01/15/2026)",
     "nature_of_suit": "Other Statutory Actions",
-    "nature_of_suit_reading": "Docketed Other Statutory Actions, which does not name this subject. Read the opinion before promoting.",
+    "nature_of_suit_reading": "Docketed Other Statutory Actions, a catch-all that names no subject, so the code is silent rather than contrary. The opinion still decides the tag.",
     "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
-    "subject_is_hypothesis": true,
     "needs": [
-      "CONFIRM THE SUBJECT against the holding, then retag or discard",
       "headnote written from the public opinion",
       "procedural tags",
       "link verified to resolve"
     ],
-    "subject_conflict": true
+    "subject_confirmed": {
+      "date": "2026-09-15",
+      "method": "opinion read in full (RECAP document 465306823, 30 pages)",
+      "basis": "Franchise termination under the Petroleum Marketing Practices Act, 15 U.S.C. 2801 et seq. Seventeen Circle K gas-station franchise agreements in Florida, each a lease plus a fuel supply contract, assigned to Lehigh Gas and terminated in February 2020; counterclaims on the leases and on the owner's personal guaranties. The docket code is Other Statutory Actions because a PMPA claim is a federal statutory action, not because the case is not a franchise case."
+    }
   }
 }
