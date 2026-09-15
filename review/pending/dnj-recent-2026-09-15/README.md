@@ -8,11 +8,11 @@ thirteen intake subjects. Nothing here renders and nothing here is finished.
     trademark and unfair comp.     3   Castner, Hayden, Semper
     copyright                      3   Castner, Neals, Semper
     commercial contract            3   Kiel, Neals, Semper
-    business torts                 3   Hayden, Kiel, Wigenton
+    business torts                 2   Hayden, Wigenton
     closely held and fiduciary     1   Castner
     franchise and distribution     4   Castner, Neals, Padin, Semper
     securities                     3   Kiel, Neals, Semper
-    consumer fraud                 1   Kirsch
+    consumer fraud                 2   Castner, Padin
     employment                     3   Castner, Kirsch, Semper
     insurance coverage             4   Castner, Hayden, Kirsch, Semper
     data privacy                   2   Semper, Wigenton
@@ -42,13 +42,19 @@ docketed ERISA. *Arro-Mark v. Warren* surfaced on "closely held" and is docketed
 under the Defend Trade Secrets Act. *Winters v. Valleau* surfaced on
 "shareholder derivative" and is a prisoner civil-rights case.
 
-Seven that are here carry a conflict, flagged as `_ingest.subject_conflict` with
-a `proposed_disposition` where one is obvious. Five of the seven are from the
-first pass, written before the code was being read:
+Two records are gone on the strength of the code. *Glaud v. NFL Player
+Disability and Survivor Benefit Plan* matched the business-torts term "breach of
+fiduciary duty" and is docketed ERISA, where the duty is the one a plan
+administrator owes a participant. *Hinds v. Sun Pharmaceutical* matched consumer
+fraud, surfaced again in the data-breach search, and is docketed pharmaceutical
+products liability. Neither subject is on the intake list. Both are in
+`review/dropped/` with the reasoning. Consumer fraud is not left empty: *Novick
+v. Unilever United States* before Padin and *Shafranski v. NewRez* before
+Castner replace it, docketed Other Fraud and Consumer Credit respectively.
 
-    Glaud v. NFL Player Disability Plan    business torts   → ERISA. Drop.
-    Hinds v. Sun Pharmaceutical            consumer fraud   → pharma products
-                                                              liability. Drop.
+Five that remain carry a conflict, flagged as `_ingest.subject_conflict` with a
+`proposed_disposition` where one is obvious:
+
     Bernard v. Comport Consulting          trade secrets    → Civil Rights: Jobs
     Rosely v. Strive Asset Management      trade secrets    → Civil Rights: Jobs
     American Financial Resources v.        business torts   → Negotiable
@@ -57,11 +63,10 @@ first pass, written before the code was being read:
       Lehigh Gas                                              Actions
     Tucker v. The Arc                      employment       → Civil Rights: Other
 
-The codes do not move the tags. A franchise docket can still produce a covenant
-ruling and only the opinion settles it; Universal Property is pleaded under the
-Franchise Practices Act, which the clerk codes as a statutory action. But the
-first two have no intake subject at all, and the last five want the opinion read
-before promotion.
+The codes do not move these tags. A franchise docket can still produce a
+covenant ruling and only the opinion settles it; Universal Property is pleaded
+under the Franchise Practices Act, which the clerk codes as a statutory action.
+Each wants the opinion read before promotion.
 
 One tag moved. *St. Paul Protective Insurance Co. v. Macor* surfaced from the
 copyright search, is captioned for an insurer, and is docketed Insurance. That

@@ -1,13 +1,16 @@
 # Dropped — nothing to publish
 
-Records removed for good. Not held pending research, and not excluded on
-subject matter: these are entries where the underlying matter is real, the
-research is sound, and there is still no district-court decision a reader
-could be pointed at.
+Records removed for good. The distinction that puts one here rather than in
+`dnj-no-district-decision/` is that no further work would change the answer. A
+held record is waiting for a link. These are not waiting for anything.
 
-The distinction that puts a record here rather than in
-`dnj-no-district-decision/` is that no further work would change the answer.
-A held record is waiting for a link. These are not waiting for anything.
+Three grounds have put records here. Most are entries where the matter is real
+and the research sound and there is still no district-court decision a reader
+could be pointed at. One, *In re Congoleum*, is a relevance drop: the decision
+exists and the reader has no use for it. And two are proposals from the
+matter-relevant sweep whose subject turned out to be off the intake list — a
+different thing from the criminal exclusion, which removed a category, and
+recorded here rather than in `dnj-out-of-scope-criminal/` for that reason.
 
 ## United States v. City of Newark, No. 2:16-cv-01731 (Arleo)
 
@@ -106,3 +109,38 @@ Ask what a reader would take from the decision, not which code it arises under.
 Note also that `bankruptcy` is not on the intake list, so the matter-relevant
 tier already cannot admit one. As with criminal work, the gap was only ever in
 the career screen.
+
+
+## Glaud v. NFL Player Disability and Survivor Benefit Plan, No. 1:25-cv-15373 (Kiel)
+
+Dropped 15 September 2026. Proposed, never published.
+
+The record came out of the business-torts search, which matched "breach of
+fiduciary duty" somewhere in an opinion about an ERISA benefit plan. The docket
+is coded 791 Labor: E.R.I.S.A., the caption names a disability and survivor
+benefit plan, and the fiduciary duty at issue is the one a plan administrator
+owes a participant. That is not the duty owners owe each other, and ERISA
+benefits is not on the intake list.
+
+This is the tag problem in its clearest form. A full-text search matches terms
+anywhere in a document, and "breach of fiduciary duty" is one of the three
+search terms for business torts, so an ERISA benefits opinion is a perfect hit
+on a search that cannot see what the case is about. The nature-of-suit code
+caught it. Nothing else would have, short of reading the opinion.
+
+## Hinds v. Sun Pharmaceutical Industries, No. 3:25-cv-15474 (Kirsch)
+
+Dropped 15 September 2026. Proposed, never published.
+
+The record came out of the consumer-fraud search and surfaced again in the
+data-breach search, which was the first sign. The docket is coded Personal
+Injury: Health Care/Pharmaceutical Personal Injury Product Liability. Whatever
+consumer-protection language the opinion contains sits inside a pharmaceutical
+products case, and products liability reaches this site only through
+`products-liability-mdl`, which is indexed without a topic page and is not on
+the intake list.
+
+Consumer fraud is not left empty by the drop. *Novick v. Unilever United
+States* before Padin, docketed Other Fraud, and *Shafranski v. NewRez* before
+Castner, docketed Consumer Credit, replace it — both corroborated by the code
+rather than contradicted by it.

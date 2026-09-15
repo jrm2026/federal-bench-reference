@@ -336,8 +336,10 @@ on this corpus it does so about a fifth of the time. *Ocean Port Enterprise*
 surfaced on "LLC operating agreement" and is docketed Rent Lease & Ejectment;
 *Miller v. Brozen* surfaced on "breach of fiduciary duty" and is docketed
 ERISA; *Arro-Mark v. Warren* surfaced on "closely held" and is docketed under
-the DTSA. None became a record. Of the eleven written before the code was being
-read, five carry a contradiction. `natureOfSuitReading` in
+the DTSA. None became a record. Seven that did carry a contradiction, five of
+them among the eleven written before the code was being read; two of the seven,
+*Glaud* and *Hinds v. Sun Pharmaceutical*, had no intake subject at all and are
+in `review/dropped/`. `natureOfSuitReading` in
 `scripts/lib/proposal.mjs` states the three readings, and a contradicted record
 carries `_ingest.subject_conflict`. The code never moves a tag on its own: a
 franchise docket can still produce a covenant ruling, and a Franchise Practices
@@ -497,7 +499,7 @@ hard cases fell from nine to three.
 `docs/VERIFICATION-WORKLIST.md` holds the open items in the order I would take
 them. The matter-relevant sweep is done and its output is in
 `review/pending/dnj-recent-2026-09-15/`, thirty-six proposals across all
-thirteen intake subjects, seven of them carrying a nature-of-suit conflict that
+thirteen intake subjects, five of them carrying a nature-of-suit conflict that
 the README lists by name. Confirming the subject and writing the headnote is
 the next real work, and it is the curator's. After that, the FindLaw question
 on *Ireland v. Hegseth*, then the firm block, then the Phase 3 news module.
