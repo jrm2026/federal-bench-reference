@@ -72,3 +72,37 @@ enough to score is important enough to have been appealed, and if it was
 appealed long enough ago the only surviving public copy is the circuit's. Age
 alone does not disqualify — Cooper's Lightner entry is 2012 and survives — but
 before roughly 2004 the district record is generally gone.
+
+## In re Congoleum Corp., No. 2:22-cv-00423 (Arleo)
+
+Dropped 15 September 2026 on relevance, not availability.
+
+Judge Arleo, sitting in appellate review of the bankruptcy court, reversed an
+order reopening Congoleum's long-closed bankruptcy and rejected the finding that
+a plan provision insulated Bath Iron Works from environmental liabilities. The
+Third Circuit reversed her and reinstated the bankruptcy court's result.
+
+Whatever interest the decision holds is bankruptcy interest: reopening under
+§ 350(b), the preclusive reach of a confirmation finding, the allocation of
+environmental liability under a plan. None of that reaches an out-of-state
+defendant newly served with a civil complaint who has not yet retained counsel.
+The entry would sit on Arleo's page describing a proceeding the reader is not
+in, decided under a code they are not subject to.
+
+The copy problem was real but secondary, and is recorded because the next
+person will retrace it: GovInfo has no package for the docket, which fits, its
+USCOURTS collection carrying written opinions and ECF 25 being an order; and
+CourtListener matches 2:22-cv-00423 loosely, returning the Passaic River CERCLA
+docket 2:18-cv-11273 instead, which is also what made three "duplicate dockets"
+appear. Had the copy turned up, the entry would still be out.
+
+The subject label is not the test, and one record on the other side proves it.
+*Valley National Bank v. Burrini's Olde World Market* is tagged `bankruptcy`
+and stays, because what it decides is whether a nonparty may remove under
+§ 1452(a) — a removal and remand question a civil defendant can face on the
+day they are served. The bankruptcy there is the predicate, not the subject.
+Ask what a reader would take from the decision, not which code it arises under.
+
+Note also that `bankruptcy` is not on the intake list, so the matter-relevant
+tier already cannot admit one. As with criminal work, the gap was only ever in
+the career screen.

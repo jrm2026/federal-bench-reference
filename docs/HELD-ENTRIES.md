@@ -3,7 +3,7 @@
 Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
 re-run it. An entry belongs on a judge's page only when the district court's
 own decision is available; an appellate opinion shows what the circuit did,
-not what the judge did. 1 entries failed that test and sit in
+not what the judge did. 0 entries failed that test and sit in
 `review/pending/dnj-no-district-decision/`, which does not render. 82 remain published.
 
 Every held entry came from a District Judge. No magistrate judge lost one.
@@ -20,13 +20,13 @@ directory's README says where the line falls and which look-alikes stay.
 
 | | Count | What it means |
 |---|---|---|
-| **A** | 1 | A district docket is on the record. A district link resolves from it. |
+| **A** | 0 | A district docket is on the record. A district link resolves from it. |
 | **B** | 0 | The docket on the record is the Third Circuit’s. The district docket is missing. |
 | **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
 | **D** | 0 | The record carries only an appellate citation. As written, this entry is the appeal. |
 | **E** | 0 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-1 of the 1 are recoverable with a lookup.
+0 of the 0 are recoverable with a lookup.
 0 need research or should be dropped.
 
 ## What the docket actually holds
@@ -43,12 +43,10 @@ disagree the verdict governs.
 # District Judges
 
 ## Madeline Cox Arleo
-kept 1 · held 1
+kept 1 · held 0
 
 - **Kept.** Antar v. Borgata Hotel Casino & Spa, LLC, No. 2:22-cv-05785, ECF No. 59 (D.N.J. Jan. 31, 2024), aff’d sub nom. Antar v. BetMGM, LLC, No. 24-1364 (3d Cir. Apr. 28, 2025)  
   `www.courtlistener.com`
-- **Held (A).** In re Congoleum Corp., No. 2:22-cv-00423, ECF No. 25 (D.N.J. Jan. 31, 2023), rev’d, No. 23-1295 (3d Cir. Aug. 22, 2025)  
-  A district docket is on the record. A district link resolves from it.
 
 ## Renée Marie Bumb
 kept 3 · held 0
