@@ -25,9 +25,24 @@
 import { cl } from './courtlistener.mjs';
 import { signedBy } from '../reconcile-dockets.mjs';
 
-/** Only documents a judge wrote. A motion is not a decision, however apt its text. */
+/**
+ * Only documents a judge wrote, and only on the merits.
+ *
+ * A full-text search for a subject matches every document in a case about that
+ * subject. Most of the noise is obvious — complaints, motions, letters — but the
+ * expensive kind is not: a trade-secrets case generates opinions on sealing, on
+ * compelling discovery, on attorney's fees. Those are genuine opinions by the
+ * right judge in the right case, and none of them is a decision about trade
+ * secrets. Asking what the document IS rather than what the case is ABOUT is the
+ * whole filter.
+ *
+ * Procedural rulings are not discarded from the site — they have their own
+ * section and their own tags — but they do not belong under a matter type a
+ * reader chose because it matches their complaint.
+ */
 const DECISION = /\b(OPINION|MEMORANDUM)\b/i;
-const NOT_A_DECISION = /^(MOTION|BRIEF|MEMORANDUM IN (SUPPORT|OPPOSITION)|LETTER from|NOTICE|DECLARATION|CERTIFICAT)/i;
+const NOT_A_DECISION = /^\s*\W*(MOTION|CROSS[- ]MOTION|BRIEF|MEMORANDUM IN (SUPPORT|OPPOSITION)|LETTER|NOTICE|DECLARATION|CERTIFICAT|COMPLAINT|ANSWER|STIPULATION|RESPONSE|REPLY)/i;
+const PROCEDURAL = /\bMotion (to|for) (Seal|Compel|Change Venue|Attorney|Attorney'?s? Fees|Leave|Extension|Reconsideration|Withdraw|Stay|Expedited)\b|\bto Seal\b|\bAttorney'?s? Fees\b|\bScheduling Order\b|\bpro hac vice\b/i;
 
 /**
  * Opinions on a subject, newest first.
@@ -49,7 +64,8 @@ export async function findBySubject({ court, terms, since, limit = 40 }) {
   for (const r of payload.results ?? []) {
     for (const d of (Array.isArray(r.recap_documents) ? r.recap_documents : [r])) {
       const description = d.description ?? '';
-      if (!DECISION.test(description) || NOT_A_DECISION.test(description.trim())) continue;
+      if (!DECISION.test(description) || NOT_A_DECISION.test(description)) continue;
+      if (PROCEDURAL.test(description)) continue;   // a real opinion, wrong section
       const sig = signedBy(description);
       if (!sig) continue;                       // no signature line, no attribution
       if (!d.is_available) continue;            // no retrievable copy, no entry
