@@ -305,16 +305,20 @@ none of the decisions are Claude's.
   and the gates check for them.
 - Sentence splitting on legal prose breaks on "St. John's", "U.S.", "Jr." — use
   the abbreviation-aware splitter in `scripts/extract-bios.py`.
-- CourtListener meters this account at 5 requests/minute, 50/hour and 125/day,
-  and a token does not change that — it authenticates, it does not raise the
-  tier. `scripts/lib/courtlistener.mjs` paced at 1200ms on the opposite belief
-  and failed on the second request. The limits are a rolling 24 hours, not a
-  calendar day, so a budget spent yesterday evening is still spent this morning
-  and returns gradually. The hourly ceiling is the one a corpus sweep meets
-  first: 50/hour stops a run at fifty records however patiently it is paced. Set
-  `COURTLISTENER_RPM` if the tier ever changes. The v4 *search* endpoint is
-  different again: it refuses an anonymous caller outright with a 403 rather
-  than throttling. GovInfo package
+- CourtListener meters by membership tier, and a token does not change the tier
+  — it authenticates, it does not raise anything. The free tier is 5
+  requests/minute, 50/hour, 125/day. This project's account moved to Tier 3 on
+  15 September 2026: **20/minute, 250/hour, 1,000/day**, which puts a 36-record
+  sweep at about two minutes and inside every ceiling. `.env` carries
+  `COURTLISTENER_RPM=20` and `COURTLISTENER_RPH=250`; the code still defaults to
+  the free tier, so a fresh clone without them paces safely rather than
+  failing. `scripts/lib/courtlistener.mjs` once paced at 1200ms on the belief
+  that a token lifted the per-minute limit and failed on the second request.
+  The limits are a rolling 24 hours, not a calendar day, so a budget spent
+  yesterday evening is still spent this morning and returns gradually. Watch
+  the hourly ceiling before the daily one: it is the one a corpus sweep meets
+  first. The v4 *search* endpoint is different again: it refuses an anonymous
+  caller outright with a 403 rather than throttling. GovInfo package
   IDs are deterministic from the docket (`USCOURTS-njd-1_23-cv-12601`), so try it
   first. Justia district paths are predictable but need one probe for the case ID.
 - `legacy/` holds the superseded scaffold — the flat `data/judges` tree, its
