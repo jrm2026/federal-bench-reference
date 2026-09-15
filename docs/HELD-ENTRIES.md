@@ -3,8 +3,8 @@
 Generated 2026-09-15 by `scripts/inventory-held.mjs`. Do not edit by hand —
 re-run it. An entry belongs on a judge's page only when the district court's
 own decision is available; an appellate opinion shows what the circuit did,
-not what the judge did. 5 entries failed that test and sit in
-`review/pending/dnj-no-district-decision/`, which does not render. 79 remain published.
+not what the judge did. 3 entries failed that test and sit in
+`review/pending/dnj-no-district-decision/`, which does not render. 80 remain published.
 
 Every held entry came from a District Judge. No magistrate judge lost one.
 The significant tier was scored on career significance, and a district
@@ -21,13 +21,13 @@ directory's README says where the line falls and which look-alikes stay.
 | | Count | What it means |
 |---|---|---|
 | **A** | 2 | A district docket is on the record. A district link resolves from it. |
-| **B** | 1 | The docket on the record is the Third Circuit’s. The district docket is missing. |
+| **B** | 0 | The docket on the record is the Third Circuit’s. The district docket is missing. |
 | **C** | 0 | No docket, but the district decision is published in F. Supp. and findable by citation. |
-| **D** | 1 | The record carries only an appellate citation. As written, this entry is the appeal. |
+| **D** | 0 | The record carries only an appellate citation. As written, this entry is the appeal. |
 | **E** | 1 | No docket and no reporter citation. Nothing on the record to resolve from. |
 
-3 of the 5 are recoverable with a lookup.
-2 need research or should be dropped.
+2 of the 3 are recoverable with a lookup.
+1 need research or should be dropped.
 
 ## What the docket actually holds
 
@@ -37,7 +37,7 @@ disagree the verdict governs.
 
 | | Count | What it means |
 |---|---|---|
-| `empty` | 2 | no signed orders indexed |
+| `empty` | 1 | no signed orders indexed |
 
 ---
 
@@ -49,18 +49,18 @@ kept 0 · held 2
 - **Kept: none.** The page reads "Developing record."
 - **Held (E).** Antar v. Borgata Hotel Casino & Spa, LLC, 2024 WL 1672280 (D.N.J. Jan. 31, 2024)  
   No docket and no reporter citation. Nothing on the record to resolve from.
-- **Held (B).** In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)  
-  The docket on the record is the Third Circuit’s. The district docket is missing.
+- **Held (A).** In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)  
+  A district docket is on the record. A district link resolves from it.
 
 ## Renée Marie Bumb
-kept 2 · held 1
+kept 3 · held 0
 
+- **Kept.** Govatos v. Murphy, No. 1:23-cv-12601, ECF No. 29 (D.N.J. Sept. 18, 2024), aff’d sub nom. Bryman v. Murphy, No. 24-2947 (3d Cir. Dec. 5, 2025)  
+  `www.govinfo.gov`
 - **Kept.** Koons v. Platkin, 673 F. Supp. 3d 515 (D.N.J. 2023)  
   `cases.justia.com`
 - **Kept.** New Jersey Department of Environmental Protection v. E.I. du Pont de Nemours & Co., Nos. 1:19-cv-14758, 1:19-cv-14765, 1:19-cv-14766 & 3:19-cv-14767 (D.N.J. Aug. 7, 2026)  
   `cases.justia.com`
-- **Held (A).** · `empty` Bryman v. Murphy, No. 1:23-cv-12601; aff’d, No. 24-2947 (3d Cir. Dec. 5, 2025)  
-  A district docket is on the record. A district link resolves from it.
 
 ## Georgette Castner
 kept 0 · held 1
@@ -90,12 +90,10 @@ kept 4 · held 0
   `www.courtlistener.com`
 
 ## Mary Little Cooper
-kept 1 · held 1
+kept 1 · held 0
 
 - **Kept.** Lightner v. 1621 Route 22 West Operating Co., Nos. 3:11-cv-02007, 3:11-cv-03960 & 3:11-cv-04072, ECF No. 131 (D.N.J. Apr. 16, 2012), vacated, Nos. 12-2122 & 12-2726 (3d Cir. Sept. 4, 2013)  
   `www.courtlistener.com`
-- **Held (D).** Coleman v. Home Depot, Inc., 306 F.3d 1333 (3d Cir. 2002)  
-  The record carries only an appellate citation. As written, this entry is the appeal.
 
 ## Michael E. Farbiarz
 kept 3 · held 0

@@ -63,5 +63,6 @@
   "authorship_source": "unverified",
   "authored_by": null,
   "decision_ecf_number": null,
-  "decision_date": null
+  "decision_date": null,
+  "decision_selection_note": "Unresolved caption conflict. A secondary source ties 2024 WL 1672280 to No. 22-05785, and the appeal is CA3 No. 24-1364, but CourtListener records 2:22-cv-05785 as ANTAR v. BetMGM, LLC (Arleo, filed 29 Sept. 2022) and holds no Antar case against Borgata or Marina District Development in this district. The 31 January 2024 disposition was a letter order. Do not write the docket until the conflict is resolved: the district docket establishes identity."
 }

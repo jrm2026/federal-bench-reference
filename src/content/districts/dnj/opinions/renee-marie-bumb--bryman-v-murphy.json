@@ -5,7 +5,7 @@
   "judge_name": "Renée Marie Bumb",
   "judge_office": "district",
   "caption": "Bryman v. Murphy",
-  "citation_line": "Bryman v. Murphy, No. 1:23-cv-12601; aff’d, No. 24-2947 (3d Cir. Dec. 5, 2025)",
+  "citation_line": "Govatos v. Murphy, No. 1:23-cv-12601, ECF No. 29 (D.N.J. Sept. 18, 2024), aff’d sub nom. Bryman v. Murphy, No. 24-2947 (3d Cir. Dec. 5, 2025)",
   "district_docket": "1:23-cv-12601",
   "appellate_docket": "24-2947",
   "additional_dockets": [],
@@ -18,10 +18,14 @@
   "qualification_rationale": "The case addressed a consequential and unusually sensitive constitutional boundary involving interstate travel, medical services, assisted suicide, equal protection, privileges and immunities, and the dormant Commerce Clause.",
   "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion. It held that New Jersey could reserve physician-assisted suicide to residents and that the residency rule survived each asserted constitutional challenge.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/242947p.pdf",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_23-cv-12601/pdf/USCOURTS-njd-1_23-cv-12601-0.pdf",
   "links": [
     {
-      "anchor": "Third Circuit precedential opinion",
+      "anchor": "District opinion, ECF 29 (GovInfo)",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-1_23-cv-12601/pdf/USCOURTS-njd-1_23-cv-12601-0.pdf"
+    },
+    {
+      "anchor": "Third Circuit opinion",
       "url": "https://www2.ca3.uscourts.gov/opinarch/242947p.pdf"
     }
   ],
@@ -59,9 +63,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": true,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Renée Marie Bumb",
+  "decision_ecf_number": "29",
+  "decision_date": "2024-09-18",
+  "decision_selection_note": "Captioned Govatos v. Murphy below and Bryman v. Murphy on appeal. Located through GovInfo, whose package ID is deterministic from the docket."
 }

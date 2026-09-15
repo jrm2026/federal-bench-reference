@@ -6,7 +6,7 @@
   "judge_office": "district",
   "caption": "In re Congoleum Corp.",
   "citation_line": "In re Congoleum Corp., No. 23-1295 (3d Cir. Aug. 22, 2025)",
-  "district_docket": null,
+  "district_docket": "2:22-cv-00423",
   "appellate_docket": "23-1295",
   "additional_dockets": [],
   "reporter_cite": null,
@@ -63,5 +63,6 @@
   "authorship_source": "unverified",
   "authored_by": null,
   "decision_ecf_number": null,
-  "decision_date": null
+  "decision_date": null,
+  "decision_selection_note": "District docket 2:22-cv-00423, captioned below as Occidental Chemical Corp. v. Bath Iron Works Corp. — a bankruptcy appeal takes the parties’ names, not the debtor’s. CourtListener holds three duplicate dockets for this number. The decision itself is not yet located."
 }

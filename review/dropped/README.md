@@ -50,3 +50,25 @@ file is kept only so the supersession is legible.
 The release order is ECF 316 of 20 June 2025 and carries no accompanying
 opinion, so it is described inside the injunction entry rather than given one
 of its own — the rule at the head of this file.
+
+## Coleman v. Home Depot, Inc., 306 F.3d 1333 (3d Cir. 2002) — Cooper
+
+Dropped 15 September 2026. Not a research failure; a coverage one.
+
+The entry records Judge Cooper excluding an EEOC letter of determination
+finding reasonable cause on race and sex discrimination, after which the jury
+returned a defence verdict. The Third Circuit decided the appeal on 9 October
+2002 at Nos. 00-3496 and 00-3656, so the notice of appeal was filed in 2000
+and the district ruling is older still.
+
+Nothing from that period is retrievable. GovInfo's USCOURTS collection does not
+reach back to a D.N.J. civil case tried in the 1990s, and RECAP fills only when
+somebody buys a document from PACER, which nobody does for a case closed
+twenty-six years ago. The entry as written is the appeal, and the rule is that
+an appellate opinion shows what the circuit did rather than what the judge did.
+
+This is the shape of the oldest tail of a career screen. A decision important
+enough to score is important enough to have been appealed, and if it was
+appealed long enough ago the only surviving public copy is the circuit's. Age
+alone does not disqualify — Cooper's Lightner entry is 2012 and survives — but
+before roughly 2004 the district record is generally gone.
