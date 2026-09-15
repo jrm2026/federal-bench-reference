@@ -448,11 +448,27 @@ fail on a slug canonical in two places.
 ## Deployment
 
 Cloudflare Workers, not Pages, and not GitHub Pages. `wrangler.jsonc` serves
-`dist/`. The Workers Builds build command is `npm run build`, which runs the
-gates first; with the field empty there is no `dist/` and the deploy fails
-outright. Workers allows only relative URLs in `_redirects` and rejects the
-whole file over one absolute rule, so cross-host redirects belong in zone-level
+`dist/`. Workers allows only relative URLs in `_redirects` and rejects the whole
+file over one absolute rule, so cross-host redirects belong in zone-level
 Redirect Rules.
+
+**Workers Builds has two fields and they are not interchangeable.** The build
+command is `npm run build`; the deploy command is `npx wrangler deploy` and is
+usually the default. The build command has to run because `dist/` is gitignored
+and does not exist after a clone, because `npm run build` runs the gates first
+and exit 1 is what blocks a bad deploy, and because it also generates
+`worker/edge-headers.generated.js`, which the Worker imports.
+
+Both halves of that have now failed in the real world, and the second is the one
+that will fool you. An empty build command fails the deploy outright with "Could
+not detect a directory containing static files". A *wrong* one fails somewhere
+else entirely: on 15 September the field held `npx wranger deploy` — the deploy
+command, typed into the build field, and misspelled — so npm went looking for a
+package called `wranger`, got a 404 from the registry, and the build died eight
+seconds in. The GitHub check showed `started_at` equal to `completed_at` and
+carried no log text, which reads exactly like a build that never ran. It ran.
+Read the log in the dashboard before theorising from the check run; nothing else
+in this project has a failure mode that invisible.
 
 The preview is closed twice over. `worker/index.js` requires HTTP Basic
 credentials on every request before it will serve anything, and the site is
