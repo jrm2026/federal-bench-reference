@@ -3,6 +3,7 @@
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { runComplianceGates } from './gates-compliance.mjs';
+import { sameJudge } from './lib/judge-name.mjs';
 
 const ROOT = 'src/content/districts';
 const tax = JSON.parse(readFileSync('src/content/config/taxonomy.json', 'utf8'));
@@ -114,8 +115,13 @@ for (const d of districts) {
                `the linked document is the appeal, not the decision`);
     if (o.authorship_source === 'unverified')
       err.push(`${id}: authorship unverified — no signature line or cover page read`);
+    // Identity, not string equality. The clerk writes "Julien Xavier Neals"
+    // where the roster says "Julien X. Neals", and Mary L. Cooper signs what the
+    // roster calls Mary Little Cooper. The old test asked whether any word over
+    // three letters appeared in both, which passed Michael Vazquez as Michael
+    // Farbiarz — the exact substitution this gate exists to catch.
     if (o.authored_by && o.authorship_source !== 'unverified' &&
-        !o.authored_by.split(/\s+/).some((w) => w.length > 3 && o.judge_name.includes(w)))
+        !sameJudge(o.authored_by, o.judge_name))
       err.push(`${id}: signed by '${o.authored_by}' but filed under ${o.judge_name}`);
     if (!o.district_docket)
       warn.push(`${id}: no district docket recorded${o.appellate_docket ? ` (appellate docket ${o.appellate_docket} is on the record)` : ''}`);
