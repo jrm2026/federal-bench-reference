@@ -9,6 +9,23 @@ District Judge and Magistrate Judge on their docket.
 Read this file before changing anything. `docs/handoff.md` is the full
 specification; this file is the operating summary.
 
+## Who you are writing for
+
+Jay R. McDaniel is a lawyer, not a developer. He owns this project, makes every
+judgment call in it, and decides what publishes. He does not read build logs,
+shell output, stack traces or code, and nothing should be explained to him as
+though he does.
+
+Say what broke in plain English, what it means for the site, and the exact thing
+he has to do. When the fix lives in a web dashboard, give the click path and the
+literal text that goes in each field. Define a term the first time you use it,
+or do not use it.
+
+Speak when something needs his decision or his hands. Do not narrate machine
+state. A build that failed the same way it failed an hour ago is not news, and a
+run of status updates he cannot act on is worse than silence — it buries the one
+message that did need him. Watch quietly; report outcomes and blockers.
+
 ## Commands
 
     npm install
