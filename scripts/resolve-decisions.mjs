@@ -126,9 +126,22 @@ const records = [
 
 console.log(`${records.length} record${records.length === 1 ? '' : 's'} with a district docket` +
             `${heldOnly ? ' (held only)' : ''}`);
+const pace = stats();
 console.log(hasToken()
-  ? 'COURTLISTENER_TOKEN present.'
-  : 'No COURTLISTENER_TOKEN — anonymous throttle is five requests a minute; this will pace itself.');
+  ? `COURTLISTENER_TOKEN present. Pacing ${pace.gapMs}ms for ${pace.rpm} requests/minute ` +
+    `(set COURTLISTENER_RPM if the tier changed).`
+  : 'No COURTLISTENER_TOKEN — the v4 search endpoint refuses anonymous callers.');
+
+// The hourly ceiling bites before the daily one on a sweep this shape. D.N.J.
+// has 36 held records and clears it; a larger district will not.
+const HOURLY = Number(process.env.COURTLISTENER_RPH) || 50;
+const toRun = records.length;
+if (toRun > HOURLY) {
+  const hours = Math.ceil(toRun / HOURLY);
+  console.log(`${toRun} records against an hourly ceiling of ${HOURLY}: this needs ${hours} ` +
+              `sittings. The run stops when the quota refuses it and keeps what it has; ` +
+              `re-run and it continues.`);
+}
 console.log('');
 
 // Resume. A free CourtListener account gets 125 search requests a day, and a

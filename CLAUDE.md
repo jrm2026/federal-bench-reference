@@ -305,10 +305,16 @@ none of the decisions are Claude's.
   and the gates check for them.
 - Sentence splitting on legal prose breaks on "St. John's", "U.S.", "Jr." — use
   the abbreviation-aware splitter in `scripts/extract-bios.py`.
-- CourtListener throttles at 5 requests/minute without a token, and caps a free
-  account at 125 requests/day — a cap a corpus sweep reaches long before the
-  per-minute one bites. The v4 *search* endpoint is different again: it refuses
-  an anonymous caller outright with a 403 rather than throttling. GovInfo package
+- CourtListener meters this account at 5 requests/minute, 50/hour and 125/day,
+  and a token does not change that — it authenticates, it does not raise the
+  tier. `scripts/lib/courtlistener.mjs` paced at 1200ms on the opposite belief
+  and failed on the second request. The limits are a rolling 24 hours, not a
+  calendar day, so a budget spent yesterday evening is still spent this morning
+  and returns gradually. The hourly ceiling is the one a corpus sweep meets
+  first: 50/hour stops a run at fifty records however patiently it is paced. Set
+  `COURTLISTENER_RPM` if the tier ever changes. The v4 *search* endpoint is
+  different again: it refuses an anonymous caller outright with a 403 rather
+  than throttling. GovInfo package
   IDs are deterministic from the docket (`USCOURTS-njd-1_23-cv-12601`), so try it
   first. Justia district paths are predictable but need one probe for the case ID.
 - `legacy/` holds the superseded scaffold — the flat `data/judges` tree, its
