@@ -34,10 +34,10 @@
   "score_total": null,
   "components": {},
   "subject_screen": "qualifying",
-  "subject_label": "Trade secrets",
+  "subject_label": "Employment",
   "subject_screen_exclusion_reason": null,
   "publish_subject_index": true,
-  "subject_primary": "trade-secrets",
+  "subject_primary": "employment",
   "subject_secondary": [],
   "subject_index_only": false,
   "procedural_tags": [],
@@ -65,8 +65,7 @@
       "link verified to resolve"
     ],
     "nature_of_suit": "Civil Rights: Jobs",
-    "nature_of_suit_reading": "Docketed Civil Rights: Jobs, which does not name this subject. Read the opinion before promoting.",
-    "proposed_disposition": "consider employment",
-    "subject_conflict": true
+    "nature_of_suit_reading": "Docketed Civil Rights: Jobs, consistent with the tag.",
+    "retagged_from": "trade-secrets"
   }
 }

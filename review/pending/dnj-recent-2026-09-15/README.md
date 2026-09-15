@@ -3,7 +3,7 @@
 Thirty-six candidates from CourtListener's RECAP document index, covering all
 thirteen intake subjects. Nothing here renders and nothing here is finished.
 
-    trade secrets                  4   Neals 2, Semper 2
+    trade secrets                  2   Neals, Semper
     restrictive covenants          2   Castner, Wigenton
     trademark and unfair comp.     3   Castner, Hayden, Semper
     copyright                      3   Castner, Neals, Semper
@@ -13,7 +13,7 @@ thirteen intake subjects. Nothing here renders and nothing here is finished.
     franchise and distribution     4   Castner, Neals, Padin, Semper
     securities                     3   Kiel, Neals, Semper
     consumer fraud                 2   Castner, Padin
-    employment                     3   Castner, Kirsch, Semper
+    employment                     5   Castner, Kirsch, Neals, Semper 2
     insurance coverage             4   Castner, Hayden, Kirsch, Semper
     data privacy                   2   Semper, Wigenton
 
@@ -52,26 +52,34 @@ products liability. Neither subject is on the intake list. Both are in
 v. Unilever United States* before Padin and *Shafranski v. NewRez* before
 Castner replace it, docketed Other Fraud and Consumer Credit respectively.
 
-Five that remain carry a conflict, flagged as `_ingest.subject_conflict` with a
-`proposed_disposition` where one is obvious:
+Three tags moved, each where the code and the caption agree and no reading of
+the opinion could change the answer. *St. Paul Protective Insurance Co. v.
+Macor* came from the copyright search, is captioned for an insurer and is
+docketed Insurance; it is now insurance-coverage. *Bernard v. Comport
+Consulting* and *Rosely v. Strive Asset Management* both matched a trade-secrets
+term somewhere in the document and are both docketed Civil Rights: Jobs; they
+are now employment. `_ingest.retagged_from` records where each came from, and
+`matched_subject` still names the search that found it.
 
-    Bernard v. Comport Consulting          trade secrets    → Civil Rights: Jobs
-    Rosely v. Strive Asset Management      trade secrets    → Civil Rights: Jobs
+The retags cost trade secrets half its entries, four down to two, and take
+employment to five. That is the right direction. A trade-secrets heading holding
+two employment cases would have been the exact failure this section is about,
+and employment at five is still one per judge except Semper, who has two.
+
+Three still carry a conflict, flagged as `_ingest.subject_conflict`:
+
     American Financial Resources v.        business torts   → Negotiable
       LoanCare                                                Instrument
     Universal Property Services v.         franchise        → Other Statutory
       Lehigh Gas                                              Actions
     Tucker v. The Arc                      employment       → Civil Rights: Other
 
-The codes do not move these tags. A franchise docket can still produce a
-covenant ruling and only the opinion settles it; Universal Property is pleaded
-under the Franchise Practices Act, which the clerk codes as a statutory action.
-Each wants the opinion read before promotion.
-
-One tag moved. *St. Paul Protective Insurance Co. v. Macor* surfaced from the
-copyright search, is captioned for an insurer, and is docketed Insurance. That
-needs no opinion to settle, so it is retagged insurance-coverage and
-`_ingest.retagged_from` records where it came from.
+The code does not move these, and each for its own reason. Universal Property is
+pleaded under the Franchise Practices Act, which the clerk codes as a statutory
+action, so the conflict is probably the coding's limit rather than the tag's
+error. A negotiable-instrument docket can carry tortious-interference counts.
+Civil Rights: Other covers disability and public-accommodation claims as well as
+employment ones. Read the opinion.
 
 A wrong tag is worse here than a missing one. It would put a decision under a
 matter type a reader chose *because it matches the complaint they were served
