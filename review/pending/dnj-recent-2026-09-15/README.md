@@ -1,44 +1,75 @@
-# Proposed: dnj recent tier, trade secrets, 15 September 2026
+# Proposed: dnj recent tier, 15 September 2026
 
-Four candidates from CourtListener's RECAP document index. Nothing here
-renders; nothing here is finished.
+Eleven candidates from CourtListener's RECAP document index, across five of
+the thirteen intake subjects. Nothing here renders and nothing here is
+finished.
 
-Each was found by full-text search for the taxonomy's trade-secrets terms,
-restricted to D.N.J., filed since 2019, with a retrievable PDF — then filtered
-down to documents that are decisions on the merits. The judge, the date and the
-ECF number come from the clerk's signature line on the docket entry, so each
-carries `docket_entry_signature` rather than an inference.
+    trade secrets           4   Neals 2, Semper 2
+    restrictive covenants   2   Castner, Wigenton
+    copyright               1   Castner
+    business torts          3   Wigenton, Kiel, Hayden
+    consumer fraud          1   Kirsch
 
-Both judges have thin pages, which is the point of the tier. Neals had one
-published entry and Semper none.
+Every judge here had a thin page: Semper none, and Wigenton, Castner, Kiel,
+Hayden, Kirsch and Neals one apiece.
+
+The judge, date and ECF number come from the clerk's signature line, so each
+record carries `docket_entry_signature` rather than an inference. Those are
+sound.
+
+## The subject tag is a hypothesis, not a finding
+
+Read this before promoting anything. The tag on each proposal records which
+search found the document, and a full-text search matches terms *somewhere in
+the document*, not in the holding. Two of these are visibly wrong already:
+
+- *St. Paul Protective Insurance Co. v. Macor* surfaced from the **copyright**
+  search and is, on its caption, an insurance coverage case.
+- *Glaud v. NFL Player Disability and Survivor Benefit Plan* surfaced from
+  **business torts** and reads as an ERISA benefits dispute.
+
+Both may still be right — a coverage action can turn on whether a policy
+reaches copyright claims — and neither is knowable without reading the opinion.
+That is why `_ingest.subject_is_hypothesis` is true on every record and why the
+first item in `needs` is to confirm or retag.
+
+A wrong tag is worse here than a missing one. It would put a decision under a
+matter type a reader chose *because it matches the complaint they were served
+with*.
 
 ## What each still needs
 
-1. **A headnote**, written from the public opinion. Deliberately null here.
-   No automated process writes what a judge decided, and a commercial headnote
-   never enters this repo at all.
-2. **Procedural tags** from `taxonomy.json`.
-3. **The link verified** to resolve to the right document.
-4. **The judge's counts raised** in `src/content/districts/dnj/judges/`.
+1. **Confirm the subject** against the holding. Retag or discard.
+2. **A headnote**, written from the public opinion. Null by design: no
+   automated process writes what a judge decided, and a commercial headnote
+   never enters this repo.
+3. **Procedural tags** from `taxonomy.json`.
+4. **The link verified** to resolve to the right document.
+5. **The judge's counts raised** in `src/content/districts/dnj/judges/`.
 
 Then `npm run validate` and move the file into
 `src/content/districts/dnj/opinions/`.
 
-## What the search taught
+## What the sweep found out
 
-A full-text query for a subject matches every document in a case about that
-subject. The obvious noise is easy — complaints, motions, letters. The
-expensive noise is not: a trade-secrets case generates opinions on sealing, on
-compelling discovery, on attorney's fees, each a real opinion by the right
-judge in the right case, and none of them a decision about trade secrets.
+The corpus is far deeper than the tier was designed against. Searching D.N.J.
+since 2019 or 2020, with a retrievable PDF:
 
-Of thirty results, four survived. The filter in `scripts/lib/recap.mjs` asks
-what the document is, not what the case is about. Procedural rulings are not
-discarded from the site — they have their own section and their own tags — but
-they do not belong under a matter type a reader chose because it matches the
-complaint they were served with.
+    trade secrets           563 documents
+    restrictive covenants   256
+    copyright               713
+    consumer fraud          829
+    business torts        2,083
 
-`H&U v. Komolo` is worth noting: an opinion on a TRO and expedited discovery in
-a trade-secrets case, decided a week ago. That is the thing CLAUDE.md describes
-as "exactly the ordinary trade-secrets TRO the recipient wants to see", and the
-career screen would have rejected it without a second look.
+So scarcity is not the constraint. The per-judge-per-subject cap is, and after
+that the headnote work, which is human by design and does not scale with the
+search. Eight subjects remain unsearched — trademark, commercial contract,
+closely held fiduciary, franchise, securities, employment, insurance coverage,
+data privacy — and they are a scripted run, not a hand sweep.
+
+The filter earned its test file. `scripts/lib/recap.test.mjs` holds eighteen
+real docket descriptions and the classification each should get; it was widened
+twice by reading output rather than reasoning about it. The hardest class is
+not the motions, it is the procedural *opinions*: a trade-secrets case
+generates real opinions by the right judge on sealing, on compelling discovery,
+on attorney's fees, none of them a decision about trade secrets.

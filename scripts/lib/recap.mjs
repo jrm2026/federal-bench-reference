@@ -42,7 +42,17 @@ import { signedBy } from '../reconcile-dockets.mjs';
  */
 const DECISION = /\b(OPINION|MEMORANDUM)\b/i;
 const NOT_A_DECISION = /^\s*\W*(MOTION|CROSS[- ]MOTION|BRIEF|MEMORANDUM IN (SUPPORT|OPPOSITION)|LETTER|NOTICE|DECLARATION|CERTIFICAT|COMPLAINT|ANSWER|STIPULATION|RESPONSE|REPLY)/i;
-const PROCEDURAL = /\bMotion (to|for) (Seal|Compel|Change Venue|Attorney|Attorney'?s? Fees|Leave|Extension|Reconsideration|Withdraw|Stay|Expedited)\b|\bto Seal\b|\bAttorney'?s? Fees\b|\bScheduling Order\b|\bpro hac vice\b/i;
+// Widened twice, both times by reading output rather than reasoning about it.
+// The first pass listed "Motion to/for X" and missed "Motion SEEKING Leave To
+// Serve A Third Party Subpoena"; it also had no entry for discovery, which is
+// the commonest procedural opinion of all. Match the relief, not the phrasing.
+const PROCEDURAL = new RegExp([
+  '\\b(?:to |for |seeking )(?:leave|discovery|reconsideration|disgorgement)\\b',
+  '\\bmotion\\b[^.]{0,40}\\b(?:seal|compel|subpoena|quash|strike|sever|stay|remand|venue|transfer)\\b',
+  '\\bto seal\\b', '\\battorney\'?s? fees\\b', '\\bscheduling order\\b',
+  '\\bpro hac vice\\b', '\\bamended? (?:answers|scheduling)\\b',
+  '\\brule 26\\(f\\)\\b', '\\bthird[- ]party subpoena\\b',
+].join('|'), 'i');
 
 /**
  * Opinions on a subject, newest first.
@@ -50,6 +60,20 @@ const PROCEDURAL = /\bMotion (to|for) (Seal|Compel|Change Venue|Attorney|Attorne
  * `terms` is the taxonomy's own query for the subject, so tuning search lives in
  * taxonomy.json and not in code.
  */
+/**
+ * Is this docket entry a decision on the merits?
+ *
+ * Note what this cannot do: the search finds cases ABOUT a subject and this
+ * separates decisions from motions, but neither can tell whether the decision
+ * is ON that subject. A venue ruling in a consumer-fraud case passes here and
+ * still does not belong under consumer fraud. That judgment is the curator's,
+ * and `_ingest.needs` says so on every proposal.
+ */
+export const classify = (description) =>
+  DECISION.test(description ?? '') &&
+  !NOT_A_DECISION.test(description ?? '') &&
+  !PROCEDURAL.test(description ?? '');
+
 export async function findBySubject({ court, terms, since, limit = 40 }) {
   const payload = await cl('/search/', {
     type: 'rd',
@@ -64,8 +88,7 @@ export async function findBySubject({ court, terms, since, limit = 40 }) {
   for (const r of payload.results ?? []) {
     for (const d of (Array.isArray(r.recap_documents) ? r.recap_documents : [r])) {
       const description = d.description ?? '';
-      if (!DECISION.test(description) || NOT_A_DECISION.test(description)) continue;
-      if (PROCEDURAL.test(description)) continue;   // a real opinion, wrong section
+      if (!classify(description)) continue;
       const sig = signedBy(description);
       if (!sig) continue;                       // no signature line, no attribution
       if (!d.is_available) continue;            // no retrievable copy, no entry

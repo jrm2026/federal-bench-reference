@@ -1,0 +1,68 @@
+{
+  "id": "robert-kirsch--hinds-v-sun-pharmaceutical-industries",
+  "district": "dnj",
+  "judge_slug": "robert-kirsch",
+  "judge_name": "Robert Kirsch",
+  "judge_office": "district",
+  "caption": "Hinds v. Sun Pharmaceutical Industries",
+  "citation_line": "Hinds v. Sun Pharmaceutical Industries, No. 3:25-cv-15474, ECF No. 14 (D.N.J. Sept. 9, 2026)",
+  "district_docket": "3:25-cv-15474",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "recent",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": null,
+  "qualification_rationale": null,
+  "appellate_posture_note": "No appellate disposition identified as of 2026-09-15.",
+  "headnote_status": "draft",
+  "public_url": "https://www.courtlistener.com/docket/71325540/14/hinds-v-sun-pharmaceutical-industries/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 14 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/71325540/14/hinds-v-sun-pharmaceutical-industries/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.582923/gov.uscourts.njd.582923.14.0.pdf"
+    }
+  ],
+  "link_level": "district",
+  "classification": null,
+  "score_total": null,
+  "components": {},
+  "subject_screen": "qualifying",
+  "subject_label": "consumer-fraud",
+  "subject_screen_exclusion_reason": null,
+  "publish_subject_index": true,
+  "subject_primary": "consumer-fraud",
+  "subject_secondary": [],
+  "subject_index_only": false,
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "decision_ecf_number": "14",
+  "decision_date": "2026-09-09",
+  "authored_by": "Robert Kirsch",
+  "authorship_source": "docket_entry_signature",
+  "research_cutoff": "2026-09-15",
+  "status_checked": "2026-09-15",
+  "last_verified": "2026-09-15",
+  "_ingest": {
+    "source": "recap",
+    "matched_subject": "consumer-fraud",
+    "subject_is_hypothesis": true,
+    "matched_terms": "\"Consumer Fraud Act\" OR \"ascertainable loss\" OR \"consumer fraud\"",
+    "docket_entry": "MEMORANDUM OPINION. Signed by Judge Robert Kirsch on 9/9/2026.",
+    "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
+    "needs": [
+      "CONFIRM THE SUBJECT: the search matched these terms somewhere in the document, not necessarily in the holding. Read the opinion and retag or discard.",
+      "headnote written from the public opinion",
+      "procedural tags",
+      "link verified to resolve"
+    ]
+  }
+}
