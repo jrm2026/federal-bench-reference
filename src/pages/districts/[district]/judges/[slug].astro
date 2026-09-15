@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
 import OpinionEntry from '../../../../components/OpinionEntry.astro';
 import taxonomy from '../../../../content/config/taxonomy.json';
+import policy from '../../../../content/config/policy.json';
 
 export async function getStaticPaths() {
   const judges = await getCollection('judges');
@@ -18,13 +19,32 @@ export async function getStaticPaths() {
 }
 const { judge, ops } = Astro.props;
 const isMag = judge.office.startsWith('magistrate');
-const selected = ops.filter(o => o.subject_screen === 'qualifying')
-  .sort((a, b) => (b.citation_line.match(/(19|20)\d\d/)?.[0] ?? '') .localeCompare(a.citation_line.match(/(19|20)\d\d/)?.[0] ?? ''));
+// The two tiers are selected on different criteria and read differently, so
+// they render in different sections. Splitting on subject_screen alone worked
+// only while every record was the career screen.
+const year = (o) => o.decision_date?.slice(0, 4)
+  ?? o.citation_line.match(/(19|20)\d\d/)?.[0] ?? '';
+const newestFirst = (a, b) => year(b).localeCompare(year(a));
+
+const significant = ops.filter(o => o.tier === 'significant');
+const selected = significant.filter(o => o.subject_screen === 'qualifying').sort(newestFirst);
 const procOnly = ops.filter(o => o.subject_screen === 'excluded');
+
 const intake = taxonomy.subject.intake_filter;
+const label = (t) => taxonomy.labels?.[t] ?? t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+// Matter-relevant entries, grouped by the subject the reader arrived with. A
+// secondary tag counts: a contract ruling that turns on a restrictive covenant
+// belongs under both.
+const recent = ops.filter(o => o.tier === 'recent');
+const byMatter = intake
+  .map(t => [t, recent.filter(o => o.subject_primary === t || o.subject_secondary.includes(t)).sort(newestFirst)])
+  .filter(([, list]) => list.length);
 const counts = Object.fromEntries(intake.map(t => [t,
   ops.filter(o => o.subject_primary === t || o.subject_secondary.includes(t)).length]));
-const label = (t) => t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+const subjectYears = policy.lookback.subject_district_years;
+const cutoff = new Date(Date.now() - subjectYears * 365.25 * 86400000).toISOString().slice(0, 10);
 ---
 <Base title={`Hon. ${judge.name} — Federal Bench Reference`} district={judge.district}>
   <div class="breadcrumb"><a href={`/districts/${judge.district}/`}>District of New Jersey</a> › Judges › {judge.name}</div>
@@ -92,12 +112,23 @@ const label = (t) => t.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 
   <section class="block">
     <h2>Decisions by matter type</h2>
-    <p class="windownote">Commercial matter types. Rolling five years.</p>
-    <div class="taggrid">
-      {intake.slice(0, 8).map(t =>
+    <p class="windownote">Commercial matter types. Decisions since {cutoff} ({subjectYears}-year window).</p>
+
+    {byMatter.map(([t, list]) =>
+      <>
+        <h3 class="mattertype">{label(t)}</h3>
+        {list.map(op => <OpinionEntry op={op} />)}
+      </>)}
+
+    {byMatter.length === 0 &&
+      <div class="empty"><strong>No verified entries yet</strong>Matter-type entries for this judge have not
+      cleared review. Absence of an entry is not evidence that no ruling was made.</div>}
+
+    <div class="taggrid" style="margin-top:16px">
+      {intake.map(t =>
         <div>{label(t)}<span>{counts[t] ? `${counts[t]} entr${counts[t] === 1 ? 'y' : 'ies'}` : 'No entries'}</span></div>)}
     </div>
-    <div class="notice neutral" style="margin-top:12px">Commercial matter-type coverage is under development.
+    <div class="notice neutral" style="margin-top:12px">Coverage is built subject by subject and is not complete.
     Absence of an entry is not evidence that no ruling was made.</div>
   </section>
 </Base>

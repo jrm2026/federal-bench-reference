@@ -20,7 +20,8 @@ specification; this file is the operating summary.
     npm run reconcile -- --district=dnj --held # same
     npm run resolve-decisions -- --district=dnj --held  # needs COURTLISTENER_TOKEN
     npm run inventory -- --district=dnj        # regenerates docs/HELD-ENTRIES.md
-    npm run ingest -- --district=dnj           # proposes the recent tier; GOVINFO_API_KEY
+    npm run ingest -- --district=dnj           # proposes the recent tier from RECAP
+    npm run ingest -- --district=dnj --source=govinfo --subjects=trade-secrets
     # Both read .env via --env-file-if-exists. Calling node directly does not:
     # Node ignores .env unless told, and the run falls back to the 5/min throttle.
     node scripts/check-links.mjs                    # needs open network access
@@ -272,23 +273,48 @@ inside the lookback window, link resolves. Three gates, no scoring. Do not run
 matter-relevant candidates through the significance rubric; it will reject
 exactly the ordinary trade-secrets TRO the recipient wants to see.
 
+`scripts/validate.mjs` enforces all three, and refuses a recent record that
+carries a significance score — which is how the rubric would creep back in.
+Caps are per tier and counted separately: the career screen is capped per judge,
+the matter-relevant tier per judge per subject, because a reader arrives with
+one subject and five entries in it is already generous. Counting both against
+one cap would have failed any judge with a full career screen the moment the
+first matter-relevant entry landed.
+
+Judge pages render the two tiers in separate sections. "Selected decisions" is
+the career screen; "Decisions by matter type" groups the matter-relevant tier
+under the subject the reader arrived with, secondary tags included, with the
+governing window stated under the heading. Splitting on `subject_screen` alone
+worked only while every record was `significant`.
+
 `scripts/ingest-decisions.mjs` proposes for this tier, from GovInfo. Search
 terms per subject live in `taxonomy.json` so they can be tuned without code.
 
-**CourtListener cannot supply this tier.** Its citable opinions collection
-returns 53 D.N.J. hits for "trade secret" whose newest is June 2016, and none
-inside a five-year window. Recent district decisions sit in RECAP as documents
-whose PDFs are mostly not held: the docket text is public, the document is not.
+**RECAP supplies this tier; the citable opinions collection does not.** This
+file said until 15 September 2026 that CourtListener could not serve it at all.
+That was true of the collection it was tested against and false of
+CourtListener. Its *citable opinions* collection returns 53 D.N.J. hits for
+"trade secret" whose newest is June 2016 — the finding was right, the
+conclusion too broad.
 
-That is the opposite of what the held significant entries showed, and the
-difference is not a contradiction — it is the selection. RECAP fills when
-somebody pays PACER for a document, and somebody always pays on a case that went
-up on appeal. A routine Rule 12 ruling nobody appealed is exactly the document
-nobody bought. So the tier that needs RECAP least is the one it serves, and the
-matter-relevant tier still has to come from GovInfo. The 44 published entries decided 2021 or later bear it out — 19 link
-to GovInfo, 23 to Justia, one to CourtListener. GovInfo's USCOURTS collection is
-the source of record, and its package IDs are deterministic from the docket,
-which is also what makes a located decision verifiable afterwards.
+The RECAP *document* index is a different thing: full-text searchable across
+the filings themselves. `type=rd & court=njd & q="trade secret" &
+filed_after=2021-01-01 & available_only` returns 264 opinions with retrievable
+PDFs, by Quraishi, Wigenton, Salas, Padin, Martinotti and Castner — the judges
+whose pages this tier exists to fill.
+
+It is also the better source, and not only because it has the documents. The
+clerk's signature line comes with them, so a record sourced here carries
+`docket_entry_signature` — authorship, date and ECF number in one string —
+where GovInfo yields a judge field that has to be matched by surname against
+the page. `scripts/lib/recap.mjs` does the search; `--source=govinfo` keeps the
+older path for a district where RECAP coverage turns out thin.
+
+The earlier reasoning still holds for what it actually explains. RECAP fills
+when somebody pays PACER, and somebody always pays on an appealed case, which
+is why the held significant entries were so well covered. What that reasoning
+got wrong was the inference that nobody buys anything else: a busy commercial
+docket generates purchases for reasons other than appeal.
 
 Why this tier matters more than the significant one. Of the 48 published
 entries, eleven are on an intake-list subject and nine of those were decided

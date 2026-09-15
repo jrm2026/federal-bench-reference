@@ -45,6 +45,7 @@ import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { searchUscourts, granule, pdfUrl, usingDemoKey, stats } from './lib/govinfo.mjs';
+import { findBySubject, docketsById } from './lib/recap.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -58,6 +59,12 @@ const DISTRICT = arg('district', 'dnj');
 const COURT = { dnj: 'njd' }[DISTRICT] ?? DISTRICT;
 const WRITE = process.argv.includes('--write');
 const ONE_JUDGE = arg('judge');
+// RECAP by default. GovInfo was the original source on the belief that
+// CourtListener could not serve this tier; that was true of its citable
+// opinions collection and false of its RECAP document index, which carries
+// recent D.N.J. opinions with their signature lines. --source=govinfo keeps the
+// older path for a district where RECAP coverage is thin.
+const SOURCE = arg('source', 'recap');
 
 const taxonomy = JSON.parse(readFileSync(join(CONFIG, 'taxonomy.json'), 'utf8'));
 const policy = JSON.parse(readFileSync(join(CONFIG, 'policy.json'), 'utf8'));
@@ -131,7 +138,10 @@ function proposal(hit, judge, subject) {
     appellate_posture_note: `No appellate disposition identified as of ${TODAY}.`,
     headnote_status: 'draft',
     public_url: url,
-    links: [{ anchor: 'District opinion (GovInfo)', url }],
+    links: hit.pdf
+      ? [{ anchor: `District opinion, ECF ${hit.ecf} (CourtListener)`, url },
+         { anchor: 'District opinion PDF (RECAP)', url: hit.pdf }]
+      : [{ anchor: 'District opinion (GovInfo)', url }],
     link_level: 'district',
     // The significance rubric is a career screen and does not apply to this tier.
     classification: null,
@@ -148,19 +158,25 @@ function proposal(hit, judge, subject) {
     motion_type: null,
     disposition: null,
     taxonomy_gap: null,
-    decision_ecf_number: null,
+    decision_ecf_number: hit.ecf != null ? String(hit.ecf) : null,
     decision_date: hit.dateFiled ?? null,
-    authored_by: matches ? judge.name : null,
-    authorship_source: matches ? 'opinion_text' : 'unverified',
+    authored_by: hit.signedBy ?? (matches ? judge.name : null),
+    // RECAP gives the clerk's line, which is the best of the three sources.
+    // GovInfo gives a judge field that has to be matched against the page.
+    authorship_source: hit.signedBy ? 'docket_entry_signature'
+                     : matches ? 'opinion_text' : 'unverified',
     research_cutoff: TODAY,
     status_checked: TODAY,
     last_verified: TODAY,
     _ingest: {
       matched_subject: subject,
       matched_terms: taxonomy.search_terms[subject],
-      govinfo_package: hit.packageId,
-      govinfo_granule: hit.granuleId,
-      govinfo_judge_field: named || null,
+      source: hit.pdf ? 'recap' : 'govinfo',
+      govinfo_package: hit.packageId ?? null,
+      govinfo_granule: hit.granuleId ?? null,
+      judge_field: named || null,
+      docket_entry: hit.description ?? null,
+      matched_text: hit.snippet ?? null,
       window: `${CUTOFF} to ${TODAY} (${YEARS}y subject lookback)`,
       predates_watershed: hit.predatesWatershed ?? null,
       needs: [
@@ -193,7 +209,8 @@ const proposals = [];
 let searches = 0, skipped = 0;
 
 console.log(`${judges.length} judges x ${SUBJECTS.length} subject(s), ${YEARS}-year window from ${CUTOFF}`);
-console.log(`cap ${PER_TAG} per judge per subject · source: GovInfo USCOURTS\n`);
+console.log(`cap ${PER_TAG} per judge per subject · source: ` +
+            `${SOURCE === 'recap' ? 'RECAP document index' : 'GovInfo USCOURTS'}\n`);
 
 const bySurname = new Map(judges.map((j) => [j.name.split(/\s+/).pop().toLowerCase(), j]));
 
@@ -203,13 +220,20 @@ for (const subject of SUBJECTS) {
 
   // One search per subject across the whole court, then attribute to judges.
   // Searching per judge per subject would be 41x the calls for the same corpus,
-  // and GovInfo does not filter by judge in the query anyway.
+  // and neither source filters by judge in the query anyway.
   let results = [];
   try {
     searches++;
-    const r = await searchUscourts({ courtCode: COURT, terms, since: CUTOFF, pageSize: 100 });
-    results = r.results ?? [];
-    if (!results.length) console.log(`  · ${subject}: no results (count ${r.count ?? 0})`);
+    if (SOURCE === 'recap') {
+      const hits = await findBySubject({ court: COURT, terms, since: CUTOFF, limit: 60 });
+      const dockets = await docketsById(hits.map((h) => h.docketId));
+      searches += dockets.size;
+      results = hits.map((h) => ({ ...h, docket: dockets.get(h.docketId) ?? null }));
+    } else {
+      const r = await searchUscourts({ courtCode: COURT, terms, since: CUTOFF, pageSize: 100 });
+      results = r.results ?? [];
+    }
+    if (!results.length) console.log(`  · ${subject}: no results`);
   } catch (e) {
     console.log(`  ! ${subject}: ${e.message}`);
     continue;
@@ -217,15 +241,32 @@ for (const subject of SUBJECTS) {
 
   const perJudge = new Map();
   for (const hit of results) {
-    if (!hit.packageId || !hit.granuleId) continue;
+    // Normalise the two sources to one shape: who signed, what it is called,
+    // which docket, when, and where the public copy is.
+    let named, caseName, docketNumber, issued, url, extra;
+    if (SOURCE === 'recap') {
+      if (!hit.docket) continue;                    // no docket, no identity
+      named = hit.judge;
+      caseName = hit.docket.case_name;
+      docketNumber = hit.docket.docket_number;
+      issued = hit.dateSigned ?? hit.dateFiled;
+      url = hit.page ?? hit.pdf;
+      extra = { ecf: hit.ecf, pdf: hit.pdf, signedBy: hit.judge,
+                description: hit.description, snippet: hit.snippet };
+    } else {
+      if (!hit.packageId || !hit.granuleId) continue;
+      let g;
+      try { searches++; g = await granule(hit.packageId, hit.granuleId); }
+      catch (e) { console.log(`  ! granule ${hit.granuleId}: ${e.message}`); continue; }
+      named = [g.judges, g.judge, g.courtName].flat().filter((x) => typeof x === 'string').join(' ');
+      caseName = g.title ?? hit.title;
+      docketNumber = g.caseNumber ?? null;
+      issued = g.dateIssued ?? hit.dateIssued ?? null;
+      url = pdfUrl(hit.packageId, hit.granuleId);
+      extra = { packageId: hit.packageId, granuleId: hit.granuleId };
+    }
 
-    // The search result does not name the judge; the granule summary does.
-    let g;
-    try { searches++; g = await granule(hit.packageId, hit.granuleId); }
-    catch (e) { console.log(`  ! granule ${hit.granuleId}: ${e.message}`); continue; }
-
-    const named = [g.judges, g.judge, g.courtName].flat().filter((x) => typeof x === 'string').join(' ');
-    const surname = [...bySurname.keys()].find((sn) => new RegExp(`\\b${sn}\\b`, 'i').test(named));
+    const surname = [...bySurname.keys()].find((sn) => new RegExp(`\\b${sn}\\b`, 'i').test(named ?? ''));
     if (!surname) continue;
     const judge = bySurname.get(surname);
     if (ONE_JUDGE && judge.slug !== ONE_JUDGE) continue;
@@ -237,17 +278,11 @@ for (const subject of SUBJECTS) {
     // A decision inside the window can still predate the statute the reader's
     // case will be pleaded under. Flag it; do not silently drop it.
     const ws = policy.doctrinal_watersheds?.[subject];
-    const issued = g.dateIssued ?? hit.dateIssued ?? null;
     const predates = ws && issued && issued < ws.date;
 
     const p = proposal({
-      caseName: g.title ?? hit.title,
-      docketNumber: g.caseNumber ?? null,
-      dateFiled: g.dateIssued ?? hit.dateIssued ?? null,
-      url: pdfUrl(hit.packageId, hit.granuleId),
-      namedJudge: named,
-      packageId: hit.packageId,
-      granuleId: hit.granuleId,
+      caseName, docketNumber, dateFiled: issued, url, namedJudge: named,
+      ...extra,
       predatesWatershed: predates ? ws : null,
     }, judge, subject);
 
@@ -267,7 +302,7 @@ if (WRITE && proposals.length) {
   for (const p of proposals) writeFileSync(join(outDir, `${p.id}.json`), JSON.stringify(p, null, 2) + '\n');
   writeFileSync(join(outDir, 'README.md'),
     `# Proposed: ${DISTRICT} recent tier, ${TODAY}\n\n` +
-    `${proposals.length} candidates from CourtListener's opinions collection, ` +
+    `${proposals.length} candidates from ${SOURCE === 'recap' ? "CourtListener's RECAP document index" : 'GovInfo USCOURTS'}, ` +
     `${YEARS}-year window from ${CUTOFF}, capped at ${PER_TAG} per judge per subject.\n\n` +
     `Nothing here renders. Each candidate needs, before it moves into ` +
     `\`src/content/districts/${DISTRICT}/opinions/\`:\n\n` +

@@ -7,6 +7,14 @@ import { sameJudge } from './lib/judge-name.mjs';
 
 const ROOT = 'src/content/districts';
 const tax = JSON.parse(readFileSync('src/content/config/taxonomy.json', 'utf8'));
+const policy = JSON.parse(readFileSync('src/content/config/policy.json', 'utf8'));
+const INTAKE = new Set(tax.subject.intake_filter);
+const CAP_SIG = policy.caps.significant_per_judge;
+const CAP_RECENT = policy.caps.recent_per_tag;
+// The matter-relevant window, as a date. A record older than this is not
+// matter-relevant however good it is; that is what the tier means.
+const SUBJECT_CUTOFF = new Date(Date.now() - policy.lookback.subject_district_years * 365.25 * 86400000)
+  .toISOString().slice(0, 10);
 const SUBJ = new Set(tax.subject.all), PROC = new Set(tax.procedural.all);
 const CMAX = { app:25, doc:20, prac:20, end:15, press:10, career:10 };
 const BANDS = [[75,100,'major'],[60,74,'noteworthy'],[40,59,'qualifying'],[30,39,'supplemental']];
@@ -59,7 +67,18 @@ for (const d of districts) {
     }
     const n = ops.filter(o => o.judge_slug === j.slug).length;
     if (n !== j.actual_selected_count) err.push(`${j.slug}: count ${j.actual_selected_count} != ${n} records`);
-    if (n > 5) err.push(`${j.slug}: ${n} decisions exceeds cap of 5`);
+    // Caps are per tier. The career screen is capped per judge; the
+    // matter-relevant tier is capped per judge per subject, because a reader
+    // arrives with one subject and five entries in it is already generous.
+    const mine = ops.filter(o => o.judge_slug === j.slug);
+    const sig = mine.filter(o => o.tier === 'significant').length;
+    if (sig > CAP_SIG) err.push(`${j.slug}: ${sig} significant decisions exceeds cap of ${CAP_SIG}`);
+    for (const t of INTAKE) {
+      const k = mine.filter(o => o.tier === 'recent' &&
+        (o.subject_primary === t || (o.subject_secondary ?? []).includes(t))).length;
+      if (k > CAP_RECENT)
+        err.push(`${j.slug}: ${k} recent decisions tagged '${t}' exceeds cap of ${CAP_RECENT}`);
+    }
     if (n === 0 && j.record_status === 'represented') err.push(`${j.slug}: no decisions and no status note`);
     if (n > 0 && j.record_status !== 'represented') err.push(`${j.slug}: status '${j.record_status}' with ${n} records`);
   }
@@ -93,6 +112,23 @@ for (const d of districts) {
     if (CRIMINAL_PROSE.test(o.headnote_district_ruling ?? ''))
       warn.push(`${id}: headnote reads as a criminal prosecution while its subject is ` +
                 `'${o.subject_primary}' — confirm it is civil in substance`);
+
+    // The matter-relevant tier has three rules and no scoring. A record that
+    // fails any of them is not matter-relevant, whatever else is true of it.
+    if (o.tier === 'recent') {
+      const tags = [o.subject_primary, ...(o.subject_secondary ?? [])];
+      if (!tags.some((t) => INTAKE.has(t)))
+        err.push(`${id}: recent tier but no subject on the intake list — ` +
+                 `a reader cannot arrive at this entry`);
+      if (!o.decision_date)
+        err.push(`${id}: recent tier with no decision_date — the window cannot be applied`);
+      else if (o.decision_date < SUBJECT_CUTOFF)
+        err.push(`${id}: decided ${o.decision_date}, outside the matter-relevant window ` +
+                 `(from ${SUBJECT_CUTOFF})`);
+      // Not scored, and saying otherwise invites the career rubric back in.
+      if (o.score_total != null || o.classification != null)
+        err.push(`${id}: recent tier carries a significance score — this tier is not scored`);
+    }
 
     // identity: caption alone is not a key on this corpus, and the docket that
     // identifies a district decision is the district court's, never the appeal's
