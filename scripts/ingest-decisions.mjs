@@ -30,14 +30,21 @@
  * not touch src/content; a human reads each candidate, writes the headnote from
  * the public opinion, and merges. That is hard constraint 6.
  *
- * Needs COURTLISTENER_TOKEN. Use `npm run ingest`, which reads .env; calling
- * node directly does not, and the run falls back to five requests a minute.
+ * The source is GovInfo, not CourtListener. That was not the first design.
+ * CourtListener's citable opinions collection returns 53 D.N.J. hits for "trade
+ * secret" whose newest is June 2016 and none inside a five-year window; recent
+ * district decisions live in RECAP as documents that are mostly not available.
+ * The 44 published entries decided 2021 or later confirm it — 19 link to GovInfo
+ * and 23 to Justia. GovInfo's USCOURTS collection is the source of record.
+ *
+ * Needs GOVINFO_API_KEY. DEMO_KEY works for a small run and throttles hard; a
+ * real key is free from api.data.gov. Use `npm run ingest`, which reads .env.
  */
 
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { cl, hasToken, stats } from './lib/courtlistener.mjs';
+import { searchUscourts, granule, pdfUrl, usingDemoKey, stats } from './lib/govinfo.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -97,10 +104,10 @@ function normaliseDocket(raw) {
 function proposal(hit, judge, subject) {
   const caption = hit.caseName;
   const docket = normaliseDocket(hit.docketNumber);
-  const url = `https://www.courtlistener.com${hit.absolute_url}`;
+  const url = hit.url;
   // The link is the decision, so the document names its author. Only claim that
   // when the name on it matches the page the entry would sit on.
-  const named = (hit.judge ?? '').trim();
+  const named = (hit.namedJudge ?? '').trim();
   const matches = named && named.split(/[\s,]+/).some((w) => w.length > 3 && judge.name.includes(w));
   return {
     id: `${judge.slug}--${slug(caption)}`,
@@ -109,11 +116,11 @@ function proposal(hit, judge, subject) {
     judge_name: judge.name,
     judge_office: judge.office.startsWith('magistrate') ? 'magistrate' : 'district',
     caption,
-    citation_line: `${caption}${docket ? `, No. ${docket}` : ''} (D.N.J. ${hit.dateFiled})`,
+    citation_line: `${caption}${docket ? `, No. ${docket}` : ''} (D.N.J. ${hit.dateFiled ?? ''})`.trim(),
     district_docket: docket,
     appellate_docket: null,
     additional_dockets: [],
-    reporter_cite: (hit.citation ?? [])[0] ?? null,
+    reporter_cite: null,
     court: 'D.N.J.',
     tier: 'recent',
     document_type: 'opinion',
@@ -124,7 +131,7 @@ function proposal(hit, judge, subject) {
     appellate_posture_note: `No appellate disposition identified as of ${TODAY}.`,
     headnote_status: 'draft',
     public_url: url,
-    links: [{ anchor: 'District opinion (CourtListener)', url }],
+    links: [{ anchor: 'District opinion (GovInfo)', url }],
     link_level: 'district',
     // The significance rubric is a career screen and does not apply to this tier.
     classification: null,
@@ -151,7 +158,9 @@ function proposal(hit, judge, subject) {
     _ingest: {
       matched_subject: subject,
       matched_terms: taxonomy.search_terms[subject],
-      courtlistener_judge_field: named || null,
+      govinfo_package: hit.packageId,
+      govinfo_granule: hit.granuleId,
+      govinfo_judge_field: named || null,
       window: `${CUTOFF} to ${TODAY} (${YEARS}y subject lookback)`,
       needs: ['headnote written from the public opinion', 'procedural tags', 'link verified to resolve'],
     },
@@ -171,39 +180,63 @@ const proposals = [];
 let searches = 0, skipped = 0;
 
 console.log(`${judges.length} judges x ${SUBJECTS.length} subject(s), ${YEARS}-year window from ${CUTOFF}`);
-console.log(`cap ${PER_TAG} per judge per subject\n`);
+console.log(`cap ${PER_TAG} per judge per subject · source: GovInfo USCOURTS\n`);
 
-for (const judge of judges) {
-  const surname = judge.name.split(/\s+/).pop();
-  for (const subject of SUBJECTS) {
-    const terms = taxonomy.search_terms?.[subject];
-    if (!terms) { console.log(`  ! no search terms for '${subject}' in taxonomy.json`); continue; }
-    let hits = [];
-    try {
-      searches++;
-      const r = await cl('/search/', {
-        type: 'o', court: COURT, judge: surname, q: terms,
-        filed_after: CUTOFF, order_by: 'dateFiled desc',
-      });
-      hits = (r.results ?? []).slice(0, PER_TAG * 3);
-    } catch (e) {
-      console.log(`  ! ${judge.slug} / ${subject}: ${e.message}`);
-      if (/quota exhausted/.test(e.message)) break;
-      continue;
-    }
+const bySurname = new Map(judges.map((j) => [j.name.split(/\s+/).pop().toLowerCase(), j]));
 
-    let kept = 0;
-    for (const hit of hits) {
-      if (kept >= PER_TAG) break;
-      if (!hit.absolute_url || !hit.caseName) continue;
-      const p = proposal(hit, judge, subject);
-      const key = `${p.judge_slug}|${p.caption}|${p.district_docket ?? ''}`;
-      if (seen.has(key)) { skipped++; continue; }
-      seen.add(key);
-      proposals.push(p);
-      kept++;
-      console.log(`  + ${judge.name.padEnd(22).slice(0, 22)} ${subject.padEnd(28)} ${hit.dateFiled}  ${hit.caseName.slice(0, 40)}`);
-    }
+for (const subject of SUBJECTS) {
+  const terms = taxonomy.search_terms?.[subject];
+  if (!terms) { console.log(`  ! no search terms for '${subject}' in taxonomy.json`); continue; }
+
+  // One search per subject across the whole court, then attribute to judges.
+  // Searching per judge per subject would be 41x the calls for the same corpus,
+  // and GovInfo does not filter by judge in the query anyway.
+  let results = [];
+  try {
+    searches++;
+    const r = await searchUscourts({ courtCode: COURT, terms, since: CUTOFF, pageSize: 100 });
+    results = r.results ?? [];
+    if (!results.length) console.log(`  · ${subject}: no results (count ${r.count ?? 0})`);
+  } catch (e) {
+    console.log(`  ! ${subject}: ${e.message}`);
+    continue;
+  }
+
+  const perJudge = new Map();
+  for (const hit of results) {
+    if (!hit.packageId || !hit.granuleId) continue;
+
+    // The search result does not name the judge; the granule summary does.
+    let g;
+    try { searches++; g = await granule(hit.packageId, hit.granuleId); }
+    catch (e) { console.log(`  ! granule ${hit.granuleId}: ${e.message}`); continue; }
+
+    const named = [g.judges, g.judge, g.courtName].flat().filter((x) => typeof x === 'string').join(' ');
+    const surname = [...bySurname.keys()].find((sn) => new RegExp(`\\b${sn}\\b`, 'i').test(named));
+    if (!surname) continue;
+    const judge = bySurname.get(surname);
+    if (ONE_JUDGE && judge.slug !== ONE_JUDGE) continue;
+
+    const key = `${judge.slug}|${subject}`;
+    const kept = perJudge.get(key) ?? 0;
+    if (kept >= PER_TAG) continue;
+
+    const p = proposal({
+      caseName: g.title ?? hit.title,
+      docketNumber: g.caseNumber ?? null,
+      dateFiled: g.dateIssued ?? hit.dateIssued ?? null,
+      url: pdfUrl(hit.packageId, hit.granuleId),
+      namedJudge: named,
+      packageId: hit.packageId,
+      granuleId: hit.granuleId,
+    }, judge, subject);
+
+    const idKey = `${p.judge_slug}|${p.caption}|${p.district_docket ?? ''}`;
+    if (seen.has(idKey)) { skipped++; continue; }
+    seen.add(idKey);
+    proposals.push(p);
+    perJudge.set(key, kept + 1);
+    console.log(`  + ${judge.name.padEnd(22).slice(0, 22)} ${subject.padEnd(26)} ${p.decision_date ?? '—'}  ${String(p.caption).slice(0, 38)}`);
   }
 }
 
@@ -231,7 +264,7 @@ console.log(`\n${searches} searches · ${proposals.length} candidates · ${skipp
 console.log(`${unattributed} candidate(s) where the recorded judge did not match the page`);
 const s = stats();
 if (s.throttleEvents) console.log(`${s.throttleEvents} throttle event(s); final pacing ${s.gapMs}ms`);
-if (!hasToken()) console.log('COURTLISTENER_TOKEN is unset; this ran at 5 requests/minute.');
+if (usingDemoKey()) console.log('GOVINFO_API_KEY is unset; this ran on DEMO_KEY, which throttles hard.');
 console.log(WRITE && proposals.length
   ? `\nWritten to ${outDir.replace(ROOT + '/', '')}`
   : '\nDry run. Add --write to propose these into review/pending/.');

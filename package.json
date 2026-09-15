@@ -18,7 +18,7 @@
     "check": "npm run validate && astro check && astro build",
     "reconcile": "node --env-file-if-exists=.env scripts/reconcile-dockets.mjs",
     "resolve-links": "node --env-file-if-exists=.env scripts/resolve-links.mjs",
-    "ingest": "node --env-file-if-exists=.env scripts/ingest-courtlistener.mjs"
+    "ingest": "node --env-file-if-exists=.env scripts/ingest-decisions.mjs"
   },
   "dependencies": {
     "astro": "^7.3.2"

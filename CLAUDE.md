@@ -18,7 +18,7 @@ specification; this file is the operating summary.
     npm run build         # gates, then astro build; exit 1 blocks the deploy
     npm run resolve-links -- --district=dnj    # needs COURTLISTENER_TOKEN
     npm run reconcile -- --district=dnj --held # same
-    npm run ingest -- --district=dnj           # same; proposes the recent tier
+    npm run ingest -- --district=dnj           # proposes the recent tier; GOVINFO_API_KEY
     # Both read .env via --env-file-if-exists. Calling node directly does not:
     # Node ignores .env unless told, and the run falls back to the 5/min throttle.
     node scripts/check-links.mjs                    # needs open network access
@@ -182,8 +182,17 @@ inside the lookback window, link resolves. Three gates, no scoring. Do not run
 matter-relevant candidates through the significance rubric; it will reject
 exactly the ordinary trade-secrets TRO the recipient wants to see.
 
-`scripts/ingest-courtlistener.mjs` proposes for this tier. Search terms per
-subject live in `taxonomy.json` so they can be tuned without touching code.
+`scripts/ingest-decisions.mjs` proposes for this tier, from GovInfo. Search
+terms per subject live in `taxonomy.json` so they can be tuned without code.
+
+**CourtListener cannot supply this tier.** Its citable opinions collection
+returns 53 D.N.J. hits for "trade secret" whose newest is June 2016, and none
+inside a five-year window. Recent district decisions sit in RECAP as documents
+where `is_available` is false on most entries: the docket text is public, the
+PDF is not. The 44 published entries decided 2021 or later bear it out — 19 link
+to GovInfo, 23 to Justia, one to CourtListener. GovInfo's USCOURTS collection is
+the source of record, and its package IDs are deterministic from the docket,
+which is also what makes a located decision verifiable afterwards.
 
 Why this tier matters more than the significant one. Of the 50 published
 entries, ten are both recent and on an intake-list subject, and seven intake
@@ -270,8 +279,8 @@ district-level link and no docket to resolve one by, and the FindLaw question on
 *Ireland v. Hegseth* is undecided. After those, link resolution, then the
 matter-relevant tier, then the firm block, then the Phase 3 news module.
 
-`ingest-daily.yml` calls `scripts/ingest-courtlistener.mjs`, which does not
-exist. The workflow will fail if it fires before that script is written.
+`ingest-daily.yml` now calls `scripts/ingest-decisions.mjs`, which exists. It
+needs `GOVINFO_API_KEY` in Actions secrets; on DEMO_KEY it throttles hard.
 
 ## Ownership
 

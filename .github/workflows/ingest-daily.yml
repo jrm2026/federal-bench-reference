@@ -16,8 +16,9 @@ jobs:
       - run: npm ci
       # Proposes entries into review/pending only. Nothing about a sitting judge
       # reaches src/content without a human merging the pull request.
-      - run: node scripts/ingest-courtlistener.mjs --district=${{ matrix.district }}
+      - run: node --env-file-if-exists=.env scripts/ingest-decisions.mjs --district=${{ matrix.district }} --write
         env:
+          GOVINFO_API_KEY: ${{ secrets.GOVINFO_API_KEY }}
           COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - uses: peter-evans/create-pull-request@v6
