@@ -87,13 +87,19 @@ None of these is Claude's to make.
       sign-off procedure requires reading the page rather than the JSON, and
       today every record is a draft. They carry their own noindex tag and
       `robots.launch.txt` disallows `/drafts/`, but robots is a request, not a
-      lock: once the site is reachable without Access, an unreviewed page about a
-      sitting judge should not be on it at all.
+      lock: once the site is reachable without the preview gate, an unreviewed
+      page about a sitting judge should not be on it at all.
+- [ ] Remove the preview gate: delete `main` and `assets.run_worker_first` from
+      `wrangler.jsonc`, and the `worker/` directory with them. Until this is
+      done the site asks for a password on every request, which is the point.
+      See `docs/PREVIEW-ACCESS.md`.
 - [ ] **Remove the `X-Robots-Tag` line from `public/_headers`.**
 
-That last line is the whole gate. Until it is deleted the site is private no
-matter what else is true, and deleting it should be its own commit with its own
-message, made deliberately and after everything above it.
+Those last two lines are the whole gate, and they are two halves of one
+decision: the password stops people, the header stops crawlers. Until both are
+deleted the site is private no matter what else is true, and deleting them
+should be its own commit with its own message, made deliberately and after
+everything above.
 
 ## After launch
 

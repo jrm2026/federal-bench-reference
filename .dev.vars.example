@@ -1,0 +1,7 @@
+# Local credentials for `npx wrangler dev`, which reads .dev.vars.
+#
+# Copy this file to .dev.vars and fill it in. .dev.vars is gitignored; the real
+# preview credentials live in Workers secrets and never in this repository.
+# See docs/PREVIEW-ACCESS.md.
+PREVIEW_USER=
+PREVIEW_PASSWORD=

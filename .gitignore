@@ -34,3 +34,11 @@ Thumbs.db
 
 # Written by scripts/reconcile-dockets.mjs. Regenerable.
 docket-reconciliation.json
+
+# Compiled from public/_headers by scripts/gen-edge-headers.mjs on every build.
+worker/edge-headers.generated.js
+
+# Local Worker secrets for `wrangler dev`. Never committed; the template is.
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
