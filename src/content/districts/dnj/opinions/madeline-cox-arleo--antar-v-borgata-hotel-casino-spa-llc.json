@@ -5,9 +5,9 @@
   "judge_name": "Madeline Cox Arleo",
   "judge_office": "district",
   "caption": "Antar v. Borgata Hotel Casino & Spa, LLC",
-  "citation_line": "Antar v. Borgata Hotel Casino & Spa, LLC, 2024 WL 1672280 (D.N.J. Jan. 31, 2024)",
-  "district_docket": null,
-  "appellate_docket": null,
+  "citation_line": "Antar v. Borgata Hotel Casino & Spa, LLC, No. 2:22-cv-05785, ECF No. 59 (D.N.J. Jan. 31, 2024), aff’d sub nom. Antar v. BetMGM, LLC, No. 24-1364 (3d Cir. Apr. 28, 2025)",
+  "district_docket": "2:22-cv-05785",
+  "appellate_docket": "24-1364",
   "additional_dockets": [],
   "reporter_cite": null,
   "court": "D.N.J.",
@@ -18,11 +18,15 @@
   "qualification_rationale": "The ruling received national press attention and squarely addressed whether New Jersey’s detailed casino regime creates or leaves room for a civil duty to protect a known problem gambler who has not self-excluded.",
   "appellate_posture_note": "The Third Circuit affirmed on April 28, 2025 in a nonprecedential opinion, agreeing that the complaint did not plausibly state CFA or negligence claims. The appellate disposition is persuasive but not binding precedent under the court’s internal procedures.",
   "headnote_status": "published",
-  "public_url": "https://www2.ca3.uscourts.gov/opinarch/241364np.pdf",
+  "public_url": "https://www.courtlistener.com/docket/65391064/59/antar-v-betmgm-llc/",
   "links": [
     {
-      "anchor": "Third Circuit disposition",
-      "url": "https://www2.ca3.uscourts.gov/opinarch/241364np.pdf"
+      "anchor": "District letter order, ECF 59 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/65391064/59/antar-v-betmgm-llc/"
+    },
+    {
+      "anchor": "District letter order PDF (Courthouse News)",
+      "url": "https://www.courthousenews.com/wp-content/uploads/2024/12/antar-v-betmgm-llc-etal-njdc-order-granting-mtd.pdf"
     }
   ],
   "classification": "qualifying",
@@ -59,10 +63,10 @@
   "publish_subject_index": true,
   "classification_pass": "2026-09-13 (subject screen)",
   "subject_index_only": false,
-  "link_level": "appellate_only",
-  "authorship_source": "unverified",
-  "authored_by": null,
-  "decision_ecf_number": null,
-  "decision_date": null,
-  "decision_selection_note": "Unresolved caption conflict. A secondary source ties 2024 WL 1672280 to No. 22-05785, and the appeal is CA3 No. 24-1364, but CourtListener records 2:22-cv-05785 as ANTAR v. BetMGM, LLC (Arleo, filed 29 Sept. 2022) and holds no Antar case against Borgata or Marina District Development in this district. The 31 January 2024 disposition was a letter order. Do not write the docket until the conflict is resolved: the district docket establishes identity."
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Madeline Cox Arleo",
+  "decision_ecf_number": "59",
+  "decision_date": "2024-01-31",
+  "decision_selection_note": "ECF 59 is a letter order granting the motions to dismiss and to compel arbitration, and the notice of appeal at ECF 60 is taken from it. No separate opinion accompanies it, so here the order is the decision. The caption conflict was an artifact of shortening: the full caption is Sam A. Antar v. The Borgata Hotel Casino and Spa, LLC; B Online Casino; BetMGM, LLC; MGM Resorts International, Inc.; Entain Plc, so Borgata is first-named and CourtListener indexes it under BetMGM."
 }

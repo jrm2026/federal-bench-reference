@@ -50,6 +50,11 @@ const ALLOWED_HOSTS = new Set([
   "www.fjc.gov", "fjc.gov",
   "www.supremecourt.gov",
   "ecf.njd.uscourts.gov",
+  // Courthouse News hosts the court's own filings as PDFs, and reached Antar
+  // when neither GovInfo nor a padded-docket search did. Link the hosted
+  // document, never the article about it: the PDF is the record, the article is
+  // a reporter's account and belongs on this site no more than a headnote does.
+  "www.courthousenews.com", "courthousenews.com",
 ]);
 
 // --- Gate 4: characterising the judge, not the holding ---------------------

@@ -205,7 +205,31 @@ The same distinction governs stipulated judgments and settlement approvals: ask
 what the judge explained, never what label the disposition carries.
 
 **Captions drift between the district court and the appeal.** *Bryman v. Murphy*
-on appeal is *Govatos v. Murphy* below. Resolve by docket, never by name.
+on appeal is *Govatos v. Murphy* below; *Khalil v. President* is *Khalil v.
+Joyce*; *NCAA v. Governor of New Jersey* is *NCAA v. Christie*; *ANJRPC v.
+Platkin* becomes *ANJRPC I v. Attorney General New Jersey* en banc. Resolve by
+docket, never by name. Captions also drift by *shortening*: the full Antar
+caption names five defendants, so one index files it under Borgata and another
+under BetMGM, and the two look like different cases until you read the whole
+thing.
+
+**A docket number is written four ways and they are all the same case.** The
+leading digit is only the vicinage and is dropped as often as written; the clerk
+zero-pads the sequence and nobody else does. So 2:22-cv-05785, 22-cv-05785,
+2:22-cv-5785 and 22-cv-5785 are one docket, and a search on the padded form
+finds nothing — which is why *Antar* sat in the corpus as "no docket, nothing to
+resolve from" while its order was a click away. `scripts/lib/docket.mjs`
+normalises and enumerates the forms. Vicinage is deliberately not part of
+identity: it changes when a case is transferred, which is why GovInfo carries
+ANJRPC under both `1_` and `3_`.
+
+**Secondary sources find what the APIs do not.** Feeding the appellate caption,
+the district docket and the date into a search engine resolved five records the
+docket text could not, including two whose appeals had never been recorded.
+Courthouse News (`courthousenews.com`) is on the source allowlist because it
+hosts the court's own filings as PDFs — link the hosted document, never the
+article about it. A reporter's account of a ruling belongs on this site no more
+than a headnote does.
 
 ## The gates
 
