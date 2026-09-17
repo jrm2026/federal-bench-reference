@@ -1,0 +1,70 @@
+{
+  "id": "andre-m-espinosa--democratic-party-of-new-jersey-inc-v-devine",
+  "district": "dnj",
+  "judge_slug": "andre-m-espinosa",
+  "judge_name": "André M. Espinosa",
+  "judge_office": "magistrate",
+  "caption": "Democratic Party of New Jersey, Inc. v. Devine",
+  "citation_line": "Democratic Party of New Jersey, Inc. v. Devine, No. 2:22-cv-01268, ECF No. 152 (D.N.J. May 16, 2025)",
+  "district_docket": "2:22-cv-01268",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "adopted",
+  "headnote_district_ruling": "Recommended case-ending discovery sanctions in political-party and campaign-related litigation: striking the answer and permitting the plaintiff to seek default and default judgment after repeated noncompliance.",
+  "qualification_rationale": "A severe Rule 37 remedy, adopted as the district court's conclusions of law, showing when persistent discovery failure crosses the threshold to terminating sanctions.",
+  "appellate_posture_note": "Adopted without objection on June 9, 2025, ECF No. 154; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-01268/pdf/USCOURTS-njd-2_22-cv-01268-2.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-01268/pdf/USCOURTS-njd-2_22-cv-01268-2.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 46,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 18,
+    "end": 5,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "spoliation-sanctions",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Terminating Sanctions",
+  "screen_score": 73,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 22,
+    "analysis": 15,
+    "disposition": 20,
+    "doctrine": 8,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "André M. Espinosa",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

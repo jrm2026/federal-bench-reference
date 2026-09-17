@@ -1,0 +1,63 @@
+{
+  "id": "justin-t-quinn--khal-anshei-tallymawr-inc-v-township-of-toms-riv",
+  "district": "dnj",
+  "judge_slug": "justin-t-quinn",
+  "judge_name": "Justin T. Quinn",
+  "judge_office": "magistrate",
+  "caption": "Khal Anshei Tallymawr Inc. v. Township of Toms River",
+  "citation_line": "Khal Anshei Tallymawr Inc. v. Township of Toms River, Nos. 3:21-cv-02716 & 3:21-cv-03239, ECF No. 168 (D.N.J. Aug. 8, 2024)",
+  "district_docket": "3:21-cv-02716",
+  "appellate_docket": null,
+  "additional_dockets": [
+    "3:21-cv-03239"
+  ],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "order",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Entered a protective order blocking discovery sought through nineteen nonparty subpoenas in consolidated religious-land-use cases. The requests were irrelevant, insufficiently tied to alleged anti-Semitic animus, and unduly burdensome, though the subpoenas were not formally quashed.",
+  "qualification_rationale": "A developed proportionality analysis for sprawling third-party discovery in RLUIPA and constitutional zoning litigation.",
+  "appellate_posture_note": "Non-dispositive discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_21-cv-03239/pdf/USCOURTS-njd-3_21-cv-03239-4.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-3_21-cv-03239/pdf/USCOURTS-njd-3_21-cv-03239-4.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 47,
+  "components": {
+    "app": 0,
+    "doc": 17,
+    "prac": 18,
+    "end": 4,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope",
+    "protective-orders-sealing"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Religious Land Use Discovery",
+  "subject_screen_exclusion_reason": "Protective order concerning nonparty subpoenas; the RLUIPA and constitutional merits remain undecided.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Justin T. Quinn",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

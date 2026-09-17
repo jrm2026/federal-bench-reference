@@ -1,0 +1,44 @@
+{
+  "slug": "rukhsanah-l-singh",
+  "name": "Rukhsanah L. Singh",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Trenton",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed March 16, 2022 through September 13, 2026. Selected decisions: 4.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 4,
+  "actual_selected_count": 4,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Singh earned a B.A. from Davidson College and a J.D. from Seton Hall University School of Law. She clerked for U.S. District Judge Joel A. Pisano and New Jersey Supreme Court Justice Roberto A. Rivera-Soto, practiced at Connell Foley, served as an Assistant U.S. Attorney in the Eastern District of New York’s Civil Division, and was assistant general counsel for litigation at BASF.",
+    "education_sentences": [
+      "Singh earned a B.A. from Davidson College and a J.D. from Seton Hall University School of Law."
+    ],
+    "confidence": "partial",
+    "source_note": "Graduation years were not stated in the reviewed official sources.",
+    "sources": [
+      "https://www.njd.uscourts.gov/content/rukhsanah-l-singh",
+      "https://www.uscourts.gov/about-federal-courts/about-federal-judges/judicial-milestones/rukhsanah-l-singh",
+      "https://www.thesedonaconference.org/bio/240297"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "U.S. Courts milestone",
+      "Sedona Conference biography"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed March 16, 2022 | Trenton"
+}

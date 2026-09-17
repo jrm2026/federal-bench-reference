@@ -1,0 +1,70 @@
+{
+  "id": "james-b-clark-iii--31-01-broadway-associates-llc-v-travelers-casual",
+  "district": "dnj",
+  "judge_slug": "james-b-clark-iii",
+  "judge_name": "James B. Clark III",
+  "judge_office": "magistrate",
+  "caption": "31-01 Broadway Associates, LLC v. Travelers Casualty & Surety Co.",
+  "citation_line": "31-01 Broadway Associates, LLC v. Travelers Casualty & Surety Co., No. 2:17-cv-06292, ECF No. 84 (D.N.J. Aug. 27, 2019)",
+  "district_docket": "2:17-cv-06292",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "adopted",
+  "headnote_district_ruling": "Recommended allowing joinder of a nondiverse party under § 1447(e) and remanding an environmental insurance dispute. Applying Hensgens, the court found a legitimate contribution claim rather than a maneuver designed merely to defeat jurisdiction.",
+  "qualification_rationale": "The adoption opinion also addressed a local split over the review standard for a magistrate recommendation that effectively destroys federal jurisdiction.",
+  "appellate_posture_note": "Adopted in substance, with modifications not affecting amendment and remand, on October 10, 2019, ECF No. 91.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_17-cv-06292/pdf/USCOURTS-njd-2_17-cv-06292-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_17-cv-06292/pdf/USCOURTS-njd-2_17-cv-06292-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 48,
+  "components": {
+    "app": 0,
+    "doc": 17,
+    "prac": 17,
+    "end": 7,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Joinder and Federal Jurisdiction",
+  "screen_score": 78,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 17,
+    "disposition": 20,
+    "doctrine": 10,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "James B. Clark III",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

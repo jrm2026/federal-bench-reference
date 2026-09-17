@@ -1,0 +1,42 @@
+{
+  "slug": "karen-m-williams",
+  "name": "Karen M. Williams",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2022–13 September 2026. Selected decisions: 1.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 2,
+  "actual_selected_count": 2,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1963 in Syosset, New York. Williams earned a B.A. from Pennsylvania State University (1985) and a J.D. from Temple University School of Law (1992). She practiced in Newark from 1992 to 2009, served as a District of New Jersey magistrate judge from 2009 to 2021, and taught as an adjunct at Rutgers–Camden and Rowan University. President Biden nominated her to the district court.",
+    "education_sentences": [
+      "Williams earned a B.A. from Pennsylvania State University (1985) and a J.D. from Temple University School of Law (1992)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/10929796",
+      "https://www.njd.uscourts.gov/content/karen-m-williams"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned November 1, 2021 | Camden"
+}

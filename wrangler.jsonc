@@ -1,26 +1,46 @@
 {
-  // Cloudflare Workers static assets.
+  // Cloudflare Workers static assets, behind a preview gate.
   //
   // The assets root is ./dist, the Astro build output. public/ is Astro's
   // static passthrough directory, so _headers, _redirects and both robots files
   // are copied into dist/ during the build and are read from there — Workers
-  // reads them from the root of the assets directory, which is why the site
-  // will not serve its noindex header if this points anywhere else.
+  // reads them from the root of the assets directory.
   //
   // The build must run before this deploys. Set the Workers Builds project's
   // build command to `npm run build`, which runs the review gate first and
-  // blocks on exit 1, then builds. A deploy with no build step will fail with
-  // "Could not detect a directory containing static files" because dist/ is
-  // gitignored and will not exist.
+  // blocks on exit 1, then builds, then compiles public/_headers for the
+  // Worker. A deploy with no build step will fail with "Could not detect a
+  // directory containing static files" because dist/ is gitignored and will not
+  // exist, and worker/edge-headers.generated.js will not exist either.
   //
-  // data/ sits outside the assets root, so the forty-three judge records are
-  // versioned on GitHub and never served from the edge. Only what Astro renders
-  // into dist/ is published.
+  // src/content/ sits outside the assets root, so the judge and opinion records
+  // are versioned on GitHub and never served from the edge. Only what Astro
+  // renders into dist/ is published.
+  //
+  // `main` plus `run_worker_first` is the preview gate: every request, for a
+  // page or an asset, is handled by worker/index.js, which requires HTTP Basic
+  // credentials before it will call env.ASSETS.fetch(). Without
+  // `run_worker_first` the default is the opposite — a matching asset is served
+  // without invoking the Worker at all — so the flag is the whole protection
+  // and not a tuning knob. Removing it opens the site.
+  //
+  // Note the consequence, which is documented and easy to miss: Workers does
+  // not apply _headers to a response that came through a Worker script. The
+  // Worker sets those headers itself, from the same file, compiled at build
+  // time. public/_headers is still the one place the noindex launch switch
+  // lives.
+  //
+  // At launch, delete `main` and `run_worker_first` in one deliberate commit.
+  // See docs/LAUNCH-CHECKLIST.md and docs/PREVIEW-ACCESS.md.
 
   "name": "federal-bench-reference",
   "compatibility_date": "2026-09-08",
 
+  "main": "worker/index.js",
+
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }

@@ -1,0 +1,44 @@
+{
+  "slug": "ethan-a-hougah",
+  "name": "Ethan A. Hougah",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Camden",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed July 23, 2026 through September 13, 2026. Selected decisions: 0.",
+  "record_status": "developing",
+  "record_status_note": "No qualifying decision identified. The appointment preceded the cutoff by less than two months.",
+  "declared_selected_count": 0,
+  "actual_selected_count": 0,
+  "link_from_mail": false,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Hougah earned a B.A. from Rutgers University–Camden (2005) and a J.D. from Boston College Law School (2010). He clerked for New Jersey Superior Court Judge David W. Morgan, then-Magistrate Judge Karen M. Williams, and Magistrate Judge Steven C. Mannion. He practiced at Bressler Amery & Ross and Montgomery McCracken, becoming a partner at the latter before his appointment.",
+    "education_sentences": [
+      "Hougah earned a B.A. from Rutgers University–Camden (2005) and a J.D. from Boston College Law School (2010)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.njd.uscourts.gov/content/ethan-hougah",
+      "https://www.njd.uscourts.gov/sites/njd/files/NoticetotheBarEAH.pdf",
+      "https://www.mmwr.com/ethan-hougah-appointed-to-serve-as-magistrate-judge-in-the-united-states-district-court-for-the-district-of-new-jersey/"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "Official appointment notice",
+      "Former-firm announcement"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed July 23, 2026 | Camden"
+}

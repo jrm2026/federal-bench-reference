@@ -1,0 +1,70 @@
+{
+  "id": "jessica-s-allen--township-of-cranford-v-cranford-harrison-develop",
+  "district": "dnj",
+  "judge_slug": "jessica-s-allen",
+  "judge_name": "Jessica S. Allen",
+  "judge_office": "magistrate",
+  "caption": "Township of Cranford v. Cranford Harrison Developers, LLC",
+  "citation_line": "Township of Cranford v. Cranford Harrison Developers, LLC, No. 2:23-cv-04367, ECF No. 6 (D.N.J. Oct. 11, 2023)",
+  "district_docket": "2:23-cv-04367",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "pending",
+  "headnote_district_ruling": "Recommended remand after identifying both a procedural removal defect and the absence of diversity jurisdiction; it declined fees despite the improper removal.",
+  "qualification_rationale": "A clear primer on § 1446 notice requirements, citizenship allegations, the remand-versus-dismissal choice, and fee discretion.",
+  "appellate_posture_note": "R&R; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_23-cv-04367/pdf/USCOURTS-njd-2_23-cv-04367-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_23-cv-04367/pdf/USCOURTS-njd-2_23-cv-04367-0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 39,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 17,
+    "end": 2,
+    "press": 0,
+    "career": 6
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federal Jurisdiction and Removal",
+  "screen_score": 68,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 14,
+    "disposition": 20,
+    "doctrine": 7,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Jessica S. Allen",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "evelyn-padin",
+  "name": "Evelyn Padin",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2022–13 September 2026. Selected decisions: 0.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 1,
+  "actual_selected_count": 1,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1960 in Jersey City. Padin earned a B.A. from Rutgers University (1983), an M.S.W. from Fordham University (1985), and a J.D. from Seton Hall University School of Law (1992). She clerked in New Jersey Superior Court, practiced in Bloomfield and Jersey City for three decades, served briefly as a Jersey City municipal judge, and was counsel to a city landlord-tenant relations board. President Biden appointed her.",
+    "education_sentences": [
+      "Padin earned a B.A. from Rutgers University (1983), an M.S.W.",
+      "from Fordham University (1985), and a J.D. from Seton Hall University School of Law (1992)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/12007536",
+      "https://www.njd.uscourts.gov/content/evelyn-padin"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned June 24, 2022 | Newark"
+}

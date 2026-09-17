@@ -1,0 +1,42 @@
+{
+  "slug": "robert-kirsch",
+  "name": "Robert Kirsch",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "district",
+  "roster_group": "active",
+  "vicinage": null,
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Article III service reviewed: 2023–13 September 2026. Selected decisions: 0.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 1,
+  "actual_selected_count": 1,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Born in 1966 in Livingston, New Jersey. Kirsch earned a B.A. from Emory University (1988) and a J.D. from Fordham University School of Law (1991). He clerked for U.S. District Judge William J. Zloch, litigated in the Justice Department’s Civil Division, served as an Assistant U.S. Attorney in New Jersey, and sat on the New Jersey Superior Court from 2010 to 2023. President Biden appointed him.",
+    "education_sentences": [
+      "Kirsch earned a B.A. from Emory University (1988) and a J.D. from Fordham University School of Law (1991)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.fjc.gov/node/13619516",
+      "https://www.njd.uscourts.gov/content/robert-kirsch"
+    ],
+    "source_labels": [
+      "Federal Judicial Center biography",
+      "Official court profile"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. District Judge | Active; commissioned May 8, 2023 | Trenton"
+}

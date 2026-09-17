@@ -1,0 +1,69 @@
+{
+  "id": "mary-little-cooper--united-states-v-smith",
+  "district": "dnj",
+  "judge_slug": "mary-little-cooper",
+  "judge_name": "Mary Little Cooper",
+  "judge_office": "district",
+  "caption": "United States v. Smith",
+  "citation_line": "United States v. Smith, No. 12-1516 (3d Cir. Aug. 6, 2013)",
+  "district_docket": null,
+  "appellate_docket": "12-1516",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Cooper admitted evidence that the defendant had dealt drugs at the same location two years earlier to establish motive in a prosecution for threatening federal officers with a firearm; the jury convicted him.",
+  "qualification_rationale": "The appeal is a substantial Third Circuit Rule 404(b) authority enforcing the requirement that relevance cannot depend on a forbidden propensity inference and clarifying the analysis trial courts must perform before admitting prior-act evidence.",
+  "appellate_posture_note": "The Third Circuit reversed the evidentiary ruling in a precedential opinion, vacated two convictions, and remanded for a new trial because the proposed chain of inferences depended on propensity.",
+  "headnote_status": "published",
+  "public_url": "https://www2.ca3.uscourts.gov/opinarch/121516p.pdf",
+  "links": [
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/121516p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 77,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 13,
+    "end": 12,
+    "press": 1,
+    "career": 8
+  },
+  "subject_primary": "evidence-and-sanctions",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "evidentiary-rulings"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Evidence and Prior Acts",
+  "screen_score": 76,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 22,
+    "analysis": 20,
+    "disposition": 10,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "appellate_only",
+  "authorship_source": "unverified",
+  "authored_by": null,
+  "decision_ecf_number": null,
+  "decision_date": null
+}

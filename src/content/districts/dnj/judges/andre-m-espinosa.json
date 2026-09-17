@@ -1,0 +1,44 @@
+{
+  "slug": "andre-m-espinosa",
+  "name": "André M. Espinosa",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Newark",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed March 2021 through September 13, 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Espinosa earned a B.A. in political science and an M.P.A. from the University of Kansas and a J.D. from Rutgers Law School. He clerked for District Judge Freda L. Wolfson, New Jersey Supreme Court Justice Roberto A. Rivera-Soto, and New Jersey Appellate Division Judge Anthony J. Parrillo. He practiced at Paul Weiss and served as a federal prosecutor in San Diego, Newark, and Sacramento, including white-collar work.",
+    "education_sentences": [
+      "Espinosa earned a B.A. in political science and an M.P.A. from the University of Kansas and a J.D. from Rutgers Law School."
+    ],
+    "confidence": "partial",
+    "source_note": "Graduation years were not stated in the reviewed official sources.",
+    "sources": [
+      "https://www.njd.uscourts.gov/content/andr%C3%A9-m-espinosa",
+      "https://www.uscourts.gov/data-news/judiciary-news/2022/08/18/nj-court-welcomes-7-judges-novel-ceremony",
+      "https://www.saiber.com/insights/publications/2021-06-10-a-brief-survey-of-recent-appointments-to-the-united-states-district-court-for-the-district-of-new-jersey/_pdfx/2021-06-10-a-brief-survey-of-recent-appointments-to-the-united-states-district-court-for-the-district-of-new-jersey.pdf"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "U.S. Courts ceremony profile",
+      "Saiber appointment survey"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed in March 2021 | Newark"
+}

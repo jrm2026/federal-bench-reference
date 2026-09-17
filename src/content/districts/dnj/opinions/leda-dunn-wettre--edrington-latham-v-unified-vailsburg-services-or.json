@@ -1,0 +1,70 @@
+{
+  "id": "leda-dunn-wettre--edrington-latham-v-unified-vailsburg-services-or",
+  "district": "dnj",
+  "judge_slug": "leda-dunn-wettre",
+  "judge_name": "Leda Dunn Wettre",
+  "judge_office": "magistrate",
+  "caption": "Edrington-Latham v. Unified Vailsburg Services Organization",
+  "citation_line": "Edrington-Latham v. Unified Vailsburg Services Organization, No. 2:22-cv-01465, ECF No. 18 (D.N.J. July 14, 2022)",
+  "district_docket": "2:22-cv-01465",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "pending",
+  "headnote_district_ruling": "Recommended remand after wage plaintiffs dropped their FLSA claims, declining supplemental jurisdiction over the remaining New Jersey claims and rejecting the removing defendants' request for fees based on alleged forum manipulation.",
+  "qualification_rationale": "A practical application of § 1367(c) and Carnegie-Mellon after post-removal amendment, including the uncommon question whether the party opposing remand can recover § 1447(c) fees.",
+  "appellate_posture_note": "R&R; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-01465/pdf/USCOURTS-njd-2_22-cv-01465-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-01465/pdf/USCOURTS-njd-2_22-cv-01465-0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 36,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 15,
+    "end": 1,
+    "press": 0,
+    "career": 6
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Supplemental Jurisdiction and Remand",
+  "screen_score": 68,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 23,
+    "analysis": 14,
+    "disposition": 20,
+    "doctrine": 7,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Leda Dunn Wettre",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

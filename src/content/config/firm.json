@@ -1,0 +1,15 @@
+{
+  "base": {
+    "sponsor_name": "Scarinci Hollenbeck, LLC",
+    "address": "[address]",
+    "phone": "[phone]",
+    "advertising_label": "Attorney Advertising.",
+    "disclaimer": "It is not affiliated with, endorsed by, or authorized by the United States courts or any judge. Content is compiled from public sources; opinion summaries are written from the public opinions and are provided for general information, not as legal advice. Prior results do not guarantee a similar outcome.",
+    "copyright": "© 2026."
+  },
+  "districts": {
+    "dnj": {},
+    "sdny": {},
+    "edny": {}
+  }
+}

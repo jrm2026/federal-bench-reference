@@ -1,33 +1,33 @@
 ---
-import Base from "../layouts/Base.astro";
-import { firm, curator, advertisingBlockSettled } from "../config/site.js";
+import Base from '../layouts/Base.astro';
+import firm from '../content/config/firm.json';
+import curator from '../content/config/curator.json';
+
+// The firm block is bracketed until the sponsor's address and telephone are
+// settled. Publishing "[address]" is worse than publishing nothing, so the
+// page says the details are unsettled rather than printing the placeholder.
+const f = firm.base;
+const settled = ![f.address, f.phone].some((v) => /^\s*\[.*\]\s*$/.test(v ?? ''));
 ---
-
-<Base title="Contact">
-  <div class="breadcrumb" slot="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Contact</div>
-
-  <div class="pagehead">
+<Base title="Contact — Federal Bench Reference">
+  <div class="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Contact</div>
+  <div class="judgehead">
     <h1>Contact</h1>
     <div class="role">Corrections and questions</div>
   </div>
 
   <section class="block">
-    <div class="prose">
-      {advertisingBlockSettled ? (
-        <p>
-          This reference is maintained by <b>{curator.name}</b> at <b>{firm.name}</b>,{" "}
-          {firm.address}, {firm.phone}.
-        </p>
-      ) : (
-        <div class="empty">
-          <strong>Contact details are not yet settled</strong>
-          They are published when the curator and firm blocks are.
-        </div>
-      )}
-      <p>
-        Corrections are welcome and are treated seriously. A fact corrected here is recorded so it
-        cannot reappear: the build refuses to publish a fact that has previously been found wrong.
-      </p>
-    </div>
+    {settled ? (
+      <p class="summary">This reference is maintained by <b>{curator.curator_name}</b> and
+      sponsored by <b>{f.sponsor_name}</b>, {f.address}, {f.phone}.</p>
+    ) : (
+      <div class="empty">
+        <strong>Contact details are not yet settled</strong>
+        They are published when the sponsor block is.
+      </div>
+    )}
+    <p class="summary">Corrections are welcome and are treated seriously. A fact corrected here is
+    recorded so that it cannot reappear: the build refuses to publish a fact previously found
+    wrong.</p>
   </section>
 </Base>

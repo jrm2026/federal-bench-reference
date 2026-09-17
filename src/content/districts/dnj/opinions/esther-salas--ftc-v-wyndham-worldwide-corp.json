@@ -1,0 +1,73 @@
+{
+  "id": "esther-salas--ftc-v-wyndham-worldwide-corp",
+  "district": "dnj",
+  "judge_slug": "esther-salas",
+  "judge_name": "Esther Salas",
+  "judge_office": "district",
+  "caption": "FTC v. Wyndham Worldwide Corp.",
+  "citation_line": "FTC v. Wyndham Worldwide Corp., 10 F. Supp. 3d 602 (D.N.J. 2014), aff’d, 799 F.3d 236 (3d Cir. 2015)",
+  "district_docket": null,
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "10 F. Supp. 3d 602",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Salas denied Wyndham’s motion to dismiss the FTC’s claim that allegedly unreasonable cybersecurity practices were “unfair” under § 5 of the FTC Act.",
+  "qualification_rationale": "The ruling became a landmark in federal cybersecurity enforcement by confirming that the FTC may police inadequate corporate data-security practices under its unfairness authority; it received extensive national press coverage.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential interlocutory opinion, holding that the FTC had statutory authority over cybersecurity and that Wyndham had fair notice of potential liability.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/opinion/7305635/federal-trade-commission-v-wyndham-worldwide-corp/",
+  "links": [
+    {
+      "anchor": "District opinion (CourtListener)",
+      "url": "https://www.courtlistener.com/opinion/7305635/federal-trade-commission-v-wyndham-worldwide-corp/"
+    },
+    {
+      "anchor": "Third Circuit opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/143514p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 98,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 20,
+    "end": 15,
+    "press": 10,
+    "career": 8
+  },
+  "subject_primary": "data-privacy-cybersecurity",
+  "subject_secondary": [
+    "consumer-fraud"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Cybersecurity and FTC Enforcement",
+  "screen_score": 88,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 14,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Esther Salas",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

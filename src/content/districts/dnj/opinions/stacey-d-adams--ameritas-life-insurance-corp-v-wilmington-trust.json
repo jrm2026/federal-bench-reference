@@ -1,0 +1,60 @@
+{
+  "id": "stacey-d-adams--ameritas-life-insurance-corp-v-wilmington-trust",
+  "district": "dnj",
+  "judge_slug": "stacey-d-adams",
+  "judge_name": "Stacey D. Adams",
+  "judge_office": "magistrate",
+  "caption": "Ameritas Life Insurance Corp. v. Wilmington Trust, N.A.",
+  "citation_line": "Ameritas Life Insurance Corp. v. Wilmington Trust, N.A., No. 2:19-cv-18713, ECF No. 210 (D.N.J. Jan. 27, 2025)",
+  "district_docket": "2:19-cv-18713",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Granted a request for a letter of request to obtain evidence abroad under Rule 28(b)(2) and the Hague Evidence Convention, while editing the proposed request to remove contested characterizations of earlier discovery.",
+  "qualification_rationale": "A concise, practical illustration of judicial assistance for foreign evidence gathering in complex insurance and trust litigation.",
+  "appellate_posture_note": "Non-dispositive discovery ruling; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_19-cv-18713/pdf/USCOURTS-njd-2_19-cv-18713-1.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_19-cv-18713/pdf/USCOURTS-njd-2_19-cv-18713-1.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 38,
+  "components": {
+    "app": 0,
+    "doc": 14,
+    "prac": 15,
+    "end": 2,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "International Evidence Gathering",
+  "subject_screen_exclusion_reason": "Foreign-evidence request governing discovery mechanics only.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Stacey D. Adams",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

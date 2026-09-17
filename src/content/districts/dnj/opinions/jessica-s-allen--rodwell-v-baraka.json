@@ -1,0 +1,61 @@
+{
+  "id": "jessica-s-allen--rodwell-v-baraka",
+  "district": "dnj",
+  "judge_slug": "jessica-s-allen",
+  "judge_name": "Jessica S. Allen",
+  "judge_office": "magistrate",
+  "caption": "Rodwell v. Baraka",
+  "citation_line": "Rodwell v. Baraka, No. 2:22-cv-06427, ECF No. 131 (D.N.J. Feb. 6, 2026)",
+  "district_docket": "2:22-cv-06427",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Applied the Morgan high-ranking-official doctrine to Newark Mayor Ras Baraka, barred his deposition because other sources could supply the information, but required an answer to a targeted interrogatory.",
+  "qualification_rationale": "A developed application of Morgan and Buono that provides a useful counterpoint to decisions permitting mayoral depositions where first-hand involvement was better established.",
+  "appellate_posture_note": "Non-dispositive protective order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-06427/pdf/USCOURTS-njd-2_22-cv-06427-1.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-06427/pdf/USCOURTS-njd-2_22-cv-06427-1.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 48,
+  "components": {
+    "app": 0,
+    "doc": 18,
+    "prac": 18,
+    "end": 4,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope",
+    "protective-orders-sealing"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Discovery from High Ranking Officials",
+  "subject_screen_exclusion_reason": "Non-dispositive deposition and protective-order ruling under the high-ranking-official doctrine.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Jessica S. Allen",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

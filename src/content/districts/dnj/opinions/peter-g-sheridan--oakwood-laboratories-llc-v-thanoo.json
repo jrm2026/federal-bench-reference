@@ -1,0 +1,79 @@
+{
+  "id": "peter-g-sheridan--oakwood-laboratories-llc-v-thanoo",
+  "district": "dnj",
+  "judge_slug": "peter-g-sheridan",
+  "judge_name": "Peter G. Sheridan",
+  "judge_office": "district",
+  "caption": "Oakwood Laboratories LLC v. Thanoo",
+  "citation_line": "Oakwood Laboratories LLC v. Thanoo, No. 3:17-cv-05090, ECF No. 83 (D.N.J. Oct. 23, 2019), vacated, 999 F.3d 892 (3d Cir. 2021)",
+  "district_docket": "3:17-cv-05090",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": "999 F.3d 892",
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Sheridan dismissed four successive complaints alleging theft of pharmaceutical-development trade secrets, breach of contract and tortious interference.",
+  "qualification_rationale": "The precedential appeal became a leading Third Circuit authority on pleading claims under the Defend Trade Secrets Act, including identification of trade secrets and plausible allegations of acquisition, disclosure or use.",
+  "appellate_posture_note": "The Third Circuit vacated and remanded, concluding that the detailed third amended complaint readily satisfied federal pleading requirements and clarifying DTSA pleading standards.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/6124124/83/oakwood-laboratories-llc-v-thanoo/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 83 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/6124124/83/oakwood-laboratories-llc-v-thanoo/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.351406/gov.uscourts.njd.351406.83.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/193707p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 85,
+  "components": {
+    "app": 25,
+    "doc": 20,
+    "prac": 15,
+    "end": 15,
+    "press": 2,
+    "career": 8
+  },
+  "subject_primary": "trade-secrets",
+  "subject_secondary": [
+    "commercial-contract",
+    "business-torts"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Trade Secrets",
+  "screen_score": 93,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 22,
+    "disposition": 20,
+    "doctrine": 13,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Peter G. Sheridan",
+  "decision_ecf_number": "83",
+  "decision_date": "2019-10-23",
+  "decision_selection_note": "The docket marks this entry VACATED, matching the Third Circuit vacatur at 999 F.3d 892."
+}

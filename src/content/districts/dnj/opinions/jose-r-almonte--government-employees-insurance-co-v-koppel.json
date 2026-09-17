@@ -1,0 +1,60 @@
+{
+  "id": "jose-r-almonte--government-employees-insurance-co-v-koppel",
+  "district": "dnj",
+  "judge_slug": "jose-r-almonte",
+  "judge_name": "José R. Almonte",
+  "judge_office": "magistrate",
+  "caption": "Government Employees Insurance Co. v. Koppel",
+  "citation_line": "Government Employees Insurance Co. v. Koppel, No. 2:21-cv-03413, ECF No. 159 (D.N.J. Aug. 28, 2023)",
+  "district_docket": "2:21-cv-03413",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied physicians' effort to quash a subpoena to New Jersey's Office of the Insurance Fraud Prosecutor in a civil RICO and insurance-fraud case, finding the responsive records relevant and not privileged while permitting confidentiality designations.",
+  "qualification_rationale": "Practical guidance on party standing, statutory confidentiality, burden, and protective-order treatment for law-enforcement records sought in parallel civil fraud litigation.",
+  "appellate_posture_note": "Non-dispositive discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_21-cv-03413/pdf/USCOURTS-njd-2_21-cv-03413-2.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo opinion",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_21-cv-03413/pdf/USCOURTS-njd-2_21-cv-03413-2.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 41,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 16,
+    "end": 3,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "insurance-coverage",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Insurance Fraud Discovery",
+  "subject_screen_exclusion_reason": "Third-party subpoena and confidentiality ruling in insurance-fraud litigation.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "José R. Almonte",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

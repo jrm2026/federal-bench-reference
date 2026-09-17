@@ -1,0 +1,78 @@
+{
+  "id": "susan-d-wigenton--huertas-v-bayer-us-llc",
+  "district": "dnj",
+  "judge_slug": "susan-d-wigenton",
+  "judge_name": "Susan D. Wigenton",
+  "judge_office": "district",
+  "caption": "Huertas v. Bayer US LLC",
+  "citation_line": "Huertas v. Bayer US LLC, No. 2:21-cv-20021, ECF No. 48 (D.N.J. May 23, 2023), rev’d in part, No. 23-2178 (3d Cir. Nov. 7, 2024)",
+  "district_docket": "2:21-cv-20021",
+  "appellate_docket": "23-2178",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Wigenton dismissed consumer claims arising from recalled Lotrimin and Tinactin sprays contaminated with benzene, applying a heightened conception of the economic injury required for Article III standing.",
+  "qualification_rationale": "The case addresses standing for consumers who bought allegedly contaminated products but suffered no physical injury, an important and recurring question in pharmaceutical, food, product-recall, and putative class litigation.",
+  "appellate_posture_note": "The Third Circuit partially reversed in a precedential opinion, holding that the district court had imposed too demanding a standing standard on purchasers alleging an economic overpayment injury.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/61463600/48/huertas-v-bayer-us-llc/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 48 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/61463600/48/huertas-v-bayer-us-llc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.487197/gov.uscourts.njd.487197.48.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/232178p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 74,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 16,
+    "end": 5,
+    "press": 3,
+    "career": 7
+  },
+  "subject_primary": "consumer-fraud",
+  "subject_secondary": [
+    "products-liability-mdl"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Consumer Standing and Product Defects",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Susan D. Wigenton",
+  "decision_ecf_number": "48",
+  "decision_date": "2023-05-23",
+  "decision_selection_note": "Appeal 23-2178, filed 2023. ECF 27 is the first dismissal."
+}

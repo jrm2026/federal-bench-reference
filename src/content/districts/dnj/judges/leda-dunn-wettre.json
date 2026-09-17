@@ -1,0 +1,42 @@
+{
+  "slug": "leda-dunn-wettre",
+  "name": "Leda Dunn Wettre",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Newark",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Serving since April 2, 2015 through September 13, 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Wettre earned a B.A., cum laude, from the University of Pennsylvania (1990) and a J.D. from Fordham University School of Law (1993), where she was a managing editor of the law review. She clerked for U.S. District Judge John F. Keenan, practiced at Kramer Levin, and became a partner at Robinson Wettre & Miller, handling complex commercial, IP, shareholder, class, and employment litigation. She has chaired the court’s Local Rules Committee.",
+    "education_sentences": [
+      "Wettre earned a B.A., cum laude, from the University of Pennsylvania (1990) and a J.D. from Fordham University School of Law (1993), where she was a managing editor of the law review."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.njd.uscourts.gov/content/leda-dunn-wettre",
+      "https://www.thesedonaconference.org/bio/78714"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "Sedona Conference biography"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Serving since April 2015 | Newark"
+}

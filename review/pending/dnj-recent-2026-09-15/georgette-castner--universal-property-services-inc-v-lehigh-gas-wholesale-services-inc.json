@@ -1,0 +1,73 @@
+{
+  "id": "georgette-castner--universal-property-services-inc-v-lehigh-gas-wholesale-services-inc",
+  "district": "dnj",
+  "judge_slug": "georgette-castner",
+  "judge_name": "Georgette Castner",
+  "judge_office": "district",
+  "caption": "Universal Property Services, Inc. v. Lehigh Gas Wholesale Services, Inc.",
+  "citation_line": "Universal Property Services, Inc. v. Lehigh Gas Wholesale Services, Inc., No. 3:20-cv-03315, ECF No. 165 (D.N.J. January 15, 2026)",
+  "district_docket": "3:20-cv-03315",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "recent",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": null,
+  "qualification_rationale": null,
+  "appellate_posture_note": "No appellate disposition identified as of 2026-09-15.",
+  "headnote_status": "draft",
+  "public_url": "https://www.courtlistener.com/docket/17015899/165/universal-property-services-inc-v-lehigh-gas-wholesale-services-inc/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 165 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/17015899/165/universal-property-services-inc-v-lehigh-gas-wholesale-services-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.430815/gov.uscourts.njd.430815.165.0_1.pdf"
+    }
+  ],
+  "link_level": "district",
+  "classification": null,
+  "score_total": null,
+  "components": {},
+  "subject_screen": "qualifying",
+  "subject_label": "Franchise and distribution",
+  "subject_screen_exclusion_reason": null,
+  "publish_subject_index": true,
+  "subject_primary": "franchise-distribution",
+  "subject_secondary": [],
+  "subject_index_only": false,
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "decision_ecf_number": "165",
+  "decision_date": "2026-01-15",
+  "authored_by": "Georgette Castner",
+  "authorship_source": "docket_entry_signature",
+  "research_cutoff": "2026-09-15",
+  "status_checked": "2026-09-15",
+  "last_verified": "2026-09-15",
+  "_ingest": {
+    "source": "recap",
+    "matched_subject": "franchise-distribution",
+    "matched_terms": "\"New Jersey Franchise Practices Act\" OR \"franchise agreement\" OR \"distributorship\"",
+    "docket_entry": "OPINION. Signed by Judge Georgette Castner on 1/15/2026. (amv) (Entered: 01/15/2026)",
+    "nature_of_suit": "Other Statutory Actions",
+    "nature_of_suit_reading": "Docketed Other Statutory Actions, a catch-all that names no subject, so the code is silent rather than contrary. The opinion still decides the tag.",
+    "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
+    "needs": [
+      "headnote written from the public opinion",
+      "procedural tags",
+      "link verified to resolve"
+    ],
+    "subject_confirmed": {
+      "date": "2026-09-15",
+      "method": "opinion read in full (RECAP document 465306823, 30 pages)",
+      "basis": "Franchise termination under the Petroleum Marketing Practices Act, 15 U.S.C. 2801 et seq. Seventeen Circle K gas-station franchise agreements in Florida, each a lease plus a fuel supply contract, assigned to Lehigh Gas and terminated in February 2020; counterclaims on the leases and on the owner's personal guaranties. The docket code is Other Statutory Actions because a PMPA claim is a federal statutory action, not because the case is not a franchise case."
+    }
+  }
+}

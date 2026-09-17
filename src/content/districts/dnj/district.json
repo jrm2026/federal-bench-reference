@@ -1,0 +1,8 @@
+{
+  "slug": "dnj",
+  "name": "District of New Jersey",
+  "court": "United States District Court for the District of New Jersey",
+  "vicinages": ["Camden", "Newark", "Trenton", "Fort Dix"],
+  "roster_sources": ["https://www.njd.uscourts.gov/our-judges", "https://www.fjc.gov/sites/default/files/history/judges.csv"],
+  "research_cutoff": "2026-09-13"
+}

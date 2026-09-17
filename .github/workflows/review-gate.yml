@@ -1,9 +1,9 @@
 # The review gate, on push, on pull request, and weekly.
 #
 # The workflow name and the job id together produce the status check named
-# "Review gate / gate". docs/HANDOFF.md section 2 requires that exact name in
-# the branch protection rule for main, so renaming either one silently detaches
-# the protection. Change them together or not at all.
+# "Review gate / gate". docs/DESKTOP-SETUP.md requires that exact name in the branch
+# protection rule for main, so renaming either one silently detaches the
+# protection. Change them together or not at all.
 #
 # The weekly run is not redundant. Appellate staleness accrues while the
 # repository sits still: a vacated or stayed posture goes stale forty-five days
@@ -37,36 +37,29 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.11"
-
-      # Drift is a signal, not an error: the court's directory changed, or a
-      # patch script deliberately changed something. A human decides which.
-      # --check writes nothing and exits 1 only on divergence.
-      - name: Roster drift
-        run: python3 scripts/build-roster.py --check
-
-      - name: Review gate
-        run: node scripts/validate-content.mjs
-
-      # A sign-off is bound to a hash of the record's publishable content, so an
-      # edit to a signed record lapses it. Catch that here rather than at the
-      # moment someone tries to publish.
-      - name: Sign-off ledger
-        run: node scripts/sign-record.mjs --verify-all
-
       - name: Install
         run: npm ci
 
+      # Schema, taxonomy, scoring and identity integrity, then the compliance
+      # gates in scripts/gates-compliance.mjs. Exit 1 blocks.
+      - name: Review gate
+        run: npm run validate
+
+      # A sign-off is bound to a hash of everything on a judge's page, so an
+      # edit to a signed record lapses it. Catch that here rather than at the
+      # moment someone tries to publish. Unsigned records do not fail; lapsed
+      # and orphaned ones do.
+      - name: Sign-off ledger
+        run: npm run signoffs
+
       # The gate above decides whether the content may publish. This decides
-      # whether it can be rendered at all. A scaffold that throws is as
-      # effective at stopping a launch as a record that fails review, and it is
-      # cheaper to find here than in a deploy.
+      # whether it can be rendered at all. A scaffold that throws stops a launch
+      # as effectively as a record that fails review, and it is cheaper to find
+      # here than in a deploy.
       - name: Build site
         run: npx astro build
 
       # scripts/check-links.mjs is deliberately absent. It needs open network
-      # access to the courts, GovInfo and the FJC, and docs/HANDOFF.md puts it on
-      # the desktop. Whether a scheduled job should poll those hosts weekly is a
-      # decision, not a task.
+      # access to the courts, GovInfo, CourtListener and the FJC, and
+      # docs/handoff.md puts it on the desktop. Whether a scheduled job should
+      # poll those hosts weekly is a decision, not a task.

@@ -1,0 +1,61 @@
+{
+  "id": "tonianne-j-bongiovanni--isaac-v-defendant-1",
+  "district": "dnj",
+  "judge_slug": "tonianne-j-bongiovanni",
+  "judge_name": "Tonianne J. Bongiovanni",
+  "judge_office": "magistrate",
+  "caption": "Isaac v. Defendant 1",
+  "citation_line": "Isaac v. Defendant 1, No. 3:25-cv-01325, ECF No. 11 (D.N.J. Dec. 30, 2025)",
+  "district_docket": "3:25-cv-01325",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Denied alternative service through WhatsApp, NFTs, and a website for insufficient diligence in locating alleged foreign participants in a cryptocurrency 'pig-butchering' scheme, but allowed limited expedited KYC discovery from identified exchanges while rejecting account-balance and transaction-history requests.",
+  "qualification_rationale": "A timely treatment of identity discovery, digital service, due process, and proportionality in cross-border cryptocurrency fraud litigation.",
+  "appellate_posture_note": "Pre-service and nonparty-discovery order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2025cv01325/562977/11/",
+  "links": [
+    {
+      "anchor": "Justia opinion",
+      "url": "https://law.justia.com/cases/federal/district-courts/new-jersey/njdce/3%3A2025cv01325/562977/11/"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 51,
+  "components": {
+    "app": 0,
+    "doc": 19,
+    "prac": 18,
+    "end": 5,
+    "press": 0,
+    "career": 9
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "case-management",
+    "discovery-scope"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "excluded",
+  "subject_label": "Cryptocurrency Fraud and Alternative Service",
+  "subject_screen_exclusion_reason": "Pre-service identity discovery and alternative-service ruling without a merits determination.",
+  "publish_subject_index": false,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "Tonianne J. Bongiovanni",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

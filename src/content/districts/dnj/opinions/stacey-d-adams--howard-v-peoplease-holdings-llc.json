@@ -1,0 +1,69 @@
+{
+  "id": "stacey-d-adams--howard-v-peoplease-holdings-llc",
+  "district": "dnj",
+  "judge_slug": "stacey-d-adams",
+  "judge_name": "Stacey D. Adams",
+  "judge_office": "magistrate",
+  "caption": "Howard v. Peoplease Holdings, LLC",
+  "citation_line": "Howard v. Peoplease Holdings, LLC, No. 2:24-cv-09476, ECF No. 34 (D.N.J. Oct. 27, 2025)",
+  "district_docket": "2:24-cv-09476",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Allowed an employment plaintiff to add the corporate entity identified through discovery and new commission allegations, but required alter-ego allegations to be pleaded as a theory of liability rather than a standalone count and rejected unnecessary fictitious defendants.",
+  "qualification_rationale": "Practical Rule 15 guidance for cases involving uncertain corporate employers, veil-piercing theories, and information disclosed only after suit.",
+  "appellate_posture_note": "Non-dispositive amendment order; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2024cv09476/555094/34/0.pdf",
+  "links": [
+    {
+      "anchor": "Justia PDF",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2024cv09476/555094/34/0.pdf"
+    }
+  ],
+  "classification": "supplemental",
+  "score_total": 35,
+  "components": {
+    "app": 0,
+    "doc": 13,
+    "prac": 15,
+    "end": 1,
+    "press": 0,
+    "career": 6
+  },
+  "subject_primary": "employment",
+  "subject_secondary": [
+    "business-torts"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Employment and Alter Ego Liability",
+  "screen_score": 55,
+  "screen_classification": "useful",
+  "screen_components": {
+    "centrality": 20,
+    "analysis": 13,
+    "disposition": 12,
+    "doctrine": 6,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "decision_ecf_number": null,
+  "decision_date": null,
+  "authored_by": "Stacey D. Adams"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "andre-m-espinosa--valley-national-bank-v-burrinis-olde-world-marke",
+  "district": "dnj",
+  "judge_slug": "andre-m-espinosa",
+  "judge_name": "André M. Espinosa",
+  "judge_office": "magistrate",
+  "caption": "Valley National Bank v. Burrini's Olde World Market, Inc.",
+  "citation_line": "Valley National Bank v. Burrini's Olde World Market, Inc., No. 2:22-cv-00919, ECF No. 18 (D.N.J. July 29, 2022)",
+  "district_docket": "2:22-cv-00919",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "report_recommendation",
+  "rr_disposition": "adopted",
+  "headnote_district_ruling": "Recommended remand of an eviction action removed by a nonparty based on a related bankruptcy. Reading § 1452(a)'s reference to a 'party' according to its ordinary meaning, the court held that the bankruptcy debtor lacked authority to remove the case.",
+  "qualification_rationale": "A careful bankruptcy-removal opinion on an infrequently litigated threshold question, with a textual analysis independently adopted by the district court.",
+  "appellate_posture_note": "Adopted after objections on October 25, 2022, ECF Nos. 23–24; no appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-00919/pdf/USCOURTS-njd-2_22-cv-00919-0.pdf",
+  "links": [
+    {
+      "anchor": "GovInfo R&R",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-njd-2_22-cv-00919/pdf/USCOURTS-njd-2_22-cv-00919-0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 48,
+  "components": {
+    "app": 0,
+    "doc": 18,
+    "prac": 17,
+    "end": 5,
+    "press": 0,
+    "career": 8
+  },
+  "subject_primary": "bankruptcy",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal",
+    "report-recommendation-practice"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Bankruptcy Removal",
+  "screen_score": 81,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 18,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 4,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "authored_by": "André M. Espinosa",
+  "decision_ecf_number": null,
+  "decision_date": null
+}

@@ -1,0 +1,69 @@
+{
+  "id": "jessica-s-allen--olivet-university-v-candappa",
+  "district": "dnj",
+  "judge_slug": "jessica-s-allen",
+  "judge_name": "Jessica S. Allen",
+  "judge_office": "magistrate",
+  "caption": "Olivet University v. Candappa",
+  "citation_line": "Olivet University v. Candappa, No. 2:25-cv-18777, ECF No. 25 (D.N.J. Sept. 2, 2026)",
+  "district_docket": "2:25-cv-18777",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Transferred a defamation action against a Newsweek employee to the Southern District of New York under § 1404(a), emphasizing the near-identical action pending there, the locus of publication, consent to personal jurisdiction, and the policy against duplicative litigation.",
+  "qualification_rationale": "A current, concrete Jumara analysis for media defendants and parallel defamation suits filed in neighboring federal districts.",
+  "appellate_posture_note": "Transfer order entered eleven days before the cutoff; no substantive appellate review identified.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2025cv18777/588670/25/0.pdf",
+  "links": [
+    {
+      "anchor": "Justia PDF",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/2%3A2025cv18777/588670/25/0.pdf"
+    }
+  ],
+  "classification": "qualifying",
+  "score_total": 42,
+  "components": {
+    "app": 0,
+    "doc": 15,
+    "prac": 17,
+    "end": 3,
+    "press": 0,
+    "career": 7
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "venue-transfer"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Venue Transfer and Parallel Litigation",
+  "screen_score": 69,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 22,
+    "analysis": 15,
+    "disposition": 20,
+    "doctrine": 8,
+    "treatment": 0,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "decision_ecf_number": null,
+  "decision_date": null,
+  "authored_by": "Jessica S. Allen"
+}

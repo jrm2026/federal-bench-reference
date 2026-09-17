@@ -1,0 +1,75 @@
+{
+  "id": "katharine-s-hayden--honda-lease-trust-v-malangas-automotive",
+  "district": "dnj",
+  "judge_slug": "katharine-s-hayden",
+  "judge_name": "Katharine S. Hayden",
+  "judge_office": "district",
+  "caption": "Honda Lease Trust v. Malanga’s Automotive",
+  "citation_line": "Honda Lease Trust v. Malanga’s Automotive, No. 2:22-cv-04862, ECF No. 35 (D.N.J. June 28, 2024), aff’d in part, rev’d in part, No. 24-2369 (3d Cir. Sept. 15, 2025)",
+  "district_docket": "2:22-cv-04862",
+  "appellate_docket": "24-2369",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Hayden entered summary judgment against a vehicle lessor’s due-process, unreasonable-seizure, and takings claims after a municipal towing contractor held a leased car for nearly a year without notifying the lessor.",
+  "qualification_rationale": "The case provides significant constitutional guidance for municipalities, towing companies, vehicle owners, and secured or leasing interests concerning notice and process when an impounded vehicle accrues storage charges.",
+  "appellate_posture_note": "The Third Circuit affirmed in part and reversed in part in a precedential opinion. It held that the municipal policies violated procedural due process while rejecting the Fourth Amendment and takings claims.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/64863298/35/honda-lease-trust-v-malangas-automotive/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 35 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/64863298/35/honda-lease-trust-v-malangas-automotive/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.499823/gov.uscourts.njd.499823.35.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/242369p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 70,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 15,
+    "end": 3,
+    "press": 2,
+    "career": 7
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Procedural Due Process and Vehicle Impoundment",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Katharine S. Hayden",
+  "decision_ecf_number": "35",
+  "decision_date": "2024-06-28"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "renee-marie-bumb--new-jersey-department-of-environmental-protectio",
+  "district": "dnj",
+  "judge_slug": "renee-marie-bumb",
+  "judge_name": "Renée Marie Bumb",
+  "judge_office": "district",
+  "caption": "New Jersey Department of Environmental Protection v. E.I. du Pont de Nemours & Co.",
+  "citation_line": "New Jersey Department of Environmental Protection v. E.I. du Pont de Nemours & Co., Nos. 1:19-cv-14758, 1:19-cv-14765, 1:19-cv-14766 & 3:19-cv-14767 (D.N.J. Aug. 7, 2026)",
+  "district_docket": "1:19-cv-14758",
+  "appellate_docket": null,
+  "additional_dockets": [
+    "1:19-cv-14765",
+    "1:19-cv-14766",
+    "3:19-cv-14767"
+  ],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "order",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Chief Judge Bumb approved four judicial consent orders resolving New Jersey's PFAS and other contamination claims involving DuPont-related industrial sites, after applying federal and state settlement-review standards and separately addressing objections and fee requests.",
+  "qualification_rationale": "The orders implement an approximately $2.5 billion package, including cash payments and a remediation funding mechanism. The scale, environmental consequences, and extensive public attention make the approval a significant institutional decision even without appellate review.",
+  "appellate_posture_note": "No merits appellate disposition was identified as of the research cutoff. The selection rests on practical impact, doctrinal settlement analysis, and press attention.",
+  "headnote_status": "published",
+  "public_url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/1:2019cv14766/411390/855/0.pdf",
+  "links": [
+    {
+      "anchor": "District opinion",
+      "url": "https://cases.justia.com/federal/district-courts/new-jersey/njdce/1:2019cv14766/411390/855/0.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 71,
+  "components": {
+    "app": 0,
+    "doc": 19,
+    "prac": 20,
+    "end": 12,
+    "press": 10,
+    "career": 10
+  },
+  "subject_primary": "environmental",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Environmental Law and Complex Settlements",
+  "screen_score": 79,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 22,
+    "analysis": 21,
+    "disposition": 19,
+    "doctrine": 12,
+    "treatment": 0,
+    "practical": 5
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "opinion_text",
+  "decision_ecf_number": null,
+  "decision_date": null,
+  "authored_by": "Renée Marie Bumb"
+}

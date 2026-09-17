@@ -1,0 +1,71 @@
+{
+  "id": "georgette-castner--l-e-a-d-inc-v-c-e-mendez-foundation-inc",
+  "district": "dnj",
+  "judge_slug": "georgette-castner",
+  "judge_name": "Georgette Castner",
+  "judge_office": "district",
+  "caption": "L.E.A.D., Inc. v. C.E. Mendez Foundation, Inc.",
+  "citation_line": "L.E.A.D., Inc. v. C.E. Mendez Foundation, Inc., No. 3:25-cv-14237, ECF No. 26 (D.N.J. May 5, 2026)",
+  "district_docket": "3:25-cv-14237",
+  "appellate_docket": null,
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "recent",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": null,
+  "qualification_rationale": null,
+  "appellate_posture_note": "No appellate disposition identified as of 2026-09-15.",
+  "headnote_status": "draft",
+  "public_url": "https://www.courtlistener.com/docket/71050888/26/l-e-a-d-inc-v-c-e-mendez-foundation-inc/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 26 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/71050888/26/l-e-a-d-inc-v-c-e-mendez-foundation-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.581037/gov.uscourts.njd.581037.26.0.pdf"
+    }
+  ],
+  "link_level": "district",
+  "classification": null,
+  "score_total": null,
+  "components": {},
+  "subject_screen": "qualifying",
+  "subject_label": "Restrictive covenants",
+  "subject_screen_exclusion_reason": null,
+  "publish_subject_index": true,
+  "subject_primary": "restrictive-covenants",
+  "subject_secondary": [],
+  "subject_index_only": false,
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "decision_ecf_number": "26",
+  "decision_date": "2026-05-05",
+  "authored_by": "Georgette Castner",
+  "authorship_source": "docket_entry_signature",
+  "research_cutoff": "2026-09-15",
+  "status_checked": "2026-09-15",
+  "last_verified": "2026-09-15",
+  "_ingest": {
+    "source": "recap",
+    "matched_subject": "restrictive-covenants",
+    "subject_is_hypothesis": true,
+    "matched_terms": "\"restrictive covenant\" OR \"non-compete\" OR \"noncompetition agreement\" OR \"non-solicitation\"",
+    "docket_entry": "OPINION. Signed by Judge Georgette Castner on 5/5/2026.",
+    "window": "2001-09-15 to 2026-09-15 (25y subject lookback)",
+    "needs": [
+      "CONFIRM THE SUBJECT: the search matched these terms somewhere in the document, not necessarily in the holding. Read the opinion and retag or discard.",
+      "headnote written from the public opinion",
+      "procedural tags",
+      "link verified to resolve"
+    ],
+    "nature_of_suit": "Contract: Franchise",
+    "nature_of_suit_reading": "Docketed Contract: Franchise, consistent with the tag.",
+    "proposed_disposition": "consider franchise-distribution as primary"
+  }
+}

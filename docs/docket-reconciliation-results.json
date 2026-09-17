@@ -1,0 +1,191 @@
+{
+  "michael-a-shipp--ncaa-v-governor-of-new-jersey": {
+    "district_docket_raw": "Civil Action No. 12-4947(MAS)(LHG)",
+    "district_docket": "3:12-cv-04947",
+    "vicinage_inferred": true,
+    "case_name_below": "National Collegiate Athletic Ass'n v. Christie",
+    "judge_confirmed": "Shipp",
+    "date_filed": "2013-02-28",
+    "source": "CourtListener opinion, cite 926 F. Supp. 2d 551",
+    "url": "https://www.courtlistener.com/opinion/8723124/national-collegiate-athletic-assn-v-christie/"
+  },
+  "michael-e-farbiarz--khalil-v-president": {
+    "district_docket": "2:25-cv-01963",
+    "vicinage_inferred": false,
+    "case_name_below": "Khalil v. Joyce",
+    "judge_confirmed": "Michael E. Farbiarz",
+    "date_filed": "2025-03-19",
+    "source": "CourtListener RECAP docket search, court=njd",
+    "note": "Caption drifted: Joyce below, President on appeal."
+  },
+  "claire-c-cecchi--in-re-horizon-healthcare-services-inc-data-breac": {
+    "district_docket": "2:13-cv-07418",
+    "vicinage_inferred": false,
+    "case_name_below": "In re Horizon Healthcare Services Inc. Data Breach Litigation",
+    "judge_confirmed": "Claire Claudia Cecchi",
+    "date_filed": "2013-12-11",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "stanley-r-chesler--in-re-nickelodeon-consumer-privacy-litigation": {
+    "district_docket": "2:12-cv-07829",
+    "vicinage_inferred": false,
+    "case_name_below": "CAF and CTF v. Viacom, Inc. (lead case, MDL 2443)",
+    "judge_confirmed": "Stanley R. Chesler",
+    "date_filed": "2012-12-24",
+    "source": "CourtListener RECAP docket search, court=njd, cause 05:552 Right to Privacy Act",
+    "note": "Consolidated MDL. Member cases K.T., N.J., Fryar, T.M. v. Viacom and L.G. v. Google are all Chesler."
+  },
+  "william-j-martini--hassan-v-city-of-new-york": {
+    "district_docket": "2:12-cv-03401",
+    "vicinage_inferred": false,
+    "case_name_below": "Hassan v. The City of New York",
+    "judge_confirmed": "William J. Martini",
+    "date_filed": "2012-06-06",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "peter-g-sheridan--oakwood-laboratories-llc-v-thanoo": {
+    "district_docket": "3:17-cv-05090",
+    "vicinage_inferred": false,
+    "case_name_below": "Oakwood Laboratories, LLC v. Thanoo",
+    "judge_confirmed": "Peter G. Sheridan",
+    "date_filed": "2017-07-12",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "esther-salas--berkelhammer-v-adp-totalsource-group-inc": {
+    "district_docket": "2:20-cv-05696",
+    "vicinage_inferred": false,
+    "appellate_docket_confirmed": "22-1618",
+    "judge_confirmed": "Esther Salas",
+    "source": "Third Circuit opinion cover page, No. 22-1618, read via CourtListener opinion text",
+    "cover_page": "On Appeal from the United States District Court for the District of New Jersey (D.C. No. 2-20-cv-05696), District Judge: Honorable Esther Salas",
+    "resolved_conflict": "CourtListener's docket assignment showed Evelyn Padin. The cover page names Esther Salas as the judge appealed from. The record was correct; the docket field reports the current assignment, not the judge who decided."
+  },
+  "karen-m-williams--cornish-adebiyi-v-caesars-entertainment-inc": {
+    "district_docket": "1:23-cv-02536",
+    "vicinage_inferred": false,
+    "case_name_below": "Cornish-Adebiyi v. Caesars Entertainment, Inc.",
+    "judge_confirmed": "Karen M. Williams",
+    "date_filed": "2023-05-09",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "madeline-cox-arleo--antar-v-borgata-hotel-casino-spa-llc": {
+    "district_docket": null,
+    "vicinage_inferred": false,
+    "case_name_below": null,
+    "judge_confirmed": null,
+    "judge_conflict": "No Antar v. Borgata docket in RECAP. The only Antar matter before Arleo is Antar v. BetMGM, LLC, 2:22-cv-05785, filed 29 September 2022. Borgata and BetMGM are both MGM properties and the plaintiff appears to have sued several operators, so these may be companion cases or the same matter under a different caption. Do not equate them. Read the Third Circuit disposition in No. 24-1364 for the docket below.",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "peter-g-sheridan--association-of-new-jersey-rifle-pistol-clubs-inc": {
+    "district_docket": "3:18-cv-10507",
+    "vicinage_inferred": false,
+    "case_name_below": "Association of New Jersey Rifle & Pistol Clubs, Inc. v. Grewal",
+    "judge_confirmed": "Peter G. Sheridan",
+    "date_filed": "2018-06-13",
+    "source": "CourtListener RECAP docket search, court=njd",
+    "note": "Caption drifted: Grewal below, Platkin on appeal, as the New Jersey Attorney General changed."
+  },
+  "brian-r-martinotti--brian-trematore-plumbing-heating-inc-v-sheet-met": {
+    "district_docket": "2:21-cv-05285",
+    "vicinage_inferred": false,
+    "case_name_below": "Brian Trematore Plumbing & Heating, Inc. v. Sheet Metal Workers Local Union 25, SMART",
+    "judge_confirmed": "Brian R. Martinotti",
+    "date_filed": "2021-03-15",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "christine-p-ohearn--thieme-v-warden-fort-dix-fci": {
+    "district_docket": null,
+    "vicinage_inferred": false,
+    "case_name_below": null,
+    "judge_confirmed": null,
+    "judge_conflict": "Two candidates, both before O'Hearn and both Fort Dix habeas petitions captioned by the warden of the day: Thieme v. Knight, 1:22-cv-03439, filed 3 June 2022, and Thieme v. Ortiz, 1:20-cv-14835, filed 22 October 2020. The Third Circuit standardises these to 'Warden Fort Dix FCI', which is why the caption does not distinguish them. A 2023 notice of appeal favours the Knight docket, but read No. 23-1697 rather than infer.",
+    "candidates": [
+      "1:22-cv-03439 (Thieme v. Knight)",
+      "1:20-cv-14835 (Thieme v. Ortiz)"
+    ],
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "katharine-s-hayden--honda-lease-trust-v-malangas-automotive": {
+    "district_docket": "2:22-cv-04862",
+    "vicinage_inferred": false,
+    "case_name_below": "Honda Lease Trust v. Malanga's Automotive",
+    "judge_confirmed": "Katharine Sweeney Hayden",
+    "date_filed": "2022-08-02",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "kevin-mcnulty--jm-v-summit-city-board-of-education": {
+    "district_docket": "2:19-cv-00159",
+    "vicinage_inferred": false,
+    "appellate_docket_confirmed": "20-3391",
+    "judge_confirmed": "Kevin McNulty",
+    "source": "Third Circuit opinion cover page, No. 20-3391, read via CourtListener opinion text",
+    "cover_page": "On Appeal from the United States District Court for the District of New Jersey (D.C. No. 2-19-cv-00159), District Judge: Honorable Kevin McNulty",
+    "resolved_conflict": "CourtListener's docket assignment showed no assignment recorded. The cover page names Kevin McNulty as the judge appealed from. The record was correct; the docket field reports the current assignment, not the judge who decided."
+  },
+  "michael-a-shipp--veterans-guardian-va-claim-consulting-llc-v-plat": {
+    "district_docket": "3:23-cv-20660",
+    "vicinage_inferred": false,
+    "case_name_below": "Veterans Guardian VA Claim Consulting, LLC v. Platkin",
+    "judge_confirmed": "Michael Andre Shipp",
+    "date_filed": "2023-09-25",
+    "source": "CourtListener RECAP docket search, court=njd",
+    "note": "Referred to Magistrate Judge Brendan Day. This is the same docket as the published Day entry, which already carries 3:23-cv-20660. One matter, two judges, two rulings \u2014 both entries are legitimate and neither is a duplicate."
+  },
+  "madeline-cox-arleo--in-re-congoleum-corp": {
+    "district_docket": null,
+    "vicinage_inferred": false,
+    "case_name_below": null,
+    "judge_confirmed": null,
+    "judge_conflict": "Forty-four Congoleum dockets in D.N.J. and none on the first page is before Arleo. Congoleum is a long-running bankruptcy, so the matter appealed as No. 23-1295 is most likely a bankruptcy appeal docketed in the district court. Search the district docket by appellant and year rather than by the In re caption.",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "peter-g-sheridan--sovereign-bank-v-remi-capital-inc": {
+    "district_docket": "3:09-cv-01580",
+    "vicinage_inferred": false,
+    "case_name_below": "Sovereign Bank v. REMI Capital, Inc.",
+    "judge_confirmed": "Peter G. Sheridan",
+    "date_filed": "2009-04-03",
+    "source": "CourtListener RECAP docket search, court=njd",
+    "note": "A duplicate 2:09-cv-01580 record exists in CourtListener with no assignment. The Sheridan docket carries the Trenton prefix."
+  },
+  "susan-d-wigenton--huertas-v-bayer-us-llc": {
+    "district_docket": "2:21-cv-20021",
+    "vicinage_inferred": false,
+    "appellate_docket_confirmed": "23-2178",
+    "judge_confirmed": "Susan D. Wigenton",
+    "source": "Third Circuit opinion cover page, No. 23-2178, read via CourtListener opinion text",
+    "cover_page": "On Appeal from the United States District Court for the District of New Jersey (District Court No. 2-21-cv-20021), District Judge: Honorable Susan D. Wigenton",
+    "resolved_conflict": "CourtListener's docket assignment showed Stanley R. Chesler. The cover page names Susan D. Wigenton as the judge appealed from. The record was correct; the docket field reports the current assignment, not the judge who decided."
+  },
+  "katharine-s-hayden--united-states-v-jackson": {
+    "district_docket": null,
+    "appellate_docket_confirmed": "16-1200, 16-1201",
+    "vicinage_inferred": false,
+    "case_name_below": null,
+    "judge_confirmed": null,
+    "judge_conflict": "The appeal is United States v. Carolyn Jackson, 3d Cir. Nos. 16-1200 and 16-1201, decided 6 July 2017, panel McKee, Cowen and Fuentes. The district criminal docket is not in RECAP under that caption \u2014 criminal dockets are thinly covered. Take the docket and the district judge from the cover page of 161200p.pdf, which the record already links.",
+    "source": "CourtListener opinions search, cite 862 F.3d 365",
+    "related_entry": "Same prosecution as the other United States v. Jackson entry. Carolyn and John Jackson were tried and sentenced before Judge Hayden (3d Cir. Nos. 16-1200, 16-1201), and the case was reassigned to Judge Wigenton for resentencing after three sentencing appeals (3d Cir. No. 23-2492 et al.). One district criminal docket, two judges, two decisions, both entries legitimate. Resolving the docket for either resolves it for both. This is the caption collision CLAUDE.md warns about, and the mechanism is reassignment."
+  },
+  "susan-d-wigenton--united-states-v-baroni-and-kelly-supreme-court-r": {
+    "district_docket": null,
+    "vicinage_inferred": false,
+    "case_name_below": null,
+    "judge_confirmed": null,
+    "judge_conflict": "The Baroni dockets in RECAP are a 2020 magistrate matter and a 2021 criminal case, neither of which is the Bridgegate prosecution. The 2015 criminal docket is not covered. The record carries no docket and no reporter citation, and its only link is the Supreme Court opinion in Kelly v. United States, 590 U.S. 391 (2020), which is not a district decision. Research from the district docket or drop the entry.",
+    "source": "CourtListener RECAP docket search, court=njd"
+  },
+  "katharine-s-hayden--united-states-v-gwinnett": {
+    "district_docket": null,
+    "appellate_docket_confirmed": "06-1766",
+    "vicinage_inferred": false,
+    "case_name_below": null,
+    "judge_confirmed": null,
+    "judge_conflict": "The appeal is United States v. Angelica Gwinnett, 3d Cir. No. 06-1766, decided 26 April 2007, panel Sloviter, Ambro and Brody. The district criminal docket predates RECAP coverage. Take it from the cover page of 061766p.pdf.",
+    "source": "CourtListener opinions search, cite 483 F.3d 200"
+  },
+  "susan-d-wigenton--united-states-v-jackson": {
+    "district_docket": null,
+    "related_entry": "Same prosecution as the other United States v. Jackson entry. Carolyn and John Jackson were tried and sentenced before Judge Hayden (3d Cir. Nos. 16-1200, 16-1201), and the case was reassigned to Judge Wigenton for resentencing after three sentencing appeals (3d Cir. No. 23-2492 et al.). One district criminal docket, two judges, two decisions, both entries legitimate. Resolving the docket for either resolves it for both. This is the caption collision CLAUDE.md warns about, and the mechanism is reassignment."
+  }
+}

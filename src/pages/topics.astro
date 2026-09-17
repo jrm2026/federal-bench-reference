@@ -1,63 +1,73 @@
 ---
-import Base from "../layouts/Base.astro";
-import { taxonomy, publishedJudges } from "../lib/content.js";
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import taxonomy from '../content/config/taxonomy.json';
+import policy from '../content/config/policy.json';
 
-// Counts come from published records only. A topic page that counted drafts
-// would advertise entries a reader cannot reach.
-const counts = Object.fromEntries(
-  taxonomy.categories.map((c) => [
-    c.key,
-    publishedJudges.reduce((n, j) => n + ((j.matter_relevant_opinions || {})[c.key] || []).length, 0),
-  ]),
-);
-const total = Object.values(counts).reduce((a, b) => a + b, 0);
+// Counts are aggregated across the whole bench, never per judge. A per-judge
+// tally would convert a record of what a judge has done into a prediction of
+// what a judge will do, which is the one thing this site does not do.
+const opinions = (await getCollection('opinions')).map((o) => o.data);
+
+const label = (k) => taxonomy.labels?.[k] ?? k.replace(/-/g, ' ').replace(/^./, (c) => c.toUpperCase());
+
+const subjectCount = (k) =>
+  opinions.filter((o) => o.subject_primary === k || (o.subject_secondary ?? []).includes(k)).length;
+const proceduralCount = (k) => opinions.filter((o) => (o.procedural_tags ?? []).includes(k)).length;
+
+const topics = taxonomy.topic_pages.map((k) => ({ key: k, label: label(k), n: subjectCount(k) }));
+const procedural = taxonomy.procedural.all
+  .map((k) => ({ key: k, label: label(k), n: proceduralCount(k) }))
+  .filter((p) => p.n > 0)
+  .sort((a, b) => b.n - a.n || a.label.localeCompare(b.label));
+
+const subjectYears = policy.lookback.subject_district_years;
+const proceduralYears = policy.lookback.procedural_district_years;
 ---
-
-<Base title="Topics">
-  <div class="breadcrumb" slot="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Topics</div>
-
-  <div class="pagehead">
-    <h1>Matter Types</h1>
-    <div class="role">The six categories this reference covers</div>
+<Base title="Matter types — Federal Bench Reference">
+  <div class="breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; Matter types</div>
+  <div class="judgehead">
+    <h1>Matter types</h1>
+    <div class="role">How decisions are indexed across the bench</div>
   </div>
 
   <section class="block">
-    <div class="prose">
-      <p>
-        Opinions are grouped by the kind of matter a commercial defendant is likely to be living
-        through. Within a category, entries are selected by procedural posture and subject, and a
-        category published without summaries is listed exhaustively — a partial unsummarized list
-        still implies a choice, and a complete one does not.
-      </p>
-    </div>
-    <ul class="roster" style="margin-top:18px">
-      {taxonomy.categories.map((c) => (
-        <li>
-          <span class="name">{c.label}</span>
-          <span class="office">{counts[c.key] > 0 ? `${counts[c.key]} published` : "none published yet"}</span>
-        </li>
+    <p class="summary">Decisions are indexed by the kind of matter a commercial defendant is likely
+    to be living through, and again by the procedural posture the document actually decides. Both
+    vocabularies are closed: an entry is tagged from the list below or it is not tagged at all.</p>
+    <p class="windownote">Counts are across the whole bench. This reference publishes no per-judge
+    statistics of any kind.</p>
+  </section>
+
+  <section class="block">
+    <h2>Subjects with a topic page</h2>
+    <p class="windownote">Matter-relevant selection looks back {subjectYears} years at the district level.</p>
+    <ul class="benchlist">
+      {topics.map((t) => (
+        <li><span class="name">{t.label}</span>
+          <div class="meta">{t.n > 0 ? `${t.n} indexed` : 'no entries yet'}</div></li>
       ))}
     </ul>
-    {total === 0 && (
-      <div class="empty" style="margin-top:18px">
-        <strong>No entries are published yet</strong>
-        Categories appear on a judge's page as records clear review.
+    {topics.every((t) => t.n === 0) && (
+      <div class="empty">
+        <strong>No entries are indexed under these subjects yet</strong>
+        The matter-relevant tier is not built. Entries appear as they clear review.
       </div>
     )}
   </section>
 
   <section class="block">
     <h2>Procedural postures</h2>
-    <div class="prose">
-      <p>Within those categories, selection favours the postures this reader meets first.</p>
-      <ul>
-        {taxonomy.postures
-          .filter((p) => p.key !== "institutional")
-          .sort((a, b) => a.priority - b.priority)
-          .map((p) => (
-            <li>{p.label}{p.note ? ` — ${p.note}` : ""}</li>
-          ))}
-      </ul>
-    </div>
+    <p class="windownote">Procedural selection looks back {proceduralYears} years at the district level.</p>
+    {procedural.length > 0 ? (
+      <div class="taggrid">
+        {procedural.map((p) => <span class="tag">{p.label} · {p.n}</span>)}
+      </div>
+    ) : (
+      <div class="empty">
+        <strong>No procedural postures are indexed yet</strong>
+        Entries appear as they clear review.
+      </div>
+    )}
   </section>
 </Base>

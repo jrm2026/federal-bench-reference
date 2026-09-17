@@ -1,0 +1,78 @@
+{
+  "id": "robert-kirsch--new-jersey-v-dow-chemical-co",
+  "district": "dnj",
+  "judge_slug": "robert-kirsch",
+  "judge_name": "Robert Kirsch",
+  "judge_office": "district",
+  "caption": "New Jersey v. Dow Chemical Co.",
+  "citation_line": "New Jersey v. Dow Chemical Co., No. 3:23-cv-02449, ECF No. 86 (D.N.J. Apr. 23, 2024), aff’d, No. 24-1753 (3d Cir. June 11, 2025)",
+  "district_docket": "3:23-cv-02449",
+  "appellate_docket": "24-1753",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Kirsch remanded New Jersey’s environmental suit over 1,4-dioxane to state court, rejecting Dow’s contention that federal specifications made it a person “acting under” a federal officer for purposes of 28 U.S.C. § 1442(a)(1).",
+  "qualification_rationale": "The precedential ruling clarifies the boundary of federal-officer removal for a private manufacturer that helped develop and sold products meeting government specifications—a recurring issue in mass-tort and environmental litigation.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, holding that the record did not establish the required government-assistance or delegation relationship.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/67320220/86/attorney-general-of-the-state-of-new-jersey-v-the-dow-chemical-company/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 86 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/67320220/86/attorney-general-of-the-state-of-new-jersey-v-the-dow-chemical-company/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.511993/gov.uscourts.njd.511993.86.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/241753p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 74,
+  "components": {
+    "app": 25,
+    "doc": 16,
+    "prac": 15,
+    "end": 5,
+    "press": 4,
+    "career": 9
+  },
+  "subject_primary": "civil-procedure-jurisdiction",
+  "subject_secondary": [],
+  "procedural_tags": [
+    "subject-matter-jurisdiction-removal"
+  ],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Federal Officer Removal",
+  "screen_score": 85,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 18,
+    "disposition": 20,
+    "doctrine": 9,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Robert Kirsch",
+  "decision_ecf_number": "86",
+  "decision_date": "2024-04-23",
+  "decision_selection_note": "Appeal 24-1753, so the notice of appeal was filed in spring 2024."
+}

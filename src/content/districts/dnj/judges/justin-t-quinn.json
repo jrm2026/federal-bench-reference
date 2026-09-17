@@ -1,0 +1,44 @@
+{
+  "slug": "justin-t-quinn",
+  "name": "Justin T. Quinn",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Trenton",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed May 29, 2024 through September 13, 2026. Selected decisions: 3.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 3,
+  "actual_selected_count": 3,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Quinn earned a B.A. from Caldwell University (2004) and a J.D. from Seton Hall University School of Law (2010). Before law school he worked in the District of New Jersey clerk’s office and as then-Magistrate Judge Esther Salas’s courtroom deputy. He practiced at Gibbons, clerked for Judge Salas, and was a partner at Robinson Miller before appointment.",
+    "education_sentences": [
+      "Quinn earned a B.A. from Caldwell University (2004) and a J.D. from Seton Hall University School of Law (2010)."
+    ],
+    "confidence": "verified",
+    "source_note": null,
+    "sources": [
+      "https://www.njd.uscourts.gov/content/justin-t-quinn",
+      "https://www.njd.uscourts.gov/sites/njd/files/NoticetotheBarJTQ.pdf",
+      "https://www.uscourts.gov/about-federal-courts/about-federal-judges/judicial-milestones/justin-quinn"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "Official appointment notice",
+      "U.S. Courts milestone"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed May 29, 2024 | Trenton"
+}

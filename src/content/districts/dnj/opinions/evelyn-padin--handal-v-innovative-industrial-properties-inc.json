@@ -1,0 +1,76 @@
+{
+  "id": "evelyn-padin--handal-v-innovative-industrial-properties-inc",
+  "district": "dnj",
+  "judge_slug": "evelyn-padin",
+  "judge_name": "Evelyn Padin",
+  "judge_office": "district",
+  "caption": "Handal v. Innovative Industrial Properties, Inc.",
+  "citation_line": "Handal v. Innovative Industrial Properties, Inc., No. 2:22-cv-02359, ECF No. 67 (D.N.J. Sept. 25, 2024), aff’d, No. 24-2829 (3d Cir. Oct. 15, 2025)",
+  "district_docket": "2:22-cv-02359",
+  "appellate_docket": "24-2829",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge Padin dismissed with prejudice a putative securities class action arising from alleged fraud by a tenant of a cannabis-focused real-estate investment trust, finding no adequately pleaded false statement and scienter combination.",
+  "qualification_rationale": "The case gives precedential guidance on pleading opinion statements, falsity and scienter under § 10(b), Rule 10b-5 and the PSLRA in the wake of corporate trauma.",
+  "appellate_posture_note": "The Third Circuit affirmed in a precedential opinion, emphasizing that ill-advised or incorrect opinions do not alone amount to securities fraud and that negligence is not scienter.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/63260216/67/mallozzi-v-innovative-industrial-properties-inc/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 67 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/63260216/67/mallozzi-v-innovative-industrial-properties-inc/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.494741/gov.uscourts.njd.494741.67.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/242829p.pdf"
+    }
+  ],
+  "classification": "noteworthy",
+  "score_total": 62,
+  "components": {
+    "app": 22,
+    "doc": 15,
+    "prac": 12,
+    "end": 3,
+    "press": 2,
+    "career": 8
+  },
+  "subject_primary": "securities",
+  "subject_secondary": [],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "Securities Fraud",
+  "screen_score": 81,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 17,
+    "disposition": 20,
+    "doctrine": 8,
+    "treatment": 9,
+    "practical": 3
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": false,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Evelyn Padin",
+  "decision_ecf_number": "67",
+  "decision_date": "2024-09-25",
+  "decision_selection_note": "The record describes dismissal with prejudice and appeal 24-2829 was filed in 2024. ECF 55 is the earlier dismissal."
+}

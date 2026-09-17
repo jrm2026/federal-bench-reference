@@ -1,0 +1,42 @@
+{
+  "slug": "james-b-clark-iii",
+  "name": "James B. Clark III",
+  "district": "dnj",
+  "home_district": "dnj",
+  "designations": [],
+  "canonical": true,
+  "office": "magistrate",
+  "roster_group": null,
+  "vicinage": "Newark",
+  "roster_sources": [
+    "dnj_directory",
+    "fjc"
+  ],
+  "render_section": "current_bench",
+  "service_line_reviewed": "Service reviewed: Appointed July 15, 2013 through September 13, 2026. Selected decisions: 4.",
+  "record_status": "represented",
+  "record_status_note": null,
+  "declared_selected_count": 4,
+  "actual_selected_count": 4,
+  "link_from_mail": true,
+  "research_cutoff": "2026-09-13",
+  "biography": {
+    "text": "Clark earned his undergraduate degree from the University of Notre Dame and practiced as a partner at Peterpaul & Clark before joining the bench in 2013.",
+    "education_sentences": [],
+    "confidence": "conflicted",
+    "source_note": "Public secondary sources conflict on law school: one identifies St. John's University School of Law, another Seton Hall. Both are recorded; neither is adopted until an official resume resolves it.",
+    "sources": [
+      "https://www.njd.uscourts.gov/content/james-b-clark-iii",
+      "https://www.uscourts.gov/about-federal-courts/about-federal-judges/judicial-milestones/james-b-clark-iii",
+      "https://ballotpedia.org/James_B._Clark%2C_III"
+    ],
+    "source_labels": [
+      "Official court profile",
+      "U.S. Courts milestone",
+      "Ballotpedia profile showing education conflict"
+    ],
+    "last_verified": "2026-09-03"
+  },
+  "other_writings": [],
+  "role_line": "U.S. Magistrate Judge | Appointed July 15, 2013 | Newark"
+}

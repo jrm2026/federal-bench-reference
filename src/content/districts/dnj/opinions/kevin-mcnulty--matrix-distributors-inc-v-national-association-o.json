@@ -1,0 +1,77 @@
+{
+  "id": "kevin-mcnulty--matrix-distributors-inc-v-national-association-o",
+  "district": "dnj",
+  "judge_slug": "kevin-mcnulty",
+  "judge_name": "Kevin McNulty",
+  "judge_office": "district",
+  "caption": "Matrix Distributors, Inc. v. National Association of Boards of Pharmacy",
+  "citation_line": "Matrix Distributors, Inc. v. National Association of Boards of Pharmacy, No. 2:18-cv-17462, ECF No. 184 (D.N.J. Dec. 4, 2020), aff’d in part, rev’d in part, No. 20-3638 (3d Cir. May 19, 2022)",
+  "district_docket": "2:18-cv-17462",
+  "appellate_docket": "20-3638",
+  "additional_dockets": [],
+  "reporter_cite": null,
+  "court": "D.N.J.",
+  "tier": "significant",
+  "document_type": "opinion",
+  "rr_disposition": null,
+  "headnote_district_ruling": "Judge McNulty dismissed claims by pharmaceutical wholesalers challenging accreditation decisions by the National Association of Boards of Pharmacy and related actions by OptumRx.",
+  "qualification_rationale": "The case addresses when a nationwide private accreditor can be treated as a state actor and whether New Jersey common law can impose due-process-like duties on powerful private standard setters.",
+  "appellate_posture_note": "The Third Circuit affirmed dismissal of the § 1983/state-action and most remaining claims, but reversed in part in a precedential opinion because the complaint plausibly alleged a New Jersey common-law due process claim against NABP.",
+  "headnote_status": "published",
+  "public_url": "https://www.courtlistener.com/docket/14750572/184/matrix-distributors-inc-v-national-association-of-boards-of-pharmacy/",
+  "links": [
+    {
+      "anchor": "District opinion, ECF 184 (CourtListener)",
+      "url": "https://www.courtlistener.com/docket/14750572/184/matrix-distributors-inc-v-national-association-of-boards-of-pharmacy/"
+    },
+    {
+      "anchor": "District opinion PDF (RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.njd.390203/gov.uscourts.njd.390203.184.0.pdf"
+    },
+    {
+      "anchor": "Third Circuit precedential opinion",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/203638p.pdf"
+    }
+  ],
+  "classification": "major",
+  "score_total": 75,
+  "components": {
+    "app": 25,
+    "doc": 18,
+    "prac": 16,
+    "end": 8,
+    "press": 1,
+    "career": 7
+  },
+  "subject_primary": "civil-rights",
+  "subject_secondary": [
+    "business-torts"
+  ],
+  "procedural_tags": [],
+  "motion_type": null,
+  "disposition": null,
+  "taxonomy_gap": null,
+  "research_cutoff": "2026-09-13",
+  "status_checked": "2026-09-13",
+  "last_verified": "2026-09-13",
+  "subject_screen": "qualifying",
+  "subject_label": "State Action and Private Accreditation",
+  "screen_score": 89,
+  "screen_classification": "principal",
+  "screen_components": {
+    "centrality": 24,
+    "analysis": 20,
+    "disposition": 20,
+    "doctrine": 11,
+    "treatment": 10,
+    "practical": 4
+  },
+  "publish_subject_index": true,
+  "classification_pass": "2026-09-13 (subject screen)",
+  "subject_index_only": true,
+  "link_level": "district",
+  "authorship_source": "docket_entry_signature",
+  "authored_by": "Kevin McNulty",
+  "decision_ecf_number": "184",
+  "decision_date": "2020-12-04"
+}
