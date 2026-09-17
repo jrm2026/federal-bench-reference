@@ -2,7 +2,8 @@
 
 ## Where this stands
 
-41 judge records and 95 decision records are in the tree. Every biography is
+41 judge records and 131 decision records are in the tree — 82 published and
+49 held for review. Every biography is
 drafted from primary sources and carries a confidence value and a check date.
 The gates pass. No record carries a curator sign-off, so nothing here has been
 read by a human on the rendered page, which is the thing the gates cannot do.
@@ -22,17 +23,32 @@ Open, in the order I would take them:
    was cited to FindLaw. FindLaw is not an advocacy, party or press host, so the
    stated rule does not plainly refuse it, but it is a Thomson Reuters property
    on a site whose premise is a Westlaw firewall. Decide it. If it is allowed,
-   add the host to the allowlist in `scripts/gates-compliance.mjs` and restore
-   the link alongside the docket.
-3. **Sixteen biography sources sit outside the free-public list.** They warn
-   rather than block: AP, three law-firm biographies, a bar association, a law
-   school, Martindale, attorneys.org, Ballotpedia and the Sedona Conference.
-   Martindale and Ballotpedia are the weak ones. Replace or accept each.
+   add the host to `src/content/config/source-hosts.json` and restore the link
+   alongside the docket. An opinion link is held to the strict rule and errors,
+   unlike a biography source.
+3. **Eleven biography sources are secondary, and all eleven are disclosed.**
+   Closed on 17 September 2026, not by replacement but by a rule. No primary
+   source carries a magistrate judge's biography: FJC covers Article III judges,
+   the court's own judge page is chambers and procedures, and a judicial-
+   milestones page gives an appointment date. The Notices to the Bar do carry a
+   full resume, and the five that exist are now cited, but the court began
+   publishing them only around 2023 and none of the ten affected judges has one.
+   So a source outside the primary list is marked with an asterisk on the page
+   and every magistrate page carries the disclaimer in `policy.json`. The gate
+   errors on an unlabelled secondary source, notes a labelled one on a
+   magistrate record, and still warns on an Article III record, where the FJC
+   entry should carry the fact instead. Ballotpedia is the one left to move: it
+   is cited on Clark to document a law-school conflict, which is a note, not a
+   source.
 4. **44 records lack a district-level link.** `scripts/resolve-links.mjs` is
    written and has never been run against the live APIs. It needs
    `COURTLISTENER_TOKEN`; the free tier throttles at five requests a minute.
-5. **The matter-relevant tier does not exist.** It is what the mail campaign
-   actually needs. Section 4 below governs the selection.
+5. **The matter-relevant tier exists and needs a curator.** The sweep ran
+   across all thirteen intake subjects and left thirty-six proposals in
+   `review/pending/dnj-recent-2026-09-15/`, one carrying a nature-of-suit
+   conflict the README names. None is promoted, because promotion needs a
+   headnote and a headnote is written by a human from the opinion. Section 4
+   below governs the selection.
 6. **`firm.json` still holds `[address]` and `[phone]`.** The contact page
    suppresses the block rather than print the brackets, but the site should not
    go live with them unset.
