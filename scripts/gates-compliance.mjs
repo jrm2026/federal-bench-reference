@@ -56,6 +56,14 @@ const ALLOWED_HOSTS = new Set([
   // document, never the article about it: the PDF is the record, the article is
   // a reporter's account and belongs on this site no more than a headnote does.
   "www.courthousenews.com", "courthousenews.com",
+  // Seton Hall's own faculty directory, for the fact that a judge teaches
+  // there. An institution's roster of its own appointments is the record, the
+  // same reason the Courthouse News PDFs qualify. The court's page for a
+  // magistrate judge carries no biography and FJC covers Article III judges
+  // only, so nothing already on this list can support the fact. Directory
+  // pages only: the domain also hosts panel and speaker bios, which are
+  // accounts and do not qualify.
+  "law.shu.edu",
 ]);
 
 // --- Gate 4: characterising the judge, not the holding ---------------------

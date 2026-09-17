@@ -333,3 +333,40 @@ opinion text and all six statements hold. Salas compelled arbitration and was
 affirmed. Wigenton dismissed for want of standing and was partially reversed for
 applying too demanding a standard. McNulty upheld the administrative
 determination and was affirmed, over a dissent by Judge Greenaway.
+
+---
+
+# Batch, 17 September 2026
+
+## Bongiovanni: the degree and the institution
+
+**A B.A. was attributed on no source.** The biography gave Judge Bongiovanni a
+B.A. from New Jersey City University in 1980. Both sources that speak to it
+record a B.S.: Seton Hall's own adjunct directory, and the New Jersey Lawyers
+Diary, which gives "B.S., Criminal Justice Major, Jersey City State College,
+1980."
+
+**The institution is an anachronism.** Jersey City State College became New
+Jersey City University in 1998. No degree conferred in 1980 came from an entity
+by that name. The record now names the conferring institution and glosses the
+current one.
+
+## Sources
+
+**law.shu.edu admitted, for faculty directories only.** The adjunct clause on
+the Bongiovanni page had no admissible support and no substitute exists. The
+court's own page for her is a chambers and procedures page carrying no
+biography at all, and the FJC directory covers Article III judges, so a
+magistrate judge has no entry there. The Historical Society of the District
+Court keeps a biographies page for her and it is a stub.
+
+The school's roster of its own appointments is the record of the fact, which is
+the same ground on which the Courthouse News PDFs were admitted: the document
+is the record, the account of it is not. The comment in
+`scripts/gates-compliance.mjs` confines the host to directory pages. The domain
+also serves panel and speaker bios, which are accounts and do not qualify.
+
+**The Lawyers Diary is not admitted.** It carries the pre-bench practice detail
+the record says is unavailable, and the adjunct appointment from 1998. It is a
+commercial compilation, an account rather than a record, and stays out on the
+line that keeps Martindale out.

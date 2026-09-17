@@ -42,6 +42,18 @@
       "pattern": "Third Circuit upheld most sensitive-place",
       "reason": "The 10 September 2025 Koons panel opinion was vacated on 11 December 2025 when rehearing en banc was granted. It may not be described as the appellate disposition.",
       "corrected_on": "2026-09-03"
+    },
+    {
+      "jurist_id": "tonianne-j-bongiovanni",
+      "pattern": "B\\.A\\.",
+      "reason": "The biography attributed a B.A. to Judge Bongiovanni. Seton Hall's adjunct directory and the New Jersey Lawyers Diary both record a B.S., 1980.",
+      "corrected_on": "2026-09-17"
+    },
+    {
+      "jurist_id": "tonianne-j-bongiovanni",
+      "pattern": "from New Jersey City University",
+      "reason": "The 1980 degree was conferred by Jersey City State College, which did not become New Jersey City University until 1998. Name the conferring institution and gloss the current name.",
+      "corrected_on": "2026-09-17"
     }
   ]
 }
