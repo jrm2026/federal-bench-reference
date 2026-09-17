@@ -18,3 +18,21 @@
 # Judge URLs are slugs, and slugs change when a name is corrected. Add a line
 # here rather than breaking an inbound link from a mail piece already sent.
 # /judges/old-slug/  /judges/new-slug/  301
+
+# The flat /judges/ tree was the legacy scaffold. Judges now live under their
+# district. Rules match in order and the first match wins, so the three
+# exceptions must stay above the splat.
+#
+# O'Hearn was re-slugged; the apostrophe no longer becomes a hyphen.
+/judges/christine-p-o-hearn/  /districts/dnj/judges/christine-p-ohearn/  301
+#
+# Hammer retired in 2026 and Silagi holds the seat; Pollak sits by designation
+# from E.D.N.Y. and is not on the permanent roster. Neither has a page, and
+# neither should land on the judge who replaced them. Send both to the district
+# index. See src/content/config/roster-manifest.json.
+/judges/michael-a-hammer/     /districts/dnj/                            301
+/judges/cheryl-l-pollak/      /districts/dnj/                            301
+#
+# The old index, then every remaining slug, which carried over unchanged.
+/judges/                      /districts/dnj/                            301
+/judges/*                     /districts/dnj/judges/:splat               301
