@@ -384,3 +384,27 @@ residue that settled in the wrong field.
 
 Warnings fell from fifteen to eleven. Every one that remains is a magistrate
 judge, which is the pattern worth naming.
+
+## Secondary biography sources are now marked, not excluded
+
+**The magistrate biographies rest on secondary sources because no primary one
+exists.** FJC's directory covers Article III judges. The court's own judge page
+is chambers, phone and procedures — Wettre's carries nothing but her title. A
+`uscourts.gov` judicial-milestones page gives an appointment date and stops;
+Allen's says "U.S. Magistrate Judge," the court, and 17 February 2021. Where the
+court published a Notice to the Bar announcing the appointment, that is primary
+and carries a full resume — Hougah's gives his degrees with years and seven
+positions in sequence — but the court's notices run back only to about 2023 and
+none of the ten affected judges has one.
+
+Excluding the secondary sources would empty six pages. They are marked instead.
+A source outside the primary host list renders with an asterisk after its label,
+and every magistrate page carrying a biography renders the disclaimer in
+`policy.json`. The gate now errors on an unlabelled secondary source, because
+the label is the disclosure, and treats a labelled one on a magistrate record as
+a note. On an Article III record it still warns: that judge has an FJC entry,
+and the fact belongs there.
+
+The host list moved to `src/content/config/source-hosts.json`, with the reason
+each host is on it. The gate reads it as Gate 3 and the judge page template
+reads it to decide what to mark, so the two cannot drift.

@@ -28,6 +28,7 @@ const ROOT = join(HERE, "..");
 const CONFIG = join(ROOT, "src", "content", "config");
 const POISON = join(CONFIG, "poison-list.json");
 const LEDGER = join(CONFIG, "signoffs.json");
+const SOURCE_HOSTS = join(CONFIG, "source-hosts.json");
 
 // --- Gate 2: subscription research services --------------------------------
 // "headnote" is our own field name for a summary written from the public
@@ -40,31 +41,9 @@ const FIREWALL = [
 ];
 
 // --- Gate 3: where an opinion or a biography may be sourced from -----------
-const ALLOWED_HOSTS = new Set([
-  "www.govinfo.gov", "govinfo.gov",
-  "www.courtlistener.com", "courtlistener.com", "storage.courtlistener.com",
-  "law.justia.com", "cases.justia.com", "docs.justia.com", "dockets.justia.com",
-  "supreme.justia.com",
-  "www.uscourts.gov", "uscourts.gov",
-  "www2.ca3.uscourts.gov", "www.ca3.uscourts.gov", "www.njd.uscourts.gov",
-  "www.cafc.uscourts.gov",
-  "www.fjc.gov", "fjc.gov",
-  "www.supremecourt.gov",
-  "ecf.njd.uscourts.gov",
-  // Courthouse News hosts the court's own filings as PDFs, and reached Antar
-  // when neither GovInfo nor a padded-docket search did. Link the hosted
-  // document, never the article about it: the PDF is the record, the article is
-  // a reporter's account and belongs on this site no more than a headnote does.
-  "www.courthousenews.com", "courthousenews.com",
-  // Seton Hall's own faculty directory, for the fact that a judge teaches
-  // there. An institution's roster of its own appointments is the record, the
-  // same reason the Courthouse News PDFs qualify. The court's page for a
-  // magistrate judge carries no biography and FJC covers Article III judges
-  // only, so nothing already on this list can support the fact. Directory
-  // pages only: the domain also hosts panel and speaker bios, which are
-  // accounts and do not qualify.
-  "law.shu.edu",
-]);
+// The host list lives in src/content/config/source-hosts.json, with the reason
+// each host is on it. The judge page template reads the same file to mark a
+// biography's secondary sources, so the gate and the page cannot drift.
 
 // --- Gate 4: characterising the judge, not the holding ---------------------
 const TONE = [
@@ -160,6 +139,7 @@ export function runComplianceGates(opts = {}) {
   const required = [
     [POISON, "src/content/config/poison-list.json", "the poison list has nothing to check against"],
     [LEDGER, "src/content/config/signoffs.json", "sign-off authority cannot be checked"],
+    [SOURCE_HOSTS, "src/content/config/source-hosts.json", "every source host would be unrecognised"],
   ];
   const absent = required.filter(([p]) => !existsSync(p));
   if (absent.length) {
@@ -168,6 +148,7 @@ export function runComplianceGates(opts = {}) {
   }
 
   const poison = JSON.parse(readFileSync(POISON, "utf8"));
+  const ALLOWED_HOSTS = new Set(Object.keys(JSON.parse(readFileSync(SOURCE_HOSTS, "utf8")).primary));
   const districtsRoot = join(ROOT, "src", "content", "districts");
   const districts = existsSync(districtsRoot)
     ? readdirSync(districtsRoot).filter((d) => existsSync(join(districtsRoot, d, "judges")))
@@ -219,12 +200,26 @@ export function runComplianceGates(opts = {}) {
     }
 
     // Gate 3 — sources, on every URL the site will render
+    // A biography may rest on a secondary source, because for a magistrate
+    // judge there is no primary one: FJC covers Article III judges, the court's
+    // own judge page is chambers and procedures, and a judicial-milestones page
+    // gives an appointment date. What the reader may not be given is an
+    // unlabelled link, since the label is the disclosure. An opinion link is
+    // governed separately and strictly, below.
     for (const { file, rec } of judges) {
-      for (const u of rec.biography?.sources ?? []) {
+      const srcs = rec.biography?.sources ?? [];
+      const labels = rec.biography?.source_labels ?? [];
+      srcs.forEach((u, i) => {
         const h = hostOf(u);
-        if (!h) { err(file, "sources", `unparseable biography source '${u}'`); continue; }
-        if (!ALLOWED_HOSTS.has(h)) warn(file, "sources", `biography source host '${h}' is outside the free-public-source list`);
-      }
+        if (!h) { err(file, "sources", `unparseable biography source '${u}'`); return; }
+        if (ALLOWED_HOSTS.has(h)) return;
+        if (!labels[i]?.trim())
+          err(file, "sources", `secondary biography source '${h}' carries no source_label; the label is what discloses it to the reader`);
+        else if (rec.office?.startsWith("magistrate"))
+          notes.push(`${file} [sources] secondary biography source '${h}', labelled '${labels[i]}' and disclosed on the page`);
+        else
+          warn(file, "sources", `biography source host '${h}' is secondary, and this judge has an FJC entry that should carry the fact instead`);
+      });
     }
     for (const { file, rec } of opinions) {
       const urls = [rec.public_url, ...(rec.links ?? []).map((l) => l.url)].filter(Boolean);

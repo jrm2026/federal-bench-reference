@@ -42,5 +42,10 @@
       "date": "2015-12-01",
       "what": "The December 2015 Federal Rules amendments rewrote Rule 26(b)(1) proportionality. A discovery ruling before this date may state a superseded standard. This is the discovery_scope_flag_before date, applied to any procedural tag."
     }
+  },
+  "magistrate_biography_disclaimer": {
+    "secondary_marker": "* Secondary source.",
+    "text": "Biographical information for magistrate judges has been compiled from publicly available sources, including Notices to the Bar, faculty and professional directories, and news sources. No representation is made as to the accuracy of such sources. Any errors may be brought to the attention of Jay McDaniel at jmcdaniel@sh-law.com.",
+    "_note": "Rendered on every magistrate judge page carrying a biography. The marker sentence is prepended only where the page actually cites a secondary source. No primary source carries a magistrate biography — see source-hosts.json."
   }
 }
