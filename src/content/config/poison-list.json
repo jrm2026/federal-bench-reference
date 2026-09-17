@@ -54,6 +54,12 @@
       "pattern": "from New Jersey City University",
       "reason": "The 1980 degree was conferred by Jersey City State College, which did not become New Jersey City University until 1998. Name the conferring institution and gloss the current name.",
       "corrected_on": "2026-09-17"
+    },
+    {
+      "jurist_id": "jamel-k-semper",
+      "pattern": "service reviewed: 2024",
+      "reason": "Semper's Article III service was dated from 2024. The FJC records his commission issued 1 December 2023, and the court's own appointment notice gives the same effective date.",
+      "corrected_on": "2026-09-17"
     }
   ]
 }

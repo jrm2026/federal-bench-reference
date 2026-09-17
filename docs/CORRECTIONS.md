@@ -408,3 +408,35 @@ and the fact belongs there.
 The host list moved to `src/content/config/source-hosts.json`, with the reason
 each host is on it. The gate reads it as Gate 3 and the judge page template
 reads it to decide what to mark, so the two cannot drift.
+
+## The Notices to the Bar, swept
+
+**Five notices were on the court's site and not in the tree.** Three are
+appointment notices for Article III judges, and each is a full biography from
+the court itself: Kirsch (Emory 1988, Fordham 1991, the Zloch clerkship, DOJ
+Civil, the U.S. Attorney's Office, the Union County bench, effective 9 May
+2023), Farbiarz (Harvard 1995, Yale 1999, the Mukasey and Cabranes clerkships,
+Davis Polk, S.D.N.Y., the Port Authority, effective 5 May 2023) and Semper
+(Hampton 2003, Rutgers-Newark 2007, the Fullilove clerkship, Union and Essex
+County prosecutions, the U.S. Attorney's Office, effective 1 December 2023).
+Two are reappointment notices, for Clark and Bongiovanni. Those carry no
+biography at all — only the expiring term, 14 July 2021 and 13 April 2019 — but
+they are the court speaking to the dates on two of the thinnest records here.
+
+**Semper's service was dated from 2024.** The notice gives 1 December 2023 and
+the FJC records a commission issued that day. Corrected, and on the poison list.
+
+**No appointment notice exists for the 2021-22 magistrate cohort.** The court's
+file naming is `NoticetotheBar` plus the judge's initials — EAH, ADS, CF, SDA,
+JTQ, AB, RAK, MEF, JS. Probed against the six magistrates whose pages rest on
+secondary sources, every one returns 404: AME, JSA, MJS, SAK, JRA, RLS. The
+index page is not the answer either, since it omits notices that exist, Silagi's
+and Quinn's among them.
+
+The reason is in the record. Those seven took office together and were sworn in
+at a single ceremony in August 2022, which the Administrative Office wrote up.
+That article names all seven — Allen, Skahill, Espinosa, King, Almonte, Singh
+and Pascal — and gives no education, no prior positions and no dates. The
+individual notice is a practice that began around 2023. For the judges appointed
+before it, the secondary sources are what exist, which is what the disclaimer on
+those pages now says.
