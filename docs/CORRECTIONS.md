@@ -370,3 +370,17 @@ also serves panel and speaker bios, which are accounts and do not qualify.
 the record says is unavailable, and the adjunct appointment from 1998. It is a
 commercial compilation, an account rather than a record, and stays out on the
 line that keeps Martindale out.
+
+## Four AP citations dropped from Article III biographies
+
+**They supported nothing.** O'Hearn, Salas, Neals and Quraishi each carried an
+Associated Press URL in `biography.sources`: two reports on rulings, one on the
+county-line appeal, one on the threats against Judge Salas's family. None of
+them is cited for a sentence in the biography, and the FJC entry for each judge
+carries every fact the text asserts — birth year and place, both degrees with
+years, the career line, the appointing president, and in O'Hearn's case the
+Rutgers-Camden adjunct appointment, 2006-2007. They appear to be research-pass
+residue that settled in the wrong field.
+
+Warnings fell from fifteen to eleven. Every one that remains is a magistrate
+judge, which is the pattern worth naming.
