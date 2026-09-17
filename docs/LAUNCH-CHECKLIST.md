@@ -41,7 +41,13 @@ None of these is Claude's to make.
       account Jay controls at cost.
 - [ ] Firm block settled: exact sponsor name, address, telephone, and the
       advertising notice language. That block does four compliance jobs at once
-      and it is bracketed in every draft so far.
+      and it is bracketed in every draft so far. `src/content/config/firm.json`
+      currently carries `[address]` and `[phone]`, and they render in the footer
+      of every page beside the sponsor's full name. Gate 9 in
+      `scripts/gates-compliance.mjs` warns about that while the preview stays
+      shut and fails the build the moment either half of the launch gate comes
+      off, so this cannot be forgotten at the last step — but it also cannot be
+      answered by anyone but Jay.
 - [ ] Curator block settled.
 - [ ] Ownership acknowledgment executed. The clean moment to paper that this is
       Jay's personal business-development asset, sponsored by the firm during

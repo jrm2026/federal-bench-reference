@@ -261,7 +261,17 @@ layout on every page.
 `scripts/gates-compliance.mjs` checks that what a reader will see is allowed to
 be published: fail-closed on a missing gate file, the Westlaw firewall, the
 source-host allowlist, tone, tallies and outcome-based selection, appellate
-currency inside a 45-day window, the poison list, and the sign-off ledger.
+currency inside a 45-day window, the poison list, the sign-off ledger, and the
+attorney advertising block.
+
+The advertising gate takes its severity from the launch gate rather than from
+the records, because that is where the exposure is. An unsettled sponsor address
+warns while `wrangler.jsonc` still runs the preview Worker and `public/_headers`
+still sets `noindex`; it fails the build the moment either comes off. It reads
+`wrangler.jsonc` through a JSONC stripper rather than by pattern, because the
+comments in that file discuss `main` and `run_worker_first` at length and a
+check that cannot tell prose from configuration would report the gate present
+after someone deleted it.
 
 Unsigned records are reported, not blocked — that is the expected state before
 launch. Lapsed and orphaned sign-offs block. `--require-signoffs` makes unsigned
