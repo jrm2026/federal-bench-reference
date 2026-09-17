@@ -11,6 +11,7 @@
  *   6. Appellate currency — a disturbed posture needs a status check in the window
  *   7. Poison list      — a fact once corrected may never reappear
  *   8. Sign-off ledger  — reported; blocking only under --require-signoffs
+ *   9. Advertising block — warns while the preview is closed, blocks once it opens
  *
  * These are the gates that carried over from the review scaffold. They exist
  * because the site's premise is RPC 8.4(e) and 8.2 compliance: it describes
@@ -252,5 +253,132 @@ export function runComplianceGates(opts = {}) {
     else notes.push(`${line}. docs/LAUNCH-CHECKLIST.md governs when this blocks; --require-signoffs blocks now.`);
   }
 
+  // Gate 9 — the attorney advertising block. Every page renders it, so an
+  // unsettled value is not a typo waiting to be noticed: it is the sponsor
+  // identification appearing beside a real firm's name on all of them.
+  //
+  // The severity follows the launch gate rather than the record set, because
+  // the exposure does. docs/LAUNCH-CHECKLIST.md puts it exactly: the password
+  // stops people and the header stops crawlers, and until both are gone the
+  // site is private no matter what else is true. While both hold, an unsettled
+  // block is a warning nobody can miss. The moment either is removed it blocks,
+  // which is the moment a reader could arrive.
+  const advert = advertisingBlockState();
+  if (advert.missing.length) {
+    for (const name of advert.missing) {
+      err("(tree)", "fail-closed", `src/content/config/${name} is missing — the advertising block cannot be checked`);
+    }
+  } else if (advert.unsettled.length) {
+    const what = advert.unsettled.map((u) => `${u.field} is ${u.reason}`).join(", ");
+    const where = "it renders in the footer of every page through src/layouts/Base.astro";
+    if (advert.gated) {
+      warn("src/content/config/firm.json", "advertising",
+        `${what}. Not blocking while the preview gate and the noindex header both hold, but ${where}, ` +
+        `beside a sponsor named in full. Settle it before either comes off — see docs/LAUNCH-CHECKLIST.md.`);
+    } else {
+      err("src/content/config/firm.json", "advertising",
+        `${what}, and the launch gate is down (${advert.openedBy.join("; ")}), so ${where}. ` +
+        `The advertising block does compliance work and a page carrying a placeholder in it is worse than no page.`);
+    }
+  }
+
   return { errors, warnings, notes };
+}
+
+// --- Gate 9 helpers --------------------------------------------------------
+
+/** A value nobody has filled in: absent, blank, or a [bracketed] stand-in. */
+const isUnsettled = (v) =>
+  v == null || String(v).trim() === "" ? "empty" :
+  /^\s*[\[<{].*[\]>}]\s*$/.test(String(v)) || /REPLACE[-_ ]WITH/i.test(String(v)) ? "a placeholder" :
+  null;
+
+/**
+ * Strip JSONC comments without touching the inside of a string. A naive
+ * line-strip would be wrong here for a reason specific to this file: the
+ * comments in wrangler.jsonc discuss `main` and `run_worker_first` at length,
+ * so a check that cannot tell prose from configuration would read the
+ * explanation of the gate as the gate itself and report it present after
+ * someone deleted it.
+ */
+function stripJsonc(text) {
+  let out = "";
+  let inString = false;
+  let escaped = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inString) {
+      out += c;
+      if (escaped) escaped = false;
+      else if (c === "\\") escaped = true;
+      else if (c === '"') inString = false;
+      continue;
+    }
+    if (c === '"') { inString = true; out += c; continue; }
+    if (c === "/" && text[i + 1] === "/") { while (i < text.length && text[i] !== "\n") i++; out += "\n"; continue; }
+    if (c === "/" && text[i + 1] === "*") { i += 2; while (i < text.length && !(text[i] === "*" && text[i + 1] === "/")) i++; i++; continue; }
+    out += c;
+  }
+  return out;
+}
+
+function advertisingBlockState() {
+  const firmPath = join(CONFIG, "firm.json");
+  const curatorPath = join(CONFIG, "curator.json");
+  const missing = [
+    !existsSync(firmPath) && "firm.json",
+    !existsSync(curatorPath) && "curator.json",
+  ].filter(Boolean);
+  if (missing.length) return { missing, unsettled: [], gated: true, openedBy: [] };
+
+  const firm = JSON.parse(readFileSync(firmPath, "utf8"));
+  const curator = JSON.parse(readFileSync(curatorPath, "utf8"));
+
+  // Per-district overrides win, so a district that fills in its own address is
+  // settled even where the base is not. Report a field once when every district
+  // inherits the same unsettled base value, and name districts only where they
+  // actually differ — otherwise one blank address in base reads as three faults.
+  const districts = Object.keys(firm.districts ?? {});
+  const scopes = districts.length ? districts : ["base"];
+  const unsettled = [];
+  for (const field of ["sponsor_name", "address", "phone", "advertising_label", "disclaimer"]) {
+    const byValue = new Map();
+    for (const d of scopes) {
+      const value = (firm.districts?.[d] ?? {})[field] ?? firm.base?.[field];
+      const reason = isUnsettled(value);
+      if (!reason) continue;
+      const key = `${reason} ${value ?? ""}`;
+      if (!byValue.has(key)) byValue.set(key, { reason, districts: [] });
+      byValue.get(key).districts.push(d);
+    }
+    for (const { reason, districts: ds } of byValue.values()) {
+      const scoped = ds.length === scopes.length ? field : `${ds.join("/")}.${field}`;
+      unsettled.push({ field: scoped, reason });
+    }
+  }
+  for (const field of ["curator_name", "role_phrase"]) {
+    const reason = isUnsettled(curator[field]);
+    if (reason) unsettled.push({ field: `curator.${field}`, reason });
+  }
+
+  // Is the site still closed? Two independent halves, either of which being
+  // gone means a reader can arrive.
+  const openedBy = [];
+  const headersPath = join(ROOT, "public", "_headers");
+  if (!existsSync(headersPath) || !/^\s*X-Robots-Tag\s*:.*\bnoindex\b/im.test(readFileSync(headersPath, "utf8"))) {
+    openedBy.push("public/_headers no longer sets X-Robots-Tag: noindex");
+  }
+  const wranglerPath = join(ROOT, "wrangler.jsonc");
+  if (existsSync(wranglerPath)) {
+    let cfg = null;
+    try { cfg = JSON.parse(stripJsonc(readFileSync(wranglerPath, "utf8"))); } catch { /* handled below */ }
+    if (!cfg) openedBy.push("wrangler.jsonc could not be parsed, so the preview gate cannot be confirmed");
+    else if (!cfg.main || cfg.assets?.run_worker_first !== true) {
+      openedBy.push("wrangler.jsonc no longer runs the preview gate in front of the assets");
+    }
+  } else {
+    openedBy.push("wrangler.jsonc is missing, so the preview gate cannot be confirmed");
+  }
+
+  return { missing, unsettled, gated: openedBy.length === 0, openedBy };
 }
