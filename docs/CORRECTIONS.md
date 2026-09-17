@@ -333,3 +333,110 @@ opinion text and all six statements hold. Salas compelled arbitration and was
 affirmed. Wigenton dismissed for want of standing and was partially reversed for
 applying too demanding a standard. McNulty upheld the administrative
 determination and was affirmed, over a dissent by Judge Greenaway.
+
+---
+
+# Batch, 17 September 2026
+
+## Bongiovanni: the degree and the institution
+
+**A B.A. was attributed on no source.** The biography gave Judge Bongiovanni a
+B.A. from New Jersey City University in 1980. Both sources that speak to it
+record a B.S.: Seton Hall's own adjunct directory, and the New Jersey Lawyers
+Diary, which gives "B.S., Criminal Justice Major, Jersey City State College,
+1980."
+
+**The institution is an anachronism.** Jersey City State College became New
+Jersey City University in 1998. No degree conferred in 1980 came from an entity
+by that name. The record now names the conferring institution and glosses the
+current one.
+
+## Sources
+
+**law.shu.edu admitted, for faculty directories only.** The adjunct clause on
+the Bongiovanni page had no admissible support and no substitute exists. The
+court's own page for her is a chambers and procedures page carrying no
+biography at all, and the FJC directory covers Article III judges, so a
+magistrate judge has no entry there. The Historical Society of the District
+Court keeps a biographies page for her and it is a stub.
+
+The school's roster of its own appointments is the record of the fact, which is
+the same ground on which the Courthouse News PDFs were admitted: the document
+is the record, the account of it is not. The comment in
+`scripts/gates-compliance.mjs` confines the host to directory pages. The domain
+also serves panel and speaker bios, which are accounts and do not qualify.
+
+**The Lawyers Diary is not admitted.** It carries the pre-bench practice detail
+the record says is unavailable, and the adjunct appointment from 1998. It is a
+commercial compilation, an account rather than a record, and stays out on the
+line that keeps Martindale out.
+
+## Four AP citations dropped from Article III biographies
+
+**They supported nothing.** O'Hearn, Salas, Neals and Quraishi each carried an
+Associated Press URL in `biography.sources`: two reports on rulings, one on the
+county-line appeal, one on the threats against Judge Salas's family. None of
+them is cited for a sentence in the biography, and the FJC entry for each judge
+carries every fact the text asserts — birth year and place, both degrees with
+years, the career line, the appointing president, and in O'Hearn's case the
+Rutgers-Camden adjunct appointment, 2006-2007. They appear to be research-pass
+residue that settled in the wrong field.
+
+Warnings fell from fifteen to eleven. Every one that remains is a magistrate
+judge, which is the pattern worth naming.
+
+## Secondary biography sources are now marked, not excluded
+
+**The magistrate biographies rest on secondary sources because no primary one
+exists.** FJC's directory covers Article III judges. The court's own judge page
+is chambers, phone and procedures — Wettre's carries nothing but her title. A
+`uscourts.gov` judicial-milestones page gives an appointment date and stops;
+Allen's says "U.S. Magistrate Judge," the court, and 17 February 2021. Where the
+court published a Notice to the Bar announcing the appointment, that is primary
+and carries a full resume — Hougah's gives his degrees with years and seven
+positions in sequence — but the court's notices run back only to about 2023 and
+none of the ten affected judges has one.
+
+Excluding the secondary sources would empty six pages. They are marked instead.
+A source outside the primary host list renders with an asterisk after its label,
+and every magistrate page carrying a biography renders the disclaimer in
+`policy.json`. The gate now errors on an unlabelled secondary source, because
+the label is the disclosure, and treats a labelled one on a magistrate record as
+a note. On an Article III record it still warns: that judge has an FJC entry,
+and the fact belongs there.
+
+The host list moved to `src/content/config/source-hosts.json`, with the reason
+each host is on it. The gate reads it as Gate 3 and the judge page template
+reads it to decide what to mark, so the two cannot drift.
+
+## The Notices to the Bar, swept
+
+**Five notices were on the court's site and not in the tree.** Three are
+appointment notices for Article III judges, and each is a full biography from
+the court itself: Kirsch (Emory 1988, Fordham 1991, the Zloch clerkship, DOJ
+Civil, the U.S. Attorney's Office, the Union County bench, effective 9 May
+2023), Farbiarz (Harvard 1995, Yale 1999, the Mukasey and Cabranes clerkships,
+Davis Polk, S.D.N.Y., the Port Authority, effective 5 May 2023) and Semper
+(Hampton 2003, Rutgers-Newark 2007, the Fullilove clerkship, Union and Essex
+County prosecutions, the U.S. Attorney's Office, effective 1 December 2023).
+Two are reappointment notices, for Clark and Bongiovanni. Those carry no
+biography at all — only the expiring term, 14 July 2021 and 13 April 2019 — but
+they are the court speaking to the dates on two of the thinnest records here.
+
+**Semper's service was dated from 2024.** The notice gives 1 December 2023 and
+the FJC records a commission issued that day. Corrected, and on the poison list.
+
+**No appointment notice exists for the 2021-22 magistrate cohort.** The court's
+file naming is `NoticetotheBar` plus the judge's initials — EAH, ADS, CF, SDA,
+JTQ, AB, RAK, MEF, JS. Probed against the six magistrates whose pages rest on
+secondary sources, every one returns 404: AME, JSA, MJS, SAK, JRA, RLS. The
+index page is not the answer either, since it omits notices that exist, Silagi's
+and Quinn's among them.
+
+The reason is in the record. Those seven took office together and were sworn in
+at a single ceremony in August 2022, which the Administrative Office wrote up.
+That article names all seven — Allen, Skahill, Espinosa, King, Almonte, Singh
+and Pascal — and gives no education, no prior positions and no dates. The
+individual notice is a practice that began around 2023. For the judges appointed
+before it, the secondary sources are what exist, which is what the disclaimer on
+those pages now says.

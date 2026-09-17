@@ -4,6 +4,7 @@ import Base from '../../../../layouts/Base.astro';
 import OpinionEntry from '../../../../components/OpinionEntry.astro';
 import taxonomy from '../../../../content/config/taxonomy.json';
 import policy from '../../../../content/config/policy.json';
+import sourceHosts from '../../../../content/config/source-hosts.json';
 
 export async function getStaticPaths() {
   const judges = await getCollection('judges');
@@ -19,6 +20,14 @@ export async function getStaticPaths() {
 }
 const { judge, ops } = Astro.props;
 const isMag = judge.office.startsWith('magistrate');
+// A biography source outside the primary host list is marked on the page rather
+// than excluded from it. No primary source carries a magistrate judge's
+// biography, so excluding them would empty the block. See source-hosts.json.
+const primaryHosts = new Set(Object.keys(sourceHosts.primary));
+const isSecondary = (u) => { try { return !primaryHosts.has(new URL(u).hostname); } catch { return true; } };
+const bioSources = judge.biography?.sources ?? [];
+const hasSecondary = bioSources.some(isSecondary);
+const disclaimer = policy.magistrate_biography_disclaimer;
 // The two tiers are selected on different criteria and read differently, so
 // they render in different sections. Splitting on subject_screen alone worked
 // only while every record was the career screen.
@@ -75,9 +84,11 @@ const cutoff = new Date(Date.now() - subjectYears * 365.25 * 86400000).toISOStri
             <div class="notice neutral">{judge.biography.source_note}</div>}
           <p class="srcline">
             Sources: {judge.biography.source_labels.map((l, i) =>
-              <>{i > 0 && ' · '}<a href={judge.biography.sources[i]} style="color:var(--accent);text-decoration:none">{l}</a></>)}
+              <>{i > 0 && ' · '}<a href={judge.biography.sources[i]} style="color:var(--accent);text-decoration:none">{l}</a>{isSecondary(judge.biography.sources[i]) && '*'}</>)}
             {' · verified '}{judge.biography.last_verified}
           </p>
+          {isMag &&
+            <div class="notice neutral">{hasSecondary ? `${disclaimer.secondary_marker} ${disclaimer.text}` : disclaimer.text}</div>}
         </>
       : <div class="empty"><strong>Biography pending review</strong>Verified biography will appear here.</div>}
     {judge.service_line_reviewed && <p class="srcline">{judge.service_line_reviewed}</p>}

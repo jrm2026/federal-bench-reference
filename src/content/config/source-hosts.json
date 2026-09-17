@@ -1,0 +1,34 @@
+{
+  "purpose": "The hosts a link may resolve to. scripts/gates-compliance.mjs reads this as Gate 3 and the judge page template reads it to mark which of a biography's sources are secondary. One file, so the gate and the page can never disagree about what is primary.",
+  "primary": {
+    "www.govinfo.gov": "Official. The USCOURTS collection carries written opinions; package IDs are deterministic from the docket.",
+    "govinfo.gov": "Official. The USCOURTS collection carries written opinions; package IDs are deterministic from the docket.",
+    "www.courtlistener.com": "Free public repository of opinions and, through RECAP, of the filings themselves.",
+    "courtlistener.com": "Free public repository of opinions and, through RECAP, of the filings themselves.",
+    "storage.courtlistener.com": "Free public repository of opinions and, through RECAP, of the filings themselves.",
+    "law.justia.com": "Free public repository of opinions and dockets.",
+    "cases.justia.com": "Free public repository of opinions and dockets.",
+    "docs.justia.com": "Free public repository of opinions and dockets.",
+    "dockets.justia.com": "Free public repository of opinions and dockets.",
+    "supreme.justia.com": "Free public repository of opinions and dockets.",
+    "www.uscourts.gov": "The judiciary's own site. Judicial-milestones pages carry an appointment date and little else; they are primary for that fact and for nothing more.",
+    "uscourts.gov": "The judiciary's own site. Judicial-milestones pages carry an appointment date and little else; they are primary for that fact and for nothing more.",
+    "www2.ca3.uscourts.gov": "The courts' own sites, for opinions and for the court's own notices.",
+    "www.ca3.uscourts.gov": "The courts' own sites, for opinions and for the court's own notices.",
+    "www.njd.uscourts.gov": "The courts' own sites, for opinions and for the court's own notices.",
+    "www.cafc.uscourts.gov": "The courts' own sites, for opinions and for the court's own notices.",
+    "ecf.njd.uscourts.gov": "The courts' own sites, for opinions and for the court's own notices.",
+    "www.fjc.gov": "The Federal Judicial Center's biographical directory. It covers Article III judges only: a magistrate judge has no entry, which is why magistrate biographies rest on secondary sources.",
+    "fjc.gov": "The Federal Judicial Center's biographical directory. It covers Article III judges only: a magistrate judge has no entry, which is why magistrate biographies rest on secondary sources.",
+    "www.supremecourt.gov": "The Court's own site.",
+    "www.courthousenews.com": "Hosts the court's own filings as PDFs, and reached Antar when neither GovInfo nor a padded-docket search did. Link the hosted document, never the article about it: the PDF is the record, the article is a reporter's account and belongs on this site no more than a headnote does.",
+    "courthousenews.com": "Hosts the court's own filings as PDFs, and reached Antar when neither GovInfo nor a padded-docket search did. Link the hosted document, never the article about it: the PDF is the record, the article is a reporter's account and belongs on this site no more than a headnote does.",
+    "law.shu.edu": "Seton Hall's own faculty directory, for the fact that a judge teaches there. An institution's roster of its own appointments is the record of it, the same ground the Courthouse News PDFs were admitted on. Directory pages only: the domain also serves panel and speaker bios, which are accounts."
+  },
+  "secondary": {
+    "opinions": "None. A link to an opinion or a filing must resolve to a primary host. The gate errors otherwise.",
+    "biographies": "Permitted, and marked as secondary on the page. No primary source carries a magistrate judge's biography: FJC covers Article III judges, the court's own judge pages are chambers and procedures, and a judicial-milestones page gives an appointment date. Where the court published a Notice to the Bar announcing the appointment, that is primary and comes first; for appointments before roughly 2023 there is none.",
+    "requirement": "A secondary biography source must carry a source_label saying what it is, because the label is what the reader sees. The gate errors on an unlabeled one.",
+    "disclosure": "policy.json carries the disclaimer the magistrate pages render."
+  }
+}

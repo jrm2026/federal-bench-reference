@@ -546,10 +546,6 @@ a task, and none of the decisions are Claude's.
   caller outright with a 403 rather than throttling. GovInfo package
   IDs are deterministic from the docket (`USCOURTS-njd-1_23-cv-12601`), so try it
   first. Justia district paths are predictable but need one probe for the case ID.
-- `legacy/` holds the superseded scaffold — the flat `data/judges` tree, its
-  build and patch scripts, the old page templates and the old gate. Nothing
-  builds from it and nothing imports it. It is kept only until the merge is
-  confirmed; delete it.
 
 ## Current state
 
